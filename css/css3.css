@@ -1,0 +1,231 @@
+/*  CSS3
+-------------------------------------------------
+    - bounceInUp :跳起來
+    - fadeInUp   :div浮起來
+    - fadeInLeft :從左測進入
+    - light      :發光效果
+    - btn-open   :按鈕張開
+    - slow-float :上下飄動
+    - turn       :轉圈圈
+------------------------------------------------*/
+
+
+/*-----------------------------------------------
+    bounceInUp - 跳起來
+-----------------------------------------------*/
+
+@keyframes bounceInUp {
+
+    0%   { opacity: 0; transform: translateY(50px) ; }
+    60%  { opacity: 1; transform: translateY(-30px); }
+    80%  { opacity: 1; transform: translateY(10px) ; }
+    100% { opacity: 1; transform: translateY(0)    ; } }
+
+
+.bounceinup-01
+{
+    animation: bounceInUp .5s ease-out 0s 1 both;
+    animation-play-state: paused;
+}
+
+.bounceInUp-01:hover
+{
+    animation-play-state: running;
+}
+
+/*-----------------------------------------------
+    fadeInUp - div浮起來
+-----------------------------------------------*/
+
+@keyframes fadeInUp {
+
+    0%   { opacity: 0; transform: translateY(200px); }
+    80%  { opacity: 1; transform: translateY(-50)  ; }
+    100% { opacity: 1; transform: translateY(0)    ; } }
+
+
+
+	
+	
+/*-----------------------------------------------
+    fadeInLeft - 從左測進入
+-----------------------------------------------*/
+
+@keyframes fadeInLeft {
+
+    0%   { opacity: 0; transform: translate3d(-10%, 0, 0); }
+    100% { opacity: 1; transform: none                   ; } }
+
+
+
+/*-----------------------------------------------
+    light - 發光效果
+-----------------------------------------------*/
+
+@keyframes light {
+
+    0%   { filter: brightness(1)  ; }
+    50%  { filter: brightness(3); }
+    70%  { filter: brightness(1)  ; }
+    90%  { filter: brightness(3)  ; }
+    99%  { filter: brightness(3)  ;transform: scale(1)  }
+    100% { opacity: 0; transform: scale(0)  ;} }
+
+
+.light { animation: light .5s ease-out .5s 100 both; }
+
+
+
+/*-----------------------------------------------
+    lightbox-open - 彈跳出現
+-----------------------------------------------*/
+
+@keyframes lightbox-open {
+
+    0%   { opacity: 0; transform: scale(0)  ; }
+    60%  { opacity: 1; transform: scale(.98); }
+    80%  { transform: scale(.92)            ; }
+    100% { transform: scale(1)              ; } }
+
+
+/*-----------------------------------------------
+    btn-open - 按鈕張開
+-----------------------------------------------*/
+
+@keyframes btn-open {
+
+    0%   { opacity: 0; width: 0   ; }
+    50%  { opacity: 0; width: 50% ; }
+    100% { opacity: 1; width: 100%; } }
+
+
+.btn-open { animation: btn-open 1s ease-out 0s 1 both; }
+
+
+
+
+/*-----------------------------------------------
+    run - 跑光效果
+-----------------------------------------------*/
+
+@keyframes run {
+
+    0%   { right: -200%; filter: brightness(1) ; }
+    50%  { right: 300%; filter: brightness(1.5); }
+    100% { right: -200%; filter: brightness(1) ; } }
+
+
+
+/*usage: add "run-effect" to class in Html */
+.run-effect,.run-effect1 {
+    position: relative;
+    overflow: hidden; }
+
+.run-effect:after,.run-effect1:after {
+    position: absolute;
+    top: -10%;
+    right: -200%;
+    z-index: 0;
+    opacity: .2;
+    width: 50%;
+    height: 120%;
+    color: #fff;
+    content: '';
+    transition: all 300ms;
+    transform: skewX(40deg);
+    animation: run 3.5s ease 0s infinite both;
+    background: #fff;
+    filter: brightness(.5); }
+.run-effect1:after {
+
+    animation: run 3.5s ease 0.4s infinite both;
+  }
+
+/*-----------------------------------------------
+    slow-float - 上下飄動
+-----------------------------------------------*/
+
+@keyframes slow-float {
+
+    0%   { transform: translate3d(0, 0px, 0); }
+    50%  { transform: translate3d(0, 4px, 0); }
+    100% { transform: translate3d(0, 0, 0)  ; } }
+
+.run { animation: slow-float 1s ease-out 0s 1 both; }
+
+
+
+/*-----------------------------------------------
+    turn - 轉圈圈
+-----------------------------------------------*/
+
+@keyframes turn {
+
+    0%   { transform: rotateZ(0deg)                         ; }
+    10%  { filter: brightness(1.1)                          ; }
+    20%  { filter: brightness(1)                            ; }
+    50%  { filter: brightness(1.2)                          ; }
+    70%  { filter: brightness(1)                            ; }
+    90%  { filter: brightness(1.1)                          ; }
+    100% { transform: rotateZ(225deg); filter: brightness(1); } }
+
+.turn { animation: turn 3s ease-out 0s 1 both; }
+
+
+
+/*-----------------------------------------------
+    fly - 蝴蝶飛
+-----------------------------------------------*/
+
+@keyframes fly {
+
+    0%   { opacity: 0; transform: translate3d(220%, 250%, 0) ; }
+    30%  { opacity: 1                                        ; }
+    40%  { filter: brightness(1.1)                           ; }
+    50%  { filter: brightness(1)                             ; }
+    70%  { opacity: 1; filter: brightness(1.1)               ; }
+    90%  { opacity: 1; transform: translate3d(120%, -120%, 0); }
+    100% { opacity: 0; transform: translate3d(120%, -120%, 0); } }
+
+@keyframes fly2 {
+
+    0%   { opacity: 0; transform: translate3d(80%, 300%, 0)  ; }
+    10%  { opacity: 1; filter: brightness(1.1)               ; }
+    20%  { filter: brightness(1)                             ; }
+    30%  { opacity: 1; filter: brightness(1)                 ; }
+    90%  { opacity: 1; transform: translate3d(150%, -150%, 0); }
+    100% { opacity: 0; transform: translate3d(150%, -150%, 0); } }
+
+
+@keyframes breath {
+    0% {
+        -webkit-transform: scale(0.95);
+        -moz-transform: scale(0.95);
+        -ms-transform: scale(0.95);
+        -o-transform: scale(0.95);
+        transform: scale(0.95);
+    }
+
+    50% {
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    100% {
+        -webkit-transform: scale(0.95);
+        -moz-transform: scale(0.95);
+        -ms-transform: scale(0.95);
+        -o-transform: scale(0.95);
+        transform: scale(0.95);
+    }
+}
+
+@keyframes rotate {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
