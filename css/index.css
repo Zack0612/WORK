@@ -1157,3 +1157,7 @@ img {
         height: auto;
     }
 }
+
+#POP{
+    cursor: pointer;
+    }
