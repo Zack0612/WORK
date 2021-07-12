@@ -101,7 +101,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <img  src="images/btn_ios.png">
     </a>
 
-     <a href="apk連結" title="APK下載" target="_blank" class="download_bt3 run-effect">
+     <a id="POP2" title="APK下載"  class="download_bt3 run-effect">
       <img  src="images/btn_apk.png">
     </a>
 </div>  
@@ -224,6 +224,13 @@ document.getElementById("POP").addEventListener("click",function(){
   )
 });
 
+document.getElementById("POP2").addEventListener("click",function(){
+  swal(
+    '尚未開放',
+    '敬請期待',
+    'warning'
+  )
+});
 </script>
 
 <script src="js/particles.js"></script>
