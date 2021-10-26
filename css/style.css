@@ -571,7 +571,7 @@ canvas {
 .outa {
     background-position: center top;
     max-width: 96%;
-    margin: 0 auto;
+    margin: 3% auto 0;
     padding-top: 0;
     padding-bottom: 9%;
     z-index: 5;
@@ -611,8 +611,8 @@ canvas {
     margin:0.5% 2%;
 }
 .pt4{
-    width: 49%;
-    margin:0.5% 0.5%;
+    width: 47%;
+    margin:0.5% 1%;
 }
 .pt1 img,.pt2 img,.pt3 img{
     max-width: 60%;
@@ -625,8 +625,8 @@ canvas {
     line-height: 1.2rem;
 }
 .pt4 p{
-    font-size: 1rem;
-    line-height: 1.2rem;
+    font-size: 0.9rem;
+    line-height: 1.1rem;
 }
 
 .not1{
@@ -636,6 +636,21 @@ canvas {
 .tag img{
     max-width: 100%;
 }
+}
+
+@media only screen and (max-width: 320px){
+.pt4{
+    width: 98%;
+    margin:0.5% 1%;
+}
+.pt4 img{
+    max-width: 70%;
+}
+.pt4 p{
+    font-size: 1rem;
+    line-height: 1.2rem;
+}
+
 }
 
 /*-- SEC3 --*/
