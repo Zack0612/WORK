@@ -1,4 +1,4 @@
-document.writeln("	<link rel=\'stylesheet\' href=\'//static.icantw.com/ty/css/header.css\'>");
+document.writeln("	<link rel=\'stylesheet\' href=\'css/header.css\'>");
 
 document.writeln("<div id=\'topBar\'>");
 document.writeln("		<a href=\'https://www.icantw.com/\' title=\'ican艾肯娛樂\' target=\'_blank\'>");
