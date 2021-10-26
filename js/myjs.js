@@ -21,6 +21,11 @@ $(function () {
 
           });
 
+  //topbar
+  $('.hamburger,.icon-link').click(function () {
+    $('.hamburger').toggleClass('click');
+    $('.icon-link').toggleClass('click');
+  });
 
 
 });

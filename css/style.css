@@ -2,6 +2,7 @@
 
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700&display=swap');
+@import url('header.css');
 
 *,
 a,
@@ -78,6 +79,230 @@ section {
 }
 
 
+/*KV_下載區*/
+.KV_app_box {
+    position: absolute;
+    width: 31.77%;
+    height: auto;
+    padding-bottom: 8.5%;
+    top: 83%;
+    left: 33%;
+    background: url(../images/KV_app_bg.png) no-repeat;
+    background-size: 100%;
+    background-color: rgba(165, 42, 42, 0);
+    /*顏色標記*/
+    z-index: 63;
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+}
+
+/*KV_icon*/
+.KV_icon {
+    position: absolute;
+    width: 18.03%;
+    height: auto;
+    padding-bottom: 0%;
+    top: 11%;
+    left: 6%;
+    z-index: 64;
+}
+
+/*KV_QR*/
+.KV_QR {
+    position: absolute;
+    width: 18.03%;
+    height: auto;
+    padding-bottom: 0%;
+    top: 11%;
+    left: 26%;
+    z-index: 64;
+}
+
+/*KV_apple store*/
+.KV_apple_btn {
+    position: absolute;
+    width: 24.42%;
+    height: auto;
+    padding-bottom: 0%;
+    top: 15%;
+    left: 46%;
+    z-index: 64;
+}
+
+.KV_apple_btn>img {
+    transform: scale(1, 1);
+    transition: all 0.2s ease-out;
+}
+
+.KV_apple_btn>img:hover {
+    transform: scale(0.9, 0.9);
+}
+
+/*KV_google play*/
+.KV_google_btn {
+    position: absolute;
+    width: 24.42%;
+    height: auto;
+    padding-bottom: 0%;
+    top: 49%;
+    left: 46%;
+    z-index: 64;
+}
+
+.KV_google_btn>img {
+    transform: scale(1, 1);
+    transition: all 0.2s ease-out;
+}
+
+.KV_google_btn>img:hover {
+    transform: scale(0.9, 0.9);
+}
+
+
+/*KV_apk*/
+.KV_apk_btn {
+    position: absolute;
+    width: 24.42%;
+    height: auto;
+    padding-bottom: 0%;
+    top: 15%;
+    left: 72%;
+    z-index: 64;
+}
+
+.KV_apk_btn>img {
+    transform: scale(1, 1);
+    transition: all 0.2s ease-out;
+}
+
+.KV_apk_btn>img:hover {
+    transform: scale(0.9, 0.9);
+}
+
+
+/*KV_PC下載*/
+.KV_PC_btn {
+    position: absolute;
+    width: 24.42%;
+    height: auto;
+    padding-bottom: 0%;
+    top: 49%;
+    left: 72%;
+    z-index: 64;
+}
+
+.KV_PC_btn>img {
+    transform: scale(1, 1);
+    transition: all 0.2s ease-out;
+}
+
+.KV_PC_btn>img:hover {
+    transform: scale(0.9, 0.9);
+}
+
+/*M1晶片備註*/
+.KV_M1_in {
+    position: absolute;
+    width: 45.22%;
+    height: auto;
+    padding-bottom: 0%;
+    top: 79.8%;
+    left: 50.5%;
+    z-index: 63;
+    display: block;
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+
+@media (max-width:1230px) {
+
+    /*M1晶片備註*/
+    .KV_M1_in {
+        position: absolute;
+        width: 45.22%;
+        height: auto;
+        padding-bottom: 0%;
+        top: 77.5%;
+        left: 50.5%;
+    }
+}
+
+@media (max-width:1024px) {
+    .kv_zone {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding-bottom: 120%;
+
+        background: url(../images/LV1_bg_tb.jpg) no-repeat;
+        background-size: cover;
+    }
+
+    .KV_line {
+        width: 68.34%;
+        top: 68%;
+        left: 16.5%;
+    }
+
+    /*M1晶片備註*/
+    .KV_M1_in {
+        display: none;
+    }
+
+    .KV_app_box {
+        width: 63.77%;
+        padding-bottom: 14.5%;
+        top: 86%;
+        left: 20%;
+        background: url(../images/KV_app_bg_tb.png) no-repeat;
+        background-size: 100%;
+    }
+
+    .KV_google_btn {
+        width: 24.42%;
+        top: 56%;
+        left: 46%;
+    }
+
+    .KV_PC_btn {
+        width: 24.42%;
+        top: 56%;
+        left: 72%;
+    }
+}
+
+@media (max-width:767px) {
+    .kv_zone {
+        width: 100%;
+        height: auto;
+        padding-bottom: 180%;
+
+        background: url(../images/LV1_bg_sp.jpg) no-repeat;
+        background-size: cover;
+        overflow: hidden;
+    }
+    .slogan {
+        width: 80.23%;
+        top: 35%;
+        left: 0%;
+    }
+
+    .KV_app_box {
+        width: 90.77%;
+        padding-bottom: 21.5%;
+        top: 78%;
+        left: 4%;
+    }
+
+    .KV_line {
+        width: 89.34%;
+        top: 70.5%;
+        left: 7.5%;
+    }
+}
+
+
+
 /*slogan*/
 .slogan {
     position: absolute;
@@ -146,7 +371,7 @@ section {
 
      .KV_logo {
         width: 35%;
-        top: 40%;
+        top: 33%;
         left: 33%;
     }  
 }
@@ -190,6 +415,12 @@ canvas {
     overflow: hidden;
 }
 
+@media screen and (max-width: 960px){
+    .CON {
+        background: url(../images/bg_mob.jpg) no-repeat;
+        background-size: 100%;
+    }
+}
 
 /*-- SEC2 --*/
 .SEC2 {
@@ -217,7 +448,7 @@ canvas {
     background-size: 100%;
     width: 100%;
     max-width: 1090px;
-    margin: 0 auto;
+    margin: 2% auto 0;
     padding-top: 95px;
     z-index: 5;
 }
@@ -288,23 +519,31 @@ canvas {
     width: 80%;
     margin:0 auto;
 }
-.pt1 img,.pt2 img,.pt3 img{
+.pt4{
+    display: inline-block;
+    float: left;
+    width: 45%;
+    margin:0.5% 2.5%;
+}
+.pt1 img,.pt2 img,.pt3 img,.pt4 img{
     display: block;
     max-width: 100%;
     height: auto;
     margin: 0 auto;
 }
-.pt1 p,.pt2 p,.pt3 p{
+.pt1 p,.pt2 p,.pt3 p,.pt4 p{
     font-size: 1.3rem;
     line-height: 1.6rem;
     color: #f1e2c8;
     text-align: center;
 }
 .not1{
+    display: block;
     color: #d1d2d8;
     font-size: 1.2rem;
     text-align: center;
     margin: 2% auto;
+    clear: both;
 }
 .gift {
     z-index: 8;
@@ -371,10 +610,17 @@ canvas {
     width: 96%;
     margin:0.5% 2%;
 }
+.pt4{
+    width: 46%;
+    margin:0.5% 2%;
+}
 .pt1 img,.pt2 img,.pt3 img{
     max-width: 60%;
 }
-.pt1 p,.pt2 p,.pt3 p{
+.pt4 img{
+    max-width: 100%;
+}
+.pt1 p,.pt2 p,.pt3 p,.pt4 p{
     font-size: 1rem;
     line-height: 1.2rem;
 }
