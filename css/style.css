@@ -275,8 +275,8 @@ canvas {
 .pt1{
     display: inline-block;
     float: left;
-    width: 40%;
-    margin:0.5% 5%;
+    width: 45%;
+    margin:0.5% 2.5%;
 }
 .pt2{
     display: block;
@@ -295,7 +295,7 @@ canvas {
     margin: 0 auto;
 }
 .pt1 p,.pt2 p,.pt3 p{
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     line-height: 1.6rem;
     color: #f1e2c8;
     text-align: center;
@@ -313,6 +313,13 @@ canvas {
 
 .gift img {
     display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.tag{
+ display: block;
     max-width: 100%;
     height: auto;
     margin: 0 auto;
@@ -361,8 +368,8 @@ canvas {
 .pt1,.pt2,.pt3{
     display: inline-block;
     float: left;
-    width: 92%;
-    margin:0.5% 5%;
+    width: 96%;
+    margin:0.5% 2%;
 }
 .pt1 img,.pt2 img,.pt3 img{
     max-width: 60%;
@@ -375,7 +382,9 @@ canvas {
     font-size: 0.8rem;
     margin: 2% 0;
 }
-
+.tag img{
+    max-width: 100%;
+}
 }
 
 /*-- SEC3 --*/
@@ -394,12 +403,15 @@ canvas {
 
 
 .schedule img {
-    display: block;
     max-width: 90%;
     height: auto;
     margin: 0 auto;
 }
 @media only screen and (max-width: 960px){
+    .SEC3,.SEC4 {
+        margin-top: 11%;
+    }
+
   .schedule img {
         max-width: 100%;
     }  
@@ -413,13 +425,24 @@ canvas {
     line-height: 1.4rem;
 }
 
-.pt3 p.list1{
+.pt1 ol{
+    display: block;
+    width: 90%;
+    margin:0 auto 3%;
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: #f1e2c8;
+}
+
+.pt3 ol{
     display: block;
     width: 70%;
-    margin:0 auto 4%;
+    margin:0 auto 3%;
     text-align: left;
-    font-size: 1.1rem;
-    line-height: 1.3rem;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: #f1e2c8;
 }
 
 @media only screen and (max-width: 960px){
@@ -429,6 +452,12 @@ canvas {
         font-size: 0.9rem;
         line-height: 1.1rem;
     }
+.pt1 ol,.pt3 ol {
+    width: 90%;
+    margin: 0 auto 3%;
+    font-size: 1rem;
+    line-height: 1.4rem;
+}
 }
 
 
@@ -462,13 +491,17 @@ canvas {
     line-height: 1.4rem;
 }
 @media only screen and (max-width: 960px){
+    .SEC_NOT{
+    margin-top: 8%;
+}
+
     .not_tit {
     margin-top: 4%;
     margin-bottom: 5%;
 }
     .not_con{
-        font-size: 0.8rem;
-        line-height: 1.0rem;
+        font-size: 1rem;
+        line-height: 1.2rem;
     }
 }
 
@@ -594,4 +627,18 @@ footer>div>div>div {
     }
 }    
 /*-- footer --*/
+    .show_pc{
+        display: block;
+    }
+    .show_mob{
+         display: none;
+    }
 
+@media only screen and (max-width: 960px){
+    .show_pc{
+        display: none;
+    }
+    .show_mob{
+         display: block;
+    }
+}
