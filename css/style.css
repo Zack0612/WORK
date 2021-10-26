@@ -612,7 +612,7 @@ canvas {
 }
 .pt4{
     width: 46%;
-    margin:0.5% 2%;
+    margin:0.5% 1.5%;
 }
 .pt1 img,.pt2 img,.pt3 img{
     max-width: 60%;
@@ -625,8 +625,8 @@ canvas {
     line-height: 1.2rem;
 }
 .pt4 p{
-    font-size: 0.8rem;
-    line-height: 1rem;
+    font-size: 1rem;
+    line-height: 1.2rem;
 }
 
 .not1{
