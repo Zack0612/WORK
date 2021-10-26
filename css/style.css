@@ -620,10 +620,15 @@ canvas {
 .pt4 img{
     max-width: 100%;
 }
-.pt1 p,.pt2 p,.pt3 p,.pt4 p{
+.pt1 p,.pt2 p,.pt3 p,{
     font-size: 1rem;
     line-height: 1.2rem;
 }
+.pt4 p{
+    font-size: 0.8rem;
+    line-height: 1rem;
+}
+
 .not1{
     font-size: 0.8rem;
     margin: 2% 0;
