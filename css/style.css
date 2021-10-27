@@ -1,12 +1,12 @@
 @charset "utf-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK&display=swap');
 @import url('header.css');
 
 *,
 a,
 span {
-    font-family: 'Noto Serif TC', Arial, Helvetica, 微軟正黑體, Microsoft JhengHei, sans-serif;
+    font-family: 'Noto Sans HK', Arial, Helvetica, 微軟正黑體, Microsoft JhengHei, sans-serif;
 }
 
 
@@ -15,7 +15,7 @@ body {
     padding: 0;
     margin: 0;
     overflow-x: hidden;
-    background-color: #15161c;
+    background-color: #01040b;
     height: auto;
     position: relative;
 }
@@ -42,7 +42,7 @@ section {
     position: relative;
     width: 100%;
     height: auto;
-    padding-bottom: 48%;
+    padding-bottom: 51.5%;
     background: url(../images/KV_PC.jpg) no-repeat;
     background-size: 100%;
     padding-top: 30px;
@@ -75,13 +75,14 @@ section {
     z-index: 63;
     -webkit-animation-delay: 0.4s;
     animation-delay: 0.4s;
+    display: none;
 }
 
 
 /*KV_下載區*/
 .KV_app_box {
     position: absolute;
-    width: 31.77%;
+    width: 30%;
     height: auto;
     padding-bottom: 8.5%;
     top: 83%;
@@ -348,6 +349,7 @@ section {
     }
 
     .KV_logo {
+        display: block;
         width: 28%;
         top: 42%;
         left: 36%;
@@ -370,7 +372,7 @@ section {
 
      .KV_logo {
         width: 35%;
-        top: 33%;
+        top: 50%;
         left: 33%;
     }  
 }
@@ -412,6 +414,7 @@ canvas {
     padding-top: 0;
     z-index: 50;
     overflow: hidden;
+
 }
 
 @media screen and (max-width: 960px){
@@ -425,10 +428,11 @@ canvas {
 .SEC2 {
     display: block;
     z-index: 5;
+
 }
 
 .tit1{
-    margin-top: 0.2%;
+    margin-top: 0%;
     margin-bottom: 0.2%;
     z-index: 8;
     position: relative;
@@ -447,8 +451,8 @@ canvas {
     background-size: 100%;
     width: 100%;
     max-width: 1090px;
-    margin: 2% auto 0;
-    padding-top: 95px;
+    margin: 0.5% auto 0;
+    padding-top: 100px;
     z-index: 5;
 }
 .outa2 {
@@ -505,8 +509,8 @@ canvas {
 .pt1{
     display: inline-block;
     float: left;
-    width: 45%;
-    margin:0.5% 2.5%;
+    width: 47%;
+    margin:0.5% 1.5%;
 }
 .pt2{
     display: block;
@@ -515,14 +519,14 @@ canvas {
 }
 .pt3{
     display: block;
-    width: 80%;
+    width: 97%;
     margin:0 auto;
 }
 .pt4{
     display: inline-block;
     float: left;
-    width: 45%;
-    margin:0.5% 2.5%;
+    width: 48%;
+    margin:0.5% 1%;
 }
 .pt1 img,.pt2 img,.pt3 img,.pt4 img{
     display: block;
@@ -531,17 +535,19 @@ canvas {
     margin: 0 auto;
 }
 .pt1 p,.pt2 p,.pt3 p,.pt4 p{
-    font-size: 1.3rem;
-    line-height: 1.6rem;
-    color: #f1e2c8;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    color: #ffffff;
     text-align: center;
 }
 .not1{
     display: block;
-    color: #d1d2d8;
+    position: relative;
+    color: #e7e8f1;
     font-size: 1.2rem;
     text-align: center;
-    margin: 2% auto;
+    margin: 0.5% auto;
+    padding-top: 2%;
     clear: both;
 }
 .gift {
@@ -563,10 +569,66 @@ canvas {
     margin: 0 auto;
 }
 
-@media only screen and (max-width: 960px){
- .se2con{
+.tab1 {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    border:2px solid #ffeccd;
+    background-color: rgba(101,84,63,0.2);
+    text-align: center;
+    padding: 1.5% 0;
+}
+
+.tab2 {
+    position: relative;
+    width: 100%;
+    margin: 3% auto 2%;
+    border:2px solid #ffeccd;
+    background-color: rgba(101,84,63,0.2);
+    text-align: center;
+    padding: 2.5% 0;
+    min-height: 50vh;
+}
+
+.tab1 h3,.tab2 h3{
+    font-size: 2.8rem;
+    line-height: 3rem;
+    margin: 2% 0;
+    color: #e6e0bc;
+    font-weight: 500;
+}
+
+.tab1 h5,.tab2 h5{
+    font-size: 1.6rem;
+    line-height: 2rem;
+    margin: 2.5% 0 ;
+    color: #e1caab;
+    font-weight: 500;
+}
+.tab1 hr,.tab2 hr{
+    border: 0;
+    border-top: 1px solid #65543f;
+    margin: 0.5% auto;
     width: 96%;
 }
+.tab1 p,.tab2 p{
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    color: #ffffff;
+}
+.tab1 span,.tab2 span{
+    display: block;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+    color: #ffffff;
+    padding: 2% 1%;
+}
+
+@media only screen and (max-width: 960px){
+     .se2con{
+        width: 96%;
+    }
+
 .outa {
     background-position: center top;
     max-width: 96%;
@@ -600,18 +662,18 @@ canvas {
     background-position: 50% 0;
     max-width: 96%;
     margin: 0 auto;
-    padding-bottom: 5%;
+    padding-bottom: 8%;
     z-index: 5;
 }
 .pt1,.pt2,.pt3{
     display: inline-block;
     float: left;
     width: 96%;
-    margin:0.5% 2%;
+    margin:0.2% 2%;
 }
 .pt4{
-    width: 47%;
-    margin:0.5% 1%;
+    width: 45%;
+    margin:0.5% 2.5%;
 }
 .pt1 img,.pt2 img,.pt3 img{
     max-width: 60%;
@@ -619,7 +681,7 @@ canvas {
 .pt4 img{
     max-width: 100%;
 }
-.pt1 p,.pt2 p,.pt3 p,{
+.pt1 p,.pt2 p,.pt3 p{
     font-size: 1rem;
     line-height: 1.2rem;
 }
@@ -635,6 +697,52 @@ canvas {
 .tag img{
     max-width: 100%;
 }
+
+.tab1,.tab2{
+   min-height: 11vh;
+   margin: 0.5% auto 0.5%;
+}
+
+    .tab1 h3,.tab2 h3{
+        font-size: 1.6rem;
+        line-height: 2rem;
+        margin: 2% 0;
+    }
+    .tab1 p,.tab2 p{
+        font-size: 1.1rem;
+    }
+    .tab1 span,.tab2 p{
+        font-size: 0.9rem;
+        line-height: 1.1rem;
+        padding: 2% 1%;
+    }
+
+}
+
+@media only screen and (max-width: 480px){
+.tab1,.tab2{
+   min-height: 14vh;
+
+}
+    .tab1 h3,.tab2 h3{
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        margin: 4% 0;
+    }
+    .tab1 p,.tab2 p{
+        font-size: 0.9rem;
+    }
+    .tab1 span,.tab2 span{
+        font-size: 0.9rem;
+        line-height: 1.1rem;
+        padding: 2% 1%;
+    }
+.tab1 h5, .tab2 h5 {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    margin: 2.5% 0;
+
+}
 }
 
 @media only screen and (max-width: 320px){
@@ -649,7 +757,9 @@ canvas {
     font-size: 1rem;
     line-height: 1.2rem;
 }
-
+.tab1{
+   min-height: 8vh;
+}
 }
 
 /*-- SEC3 --*/
@@ -674,7 +784,7 @@ canvas {
 }
 @media only screen and (max-width: 960px){
     .SEC3,.SEC4 {
-        margin-top: 11%;
+        margin-top: 6%;
     }
 
   .schedule img {
@@ -697,17 +807,17 @@ canvas {
     text-align: left;
     font-size: 1.2rem;
     line-height: 1.6rem;
-    color: #f1e2c8;
+    color: #ffffff;
 }
 
 .pt3 ol{
     display: block;
-    width: 70%;
-    margin:0 auto 3%;
+    width: 64%;
+    margin:0 auto;
     text-align: left;
     font-size: 1.2rem;
     line-height: 1.6rem;
-    color: #f1e2c8;
+    color: #fffffe;
 }
 
 @media only screen and (max-width: 960px){
@@ -718,10 +828,10 @@ canvas {
         line-height: 1.1rem;
     }
 .pt1 ol,.pt3 ol {
-    width: 90%;
+    width: 80%;
     margin: 0 auto 3%;
-    font-size: 1rem;
-    line-height: 1.4rem;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
 }
 }
 
@@ -753,7 +863,7 @@ canvas {
     margin: 1% auto 5%;
     color: #d0d2df;
     font-size: 1rem;
-    line-height: 1.4rem;
+    line-height: 1.6rem;
 }
 @media only screen and (max-width: 960px){
     .SEC_NOT{
@@ -765,7 +875,7 @@ canvas {
     margin-bottom: 5%;
 }
     .not_con{
-        font-size: 1rem;
+        font-size: 0.9rem;
         line-height: 1.2rem;
     }
 }
