@@ -721,7 +721,7 @@ canvas {
 
 @media only screen and (max-width: 480px){
 .tab1,.tab2{
-   min-height: 14vh;
+   min-height: 15vh;
 
 }
     .tab1 h3,.tab2 h3{
@@ -735,7 +735,7 @@ canvas {
     .tab1 span,.tab2 span{
         font-size: 0.9rem;
         line-height: 1.1rem;
-        padding: 2% 1%;
+        padding: 8% 5%;
     }
 .tab1 h5, .tab2 h5 {
     font-size: 1.2rem;
