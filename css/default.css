@@ -1,0 +1,598 @@
+
+/*-----------------------------------------------
+    reset
+-----------------------------------------------*/
+* , *::before , *::after ,h1 ,h2 , h3 , h4 , h5 , h6 , p ,button a ,li a ,.df-form
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans JP','Noto Sans TC', 'Microsoft JhengHei', Arial,  sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+
+@media screen and (max-width:768px)
+{
+    * , *::before , *::after ,h1 ,h2 , h3 , h4 , h5 , h6 , p ,button a ,li a ,.df-form
+    {
+        font-size: 15px;
+    }
+}
+
+html ,body
+{
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+button , select , textarea , option , input
+{
+    line-height: inherit;
+    border: 0;
+    border-style: none;
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+    background: transparent;
+}
+
+html , body , header , section , article , footer ,button ,li , .df-width
+{
+    position: relative;
+}
+button::-moz-focus-inner ,input::-moz-focus-inner
+{
+    padding: 0;
+    border: 0;
+}
+
+h1 , h2 , h3 , h4 , h5 , h6 , .h1 , .h2 , .h3 , .h4 , .h5 , .h6 , p ,button a ,li a ,.df-form
+{
+    margin: 1% auto;
+    line-height: 1.8;
+    font-weight: normal;
+    word-wrap: break-word;
+    word-break: break-all;;
+}
+
+
+/*-----------------------------------------------
+    link
+-----------------------------------------------*/
+
+a , a:active , a:hover , a:focus
+{
+    color: #000;
+    -webkit-user-select: none;
+    transition: all .3s;
+    text-decoration: none;
+    pointer-events: auto;
+    outline: 0;
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+}
+
+
+/*-----------------------------------------------
+    df-img
+-----------------------------------------------*/
+
+img
+{
+    border: 0;
+    border-style: none;
+    vertical-align: middle;
+}
+
+
+img ,.img-rwd ,.img-rwd > img ,.img-rwd > a > img ,
+ul.img-rwd > li > img ,li > img ,li > a > img
+{
+    max-width: 100%;
+}
+
+.img-auto
+{
+    max-width: initial;
+}
+/*-----------------------------------------------
+    df-button
+-----------------------------------------------*/
+button
+{
+    margin: 20px auto;
+    min-width: 50px;
+    min-height: 30px;
+    cursor: pointer;
+    border: 1px solid #000;
+    border-radius: 30px;
+    text-align: center;
+    text-decoration: none;
+}
+
+button a
+{
+    display: block;
+    padding: 0 10px;
+    width: 100%;
+}
+/*-----------------------------------------------
+    df-list
+    clear-both
+-----------------------------------------------*/
+
+ul
+{
+    height: 100%;
+}
+
+ol
+{
+    padding: 0 0 0 10%;
+}
+
+ul li
+{
+    list-style: none;
+}
+
+li a
+{
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+
+ol > li > a
+{
+    color: #007bff;
+    text-decoration: none;
+}
+
+
+.clearfix:after{
+  content:'';
+  display:table;
+  clear:both;
+}
+
+@media screen and (max-width:768px)
+{
+    ol > li , .ol > li > a
+    {
+        font-family: 'Microsoft JhengHei', serif;
+    }
+}
+
+
+/*-----------------------------------------------
+    df-video
+-----------------------------------------------*/
+
+.df-video
+{
+    display: block;
+    position: relative;
+    padding: 0;
+    padding-bottom: 56.25%;/*16by9*/
+    height: 0;
+    overflow: hidden;
+    z-index: 150;
+    margin: auto;
+    
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+
+}
+
+.df-video-item
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+
+}
+/*-----------------------------------------------
+    df-hr
+-----------------------------------------------*/
+
+hr
+{
+    display: block;
+    margin: 20px auto;
+    width: 75%;
+    height: 5px;
+    border: 0;
+    border-top: 1px solid #d7c39d;
+    /*border-bottom:5px dotted #fff;*/
+}
+
+
+
+/*  df-box
+-------------------------------------------------
+    - df-close
+    - df-cover
+    - box-content
+    - box-open & close
+------------------------------------------------*/
+
+/*-----------------------------------------------
+    df-close
+-----------------------------------------------*/
+.df-close:hover
+{
+    /*! transform: rotateZ(180deg); */
+}
+
+.df-close
+{
+    display: inline-block;
+    position: absolute;
+    top: -7%;
+    right: 0;
+    z-index: 999;
+    z-index: 10;
+    opacity: 1;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all .5s;
+    transform-origin: 50% 50%;
+}
+
+.df-close::before , .df-close::after
+{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    width: 100%;
+    height: 2px;
+    border-radius: 5px;
+    content: '';
+    /*! background: #fff; */
+    /*! opacity: 0; */
+}
+
+.df-close::before
+{
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+
+.df-close::after
+{
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+}
+/*-----------------------------------------------
+    df-cover
+-----------------------------------------------*/
+.df-cover
+{
+    /* display: none; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(0, 0, 0, .95);
+}
+/*-----------------------------------------------
+    df-box
+-----------------------------------------------*/
+.df-box
+{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    z-index: 100;
+}
+/*-----------------------------------------------
+    box-content
+-----------------------------------------------*/
+.box-content
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    padding: 30px 20px;
+    z-index: 2;
+    width: 95%;
+    height: 600px;
+    max-width: 700px;
+    border-radius: 5px;
+    /*animation: box-open 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) ;*/
+    transition: all .3s;
+    text-align: left;
+    text-align: justify;
+    background: #fff;
+}
+
+.box-text
+{
+    margin: 0 0 0 10px;
+    padding: 0 10px;
+    width: 100%;
+    max-height: 550px;
+}
+
+/*-----------------------------------------------
+    box-open & close
+-----------------------------------------------*/
+.box-open
+{
+    display: block;
+    opacity: 1;
+    transition: all .3s cubic-bezier(.390, .575, .565, 1.000)  ;
+    transform: scale(1);
+}
+
+.box-close
+{
+    display: none;
+    opacity: 0;
+    transition: all .2s cubic-bezier(.390, .575, .565, 1.000)  ;
+    transform: scale(0);
+}
+
+@media screen and (max-width:768px)
+{
+    .df-close
+    {
+        top: 8px;
+        right: 6px;
+        z-index: 11;
+        width: 30px;
+        height: 30px;
+    }
+    .df-close::before , .df-close::after
+    {
+        /*! background: #000; */
+    }
+    .df-box
+    {
+        padding: 0;
+        /*! max-height: 90vh; */
+        overflow: auto;
+    }
+    .box-content
+    {
+        padding: 50px 15px 5% 15px;
+        height: auto;
+        height: 95vh;
+        overflow: hidden;
+        background: #fff;
+    }
+}
+
+/*-----------------------------------------------
+    df-width
+-----------------------------------------------*/
+
+.df-width
+{
+    margin: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+    max-width: 768px;
+}
+/*-----------------------------------------------
+    df-form
+-----------------------------------------------*/
+input.df-form ,select.df-form
+{
+    display: block;
+    margin: 10px auto;
+    opacity: 1;
+    width: 100%;
+    height: 37px;
+    min-width: 200px;
+    max-width: 270px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 5px;
+    color: #555;
+    text-align: center;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    /*�黸��誯�鞱身��銝𧢲�匧�𣇉內*/
+
+            appearance: none;
+       -moz-appearance: none;
+    -webkit-appearance: none;
+    font-size: 15px;
+    letter-spacing: 0.05rem;
+}
+
+
+select.df-form{
+    color: #979797;
+}
+input.df-form:focus ,select.df-form:focus {
+        border-color: #66afe9;
+        color: #000;
+        outline: 0;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+    }
+
+.down_bg
+{
+    cursor: pointer;
+    color: #555;
+    background: url(../images/down_bg.png) 95% center no-repeat;
+}
+
+
+/*-----------------------------------------------
+    df-gotop
+-----------------------------------------------*/
+.gotop
+{
+    display: block;
+    /*display: none;*/
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    z-index: 99;
+    opacity: .5;
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 100px;
+    box-sizing: border-box;
+    transition: all .3s;
+    background: #000;
+}
+.gotop::after
+{
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    left: 0;
+    margin: auto;
+    width: .8rem;
+    height: .8rem;
+    color: #fff;
+    border-top: 1px solid;
+    border-right: 1px solid;
+    box-sizing: border-box;
+    content: '';
+    transform: rotate(-45deg);
+}
+
+
+.gotop:focus
+{
+    outline: none;
+}
+
+.gotop:hover
+{
+    opacity: .9;
+    transition: all .3s ease;
+    transform: scale(1.2);
+}
+
+
+
+@media screen and (max-width:767px)
+{
+    .gotop
+    {
+        right: 5px;
+        transform: scale(.7);
+    }
+    .gotop:hover
+    {
+        transform: scale(1);
+    }
+}
+/*  hide
+-------------------------------------------------
+    - hidden-sm  : show 0-768px
+    - hidden-xs  : show 0-480px
+-------------------------------------------------*/
+
+/* show 768px �� */
+.pc
+{
+    display: block;
+    opacity: 1;
+}
+@media screen and (max-width:768px)
+{
+    .pc
+    {
+        display: none;
+        opacity: 0;
+    }
+}
+
+/* show 0-768px */
+.tablet
+{
+    display: none;
+    width: 0;
+    height: 0;
+}
+@media screen and (max-width:768px)
+{
+    .tablet
+    {
+        display: block;
+        width: auto;
+        height: auto;
+    }
+}
+
+/* show 0-480px */
+.mobile
+{
+    display: none;
+    width: 0;
+    height: 0;
+}
+@media screen and (max-width:480px)
+{
+    .mobile
+    {
+        display: block;
+        width: auto;
+        height: auto;
+    }
+}
+
+/* show 480px �� */
+.no-mobile
+{
+    display: block;
+    opacity: 1;
+}
+@media screen and (max-width:480px)
+{
+    .no-mobile
+    {
+        display: none;
+        opacity: 0;
+    }
+}
+
+
+/* pc-only 768px �� */
+.pc-only
+{
+    display: block;
+    opacity: 1;
+}
+@media screen and (min-width:768px)
+{
+    .pc-only
+    {
+        display: none;
+        opacity: 0;
+    }
+}
