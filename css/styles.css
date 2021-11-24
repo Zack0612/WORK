@@ -7,11 +7,182 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
 @import url('fullpage.css');
-@import url('default.css');
 @import url('swiper.css');
-
 @import url('animate.min.css');
 @import url('swiper-bundle.min.css');
+
+
+/*-----------------------------------------------
+    reset
+-----------------------------------------------*/
+* , *::before , *::after ,h1 ,h2 , h3 , h4 , h5 , h6 , p ,button a ,li a ,.df-form
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans JP','Noto Sans TC', 'Microsoft JhengHei', Arial,  sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+
+@media screen and (max-width:768px)
+{
+    * , *::before , *::after ,h1 ,h2 , h3 , h4 , h5 , h6 , p ,button a ,li a ,.df-form
+    {
+        font-size: 15px;
+    }
+}
+
+html ,body
+{
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+button , select , textarea , option , input
+{
+    line-height: inherit;
+    border: 0;
+    border-style: none;
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+    background: transparent;
+}
+
+html , body , header , section , article , footer ,button ,li , .df-width
+{
+    position: relative;
+}
+button::-moz-focus-inner ,input::-moz-focus-inner
+{
+    padding: 0;
+    border: 0;
+}
+
+h1 , h2 , h3 , h4 , h5 , h6 , .h1 , .h2 , .h3 , .h4 , .h5 , .h6 , p ,button a ,li a ,.df-form
+{
+    margin: 1% auto;
+    line-height: 1.8;
+    font-weight: normal;
+    word-wrap: break-word;
+    word-break: break-all;;
+}
+
+
+/*-----------------------------------------------
+    link
+-----------------------------------------------*/
+
+a , a:active , a:hover , a:focus
+{
+    color: #000;
+    -webkit-user-select: none;
+    transition: all .3s;
+    text-decoration: none;
+    pointer-events: auto;
+    outline: 0;
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+}
+
+
+/*-----------------------------------------------
+    df-img
+-----------------------------------------------*/
+
+img
+{
+    border: 0;
+    border-style: none;
+    vertical-align: middle;
+}
+
+
+img ,.img-rwd ,.img-rwd > img ,.img-rwd > a > img ,
+ul.img-rwd > li > img ,li > img ,li > a > img
+{
+    max-width: 100%;
+}
+
+.img-auto
+{
+    max-width: initial;
+}
+/*-----------------------------------------------
+    df-button
+-----------------------------------------------*/
+button
+{
+    margin: 20px auto;
+    min-width: 50px;
+    min-height: 30px;
+    cursor: pointer;
+    border: 1px solid #000;
+    border-radius: 30px;
+    text-align: center;
+    text-decoration: none;
+}
+
+button a
+{
+    display: block;
+    padding: 0 10px;
+    width: 100%;
+}
+/*-----------------------------------------------
+    df-list
+    clear-both
+-----------------------------------------------*/
+
+ul
+{
+    height: 100%;
+}
+
+ol
+{
+    padding: 0 0 0 10%;
+}
+
+ul li
+{
+    list-style: none;
+}
+
+li a
+{
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+
+ol > li > a
+{
+    color: #007bff;
+    text-decoration: none;
+}
+
+
+.clearfix:after{
+  content:'';
+  display:table;
+  clear:both;
+}
+
+@media screen and (max-width:768px)
+{
+    ol > li , .ol > li > a
+    {
+        font-family: 'Microsoft JhengHei', serif;
+    }
+}
+
+
+
+
 
 
 
