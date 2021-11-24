@@ -3,14 +3,29 @@ $(function () {
     //common pages
     // fullpage =============================================
     var myFullpage = new fullpage('#wrapper', {
-        // sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
         anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage'],
         navigation: true,
         navigationPosition: 'right',
         lazyLoad: true,
-        // navigation: true,
-        // continuousVertical: true,
+
     });
 
+    //adding the action to the button
+    $(document).on('click', '#moveTo1', function(){
+      fullpage_api.moveTo('firstPage', 1);
+    });
+    $(document).on('click', '#moveTo3', function(){
+      fullpage_api.moveTo('3rdPage', 1);
+    });
+    $(document).on('click', '#moveTo2', function(){
+      fullpage_api.moveTo('secondPage', 1);
+    });
+    $(document).on('click', '#moveTo4', function(){
+      fullpage_api.moveTo('4thPage', 1);
+    });
+
+    $(document).on('click', '#gotop', function(){
+      fullpage_api.moveTo('firstPage', 1);
+    });
 
 });
