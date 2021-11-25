@@ -24,7 +24,7 @@ $(function () {
         },5000);
         distance = setTimeout(function(){
             fullpage_api.moveTo('3rdPage', 1);
-        },10000);
+        },15000);
     })
 
              
