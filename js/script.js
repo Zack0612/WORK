@@ -25,9 +25,16 @@ $(function () {
         distance = setTimeout(function(){
             fullpage_api.moveTo('3rdPage', 1);
         },15000);
+
+     window.addEventListener('scroll', function () {
+          if (window.scrollY > 0) {
+            clearTimeout(timer);
+            clearTimeout(distance);
+          }
+    })  
+
     })
 
-             
 
     //adding the action to the button
     $(document).on('click', '#moveTo1', function(){
