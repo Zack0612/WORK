@@ -13,30 +13,43 @@ $(function () {
         navigationPosition: 'right',
         lazyLoad: true,
 
-
   })
 
+autoScroll();
+function autoScroll() {
+  timer = setTimeout(function() {
+       fullpage_api.moveTo('secondPage', 1);
+  }, 5000);
+  distance = setTimeout(function() {
+       fullpage_api.moveTo('3rdPage', 1);
+  }, 8000);
 
-   $(window).load(
-        function(){
-        timer = setTimeout(function(){
-            fullpage_api.moveTo('secondPage', 1);
-        },5000);
-        distance = setTimeout(function(){
-            fullpage_api.moveTo('3rdPage', 1);
-        },15000);
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 0) {
+      clearTimeout(timer);
+      clearTimeout(distance);
+    }
+  })
+}
 
-     window.addEventListener('scroll', function () {
-          if (window.scrollY > 0) {
-            clearTimeout(timer);
-            clearTimeout(distance);
-          }
-    })  
+   // $(window).load(
+   //      function(){
+   //      timer = setTimeout(function(){
+   //          fullpage_api.moveTo('secondPage', 1);
+   //      },5000);
+   //      distance = setTimeout(function(){
+   //          fullpage_api.moveTo('3rdPage', 1);
+   //      },15000);
 
-       console.log(timer)
-       console.log(distance)
 
-    })
+   //  window.addEventListener('scroll', function () {
+   //      if (window.scrollY > 0) {
+   //          delete timer; 
+   //          delete distance; 
+   //      }
+   //  })  
+
+   //  })
 
 
     //adding the action to the button
