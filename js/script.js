@@ -15,6 +15,7 @@ $(function () {
 
   })
 
+autoScroll();
 function autoScroll() {
   timer = setTimeout(function() {
        fullpage_api.moveTo('secondPage', 1);
