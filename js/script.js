@@ -1,14 +1,33 @@
 $(function () {
 
+    var distance;
+    var timer;
+
     //common pages
     // fullpage =============================================
     var myFullpage = new fullpage('#wrapper', {
+
+
         anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage'],
         navigation: true,
         navigationPosition: 'right',
         lazyLoad: true,
 
-    });
+
+  })
+
+
+   $(window).load(
+        function(){
+        timer = setTimeout(function(){
+            fullpage_api.moveTo('secondPage', 1);
+        },5000);
+        distance = setTimeout(function(){
+            fullpage_api.moveTo('3rdPage', 1);
+        },10000);
+    })
+
+             
 
     //adding the action to the button
     $(document).on('click', '#moveTo1', function(){
@@ -28,4 +47,8 @@ $(function () {
       fullpage_api.moveTo('firstPage', 1);
     });
 
-});
+
+
+ })
+
+
