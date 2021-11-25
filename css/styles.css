@@ -183,7 +183,10 @@ ol > li > a
 
 
 
-
+        ::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
 
 
 /*-----------------------------------------------
@@ -1026,20 +1029,25 @@ body::before {
 
 
 .portfolio {
-   
+    background-image: url(../images/BG.jpg);
     background-position: center 0;
 }
 
 .prce {
-    
-    background-position: center 10%;
-}
-
-.aboutus {
-   
+    background-image: url(../images/BG.jpg);
     background-position: center 0;
 }
 
+.aboutus {
+    background-image: url(../images/BG.jpg);
+    background-position: center 0;
+}
+
+@media screen and (max-width: 1800px){
+    .portfolio, .prce, .aboutus {
+        background-size: cover;
+    }
+}
 
 /*---------------------------------------
              right-button

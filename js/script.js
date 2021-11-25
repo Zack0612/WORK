@@ -12,29 +12,33 @@ $(function () {
         navigation: true,
         navigationPosition: 'right',
         lazyLoad: true,
+        scrollBar: true
 
   })
 
-autoScroll();
-function autoScroll() {
-  timer = setTimeout(function() {
-       fullpage_api.moveTo('secondPage', 1);
-       console.log('timer')
-  }, 5000);
-  distance = setTimeout(function() {
-       fullpage_api.moveTo('3rdPage', 1);
-       console.log('distance')
-  }, 8000);
 
-  window.addEventListener('scroll', function() {
-     console.log('window.scrollY')
-    if (window.scrollY > 0) {
-      clearTimeout(timer);
-      clearTimeout(distance);
+    autoScroll()
+    function autoScroll() {
+        timer = setTimeout(function () {
+            fullpage_api.moveTo('secondPage', 1);
+        }, 3000);
+        distance = setTimeout(function () {
+            fullpage_api.moveTo('3rdPage', 1);
+        }, 5000);
+
+       // 滑鼠滾輪事件
+        document.documentElement.onmousewheel = function (event) {
+            if (event.deltaY > 0) {
+                clearTimeout(timer);
+                clearTimeout(distance);
+            }
+        }
     }
-  })
-}
 
+    $(document).on('click', '#fp-nav', function(){
+            clearTimeout(timer);
+            clearTimeout(distance);
+    });
 
 
    // $(window).load(
