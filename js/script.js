@@ -21,10 +21,10 @@ $(function () {
     function autoScroll() {
         timer = setTimeout(function () {
             fullpage_api.moveTo('secondPage', 1);
-        }, 3000);
+        }, 5000);
         distance = setTimeout(function () {
             fullpage_api.moveTo('3rdPage', 1);
-        }, 5000);
+        }, 15000);
 
        // 滑鼠滾輪事件
         document.documentElement.onmousewheel = function (event) {
