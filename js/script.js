@@ -33,6 +33,9 @@ $(function () {
           }
     })  
 
+       console.log(timer)
+       console.log(distance)
+
     })
 
 
