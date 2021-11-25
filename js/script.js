@@ -15,22 +15,26 @@ $(function () {
 
   })
 
-autoScroll();
 function autoScroll() {
   timer = setTimeout(function() {
        fullpage_api.moveTo('secondPage', 1);
+       console.log('timer')
   }, 5000);
   distance = setTimeout(function() {
        fullpage_api.moveTo('3rdPage', 1);
+       console.log('distance')
   }, 8000);
 
   window.addEventListener('scroll', function() {
+     console.log('window.scrollY')
     if (window.scrollY > 0) {
       clearTimeout(timer);
       clearTimeout(distance);
     }
   })
 }
+
+
 
    // $(window).load(
    //      function(){
@@ -73,5 +77,4 @@ function autoScroll() {
 
 
  })
-
 
