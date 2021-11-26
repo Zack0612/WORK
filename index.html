@@ -9,7 +9,6 @@
     <meta property="og:url" content="" />
     <meta property="og:image" content="" />
 
-    <link rel="shortcut icon" href="images/favicon.ico" />
     <title>理髮廳網站動態腳本</title>
 
     <!--  CSS  -->
@@ -20,7 +19,7 @@
 <body>
 
     <!-- KV  -->
-    <div class="logo wow slideInLeft"><img src="images/logo.png" alt=""></div>
+    <div id="logo" class="logo wow slideInLeft"><img src="images/logo.png" alt=""></div>
     <a class="call wow slideInDown" href="" target="_blank"><img src="images/call.png" alt=""></a>
 
     <div id="wrapper">
@@ -37,7 +36,7 @@
                     <div class="pic02_m wow fadeIn" data-wow-delay="0.5s"><img src="images/pic02_m.png" alt=""></div>
                     <div class="pic03_m wow fadeIn" data-wow-delay="1.5s"><img src="images/pic03_m.png" alt=""></div>
 
-                    <a class="scroll_outer" href="#s_01">
+                    <a class="scroll_outer" id="scroll">
                     <i></i>
                           <img class="scroll" src="images/scroll.png" alt="">
                    </a>
@@ -221,7 +220,8 @@
         roundLengths: true,
         centeredSlides: true,
         loop:true,
-  
+        direction: "horizontal",
+        loopHorizontal: false,
 
         keyboard: {
           enabled: true,
