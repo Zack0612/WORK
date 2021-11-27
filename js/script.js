@@ -35,13 +35,13 @@ $(function () {
 
     let startY;
     document.addEventListener("touchstart", function (event) {
-        event.preventDefault();
+        // event.preventDefault();
         startY = event.changedTouches[0].pageY;
     }, {passive: false})
 
     let moveEndY;
     document.addEventListener("touchmove", function (event) {
-        event.preventDefault();
+        // event.preventDefault();
         moveEndY = event.changedTouches[0].pageY;
         let Y = moveEndY - startY;
 

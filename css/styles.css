@@ -194,6 +194,7 @@ ol > li > a
 -----------------------------------------------*/
 
 .logo {
+    display: block;
     position: fixed;
     left: 0px;
     top: 0.5%;
@@ -203,6 +204,7 @@ ol > li > a
 }
 
 .call {
+    display: block;
     position: fixed;
     right: 8%;
     top: 0;
@@ -210,7 +212,32 @@ ol > li > a
     max-width: 13%;
 }
 
+@media screen and (max-width:1280px) {
+    
+    .logo {
+    max-width: 17%;
+}
 
+    .call{
+      max-height: 7%;
+      max-width: 10%;
+    }
+}
+
+@media screen and (max-height: 800px) {  
+    .logo {
+    max-width: 15%;
+    
+}
+
+    .call{
+      max-height: 10%;
+      max-width: 10%;
+     right: 2.5%;
+    }
+}
+
+    
 @media screen and (max-width:768px) {
     .logo {
         top: 0.2%;
@@ -392,6 +419,16 @@ p {
     display: none;
 }
 
+@media screen and (max-width:1280px) {
+    .tit{
+      max-height: 75%;
+    }
+}
+@media screen and (max-height: 800px) { 
+    .tit{
+      max-height: 73%;
+    }
+ }
 
 @media screen and (max-width:768px) {
 
@@ -448,6 +485,19 @@ p {
     display: none;
 }
 
+@media screen and (max-width:1280px) {
+    .price{
+
+        max-width: 75%;
+}
+
+}
+@media screen and (max-height: 800px) { 
+        .price{
+            max-width: 70%;
+    }
+}
+
 @media screen and (max-width:768px) {
     .price{
         display: none;
@@ -490,6 +540,18 @@ p {
 
 .about_m{
     display: none;
+}
+
+@media screen and (max-width:1280px) {
+    .about{
+        max-width: 75%; 
+    }
+}
+
+@media screen and (max-height: 800px) { 
+    .about{
+        max-width: 70%; 
+    }
 }
 
 @media screen and (max-width:768px) {
