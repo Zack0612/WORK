@@ -1,12 +1,9 @@
 window.addEventListener('hashchange', function (event) {
-    // console.log('event', event)
     const hash = window.location.hash;
-    console.log('onload hash', hash)
     if (hash) {
         // loading
         $("#bacc").fadeIn(300);
         $("#bacc").fadeOut(500);
-        console.log('hash1')
         const newHash = hash.replace(/^.*#/, '')
         const info = getInfo(newHash);
         if (info !== '') {
@@ -34,13 +31,10 @@ window.addEventListener('hashchange', function (event) {
 
 window.onload = function () {
     const hash = window.location.hash;
-    console.log('onload hash', hash)
     if (hash) {
-        console.log('onload hash', hash)
         // loading
         $("#bacc").fadeIn(300);
         $("#bacc").fadeOut(500);
-        console.log('hash2')
         const newHash = hash.replace(/^.*#/, '')
         const info = getInfo(newHash);
         if (info !== '') {
@@ -69,13 +63,11 @@ window.onload = function () {
     const cop2 = document.querySelector('.cop2');
     const topLink = document.querySelector('.top-link');
     cop1.addEventListener('click', () => {
-        console.log('cop1')
         cop1.style = 'display:none';
         cop2.style = 'display:block';
         topLink.style = 'right:0';
     }, false)
     cop2.addEventListener('click', () => {
-        console.log('cop2')
         cop2.style = 'display:none';
         cop1.style = 'display:block';
         topLink.style = 'right:-160px';
@@ -87,7 +79,6 @@ window.onload = function () {
 
 function runEffect() {
     $('html,body').animate({ scrollTop: $('.txt').offset().top - 50 }, 300);
-    console.log('runSwiper')
     // 初始化輪播
     var swiper = new Swiper('.swiper-container', {
         /*speed: 500,*/
@@ -131,27 +122,27 @@ function runEffect() {
         }
     })
 
-    $('.mu1 span').css('opacity',1);
-    $('.sk1').click(function(){
+    $('.mu1 span').css('opacity', 1);
+    $('.sk1').click(function () {
         $('.rcobx div,.swiper-slide img').removeAttr('style');
         $('.sk1 img:nth-child(1)').fadeOut(1);
         $('.sk1 img:nth-child(2)').fadeIn(1);
         $('.rc1').fadeIn();
-        $('.rc1').css('display','flex');
+        $('.rc1').css('display', 'flex');
     });
-    $('.sk2').click(function(){
+    $('.sk2').click(function () {
         $('.rcobx div,.swiper-slide img').removeAttr('style');
         $('.sk2 img:nth-child(1)').fadeOut(1);
         $('.sk2 img:nth-child(2)').fadeIn(1);
         $('.rc2').fadeIn();
-        $('.rc2').css('display','flex');
+        $('.rc2').css('display', 'flex');
     });
-    $('.sk3').click(function(){
+    $('.sk3').click(function () {
         $('.rcobx div,.swiper-slide img').removeAttr('style');
         $('.sk3 img:nth-child(1)').fadeOut(1);
         $('.sk3 img:nth-child(2)').fadeIn(1);
         $('.rc3').fadeIn();
-        $('.rc3').css('display','flex');
+        $('.rc3').css('display', 'flex');
     });
 
 
@@ -165,6 +156,7 @@ function runEffect() {
     }
     jobInfo();
     // 門派/技能影片
+    let currentVideo;
     $(".v_box a").mouseenter(function () {
         $(this).addClass('on').siblings('a').removeClass('on');
     })
@@ -173,14 +165,19 @@ function runEffect() {
         $('.alin_MV_box #a2').css('display', 'none')
         $('.alin_MV_test_pop_1').fadeIn();
         $('.alin_MV_test_pop_1').css('display', 'flex')
+        currentVideo = 'a1';
     })
     $(".v_box .a2").click(function () {
         $('.alin_MV_box #a1').css('display', 'none')
         $('.alin_MV_box #a2').css('display', 'block')
         $('.alin_MV_test_pop_1').fadeIn();
         $('.alin_MV_test_pop_1').css('display', 'flex')
+        currentVideo = 'a2';
     })
     $(".alin_MV_btn_close").click(function () {
+        // 關閉影片
+        let iframe = $(`iframe#${currentVideo}`)[0].contentWindow;
+        iframe.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
         $('.alin_MV_test_pop_1').fadeOut();
         $('.alin_MV_test_pop_1').css('display', 'none')
     })
@@ -191,7 +188,6 @@ function closeInfo(hash) {
     $('html,body').animate({ scrollTop: 0 }, 300);
     $('.dwn,#info').css('display', '');
     const newHash = hash.replace(/^.*#/, '');
-    console.log('newHash', newHash)
     $(`[data-id=${newHash}`).siblings().children('span').removeAttr("style");
     $(`[data-id=${newHash}`).children('span').removeAttr("style");
     $('.content').removeAttr("style");
@@ -301,12 +297,12 @@ const update_1_1 = `<div class="txt t_1"></div>
         </div>
         <div class="alin_MV_box">
             <iframe id="a1" class="youtube-video" width="100%" height="100%"
-                src="https://www.youtube.com/embed/NKeMj4tf__s?autoplay=0&amp;loop=1&amp;rel=0"
+                src="https://www.youtube.com/embed/NKeMj4tf__s?enablejsapi=1&autoplay=0&amp;loop=1&amp;rel=0"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen=""></iframe>
             <iframe id="a2" class="youtube-video" width="100%" height="100%"
-                src="https://www.youtube.com/embed/wUZ0pBkoyYk?autoplay=0&amp;loop=1&amp;rel=0"
+                src="https://www.youtube.com/embed/wUZ0pBkoyYk?enablejsapi=1&autoplay=0&amp;loop=1&amp;rel=0"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen=""></iframe>
