@@ -95,12 +95,13 @@ const infoList = {
     <a href="#update_1_2" data-id="update_1_2" class="mu2_1_1"><span></span></a>
     <a href="#update_1_3" data-id="update_1_3" class="mu2_1_2"><span></span></a>
     <a href="#update_1_4" data-id="update_1_4" class="mu2_1_3"><span></span></a>
+    <div class="imubx-close"></div>
 </div>
 
 <!-- 勢力起源START -->
 <div class="w1200 info2">
 <div class="eject_box" style="display: block;">
-<div class="close"></div>
+<div class="close close-mobile"></div>
 <div class="change-control">
     <div class="prev1"><a href="javascript:;"></a></div>
     <div class="next1"><a href="javascript:;"></a></div>
@@ -126,6 +127,8 @@ const infoList = {
 
 </div>
 </div>
+
+
 <!-- 勢力起源END　-->
 `,
     update_1_3: `<div class="txt t_1"></div>
@@ -135,12 +138,13 @@ const infoList = {
     <a href="#update_1_2" data-id="update_1_2" class="mu2_1_1"><span></span></a>
     <a href="#update_1_3" data-id="update_1_3" class="mu2_1_2"><span></span></a>
     <a href="#update_1_4" data-id="update_1_4" class="mu2_1_3"><span></span></a>
+    <div class="imubx-close"></div>
 </div>
 
 <!-- 勢力起源START -->
-<div class="w1200 info2">
+<div class="w1200 info2 info1_3">
 <div class="eject_box" style="display: block;">
-<div class="close"></div>
+<div class="close close-mobile"></div>
 <div class="chest_main">
 <div class="tk_box">
   <ul>
@@ -340,11 +344,12 @@ const infoList = {
     <a href="#update_2_2_1" data-id="update_2_2_1" class="mu2_2"><span></span></a>
     <a href="#update_2_3" data-id="update_2_3" class="mu2_3"><span></span></a>
     <a href="#update_2_4_1" data-id="update_2_4_1" class="mu2_4"><span></span></a>
+    <div class="imubx-close"></div>
 </div>
 
 <div class="w1200 info2">
 <div class="eject_box eject_box2_1" style="display: block;">
-<div class="close"></div>
+<div class="close close-mobile"></div>
 <div class="chest_main" style="display: block;">
 
 <div class="tk_box phx2 ph2-1">
@@ -967,11 +972,12 @@ const infoList = {
     <a href="#update_2_2_1" data-id="update_2_2_1" class="mu2_2"><span></span></a>
     <a href="#update_2_3" data-id="update_2_3" class="mu2_3"><span></span></a>
     <a href="#update_2_4_1" data-id="update_2_4_1" class="mu2_4"><span></span></a>
+    <div class="imubx-close"></div>
 </div>
 
 <div class="w1200 info2">
 <div class="eject_box eject_box2_1" style="display: block;">
-<div class="close"></div>
+<div class="close close-mobile"></div>
 <div class="chest_main" style="display: block;">
 
 <div class="tk_box phx2 ph2-4">
@@ -1008,11 +1014,12 @@ const infoList = {
     <a href="#update_2_2_1" data-id="update_2_2_1" class="mu2_2"><span></span></a>
     <a href="#update_2_3" data-id="update_2_3" class="mu2_3"><span></span></a>
     <a href="#update_2_4_1" data-id="update_2_4_1" class="mu2_4"><span></span></a>
+    <div class="imubx-close"></div>
 </div>
 
 <div class="w1200 info2 info2-4">
 <div class="eject_box eject_box2_4" style="display: block;">
-<div class="close"></div>
+<div class="close close-mobile"></div>
 <div class="change-control">
     <div class="prev2"><a href="#update_2_4_10"></a></div>
     <div class="next2"><a href="#update_2_4_2"></a></div>
@@ -1051,11 +1058,12 @@ const infoList = {
     <a href="#update_2_2_1" data-id="update_2_2_1" class="mu2_2"><span></span></a>
     <a href="#update_2_3" data-id="update_2_3" class="mu2_3"><span></span></a>
     <a href="#update_2_4_1" data-id="update_2_4_1" class="mu2_4"><span style="opacity:100"></span></a>
+    <div class="imubx-close"></div>
 </div>
 
 <div class="w1200 info2 info2-4">
 <div class="eject_box eject_box2_4" style="display: block;">
-<div class="close"></div>
+<div class="close close-mobile"></div>
 <div class="change-control">
     <div class="prev2"><a href="#update_2_4_1"></a></div>
     <div class="next2"><a href="#update_2_4_3"></a></div>
@@ -1094,11 +1102,12 @@ const infoList = {
     <a href="#update_2_2_1" data-id="update_2_2_1" class="mu2_2"><span></span></a>
     <a href="#update_2_3" data-id="update_2_3" class="mu2_3"><span></span></a>
     <a href="#update_2_4_1" data-id="update_2_4_1" class="mu2_4"><span style="opacity:100"></span></a>
+    <div class="imubx-close"></div>
 </div>
 
 <div class="w1200 info2 info2-4">
 <div class="eject_box eject_box2_4" style="display: block;">
-<div class="close"></div>
+<div class="close close-mobile"></div>
 <div class="change-control">
     <div class="prev2"><a href="#update_2_4_2"></a></div>
     <div class="next2"><a href="#update_2_4_4"></a></div>
@@ -1137,11 +1146,12 @@ const infoList = {
     <a href="#update_2_2_1" data-id="update_2_2_1" class="mu2_2"><span></span></a>
     <a href="#update_2_3" data-id="update_2_3" class="mu2_3"><span></span></a>
     <a href="#update_2_4_1" data-id="update_2_4_1" class="mu2_4"><span style="opacity:100"></span></a>
+    <div class="imubx-close"></div>
 </div>
 
 <div class="w1200 info2 info2-4">
 <div class="eject_box eject_box2_4" style="display: block;">
-<div class="close"></div>
+<div class="close close-mobile"></div>
 <div class="change-control">
     <div class="prev2"><a href="#update_2_4_3"></a></div>
     <div class="next2"><a href="#update_2_4_5"></a></div>
@@ -1180,11 +1190,12 @@ const infoList = {
     <a href="#update_2_2_1" data-id="update_2_2_1" class="mu2_2"><span></span></a>
     <a href="#update_2_3" data-id="update_2_3" class="mu2_3"><span></span></a>
     <a href="#update_2_4_1" data-id="update_2_4_1" class="mu2_4"><span style="opacity:100"></span></a>
+    <div class="imubx-close"></div>
 </div>
 
 <div class="w1200 info2 info2-4">
 <div class="eject_box eject_box2_4" style="display: block;">
-<div class="close"></div>
+<div class="close close-mobile"></div>
 <div class="change-control">
     <div class="prev2"><a href="#update_2_4_4"></a></div>
     <div class="next2"><a href="#update_2_4_6"></a></div>
@@ -1223,11 +1234,12 @@ const infoList = {
     <a href="#update_2_2_1" data-id="update_2_2_1" class="mu2_2"><span></span></a>
     <a href="#update_2_3" data-id="update_2_3" class="mu2_3"><span></span></a>
     <a href="#update_2_4_1" data-id="update_2_4_1" class="mu2_4"><span style="opacity:100"></span></a>
+    <div class="imubx-close"></div>
 </div>
 
 <div class="w1200 info2 info2-4">
 <div class="eject_box eject_box2_4" style="display: block;">
-<div class="close"></div>
+<div class="close close-mobile"></div>
 <div class="change-control">
     <div class="prev2"><a href="#update_2_4_5"></a></div>
     <div class="next2"><a href="#update_2_4_7"></a></div>
@@ -1267,11 +1279,12 @@ const infoList = {
     <a href="#update_2_2_1" data-id="update_2_2_1" class="mu2_2"><span></span></a>
     <a href="#update_2_3" data-id="update_2_3" class="mu2_3"><span></span></a>
     <a href="#update_2_4_1" data-id="update_2_4_1" class="mu2_4"><span style="opacity:100"></span></a>
+    <div class="imubx-close"></div>
 </div>
 
 <div class="w1200 info2 info2-4">
 <div class="eject_box eject_box2_4" style="display: block;">
-<div class="close"></div>
+<div class="close close-mobile"></div>
 <div class="change-control">
     <div class="prev2"><a href="#update_2_4_6"></a></div>
     <div class="next2"><a href="#update_2_4_8"></a></div>
@@ -1311,11 +1324,12 @@ const infoList = {
     <a href="#update_2_2_1" data-id="update_2_2_1" class="mu2_2"><span></span></a>
     <a href="#update_2_3" data-id="update_2_3" class="mu2_3"><span></span></a>
     <a href="#update_2_4_1" data-id="update_2_4_1" class="mu2_4"><span style="opacity:100"></span></a>
+    <div class="imubx-close"></div>
 </div>
 
 <div class="w1200 info2 info2-4">
 <div class="eject_box eject_box2_4" style="display: block;">
-<div class="close"></div>
+<div class="close close-mobile"></div>
 <div class="change-control">
     <div class="prev2"><a href="#update_2_4_7"></a></div>
     <div class="next2"><a href="#update_2_4_9"></a></div>
@@ -1354,11 +1368,12 @@ const infoList = {
     <a href="#update_2_2_1" data-id="update_2_2_1" class="mu2_2"><span></span></a>
     <a href="#update_2_3" data-id="update_2_3" class="mu2_3"><span></span></a>
     <a href="#update_2_4_1" data-id="update_2_4_1" class="mu2_4"><span style="opacity:100"></span></a>
+    <div class="imubx-close"></div>
 </div>
 
 <div class="w1200 info2 info2-4">
 <div class="eject_box eject_box2_4" style="display: block;">
-<div class="close"></div>
+<div class="close close-mobile"></div>
 <div class="change-control">
     <div class="prev2"><a href="#update_2_4_8"></a></div>
     <div class="next2"><a href="#update_2_4_10"></a></div>
@@ -1397,11 +1412,12 @@ const infoList = {
     <a href="#update_2_2_1" data-id="update_2_2_1" class="mu2_2"><span></span></a>
     <a href="#update_2_3" data-id="update_2_3" class="mu2_3"><span></span></a>
     <a href="#update_2_4_1" data-id="update_2_4_1" class="mu2_4"><span style="opacity:100"></span></a>
+    <div class="imubx-close"></div>
 </div>
 
 <div class="w1200 info2 info2-4">
 <div class="eject_box eject_box2_4" style="display: block;">
-<div class="close"></div>
+<div class="close close-mobile"></div>
 <div class="change-control">
     <div class="prev2"><a href="#update_2_4_9"></a></div>
     <div class="next2"><a href="#update_2_4_1"></a></div>
@@ -1443,11 +1459,12 @@ const infoList = {
     <a href="#update_3_5" data-id="update_3_5" class="mu3_5"><span></span></a>
     <a href="#update_3_6" data-id="update_3_6" class="mu3_6"><span></span></a>
     <a href="#update_3_7" data-id="update_3_7" class="mu3_7"><span></span></a>
+    <div class="imubx-close"></div>
 </div>
 
 <div class="w1200 info2">
 <div class="eject_box" style="display: block;">
-<div class="close"></div>
+<div class="close close-mobile"></div>
 <div class="change-control">
     <div class="prev2"><a href="#update_3_7"></a></div>
     <div class="next2"><a href="#update_3_2"></a></div>
@@ -1475,10 +1492,11 @@ const infoList = {
     <a href="#update_3_5" data-id="update_3_5" class="mu3_5"><span></span></a>
     <a href="#update_3_6" data-id="update_3_6" class="mu3_6"><span></span></a>
     <a href="#update_3_7" data-id="update_3_7" class="mu3_7"><span></span></a>
+    <div class="imubx-close"></div>
 </div>
 <div class="w1200 info2">
 <div class="eject_box" style="display: block;">
-<div class="close"></div>
+<div class="close close-mobile"></div>
 <div class="change-control">
     <div class="prev2"><a href="#update_3_1"></a></div>
     <div class="next2"><a href="#update_3_3"></a></div>
@@ -1506,10 +1524,11 @@ const infoList = {
     <a href="#update_3_5" data-id="update_3_5" class="mu3_5"><span></span></a>
     <a href="#update_3_6" data-id="update_3_6" class="mu3_6"><span></span></a>
     <a href="#update_3_7" data-id="update_3_7" class="mu3_7"><span></span></a>
+    <div class="imubx-close"></div>
 </div>
 <div class="w1200 info2">
 <div class="eject_box" style="display: block;">
-<div class="close"></div>
+<div class="close close-mobile"></div>
 <div class="change-control">
     <div class="prev2"><a href="#update_3_2"></a></div>
     <div class="next2"><a href="#update_3_4"></a></div>
@@ -1537,10 +1556,11 @@ const infoList = {
     <a href="#update_3_5" data-id="update_3_5" class="mu3_5"><span></span></a>
     <a href="#update_3_6" data-id="update_3_6" class="mu3_6"><span></span></a>
     <a href="#update_3_7" data-id="update_3_7" class="mu3_7"><span></span></a>
+    <div class="imubx-close"></div>
 </div>
 <div class="w1200 info2">
 <div class="eject_box" style="display: block;">
-<div class="close"></div>
+<div class="close close-mobile"></div>
 <div class="change-control">
     <div class="prev2"><a href="#update_3_3"></a></div>
     <div class="next2"><a href="#update_3_5"></a></div>
@@ -1569,10 +1589,11 @@ const infoList = {
     <a href="#update_3_5" data-id="update_3_5" class="mu3_5"><span></span></a>
     <a href="#update_3_6" data-id="update_3_6" class="mu3_6"><span></span></a>
     <a href="#update_3_7" data-id="update_3_7" class="mu3_7"><span></span></a>
+    <div class="imubx-close"></div>
 </div>
 <div class="w1200 info2">
 <div class="eject_box" style="display: block;">
-<div class="close"></div>
+<div class="close close-mobile"></div>
 <div class="change-control">
     <div class="prev2"><a href="#update_3_4"></a></div>
     <div class="next2"><a href="#update_3_6"></a></div>
@@ -1600,10 +1621,11 @@ const infoList = {
     <a href="#update_3_5" data-id="update_3_5" class="mu3_5"><span></span></a>
     <a href="#update_3_6" data-id="update_3_6" class="mu3_6"><span></span></a>
     <a href="#update_3_7" data-id="update_3_7" class="mu3_7"><span></span></a>
+    <div class="imubx-close"></div>
 </div>
 <div class="w1200 info2">
 <div class="eject_box" style="display: block;">
-<div class="close"></div>
+<div class="close close-mobile"></div>
 <div class="change-control">
     <div class="prev2"><a href="#update_3_5"></a></div>
     <div class="next2"><a href="#update_3_7"></a></div>
@@ -1631,10 +1653,11 @@ const infoList = {
     <a href="#update_3_5" data-id="update_3_5" class="mu3_5"><span></span></a>
     <a href="#update_3_6" data-id="update_3_6" class="mu3_6"><span></span></a>
     <a href="#update_3_7" data-id="update_3_7" class="mu3_7"><span></span></a>
+    <div class="imubx-close"></div>
 </div>
 <div class="w1200 info2">
 <div class="eject_box" style="display: block;">
-<div class="close"></div>
+<div class="close close-mobile"></div>
 <div class="change-control">
     <div class="prev2"><a href="#update_3_7"></a></div>
     <div class="next2"><a href="#update_3_1"></a></div>

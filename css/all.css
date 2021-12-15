@@ -58,7 +58,6 @@ swiper-button-white {
     .swiper-slide.peo img {
         padding: 0 25%;
         margin: auto;
-        /* width: 195px; */
     }
     .swiper-slide.peo1_4_1 img {
         padding: 0 15vw;
@@ -138,7 +137,6 @@ swiper-button-white {
 .header {
     position: relative;
     width: 100%;
-    /* height: 960px; */
     max-width: 1920px;
     background-image: url(../images/bg.jpg);
     background-repeat: no-repeat;
@@ -533,7 +531,7 @@ swiper-button-white {
 }
 
 .info4 {
-    width: 85vw;
+    width: 1230px;
     max-width: 100%;
     height: 100%;
     margin: 0 auto;
@@ -907,7 +905,6 @@ swiper-button-white {
 .info2 {
     width: 100%;
     height: 900px;
-    margin-top: 8%;
 }
 
 .info2 .close {
@@ -918,8 +915,8 @@ swiper-button-white {
     top: -5vw;
     right: 3vw;
     margin: auto;
-    width: 5vw;
-    height: 5vw;
+    width: 3.8vw;
+    height: 3.8vw;
     background: url(../images/close.png) no-repeat;
     background-size: 100%;
     z-index: 10;
@@ -942,7 +939,7 @@ swiper-button-white {
     z-index: 10;
     transition: all 0.5s;
 }
-.info4 .close-mobile {
+.close-mobile {
     display: none;
     position: absolute;
     cursor: pointer;
@@ -964,13 +961,13 @@ swiper-button-white {
 
 .imubx-close {
     cursor: pointer;
-    margin-left: auto;
-    width: 5vw;
-    height: 5vw;
     background: url(../images/close.png) no-repeat;
     background-size: 100%;
     z-index: 10;
     transition: all 0.5s;
+    margin: 1rem 0 0 auto; 
+    width: 3.8vw;
+    height: 3.8vw;
 }
 
 .imbux-close_4_1 {
@@ -1346,6 +1343,9 @@ swiper-button-white {
     .info2 {
         height: 170vw;
     }
+    .info2.info1_3 {
+        height: 145vw;
+    }
     .info2.info2-4 {
         height: 180vw;
     }
@@ -1405,6 +1405,10 @@ swiper-button-white {
         top: 153vw;
         bottom: auto;
     }
+    .info2.info1_3 .close {
+        top: 125vw;
+        bottom: auto;
+    }
     .info2.info2-4 .close {
         top: 160vw;
         bottom: auto;
@@ -1415,13 +1419,13 @@ swiper-button-white {
     .info4 .close {
         display: none;
     }
-    .info4 .close-mobile {
+    .close-mobile {
         display: block;
     }
     .imubx-close {
         display: none;
     }
-    .info4 .imubx-close-mobile {
+    .imubx-close-mobile {
         position: relative;
         padding: 8% 0;
         margin-top: 5%;

@@ -171,9 +171,11 @@ td {
 
 #imubx {
 	position: relative;
-	width: 1200px;
+	/* width: 1200px; */
 	text-align: center;
-	margin: 35px auto;
+	/* margin: 35px auto; */
+	margin: 35px auto 0;
+	width: 1100px;
 }
 #imubx a,
 #imubx2 a.mu2_0 {
@@ -716,7 +718,7 @@ td {
 	position: relative;
 	text-align: center;
 	padding: 20px 0 10px;
-	width: 1200px;
+	width: 970px;
 	margin: auto;
 	max-width: 100%;
 }
