@@ -1865,7 +1865,7 @@ const infoList = {
     <a href="#update_4_4" data-id="update_4_4" class="mu4_4"><span></span></a>
     <a href="#update_4_5" data-id="update_4_5" class="mu4_5"><span></span></a>
     <a href="#update_4_6" data-id="update_4_6" class="mu4_6"><span></span></a>
-    <a href="javascript:alert('敬請期待');" data-id="update_4_7" class="mu4_7"><span></span></a>
+    <a href="#update_4_7" data-id="update_4_7" class="mu4_7"><span></span></a>
     <a href="#update_4_8" data-id="update_4_8" class="mu4_8"><span></span></a>
     <a href="javascript:alert('敬請期待');" data-id="update_4_9" class="mu4_9"><span></span></a>
     <a href="#update_4_10" data-id="update_4_10" class="mu4_10"><span></span></a>
@@ -1898,7 +1898,7 @@ const infoList = {
     <a href="#update_4_4" data-id="update_4_4" class="mu4_4"><span></span></a>
     <a href="#update_4_5" data-id="update_4_5" class="mu4_5"><span></span></a>
     <a href="#update_4_6" data-id="update_4_6" class="mu4_6"><span></span></a>
-    <a href="javascript:alert('敬請期待');" data-id="update_4_7" class="mu4_7"><span></span></a>
+    <a href="#update_4_7" data-id="update_4_7" class="mu4_7"><span></span></a>
     <a href="#update_4_8" data-id="update_4_8" class="mu4_8"><span></span></a>
     <a href="javascript:alert('敬請期待');" data-id="update_4_9" class="mu4_9"><span></span></a>
     <a href="#update_4_10" data-id="update_4_10" class="mu4_10"><span></span></a>
@@ -1935,7 +1935,7 @@ const infoList = {
     <a href="#update_4_4" data-id="update_4_4" class="mu4_4"><span></span></a>
     <a href="#update_4_5" data-id="update_4_5" class="mu4_5"><span></span></a>
     <a href="#update_4_6" data-id="update_4_6" class="mu4_6"><span></span></a>
-    <a href="javascript:alert('敬請期待');" data-id="update_4_7" class="mu4_7"><span></span></a>
+    <a href="#update_4_7" data-id="update_4_7" class="mu4_7"><span></span></a>
     <a href="#update_4_8" data-id="update_4_8" class="mu4_8"><span></span></a>
     <a href="javascript:alert('敬請期待');" data-id="update_4_9" class="mu4_9"><span></span></a>
     <a href="#update_4_10" data-id="update_4_10" class="mu4_10"><span></span></a>
@@ -2032,7 +2032,7 @@ const infoList = {
     <a href="#update_4_4" data-id="update_4_4" class="mu4_4"><span></span></a>
     <a href="#update_4_5" data-id="update_4_5" class="mu4_5"><span></span></a>
     <a href="#update_4_6" data-id="update_4_6" class="mu4_6"><span></span></a>
-    <a href="javascript:alert('敬請期待');" data-id="update_4_7" class="mu4_7"><span></span></a>
+    <a href="#update_4_7" data-id="update_4_7" class="mu4_7"><span></span></a>
     <a href="#update_4_8" data-id="update_4_8" class="mu4_8"><span></span></a>
     <a href="javascript:alert('敬請期待');" data-id="update_4_9" class="mu4_9"><span></span></a>
     <a href="#update_4_10" data-id="update_4_10" class="mu4_10"><span></span></a>
@@ -2078,7 +2078,7 @@ const infoList = {
     <a href="#update_4_4" data-id="update_4_4" class="mu4_4"><span></span></a>
     <a href="#update_4_5" data-id="update_4_5" class="mu4_5"><span></span></a>
     <a href="#update_4_6" data-id="update_4_6" class="mu4_6"><span></span></a>
-    <a href="javascript:alert('敬請期待');" data-id="update_4_7" class="mu4_7"><span></span></a>
+    <a href="#update_4_7" data-id="update_4_7" class="mu4_7"><span></span></a>
     <a href="#update_4_8" data-id="update_4_8" class="mu4_8"><span></span></a>
     <a href="javascript:alert('敬請期待');" data-id="update_4_9" class="mu4_9"><span></span></a>
     <a href="#update_4_10" data-id="update_4_10" class="mu4_10"><span></span></a>
@@ -2116,7 +2116,7 @@ const infoList = {
     <a href="#update_4_4" data-id="update_4_4" class="mu4_4"><span></span></a>
     <a href="#update_4_5" data-id="update_4_5" class="mu4_5"><span></span></a>
     <a href="#update_4_6" data-id="update_4_6" class="mu4_6"><span></span></a>
-    <a href="javascript:alert('敬請期待');" data-id="update_4_7" class="mu4_7"><span></span></a>
+    <a href="#update_4_7" data-id="update_4_7" class="mu4_7"><span></span></a>
     <a href="#update_4_8" data-id="update_4_8" class="mu4_8"><span></span></a>
     <a href="javascript:alert('敬請期待');" data-id="update_4_9" class="mu4_9"><span></span></a>
     <a href="#update_4_10" data-id="update_4_10" class="mu4_10"><span></span></a>
@@ -2143,6 +2143,41 @@ const infoList = {
 <div class="dwbx"></div>
 `,
 
+ update_4_7: `<div class="txt t_4"></div>
+<!-- 選單 -->
+<div id="imubx" class="imbubx_4_1">
+    <a href="#update_4_1" data-id="update_4_1" class="mu4_1"><span></span></a>
+    <a href="#update_4_2" data-id="update_4_2" class="mu4_2"><span></span></a>
+    <a href="#update_4_3" data-id="update_4_3" class="mu4_3"><span></span></a>
+    <a href="#update_4_4" data-id="update_4_4" class="mu4_4"><span></span></a>
+    <a href="#update_4_5" data-id="update_4_5" class="mu4_5"><span></span></a>
+    <a href="#update_4_6" data-id="update_4_6" class="mu4_6"><span></span></a>
+    <a href="#update_4_7" data-id="update_4_7" class="mu4_7"><span></span></a>
+    <a href="#update_4_8" data-id="update_4_8" class="mu4_8"><span></span></a>
+    <a href="javascript:alert('敬請期待');" data-id="update_4_9" class="mu4_9"><span></span></a>
+    <a href="#update_4_10" data-id="update_4_10" class="mu4_10"><span></span></a>
+</div>
+<div class="actbx"><img src="images/act6.png"><div class="imubx-close imbux-close_4_1"></div></div>
+<div class="stcon2">
+    <div>
+        <div class="at1">活動時間：</div>
+        <div class="tf"><span style="color:#caff9a">2021年12月16日(四)維護後 至 2021年12月23日(四)23:59</span>
+        </div>
+    </div>
+    <div>
+</div>
+    <div>
+        <div class="at1" style="display:block">活動方式：</div>
+        <div class="tf tf2">活動期間商城消費通寶，積分回饋1.5倍！
+        </div>
+    </div>
+</div>
+
+<div class="imubx-close imbux-close_4_1_mobile"></div>
+
+<div class="dwbx"></div>
+`,
+
     update_4_8: `<div class="txt t_4"></div>
 <!-- 選單 -->
 <div id="imubx" class="imbubx_4_1">
@@ -2152,7 +2187,7 @@ const infoList = {
     <a href="#update_4_4" data-id="update_4_4" class="mu4_4"><span></span></a>
     <a href="#update_4_5" data-id="update_4_5" class="mu4_5"><span></span></a>
     <a href="#update_4_6" data-id="update_4_6" class="mu4_6"><span></span></a>
-    <a href="javascript:alert('敬請期待');" data-id="update_4_7" class="mu4_7"><span></span></a>
+    <a href="#update_4_7" data-id="update_4_7" class="mu4_7"><span></span></a>
     <a href="#update_4_8" data-id="update_4_8" class="mu4_8"><span></span></a>
     <a href="javascript:alert('敬請期待');" data-id="update_4_9" class="mu4_9"><span></span></a>
     <a href="#update_4_10" data-id="update_4_10" class="mu4_10"><span></span></a>
@@ -2188,7 +2223,7 @@ const infoList = {
     <a href="#update_4_4" data-id="update_4_4" class="mu4_4"><span></span></a>
     <a href="#update_4_5" data-id="update_4_5" class="mu4_5"><span></span></a>
     <a href="#update_4_6" data-id="update_4_6" class="mu4_6"><span></span></a>
-    <a href="javascript:alert('敬請期待');" data-id="update_4_7" class="mu4_7"><span></span></a>
+    <a href="#update_4_7" data-id="update_4_7" class="mu4_7"><span></span></a>
     <a href="#update_4_8" data-id="update_4_8" class="mu4_8"><span></span></a>
     <a href="javascript:alert('敬請期待');" data-id="update_4_9" class="mu4_9"><span></span></a>
     <a href="#update_4_10" data-id="update_4_10" class="mu4_10"><span></span></a>
