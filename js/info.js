@@ -2157,7 +2157,7 @@ const infoList = {
     <a href="javascript:alert('敬請期待');" data-id="update_4_9" class="mu4_9"><span></span></a>
     <a href="#update_4_10" data-id="update_4_10" class="mu4_10"><span></span></a>
 </div>
-<div class="actbx"><img src="images/act6.png"><div class="imubx-close imbux-close_4_1"></div></div>
+<div class="actbx"><img src="images/act7.png"><div class="imubx-close imbux-close_4_1"></div></div>
 <div class="stcon2">
     <div>
         <div class="at1">活動時間：</div>
