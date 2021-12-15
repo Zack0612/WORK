@@ -7,9 +7,8 @@
 }
 
 .swiper-slide img {
-    position: relative;
-    margin: 0 auto;
     cursor: pointer;
+    width: 100%;
 }
 
 .swiper-slide img:nth-child(1) {
@@ -18,6 +17,13 @@
 
 .swiper-slide img:nth-child(2) {
     display: none;
+}
+
+.peo.swiper-slide-thumb-active img:nth-child(1) {
+    display: none;
+}
+.peo.swiper-slide-thumb-active img:nth-child(2) {
+    display: block;
 }
 
 .swiper-button-white,
@@ -45,10 +51,15 @@ swiper-button-white {
 }
 
 @media only screen and (max-width: 600px) {
-    /**/
     .swiper-button-white,
     swiper-button-white {
         display: block;
+    }
+    .swiper-slide.peo img {
+        padding: 0 20%;
+    }
+    .swiper-slide.peo1_4_1 img {
+        padding: 0 15vw;
     }
 }
 /* loading */
@@ -81,7 +92,7 @@ swiper-button-white {
 .logo {
     position: absolute;
     width: 250px;
-    height: 132px;
+    height: 125px;
     top: 1%;
     left: 1%;
     background-image: url(../images/logo.png);
@@ -137,9 +148,6 @@ swiper-button-white {
     position: relative;
     width: 1000px;
     height: 936px;
-    /* padding-bottom: 936px; */
-    /* 切換主內容加上1080px */
-    /* padding-bottom: 1080px; */
     margin: 0 auto;
 }
 .slogan {
@@ -155,7 +163,6 @@ swiper-button-white {
     left: 0;
     right: 0;
     top: 18%;
-    /* 切換主內容加上top: 16%; */
     transition: all 0.5s;
     -moz-transition: all 0.5s;
     -webkit-transition: all 0.5s;
@@ -220,7 +227,7 @@ swiper-button-white {
     left: 50%;
     margin-left: -960px;
 }
-/* 切換主內容加上2140px */
+
 .video-width {
     width: 2140px;
 }
@@ -231,8 +238,6 @@ swiper-button-white {
     position: absolute;
     width: 2140px;
     height: 100%;
-    /* 切換主內容加上111vh */
-    /* height: 111vh; */
     background-color: rgba(0, 0, 0, 0.3);
     top: 0;
     left: 0;
@@ -242,7 +247,6 @@ swiper-button-white {
     width: 88%;
     padding-bottom: 22%;
     top: 67%;
-    /* 切換主內容加上 top: 58%; */
     left: -2%;
     right: 0;
     margin: 0 auto;
@@ -479,7 +483,8 @@ swiper-button-white {
     align-items: center;
     background-color: rgba(172, 223, 54, 0);
 }
-.alin_MV_btn_close {
+.alin_MV_btn_close,
+.mv_close {
     position: relative;
     margin-bottom: 3vw;
     cursor: pointer;
@@ -515,7 +520,6 @@ swiper-button-white {
 
 /* 主內容 start */
 .w1200 {
-    /* width: 1300px; */
     width: 64%;
     height: 60vw;
     margin: 0 auto;
@@ -527,12 +531,12 @@ swiper-button-white {
 }
 
 .info4 {
-    /* width: 1300px; */
     width: 85vw;
     max-width: 100%;
     height: 100%;
     margin: 0 auto;
     position: relative;
+    padding-bottom: 2rem;
 }
 
 .info4 > .close {
@@ -547,15 +551,11 @@ swiper-button-white {
     z-index: 10;
 }
 .name_lk {
-    /* width: 436px;
-    height: 304px; */
     width: 22vw;
     height: 16vw;
     background: url(../images/ph1.png) no-repeat;
     background-size: 100%;
     position: absolute;
-    /* top: 173px;
-    left: 50px; */
     top: 9vw;
     left: 0;
     transform: translateX(0px);
@@ -578,8 +578,6 @@ swiper-button-white {
 }
 
 .bg_img10 {
-    /* width: 692px;
-    height: 679px; */
     width: 36vw;
     height: 36vw;
     background: url(../images/ph6.png) no-repeat;
@@ -605,8 +603,6 @@ swiper-button-white {
 }
 
 .peo_img_1 {
-    /* width: 1095px;
-    height: 1035px; */
     width: 55vw;
     height: 58vw;
     background: url(../images/ph5.png) no-repeat;
@@ -671,8 +667,6 @@ swiper-button-white {
     opacity: 1;
 }
 .btn_box {
-    /* width: 480px;
-    height: 240px; */
     position: absolute;
     left: 0;
     top: 25vw;
@@ -686,14 +680,11 @@ swiper-button-white {
     opacity: 1;
 }
 .btn_box .zf_btn {
-    /* width: 120px; */
     width: 6vw;
     overflow: hidden;
     float: left;
 }
 .btn_box .zf_btn10 a.zf1 {
-    /* width: 112px;
-    height: 112px; */
     width: 12vw;
     height: 6.8vw;
     background: url(../images/ph2group.png) no-repeat;
@@ -701,25 +692,19 @@ swiper-button-white {
     display: block;
 }
 .btn_box .zf_btn10 a.zf2 {
-    /* width: 112px;
-    height: 112px; */
     width: 12vw;
     height: 6.8vw;
     background: url(../images/ph3group.png) no-repeat;
     background-size: 100%;
     display: block;
-    /* margin-top: -14px; */
     margin-top: -1.9vw;
 }
 .btn_box .zf_btn10 a.on {
-    /* background-position: -112px 0; */
     background-position: -6vw 0;
     position: relative;
     z-index: 2;
 }
 .plant_count {
-    /* width: 340px;
-    height: 240px; */
     width: 13vw;
     float: left;
     margin-left: 14px;
@@ -728,8 +713,6 @@ swiper-button-white {
     display: none;
     animation: fadeInRight1 0.8s 0.2s 1 both;
     filter: alpha(opacity=0);
-    opacity: 0;
-    /* 輪播時加上透明100 */
     opacity: 100;
 }
 .plant_count .p_c span {
@@ -738,7 +721,6 @@ swiper-button-white {
 }
 .plant_count .p_c .span1 {
     color: rgb(219, 204, 147);
-    /* font-size: 30px; */
     font-size: 1.56vw;
 }
 .plant_count .p_c .span_line1 {
@@ -765,8 +747,6 @@ swiper-button-white {
 }
 .plant_count .p_c .span3 {
     display: block;
-    /* width: 73%; */
-
     text-align: justify;
 }
 .plant_count .p_c .span_line3 {
@@ -829,8 +809,6 @@ swiper-button-white {
     transform: rotate(-45deg);
 }
 .v_box a .plant_icon {
-    /* width: 36px;
-    height: 50px; */
     width: 2vw;
     height: 3vw;
     color: #aea490;
@@ -952,11 +930,9 @@ swiper-button-white {
 .info4 .close {
     display: block;
     position: absolute;
-    display: block;
     cursor: pointer;
     top: 18px;
     right: 0;
-    margin-right: 16vw;
     width: 5vw;
     height: 5vw;
     background: url(../images/close.png) no-repeat;
@@ -964,20 +940,50 @@ swiper-button-white {
     z-index: 10;
     transition: all 0.5s;
 }
-.info4 .close:hover {
+.info4 .close-mobile {
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    bottom: 3%;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 10vw;
+    height: 10vw;
+    background: url(../images/close.png) no-repeat;
+    background-size: 100%;
+    z-index: 10;
+    transition: all 0.5s;
+}
+.info4 .close:hover,
+.imubx-close:hover {
     filter: brightness(1.3);
 }
+
+.imubx-close {
+    cursor: pointer;
+    margin-left: auto;
+    width: 5vw;
+    height: 5vw;
+    background: url(../images/close.png) no-repeat;
+    background-size: 100%;
+    z-index: 10;
+    transition: all 0.5s;
+}
+
+.imbux-close_4_1 {
+    position: absolute;
+    top: 0;
+    right: 2%;
+}
+
+.imbux-close_4_1_mobile {
+    display: none;
+}
+
 .eject_box {
-    /* width: 100%;
-    height: 760px;
-    position: relative;
-    z-index: 20;
-    background: url(../images/swiper/swbg.png) no-repeat;
-    display: none; */
-    /* width: 87.5vw; */
     width: 1200px;
     max-width: 100%;
-    /* height: 54vw; */
     max-width: 99vw;
     max-height: 59vw;
     height: 730px;
@@ -991,7 +997,6 @@ swiper-button-white {
 
 .eject_box .tk_box {
     position: absolute;
-    /* width: 76vw; */
     width: 1040px;
     max-width: 100%;
     height: 632px;
@@ -1007,11 +1012,17 @@ swiper-button-white {
 .eject_box .tk_box ul li {
     display: block;
     position: relative;
-    /* opacity: 0; */
     animation: fade 0.5s linear;
 }
 
-.eject_box .tk_box ul li img {
+.eject_box .tk_box ul li .pht {
+    position: absolute;
+    z-index: 2;
+    bottom: 6rem;
+    right: 0;
+}
+
+.eject_box .tk_box ul li img.fade {
     width: 100%;
     animation: large 7s ease forwards;
 }
@@ -1023,7 +1034,8 @@ swiper-button-white {
     bottom: 0;
 }
 
-.eject_box .change-control .next1 {
+.eject_box .change-control .next1,
+.eject_box .change-control .next2 {
     width: 226px;
     height: 76px;
     position: absolute;
@@ -1033,11 +1045,13 @@ swiper-button-white {
     right: -170px;
     z-index: 9;
 }
-.eject_box .change-control .next1 a:hover {
+.eject_box .change-control .next1 a:hover,
+.eject_box .change-control .next2 a:hover {
     background-position: -754px -251px;
 }
 
-.eject_box .change-control .prev1 {
+.eject_box .change-control .prev1,
+.eject_box .change-control .prev2 {
     width: 226px;
     height: 74px;
     position: absolute;
@@ -1048,33 +1062,35 @@ swiper-button-white {
     z-index: 9;
 }
 
-.eject_box .change-control .prev1 a:hover {
+.eject_box .change-control .prev1 a:hover,
+.eject_box .change-control .prev2 a:hover {
     background-position: 0 -75px;
 }
 
-.eject_box .change-control .next1 a:hover {
+.eject_box .change-control .next1 a:hover,
+.eject_box .change-control .next2 a:hover {
     background-position: -226px -75px;
 }
 
-.eject_box .change-control .prev1 a {
+.eject_box .change-control .prev1 a,
+.eject_box .change-control .prev2 a {
     width: 100%;
     height: 100%;
     display: block;
     background: url(../images/swiper/swcon.png) no-repeat 0 0;
-    /* background-size: 100%; */
 }
 
-.eject_box .change-control .next1 a {
+.eject_box .change-control .next1 a,
+.eject_box .change-control .next2 a {
     width: 100%;
     height: 100%;
     display: block;
     background: url(../images/swiper/swcon.png) no-repeat -226px 0;
-    /* background-size: 100%; */
 }
 .eject_box .tk_box ul li p {
     width: 100%;
     position: absolute;
-    bottom: 3%;
+    bottom: 0;
     left: 0;
     padding: 10px 3%;
     background: url(https://i3.gbimg.cn/zt/2021/11/18/bb/text_bg_img.png) repeat;
@@ -1083,13 +1099,17 @@ swiper-button-white {
     text-indent: 2em;
 }
 
+.eject_box .tk_box ul li p span {
+    margin-left: 2em;
+}
+
 .rw1 {
     width: 53%;
 }
 .rolebx {
     position: relative;
     margin: 0 auto;
-    padding: 8vw 0 2vw;
+    padding: 2vw 0;
     width: 62vw;
     display: flex;
     justify-content: center;
@@ -1098,16 +1118,14 @@ swiper-button-white {
 .rcobx {
     position: relative;
     width: 65%;
-    padding: 10% 20px;
+    padding: 7% 0 1%;
     font-size: 1.3rem;
     line-height: 2rem;
     color: #f1e0bf;
-    text-align: left;
-    background-attachment: scroll;
-    background-repeat: no-repeat, no-repeat, no-repeat;
-    background-position: 50% 0%, 50% 0%, 50% 100%;
-    background-image: url(../images/ph7.png), url(../images/it.png), url(../images/st2.png);
-    margin: 15px auto 0;
+    background-repeat: no-repeat;
+    background-image: url(../images/ph7.png);
+    background-size: 100% auto;
+    margin: 15px auto 1%;
     overflow: hidden;
 }
 /* 主內容 end */
@@ -1142,7 +1160,7 @@ swiper-button-white {
         width: 238%;
         margin-left: -96%;
     }
-    /* 切換主內容時加上這個 */
+
     .video-width {
         width: 220%;
     }
@@ -1158,16 +1176,32 @@ swiper-button-white {
         margin: 0 auto;
         text-align: center;
     }
+    .eject_box.eject_box2_4 .change-control {
+        position: absolute;
+        top: 0;
+    }
 
-    .eject_box .change-control .prev1 {
+    .eject_box .change-control .prev1,
+    .eject_box .change-control .prev2 {
         position: static;
         display: inline-block;
         margin-right: 2vw;
     }
-    .eject_box .change-control .next1 {
+    .eject_box .change-control .next1,
+    .eject_box .change-control .next2 {
         position: static;
         display: inline-block;
         margin-left: 2vw;
+    }
+    .eject_box.eject_box2_4 .change-control .prev1,
+    .eject_box.eject_box2_4 .change-control .prev2 {
+        position: absolute;
+        left: -13vw;
+    }
+    .eject_box.eject_box2_4 .change-control .next1,
+    .eject_box.eject_box2_4 .change-control .next2 {
+        position: absolute;
+        right: -13vw;
     }
 }
 
@@ -1187,7 +1221,6 @@ swiper-button-white {
     .header {
         background-image: url(../images/index_m.jpg);
         background-size: 100% auto;
-        /* 呼叫主內容才加9% */
         padding-bottom: 9%;
     }
     .content {
@@ -1291,18 +1324,14 @@ swiper-button-white {
         padding-bottom: 21%;
         background-image: url(../images/dwnm.png);
         background-size: 100%;
-        /* background-size: 156% auto;
-        background-position: -2% 0; */
     }
     #info {
         position: relative;
         background-image: url(../images/cbgm.jpg);
-        background-size: 100%;
+        background-size: cover;
         width: 100%;
         margin: -1.4% auto 0;
         padding-top: 35px;
-        /* background-size: 156% auto;
-        background-position: -2% 0; */
     }
 
     .w1200 {
@@ -1312,10 +1341,14 @@ swiper-button-white {
     .info2 {
         height: 170vw;
     }
+    .info2.info2-4 {
+        height: 180vw;
+    }
+
     .eject_box .tk_box ul li p {
         bottom: -2vw;
     }
-    .eject_box .tk_box ul li img {
+    .eject_box .tk_box ul li img.fade {
         width: 175vw;
         margin-left: -50%;
     }
@@ -1324,6 +1357,28 @@ swiper-button-white {
     }
     .eject_box .change-control {
         top: 125vw;
+    }
+    .eject_box.eject_box2_4 .change-control {
+        top: 0;
+    }
+    .eject_box.eject_box2_1 {
+        max-height: inherit;
+        height: 73%;
+    }
+
+    .eject_box.eject_box2_4 {
+        max-height: inherit;
+        height: 65%;
+    }
+    .eject_box.eject_box2_4 .change-control .prev1,
+    .eject_box.eject_box2_4 .change-control .prev2 {
+        position: absolute;
+        left: -12rem;
+    }
+    .eject_box.eject_box2_4 .change-control .next1,
+    .eject_box.eject_box2_4 .change-control .next2 {
+        position: absolute;
+        right: -12rem;
     }
     .w1200 .close {
         position: absolute;
@@ -1345,8 +1400,32 @@ swiper-button-white {
         top: 153vw;
         bottom: auto;
     }
+    .info2.info2-4 .close {
+        top: 160vw;
+        bottom: auto;
+    }
     .info4 {
         height: auto;
+    }
+    .info4 .close {
+        display: none;
+    }
+    .info4 .close-mobile {
+        display: block;
+    }
+    .imubx-close {
+        display: none;
+    }
+    .info4 .imubx-close-mobile {
+        position: relative;
+        padding: 8% 0;
+        margin-top: 5%;
+    }
+    .imbux-close_4_1_mobile {
+        display: block;
+        margin: auto;
+        width: 10vw;
+        height: 10vw;
     }
     .name_lk {
         width: 51vw;
@@ -1379,10 +1458,10 @@ swiper-button-white {
         left: -1.8vw;
     }
     .v_box a .plant_icon {
-        width: 4vw;
-        height: 4vw;
-        font-size: 2vw;
-        margin: 3.8vw 0 0 3.8vw;
+        width: 8vw;
+        height: 8vw;
+        font-size: 3vw;
+        margin: 1vw 0 0 3vw;
     }
     .v_box a img {
         width: 5vw;
@@ -1486,20 +1565,37 @@ swiper-button-white {
         height: 45px;
         margin: 15px 5px;
     }
+
 }
 
 @media only screen and (max-width: 500px) {
     .eject_box .change-control {
+        z-index: 2;
         transform: scale(0.7);
     }
+    .eject_box.eject_box2_4 .change-control {
+        transform: inherit;
+    }
 
-    .eject_box .change-control .next1 {
+    .eject_box .change-control .next1,
+    .eject_box .change-control .next2 {
         position: absolute;
         right: -21vw;
     }
-    .eject_box .change-control .prev1 {
+    .eject_box .change-control .prev1,
+    .eject_box .change-control .prev2 {
         position: absolute;
         left: -16vw;
+    }
+    .eject_box.eject_box2_4 .change-control .prev1,
+    .eject_box.eject_box2_4 .change-control .prev2 {
+        position: absolute;
+        left: -13rem;
+    }
+    .eject_box.eject_box2_4 .change-control .next1,
+    .eject_box.eject_box2_4 .change-control .next2 {
+        position: absolute;
+        right: -13rem;
     }
 }
 @media only screen and (max-width: 450px) {
