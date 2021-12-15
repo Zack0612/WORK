@@ -169,7 +169,7 @@ const infoList = {
 
 <!-- 勢力起源START -->
 <div class="w1200 info4">
-<div class="rolebx rw1">
+<div class="rolebx">
 <div class="swiper-container swiper2_2_3">
     <div class="swiper-wrapper">
         <div class="swiper-slide peo">
@@ -406,7 +406,7 @@ const infoList = {
 </div>
 
 <div class="w1200 info4">
-<div class="rolebx rw1">
+<div class="rolebx">
 <div class="swiper-container swiper2_2_1">
     <div class="swiper-wrapper">
         <div class="swiper-slide peo" onclick="javascript:alert('敬請期待');">
@@ -529,57 +529,6 @@ const infoList = {
             }
         },
     });
-
-    // 2-2-3
-    var swiper2_2_3 = new Swiper('.swiper2_2_3', {
-        slidesPerView: 3,
-        spaceBetween: 50,
-        watchSlidesProgress: true,
-        preventLinksPropagation: false,
-        observer: true,
-        observeParents: true,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-
-        breakpoints: {
-            600: {
-                slidesPerView: 1,
-                thumbs: {
-                    swiper: control2_2_3,
-                },
-                watchSlidesProgress: false,
-                // 16號開啟角色介紹要開啟 navigation: false,
-                // navigation: false,
-            }
-        },
-    });
-
-    var control2_2_3 = new Swiper(".control2_2_3", {
-        effect: "fade",
-        fadeEffect: { crossFade: true },
-        spaceBetween: 10,
-        preventLinksPropagation: false,
-        observer: true,
-        observeParents: true,
-        thumbs: {
-            swiper: swiper2_2_3,
-        },
-
-        breakpoints: {
-            600: {
-                watchSlidesProgress: true,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                thumbs: {
-                    swiper: false,
-                },
-            }
-        },
-    });
 </script>
 `,
 
@@ -607,7 +556,7 @@ const infoList = {
 </div>
 
 <div class="w1200 info4">
-<div class="rolebx rw1">
+<div class="rolebx">
 <div class="swiper-container swiper2_2_1">
     <div class="swiper-wrapper">
         <div class="swiper-slide peo" onclick="javascript:alert('敬請期待');">
@@ -729,57 +678,6 @@ const infoList = {
             }
         },
     });
-
-    // 2-2-3
-    var swiper2_2_3 = new Swiper('.swiper2_2_3', {
-        slidesPerView: 3,
-        spaceBetween: 50,
-        watchSlidesProgress: true,
-        preventLinksPropagation: false,
-        observer: true,
-        observeParents: true,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-
-        breakpoints: {
-            600: {
-                slidesPerView: 1,
-                thumbs: {
-                    swiper: control2_2_3,
-                },
-                watchSlidesProgress: false,
-                // 16號開啟角色介紹要開啟 navigation: false,
-                // navigation: false,
-            }
-        },
-    });
-
-    var control2_2_3 = new Swiper(".control2_2_3", {
-        effect: "fade",
-        fadeEffect: { crossFade: true },
-        spaceBetween: 10,
-        preventLinksPropagation: false,
-        observer: true,
-        observeParents: true,
-        thumbs: {
-            swiper: swiper2_2_3,
-        },
-
-        breakpoints: {
-            600: {
-                watchSlidesProgress: true,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                thumbs: {
-                    swiper: false,
-                },
-            }
-        },
-    });
 </script>
 `,
 
@@ -873,61 +771,10 @@ const infoList = {
 </div>
 <script>
 // pc可
-    var swiper2_2_1 = new Swiper('.swiper2_2_1', {
-        slidesPerView: 4,
-        spaceBetween: 5,
-        watchSlidesProgress: true,
-        preventLinksPropagation: false,
-        observer: true,
-        observeParents: true,
-        noSwiping: true,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-
-        breakpoints: {
-            600: {
-                slidesPerView: 1,
-                thumbs: {
-                    swiper: control2_2_1,
-                },
-                watchSlidesProgress: false,
-                // 16號開啟角色介紹要開啟 navigation: false,
-                // navigation: false,
-            }
-        },
-    });
-
-    var control2_2_1 = new Swiper(".control2_2_1", {
-        effect: "fade",
-        fadeEffect: { crossFade: true },
-        spaceBetween: 10,
-        preventLinksPropagation: false,
-        observer: true,
-        observeParents: true,
-        thumbs: {
-            swiper: swiper2_2_1,
-        },
-
-        breakpoints: {
-            600: {
-                watchSlidesProgress: true,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                thumbs: {
-                    swiper: false,
-                },
-            }
-        },
-    });
-
     // 2-2-3
     var swiper2_2_3 = new Swiper('.swiper2_2_3', {
         slidesPerView: 3,
-        spaceBetween: 50,
+        spaceBetween: 10,
         watchSlidesProgress: true,
         preventLinksPropagation: false,
         observer: true,
@@ -1060,61 +907,10 @@ const infoList = {
 
 <script>
 // pc可
-    var swiper2_2_1 = new Swiper('.swiper2_2_1', {
-        slidesPerView: 4,
-        spaceBetween: 5,
-        watchSlidesProgress: true,
-        preventLinksPropagation: false,
-        observer: true,
-        observeParents: true,
-        noSwiping: true,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-
-        breakpoints: {
-            600: {
-                slidesPerView: 1,
-                thumbs: {
-                    swiper: control2_2_1,
-                },
-                watchSlidesProgress: false,
-                // 16號開啟角色介紹要開啟 navigation: false,
-                // navigation: false,
-            }
-        },
-    });
-
-    var control2_2_1 = new Swiper(".control2_2_1", {
-        effect: "fade",
-        fadeEffect: { crossFade: true },
-        spaceBetween: 10,
-        preventLinksPropagation: false,
-        observer: true,
-        observeParents: true,
-        thumbs: {
-            swiper: swiper2_2_1,
-        },
-
-        breakpoints: {
-            600: {
-                watchSlidesProgress: true,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                thumbs: {
-                    swiper: false,
-                },
-            }
-        },
-    });
-
     // 2-2-3
     var swiper2_2_3 = new Swiper('.swiper2_2_3', {
         slidesPerView: 3,
-        spaceBetween: 50,
+        spaceBetween: 10,
         watchSlidesProgress: true,
         preventLinksPropagation: false,
         observer: true,

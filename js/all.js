@@ -20,7 +20,7 @@ window.addEventListener('hashchange', function (event) {
             $('.slogan').css('top', '16%');
             $('.video').addClass('video-width');
             $('.mubx').css('top', '58%');
-            runEffect();
+            runEffect(hash);
         } else {
             removePathname();
             closeInfo(hash);
@@ -56,7 +56,7 @@ window.onload = function () {
             $('.slogan').css('top', '16%');
             $('.video').addClass('video-width');
             $('.mubx').css('top', '58%');
-            runEffect();
+            runEffect(hash);
         } else {
             removePathname();
             closeInfo(hash);
@@ -92,8 +92,14 @@ window.onload = function () {
 }
 // ---------- 網頁內容載入完成時執行 end ---------- //
 
-function runEffect() {
-    $('html,body').animate({ scrollTop: $('.txt').offset().top - 50 }, 300);
+function runEffect(hash) {
+    console.log('hash', hash)
+    console.log('hash match', hash.match('2_4'));
+    if (hash.match('2_4')) {
+        $('html,body').animate({ scrollTop: $('.tk_box').offset().top - 20 }, 300);
+    } else {
+        $('html,body').animate({ scrollTop: $('.txt').offset().top - 50 }, 300);
+    }
     // 手機可
     // var swiper3 = new Swiper(".swiper3", {
     //     effect: "fade",

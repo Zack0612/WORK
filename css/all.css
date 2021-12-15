@@ -56,7 +56,9 @@ swiper-button-white {
         display: block;
     }
     .swiper-slide.peo img {
-        padding: 0 20%;
+        padding: 0 25%;
+        margin: auto;
+        /* width: 195px; */
     }
     .swiper-slide.peo1_4_1 img {
         padding: 0 15vw;
@@ -363,7 +365,7 @@ swiper-button-white {
     overflow: hidden;
     top: 0;
     right: 160px;
-    z-index: 2;
+    z-index: 30;
 }
 .cop1,
 .cop2 {
@@ -989,7 +991,7 @@ swiper-button-white {
     height: 730px;
     margin: auto;
     position: relative;
-    z-index: 20;
+    z-index: 19;
     background: url(../images/swiper/swbg.png) no-repeat;
     background-size: 100%;
     display: none;
@@ -1103,16 +1105,19 @@ swiper-button-white {
     margin-left: 2em;
 }
 
-.rw1 {
-    width: 53%;
-}
 .rolebx {
     position: relative;
     margin: 0 auto;
     padding: 2vw 0;
-    width: 62vw;
+    width: 820px;
+    max-width: 100%;
     display: flex;
     justify-content: center;
+}
+
+.rw1 {
+    width: 615px;
+    max-width: 100%;
 }
 
 .rcobx {

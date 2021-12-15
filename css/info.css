@@ -770,9 +770,6 @@ td {
 	}
 }
 @media only screen and (max-width: 900px) {
-	.rw1 {
-		width: 98%;
-	}
 	.pname {
 		padding: 14% 0 3%;
 	}
@@ -812,7 +809,6 @@ td {
 
 	.rolebx {
 		position: relative;
-		/*width:98%;*/
 		margin: 0 auto;
 	}
 	.rcobx {
