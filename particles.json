@@ -1,0 +1,59 @@
+{
+    "particles": {
+        "number": {
+            "value": 7,
+            "density": {
+                "enable": true,
+                "value_area": 500
+            }
+        },
+        "shape": {
+            "type": "image",
+            "options": {
+                "image": [
+                    {
+                        "src": "./images/p1flower1.png"
+                    },
+                    {
+                        "src": "./images/p1flower2.png"
+                    },
+                    {
+                        "src": "./images/p1flower3.png"
+                    }
+                ]
+            }
+        },
+        "size": {
+            "value": {
+                "min": 8,
+                "max": 12
+            },
+            "random": true,
+            "anim": {
+                "enable": false,
+                "speed": 40,
+                "size_min": 0.1,
+                "sync": false
+            }
+        },
+        "rotate": {
+            "value": {
+                "min": 0,
+                "max": 360
+            },
+            "direction": "random",
+            "move": true,
+            "animation": {
+                "enable": true,
+                "speed": 10
+            }
+        },
+        "move": {
+            "enable": true,
+            "speed": 5,
+            "direction": "bottom",
+            "random": false,
+            "out_mode": "out"
+        }
+    }
+}

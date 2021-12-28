@@ -1,295 +1,257 @@
-// 主內 html 列表
-import { infoList } from './info.js';
 
-// ---------- 網址 hash 改變時執行 start ---------- //
-window.addEventListener('hashchange', function (event) {
-    const hash = window.location.hash;
-    if (hash) {
-        // loading
-        $("#bacc").fadeIn(300);
-        $("#bacc").fadeOut(500);
-        const newHash = hash.replace(/^.*#/, '');
-        const info = infoList[newHash];
-        // 網址帶有 hash 時, 載入主內容
-        if (info) {
-            $('#info').html(info);
-            $(`[data-id=${newHash}`).children().css('opacity', '1');
-            $(`[data-id=${newHash}`).siblings().children('span').removeAttr("style");
-            $('.dwn,#info').show();
-            $('.content').css('padding-bottom', '1080px');
-            $('.slogan').css('top', '16%');
-            $('.video').addClass('video-width');
-            $('.mubx').css('top', '58%');
-            runEffect(hash);
+document.querySelector('.menu_wrapper_mobile .close').addEventListener('click', () => {
+    document.querySelector('.menu_wrapper_mobile').style.opacity = '0';
+    document.querySelector('.menu_button').style.zIndex = '50';
+    let fadeOut = setTimeout(() => {
+        document.querySelector('.menu_wrapper_mobile').style.display = 'none';
+    }, 300)
+})
+const goPageButton = document.querySelectorAll('.go_page');
+goPageButton.forEach((item, index) => {
+    item.addEventListener('click', () => {
+        document.querySelector('.menu_wrapper_mobile').style.opacity = '0';
+        document.querySelector('.menu_button').style.zIndex = '50';
+        let fadeOut = setTimeout(() => {
+            document.querySelector('.menu_wrapper_mobile').style.display = 'none';
+        }, 300)
+    })
+})
+document.querySelector('.menu_button').addEventListener('click', () => {
+    document.querySelector('.menu_wrapper_mobile').style.display = 'flex';
+    let fadeIn = setTimeout(() => {
+        document.querySelector('.menu_wrapper_mobile').style.opacity = '1';
+        document.querySelector('.menu_button').style.zIndex = '40';
+    }, 100)
+})
+
+
+
+
+function checkName() {
+    const name = document.getElementById('name').value;
+    if (name === '') {
+        alert('請先填寫名稱');
+    } else {
+        // 記錄名稱
+        localStorage.setItem('name', name);
+        document.getElementById('answer').style.display = 'flex';
+        setTimeout(() => {
+            document.getElementById('answer').classList.add('answer_show');
+            document.querySelector('h1.question').classList.add('question_show');
+        }, 100)
+    }
+}
+
+// 題目列表
+const questionList = [
+    {
+        'title': 'Q1 比起菸酒，黛西更喜歡把錢拿去買什麼？',
+        'a1': '波羅麵包',
+        'a2': '咖哩飯',
+        'a3': '馬鈴薯',
+        'a4': '玉米',
+        'answer': '馬鈴薯'
+
+    },
+    {
+        'title': 'Q2 哪種動物曾在貝洛妮卡的頭上休息過？',
+        'a1': '貓咪',
+        'a2': '蛇',
+        'a3': '兔子',
+        'a4': '老鷹',
+        'answer': '老鷹'
+
+    },
+    {
+        'title': 'Q3 學生會長陪楊夏琳找尋的失蹤小狗狗名叫？',
+        'a1': '亞歷山大',
+        'a2': '克莉斯汀',
+        'a3': '蓋布瑞爾',
+        'a4': '伊莉莎白',
+        'answer': '亞歷山大'
+
+    },
+    {
+        'title': 'Q4 找阿爾蒂做諮商，每幾分鐘就要給他一瓶巧克力香草牛奶？',
+        'a1': '15分鐘',
+        'a2': '10分鐘',
+        'a3': '5分鐘',
+        'a4': '3分鐘',
+        'answer': '10分鐘'
+    },
+]
+
+// 預設當前顯示第一題
+let questionIndex = 0;
+const answerList = document.querySelectorAll('.answer_item');
+answerList.forEach(item => {
+    item.addEventListener('click', function () {
+        const currentAnswer = this.children[1].innerText;
+        checkAnswer(currentAnswer);
+    })
+})
+
+// 是否切換下一題
+let isChangeQuestion = false;
+const title = document.querySelector('.question');
+const answerPopup = document.querySelector('.answer_popup');
+
+// 檢查答案
+function checkAnswer(currentAnswer) {
+    if (currentAnswer === questionList[questionIndex].answer) {
+        answerPopupHandler('current');
+    } else {
+        answerPopupHandler('wrong');
+    }
+}
+
+// 答題結果彈窗
+function answerPopupHandler(result) {
+    if (result === 'current') {
+        document.querySelector('.result_current').classList.add('result_current_active');
+        document.querySelector('.ribbon').classList.add('ribbon_show');
+        document.querySelector('.result_wrong').style.opacity = '0';
+        isChangeQuestion = true;
+    } else {
+        document.querySelector('.result_current').classList.remove('result_current_active');
+        document.querySelector('.result_wrong').style.opacity = '1';
+        document.querySelector('.ribbon').classList.remove('ribbon_show');
+        isChangeQuestion = false;
+    }
+    answerPopup.style.display = 'block';
+    setTimeout(() => {
+        answerPopup.style.opacity = '1';
+    }, 100)
+}
+
+// 是否可點擊關閉按鈕
+let isClose = true;
+// 關閉結果彈窗
+function closePopup(val) {
+    if (isClose) {
+        isClose = false;
+        if (val === 1) {
+            answerPopup.style.opacity = '0';
+            setTimeout(() => {
+                answerPopup.style.display = 'none';
+            }, 300);
+            // 是否切換下一題
+            if (isChangeQuestion) {
+                if (questionIndex !== 3) {
+                    questionIndex += 1;
+                } else {
+                    setTimeout(() => {
+                        showCertificate();
+                    }, 300);
+                }
+                changeQuestion(questionIndex);
+            }
         } else {
-            removePathname();
-            closeInfo(hash);
+            answerPopup.style.opacity = '0';
+            document.querySelector('.result_wrapper .close').style.display = 'block';
+            document.querySelector('.result_wrapper .close_certificate').style.display = 'none';
+            document.querySelector('.certificate').style.opacity = '0';
+            document.querySelector('.user_name').style.opacity = '0';
+            setTimeout(() => {
+                answerPopup.style.display = 'none';
+            }, 300);
         }
-        // 關閉主內頁按鈕
-        $('.plant_box .close,.w1200 .close,.w1200 .close-mobile,.imubx-close').click(() => {
-            // loading
-            $("#bacc").fadeIn(300);
-            $("#bacc").fadeOut(500);
-            removePathname();
-            closeInfo(hash);
-        })
+    }
+    setTimeout(() => {
+        isClose = true
+    }, 400);
+}
+
+// 最後一題答對秀獎狀
+function showCertificate() {
+    // 秀出名稱
+    const userName = localStorage.name;
+    document.querySelector('.user_name').style.opacity = '1';
+    document.querySelector('.user_name').innerText = userName;
+    // 秀出證書及隱藏對與錯圖示
+    document.querySelector('.result_wrapper .close').style.display = 'none';
+    document.querySelector('.result_wrapper .close_certificate').style.display = 'block';
+    document.querySelector('.certificate').style.opacity = '1';
+    document.querySelector('.result_current').classList.remove('result_current_active');
+    document.querySelector('.ribbon').classList.remove('ribbon_show');
+    document.querySelector('.result_wrong,.result_current').style.opacity = '0';
+    answerPopup.style.display = 'block';
+    setTimeout(() => {
+        answerPopup.style.opacity = '1';
+    }, 100)
+}
+
+// 切換題目
+function changeQuestion(index) {
+    title.innerText = questionList[index].title;
+    answerList[0].children[1].innerText = questionList[index].a1;
+    answerList[1].children[1].innerText = questionList[index].a2;
+    answerList[2].children[1].innerText = questionList[index].a3;
+    answerList[3].children[1].innerText = questionList[index].a4;
+}
+
+
+// 作品集輪播
+var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
+
+// 作品集彈窗
+const swiperItem = document.querySelectorAll('.swiper-slide')
+swiperItem.forEach(item => {
+    item.addEventListener('click', function () {
+        const index = Number(this.getAttribute('data-swiper-slide-index')) + 1;
+        if (index !== 8 && index !== 10 && index !== 20) {
+            const img = `./images/collection/${index}.jpg`;
+            document.querySelector('.collection_popup .photo').src = img;
+            document.querySelector('.collection_popup').style.display = 'block';
+            setTimeout(() => {
+                document.querySelector('.collection_popup').style.opacity = '1';
+            }, 100)
+        }
+    })
+})
+
+document.querySelector('.collection_popup').addEventListener('click', function () {
+    document.querySelector('.collection_popup .photo').src = '';
+    document.querySelector('.collection_popup').style.opacity = '0';
+    setTimeout(() => {
+        document.querySelector('.collection_popup').style.display = 'none';
+    }, 300)
+})
+
+let video;
+let isPlay = true;
+document.querySelector('.collection_wrapper .cover').addEventListener('click', function (event) {
+    const currentSwiper = document.querySelector('.swiper-slide-active');
+    const index = Number(currentSwiper.getAttribute('data-swiper-slide-index')) + 1;
+    if (index !== 8 && index !== 10 && index !== 20) {
+        const img = `./images/collection/${index}.jpg`;
+        document.querySelector('.collection_popup .photo').src = img;
+        document.querySelector('.collection_popup').style.display = 'block';
+        setTimeout(() => {
+            document.querySelector('.collection_popup').style.opacity = '1';
+        }, 100)
+    } else {
+        video = document.getElementById(`video_${index}`);
+        if (isPlay) {
+            video.play();
+        } else {
+            video.pause();
+        }
+        isPlay = !isPlay;
     }
 })
-// ---------- 網址 hash 改變時執行 end ---------- //
-
-// ---------- 網頁內容載入完成時執行 start ---------- //
-window.onload = function () {
-    const hash = window.location.hash;
-    if (hash) {
-        // loading
-        $("#bacc").fadeIn(300);
-        $("#bacc").fadeOut(500);
-        const newHash = hash.replace(/^.*#/, '');
-        const info = infoList[newHash];
-        // 網址帶有 hash 時, 載入主內容
-        if (info) {
-            $('#info').html(info);
-            $(`[data-id=${newHash}`).children().css('opacity', '1');
-            $(`[data-id=${newHash}`).siblings().children('span').removeAttr("style");
-            $('.dwn,#info').show();
-            $('.content').css('padding-bottom', '1080px');
-            $('.slogan').css('top', '16%');
-            $('.video').addClass('video-width');
-            $('.mubx').css('top', '58%');
-            runEffect(hash);
-        } else {
-            removePathname();
-            closeInfo(hash);
-        }
-        // 關閉主內頁按鈕
-        $('.plant_box .close,.w1200 .close,.w1200 .close-mobile,.imubx-close').click(() => {
-            // loading
-            $("#bacc").fadeIn(300);
-            $("#bacc").fadeOut(500);
-            closeInfo(hash);
-        })
-    }
-
-    // ---------- 手機開合選單 start ---------- //
-    const cop1 = document.querySelector('.cop1');
-    const cop2 = document.querySelector('.cop2');
-    const topLink = document.querySelector('.top-link');
-    cop1.addEventListener('click', () => {
-        cop1.style = 'display:none';
-        cop2.style = 'display:block';
-        topLink.style = 'right:0';
-    }, false)
-    cop2.addEventListener('click', () => {
-        cop2.style = 'display:none';
-        cop1.style = 'display:block';
-        topLink.style = 'right:-160px';
-        setTimeout(() => {
-            topLink.removeAttribute('style');
-        }, 600);
-    }, false)
-    // ---------- 手機開合選單 end ---------- //
-
-}
-// ---------- 網頁內容載入完成時執行 end ---------- //
-
-function runEffect(hash) {
-    console.log('hash', hash)
-    console.log('hash match', hash.match('2_4'));
-    if (hash.match('2_4')) {
-        $('html,body').animate({ scrollTop: $('.tk_box').offset().top - 20 }, 300);
-    } else {
-        $('html,body').animate({ scrollTop: $('.txt').offset().top - 50 }, 300);
-    }
-    // 手機可
-    // var swiper3 = new Swiper(".swiper3", {
-    //     effect: "fade",
-    //     fadeEffect: { crossFade: true },
-    //     spaceBetween: 10,
-
-
-    //     breakpoints: {
-    //         600: {
-    //             // mobile
-    //             watchSlidesProgress: true,
-    //             // mobile
-    //             freeMode: true,
-    //         }
-    //     }
-    // });
-
-    // var swiper2 = new Swiper('.swiper-container-info2-2', {
-    //     slidesPerView: 4,
-    //     spaceBetween: 5,
-
-    //     // mobile
-    //     navigation: {
-    //         nextEl: ".swiper-button-next",
-    //         prevEl: ".swiper-button-prev",
-    //     },
-    //     // mobile
-    //     thumbs: {
-    //         swiper: swiper3,
-    //     },
-
-    //     breakpoints: {
-    //         600: {
-    //             slidesPerView: 1,
-    //         }
-    //     }
-    // });
-
-    $('.tk_box').each(function () {
-        var _this = $(this);
-        var Index = 0;
-        var img2 = _this.find('li').length;
-        $(".prev1").click(function () {
-            Index = (Index > 0) ? (--Index) : (img2 - 1);
-            changeTo3(Index);
-        });
-        $(".next1").click(function () {
-            Index = (Index < img2 - 1) ? (++Index) : 0;
-            changeTo3(Index);
-        });
-        function changeTo3(num) {
-            _this.find("li").eq(num).show().siblings().hide();
+// 點擊左右箭頭，停止播放影片
+const arrowList = document.querySelectorAll('.pauseVideo');
+arrowList.forEach(item => {
+    item.addEventListener('click', function () {
+        if (video) {
+            video.pause();
         }
     })
-
-    $('.sk1').click(function () {
-        $('.rcobx div,.swiper-slide img').removeAttr('style');
-        $('.sk1 img:nth-child(1)').fadeOut(1);
-        $('.sk1 img:nth-child(2)').fadeIn(1);
-        $('.rc1').fadeIn();
-        $('.rc1').css('display', 'flex');
-    });
-    $('.sk2').click(function () {
-        $('.rcobx div,.swiper-slide img').removeAttr('style');
-        $('.sk2 img:nth-child(1)').fadeOut(1);
-        $('.sk2 img:nth-child(2)').fadeIn(1);
-        $('.rc2').fadeIn();
-        $('.rc2').css('display', 'flex');
-    });
-    $('.sk3').click(function () {
-        $('.rcobx div,.swiper-slide img').removeAttr('style');
-        $('.sk3 img:nth-child(1)').fadeOut(1);
-        $('.sk3 img:nth-child(2)').fadeIn(1);
-        $('.rc3').fadeIn();
-        $('.rc3').css('display', 'flex');
-    });
-    $('.sk4').click(function () {
-        $('.rcobx div,.swiper-slide img').removeAttr('style');
-        $('.sk4 img:nth-child(1)').fadeOut(1);
-        $('.sk4 img:nth-child(2)').fadeIn(1);
-        $('.rc4').fadeIn();
-        $('.rc4').css('display', 'flex');
-    });
-
-
-    // ---------- 全新職業 start ---------- //
-    function jobInfo() {
-        $('.zf_btn10 a').hover(function () {
-            var i = $(this).index();
-            $(this).addClass('on').siblings().removeClass('on');
-            $('.plant_count10 .p_c').eq(i).show().siblings('.plant_count10 .p_c').hide();
-        })
-    }
-    jobInfo();
-    // ---------- 全新職業 end ---------- //
-
-    // ---------- 門派/技能影片 start ---------- //
-    let currentVideo;
-    $(".v_box a").mouseenter(function () {
-        $(this).addClass('on').siblings('a').removeClass('on');
-    })
-    $(".v_box .a1").click(function () {
-        $('.alin_MV_box #a1').css('display', 'block')
-        $('.alin_MV_box #a2').css('display', 'none')
-        $('.alin_MV_test_pop_1').fadeIn();
-        $('.alin_MV_test_pop_1').css('display', 'flex')
-        currentVideo = 'a1';
-        let iframe = $(`iframe#${currentVideo}`)[0].contentWindow;
-        // 開啟影片
-        iframe.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
-    })
-    $(".v_box .a2").click(function () {
-        $('.alin_MV_box #a1').css('display', 'none')
-        $('.alin_MV_box #a2').css('display', 'block')
-        $('.alin_MV_test_pop_1').fadeIn();
-        $('.alin_MV_test_pop_1').css('display', 'flex')
-        currentVideo = 'a2';
-        let iframe = $(`iframe#${currentVideo}`)[0].contentWindow;
-        // 開啟影片
-        iframe.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
-    })
-    $(".alin_MV_btn_close").click(function () {
-        // 關閉影片
-        let iframe = $(`iframe#${currentVideo}`)[0].contentWindow;
-        iframe.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-        $('.alin_MV_test_pop_1').fadeOut();
-        $('.alin_MV_test_pop_1').css('display', 'none')
-    })
-    // ---------- 門派/技能影片 end ---------- //
-
-    // ---------- update_2_1 新劇情 start ---------- //
-    $("#kmubx .kmu1_1").click(function () {
-        $(this).addClass('kactive').siblings().removeClass('kactive');
-        $('.ph2-1').css('opacity', '100');
-        $('.ph2-2, .ph2-3').css('opacity', '0');
-        $('.ph2-1').addClass('phx2');
-        $('.ph2-2, .ph2-3').removeClass('phx2');
-    })
-    $("#kmubx .kmu1_2").click(function () {
-        $(this).addClass('kactive').siblings().removeClass('kactive');
-        $('.ph2-2').css('opacity', '100');
-        $('.ph2-1, .ph2-3').css('opacity', '0');
-        $('.ph2-2').addClass('phx2');
-        $('.ph2-1, .ph2-3').removeClass('phx2');
-    })
-    $("#kmubx .kmu1_3").click(function () {
-        $(this).addClass('kactive').siblings().removeClass('kactive');
-        $('.ph2-3').css('opacity', '100');
-        $('.ph2-1, .ph2-2').css('opacity', '0');
-        $('.ph2-3').addClass('phx2');
-        $('.ph2-1, .ph2-2').removeClass('phx2');
-    })
-    // ---------- update_2_1 新劇情 end ---------- //
-
-    // ---------- update_2_3 新秘境 start ---------- //
-    $("#kmubx .kmu1_4").click(function () {
-        $(this).addClass('kactive').siblings().removeClass('kactive');
-        $('.ph2-4').css('opacity', '100');
-        $('.ph2-5').css('opacity', '0');
-        $('.ph2-4').addClass('phx2');
-        $('.ph2-5').removeClass('phx2');
-    })
-    $("#kmubx .kmu1_5").click(function () {
-        $(this).addClass('kactive').siblings().removeClass('kactive');
-        $('.ph2-5').css('opacity', '100');
-        $('.ph2-4').css('opacity', '0');
-        $('.ph2-5').addClass('phx2');
-        $('.ph2-4').removeClass('phx2');
-    })
-    // ---------- update_2_3 新秘境 end ---------- //
-
-}
-
-// ---------- 關閉主內頁 start ---------- //
-function closeInfo(hash) {
-    $('html,body').animate({ scrollTop: 0 }, 300);
-    $('.dwn,#info').css('display', '');
-    const newHash = hash.replace(/^.*#/, '');
-    // $(`[data-id=${newHash}`).siblings().children('span').removeAttr("style");
-    $('.mua').children('span').removeAttr("style");
-    $('.content').removeAttr("style");
-    $('.slogan').removeAttr("style");
-    $('.video').removeClass('video-width');
-    $('.mubx').removeAttr("style");
-}
-// ---------- 關閉主內頁 end ---------- //
-
-// ---------- 移除 pathname start ---------- //
-function removePathname() {
-    history.pushState("", document.title, window.location.pathname
-        + window.location.search);
-}
-// ---------- 移除 pathname end ---------- //
+})

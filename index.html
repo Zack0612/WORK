@@ -1,129 +1,282 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport"
-        content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover" />
+        content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,viewport-fit=cover" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>古劍奇譚網路版-玉輪鈴音改版專區</title>
-    <meta name="title" content="古劍奇譚網路版-玉輪鈴音改版專區" />
-    <meta name="description" content="帝首劍鳴，鈴轉五音。12/16新職業「鈴客」靈幻登場！" />
-    <link rel="image_src" href="https://gj.gameflier.com/action/20211208ep/images/fb.jpg" />
-    <meta property="og:url" content="https://gj.gameflier.com/action/20211208ep/index.html" />
-    <meta property="og:image" content="https://gj.gameflier.com/action/20211208ep/images/line.jpg" />
-    <meta property="og:image" content="https://gj.gameflier.com/action/20211208ep/images/fb.jpg" />
-    <meta property="og:Site_name" content="古劍奇譚網路版-玉輪鈴音改版專區" />
-    <meta property="og:Description" content="帝首劍鳴，鈴轉五音。12/16新職業「鈴客」靈幻登場！" />
-    <link rel="icon" href="https://gj.gameflier.com/img/gi.png" type="image/ico"/>
-    <link href="css/basic.css" rel="stylesheet">
-    <link href="css/all.css" rel="stylesheet">
-    <link href="css/info.css" rel="stylesheet">
-    <link href="css/swiper.min.css" rel="stylesheet">
-    <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-K5VD3CB');</script>
-    <!-- End Google Tag Manager -->
+    <title>未來戰</title>
+    <meta property="og:title" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="./images/preview.jpg" />
+    <meta property="og:description" content="" />
+    <link href="./images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="./css/base.css" rel="stylesheet">
+    <link href="./css/fullpage.css" rel="stylesheet">
+    <link href="./css/all.css" rel="stylesheet">
+    <link href="./css/swiper.css" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K5VD3CB" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
     <div class="wrapper">
-        <!-- 刊頭 -->
-        <header class="header">
-            <!-- bg video  -->
-            <div class="video">
-                <video id="bgvideo" poster="images/bg.jpg" playsinline autoplay muted loop>
-                    <source src="kv.mp4" type="video/mp4">
-                </video>
-                <div class="video2"></div>
+        <!-- pc 選單 -->
+        <div class="menu_wrapper menu_wrapper_pc">
+            <div class="menu">
+                <nav class="main_nav">
+                    <a class="go_page" href="#firstPage">晚宴序幕</a>
+                    <a class="go_page" href="#secondPage">赴約的任務</a>
+                    <a class="go_page" href="#3rdPage">盛會上的考驗</a>
+                    <a class="go_page" href="#4thPage">神秘盒的解鎖</a>
+                    <a class="go_page" href="#5thPage">沉醉藝廊</a>
+                </nav>
+                <nav class="sub_nav">
+                    <a href="https://fw.game-beans.com/" target="_blank"><img src="./images/menuIcHome.png" alt=""></a>
+                    <a href="https://www.facebook.com/gamebeansFW" target="_blank"><img src="./images/menuIcFB.png"
+                            alt=""></a>
+                    <a href="https://www.youtube.com/channel/UCIXe3XLcZjHloRyNkx7hrfw" target="_blank"><img
+                            src="./images/menuIcYT.png" alt=""></a>
+                </nav>
             </div>
-            <!-- logo -->
-            <a href="https://gj.gameflier.com/" target="_blank" class="logo"></a>
-            <!-- 右上方連結 -->
-            <div class="top-link">
-                <div class="logo2"><a href="https://gj.gameflier.com/" target="_blank"></a></div>
-                <a href="https://gf2.gameflier.com/account/aloneregister.aspx" target="_blank" class="but1"></a>
-                <a href="https://gj.gameflier.com/download/download.html" target="_blank" class="but3"></a>
-                <a href="https://www.facebook.com/gj.gameflier/" target="_blank" class="but2"></a>
-                <a href="https://forum.gamer.com.tw/A.php?bsn=19552" target="_blank" class="shr2"></a>
-                <a href="https://www.facebook.com/sharer.php?u=https://gj.gameflier.com/action/20211208ep/index.html"
-                    target="_blank" class="shr1"></a>
-                <!-- 手機版 menu -->
-                <div class="cop">
-                    <div class="cop1"></div>
-                    <div class="cop2"></div>
-                </div>
+        </div>
+        <!-- 手機 選單 -->
+        <button class="menu_button"><img src="./images/menuBtn.png" alt=""></button>
+        <div class="menu_wrapper menu_wrapper_mobile">
+            <div class="menu">
+                <button class="close"><img src="./images/close.png" alt=""></button>
+                <nav class="main_nav">
+                    <a class="go_page" href="#firstPage">晚宴序幕</a>
+                    <a class="go_page" href="#secondPage">赴約的任務</a>
+                    <a class="go_page" href="#3rdPage">盛會上的考驗</a>
+                    <a class="go_page" href="#4thPage">神秘盒的解鎖</a>
+                    <a class="go_page" href="#5thPage">沉醉藝廊</a>
+                </nav>
+                <nav class="sub_nav">
+                    <a href="https://fw.game-beans.com/" target="_blank"><img src="./images/menuIcHome.png" alt=""></a>
+                    <a href="https://www.facebook.com/gamebeansFW" target="_blank"><img src="./images/menuIcFB.png"
+                            alt=""></a>
+                    <a href="https://www.youtube.com/channel/UCIXe3XLcZjHloRyNkx7hrfw" target="_blank"><img
+                            src="./images/menuIcYT.png" alt=""></a>
+                </nav>
             </div>
-            <div class="content">
-                <!-- slogan  -->
-                <div class="slogan">
-                    <a href="https://gf2.gameflier.com/game_zone/gj/login.aspx" class="startbx">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </a>
-                </div>
-                <!-- menu -->
-                <div class="mubx">
-                    <a href="#update_1_1" data-id="update_1_1" class="mua mu1"><span></span></a>
-                    <a href="#update_2_1" data-id="update_2_1" class="mua mu2"><span></span></a>
-                    <a href="#update_3_1" data-id="update_3_1" class="mua mu3"><span></span></a>
-                    <a href="#update_4_1" data-id="update_4_1"  class="mua mu4"><span></span></a>
-                    <a href="https://gj.gameflier.com/news/news.aspx?id=10393" target="_blank"
-                        class="mua mu5"><span></span></a>
-                    <a href="javascript:alert('敬請期待');"
-                        class="mua mu6"><span></span></a>
-                    <a href="javascript:alert('敬請期待');" 
-                        class="mua mu7"><span></span></a>
-                    <a href="javascript:alert('敬請期待');" 
-                        class="mua mu8"><span></span></a>
-                </div>
-            </div>
-            <div class="dwn"></div>
-        </header>
-        <!-- 主內容 -->
-        <section id="info">
+        </div>
 
-        </section>
-        <!-- 頁尾  -->
-        <footer>
-            <div id="cy">
-                <div class="cy1">
-                    <div class="gameflier"></div>
-                    <div class="wangyuan"></div>
-                    <div class="aurogon"></div>
-                    <div class="cy2">© 2022 Gameflier International Corp.<br>北京網元聖唐娛樂科技有限公司 © 版權所有<br>上海燭龍信息科技有限公司 ©
-                        版權所有
-                    </div>
-                </div>
-                <div class="cy3">
-                    <div class="grf">■ 本遊戲部分內容涉及暴力(武俠動作)、交友及菸酒(遊戲道具)。<span>■ 本遊戲提供前期免費體驗服務，免費體驗結束後需另行支付費用方可繼續遊玩。</span>■
-                        請避免沉迷遊戲。
-                    </div>
-                    <div class="grading"></div>
+        <!-- 主內容 -->
+        <div id="fullpage">
+            <!-- header -->
+            <div class="section section_1 effect">
+                <div class="cover"></div>
+                <div class="content">
+                    <div class="title"></div>
+                    <div class="people"></div>
+                    <div class="logo"></div>
                 </div>
             </div>
-        </footer>
+            <!-- 晚宴序幕 -->
+            <div id="#firstPage" class="section section_2 effect">
+                <!-- 花瓣 -->
+                <div id="particles-wrapper"></div>
+                <div class="content">
+                    <img src="./images/p2tit.png" alt="" class="title">
+                    <div class="video_wrapper">
+                        <img src="./images/p2playBtn.png" alt="" class="play_button">
+                    </div>
+                </div>
+                <div class="bg"></div>
+            </div>
+            <!-- 赴約的任務 -->
+            <div id="#secondPage" class="section section_3 effect">
+                <div class="content">
+                    <img src="./images/p3tit.png" alt="" class="title">
+                    <div class="reward"></div>
+                </div>
+            </div>
+            <!-- 盛會上的考驗 -->
+            <div id="#3rdPage" class="section section_4 effect">
+                <div class="content">
+                    <img src="./images/p4tit.png" alt="" class="title">
+                    <div class="question_wrapper">
+                        <input id="name" class="notice" type="text" placeholder="最多十二個字不要超過了喔" maxlength="12">
+                        <button onclick="checkName()" class="check_name"></button>
+                        <h1 class="question">Q1 比起菸酒，黛西更喜歡把錢拿去買什麼？</h1>
+                    </div>
+                    <div id="answer" class="answer">
+                        <button class="answer_item"><span class="number">1</span><span class="text">波羅麵包</span></button>
+                        <button class="answer_item"><span class="number">2</span><span class="text">咖哩飯</span></button>
+                        <button class="answer_item"><span class="number">3</span><span class="text">馬鈴薯</span></button>
+                        <button class="answer_item"><span class="number">4</span><span class="text">玉米</span></button>
+                        <a href="#4thPage" class="check"><img src="./images/p4playOffBtn.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <!-- 神秘盒的解鎖 -->
+            <div id="#4thPage" class="section section_5 effect">
+                <div class="content">
+                    <img src="./images/p5tit.png" alt="" class="title">
+                    <div class="gift_info"></div>
+                    <div class="activity_wrapper">
+                        <div class="gift_wrapper">
+                            <img src="./images/p5gift.png" alt="" class="gift">
+                            <a href="https://www.facebook.com/gamebeansFW" target="_blank" class="go_fbPage"><img
+                                    src="./images/p5fbBtn.png" alt=""></a>
+                        </div>
+                        <div class="activity_info">
+                            <img src="./images/p5activityBox1.png" alt="" class="item">
+                            <img src="./images/p5activityBox2.png" alt="" class="item">
+                            <img src="./images/p5activityBox3.png" alt="" class="item">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 沉醉藝廊 -->
+            <div id="#5thPage" class="section section_6 effect">
+                <div class="content">
+                    <div class="swipper_content">
+                        <img src="./images/p6tit.png" alt="" class="title">
+                        <div class="bg_paper">
+                            <h1 class="info">這裡的未來戰一週年二創作品，都是老闆們一筆一筆描繪出的愛＆回憶呢！</br>邀請大家一同來欣賞～</h1>
+                            <img class="npc" src="./images/p6npc.png" alt="">
+                            <div class="collection_wrapper">
+                                <div class="cover"></div>
+                                <div class="swiper mySwiper" oncontextmenu="return false" onselectstart="return false"
+                                    ondragstart="return false">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/1.jpg">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/2.jpg">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/3.jpg">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/4.jpg">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/5.jpg">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/6.jpg">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/7.jpg">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <video id="video_8" controls>
+                                                <source src="./images/collection/8.mp4" type="video/mp4">
+                                                <p>你的瀏覽器不支援 HTML 5 video</p>
+                                            </video>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/9.jpg">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <video id="video_10" controls>
+                                                <source src="./images/collection/10.mp4" type="video/mp4">
+                                                <p>你的瀏覽器不支援 HTML 5 video</p>
+                                            </video>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/11.jpg">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/12.jpg">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/13.jpg">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/14.jpg">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/15.jpg">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/16.jpg">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/17.jpg">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/18.jpg">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/19.jpg">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <video id="video_20" controls>
+                                                <source src="./images/collection/20.mp4" type="video/mp4">
+                                                <p>你的瀏覽器不支援 HTML 5 video</p>
+                                            </video>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/21.jpg">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/22.jpg">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/23.jpg">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/24.jpg">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/25.jpg">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/26.jpg">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/27.jpg">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/28.jpg">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/29.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next pauseVideo"></div>
+                                <div class="swiper-button-prev pauseVideo"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer"></div>
+        </div>
+
+
+        <!-- 答題彈窗 -->
+        <div class="answer_popup">
+            <div class="result_wrapper">
+                <button onclick="closePopup(1)" class="close"><img src="./images/close.png" alt=""></button>
+                <button onclick="closePopup(2)" class="close_certificate"><img src="./images/close.png" alt=""></button>
+                <img class="ribbon" src="./images/p4ribbon.png" alt="">
+                <img class="result result_current" src="./images/p4ansC.png" alt="">
+                <img class="result result_wrong" src="./images/p4ansW.png" alt="">
+                <img class="certificate" src="./images/p4cxertificateBg.png" alt="">
+                <h1 class="user_name"></h1>
+            </div>
+        </div>
+        <!-- 作品集彈窗 -->
+        <div class="collection_popup" oncontextmenu="return false" onselectstart="return false"
+            ondragstart="return false">
+            <img class="photo" src="" alt="">
+        </div>
+
+
     </div>
-    <!-- loading   -->
-    <div id="bacc">
-        <div id="loo"></div>
-    </div>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/swiper.min.js"></script>
-    <script type="module" src="js/all.js"></script>
 </body>
+<script src="./js/jquery.js"></script>
+<script src="./js/swiper.min.js"></script>
+<script src="./js/fullpage.js"></script>
+<script src="./js/all.js"></script>
+<script src="./js/tsparticles.js"></script>
 
 </html>
