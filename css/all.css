@@ -794,6 +794,13 @@
   .section_3 .content .reward {
     margin-top: 4vw;
   }
+
+  .section_3 .content .reward .finiBtn {
+      top: 57vw;
+      left: 34vw;
+      width: 15.3vw;
+}
+
 }
 
 .section_4.effect.active {
@@ -1135,6 +1142,14 @@
   max-width: 90%;
 }
 
+@media (max-width: 768px) {
+    .answer_popup .result_wrapper .certificate .user_name {
+    top: 22.5vw;
+    left: 38.5vw;
+    font-size: 3.5vw;
+  }
+}
+
 .answer_popup .result_wrapper .imgDownload {
   position: absolute;
   display: none;
@@ -1150,6 +1165,15 @@
 .answer_popup .result_wrapper .imgDownload:hover {
   filter: brightness(1.3);
 }
+
+@media (max-width: 768px) {
+  .answer_popup .result_wrapper .imgDownload {
+    width: 40vw;
+    left: 27.5vw;
+    bottom: -27vw;
+  }
+}
+
 
 @media (max-width: 1725px) {
   .section_4 .content {
