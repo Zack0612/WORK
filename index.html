@@ -60,7 +60,6 @@
                 </nav>
             </div>
         </div>
-
         <!-- 主內容 -->
         <div id="fullpage">
             <!-- header -->
@@ -88,7 +87,10 @@
             <div id="#secondPage" class="section section_3 effect">
                 <div class="content">
                     <img src="./images/p3tit.png" alt="" class="title">
-                    <div class="reward"></div>
+                    <div class="reward">
+                        <!-- 已完成印章 -->
+                        <!-- <img class="finiBtn" src="./images/p3finiBtn.png" alt=""> -->
+                    </div>
                 </div>
             </div>
             <!-- 盛會上的考驗 -->
@@ -97,7 +99,7 @@
                     <img src="./images/p4tit.png" alt="" class="title">
                     <div class="question_wrapper">
                         <input id="name" class="notice" type="text" placeholder="最多十二個字不要超過了喔" maxlength="12">
-                        <button onclick="checkName()" class="check_name"></button>
+                        <button class="check_name"></button>
                         <h1 class="question">Q1 比起菸酒，黛西更喜歡把錢拿去買什麼？</h1>
                     </div>
                     <div id="answer" class="answer">
@@ -137,7 +139,9 @@
                             <h1 class="info">這裡的未來戰一週年二創作品，都是老闆們一筆一筆描繪出的愛＆回憶呢！</br>邀請大家一同來欣賞～</h1>
                             <img class="npc" src="./images/p6npc.png" alt="">
                             <div class="collection_wrapper">
-                                <div class="cover"></div>
+                                <div class="cover">
+                                    <h1 class="author"><span class="author_name">老闆們</span>作品</h1>
+                                </div>
                                 <div class="swiper mySwiper" oncontextmenu="return false" onselectstart="return false"
                                     ondragstart="return false">
                                     <div class="swiper-wrapper">
@@ -163,19 +167,13 @@
                                             <img class="" src="./images/collection/7.jpg">
                                         </div>
                                         <div class="swiper-slide">
-                                            <video id="video_8" controls>
-                                                <source src="./images/collection/8.mp4" type="video/mp4">
-                                                <p>你的瀏覽器不支援 HTML 5 video</p>
-                                            </video>
+                                            <img class="" src="./images/collection/8.jpg">
                                         </div>
                                         <div class="swiper-slide">
                                             <img class="" src="./images/collection/9.jpg">
                                         </div>
                                         <div class="swiper-slide">
-                                            <video id="video_10" controls>
-                                                <source src="./images/collection/10.mp4" type="video/mp4">
-                                                <p>你的瀏覽器不支援 HTML 5 video</p>
-                                            </video>
+                                            <img class="" src="./images/collection/10.jpg">
                                         </div>
                                         <div class="swiper-slide">
                                             <img class="" src="./images/collection/11.jpg">
@@ -205,10 +203,7 @@
                                             <img class="" src="./images/collection/19.jpg">
                                         </div>
                                         <div class="swiper-slide">
-                                            <video id="video_20" controls>
-                                                <source src="./images/collection/20.mp4" type="video/mp4">
-                                                <p>你的瀏覽器不支援 HTML 5 video</p>
-                                            </video>
+                                            <img class="" src="./images/collection/20.jpg">
                                         </div>
                                         <div class="swiper-slide">
                                             <img class="" src="./images/collection/21.jpg">
@@ -237,10 +232,91 @@
                                         <div class="swiper-slide">
                                             <img class="" src="./images/collection/29.jpg">
                                         </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/30.jpg">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/31.jpg">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/32.jpg">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/33.jpg">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/34.jpg">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/35.jpg">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/36.jpg">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/37.jpg">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/38.jpg">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/39.jpg">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/40.jpg">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/41.jpg">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/42.jpg">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/43.jpg">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/44.jpg">
+                                        </div>
+                                        <!-- 45 -->
+                                        <div class="swiper-slide">
+                                            <img class="" src="./images/collection/45_1.jpg">
+                                        </div>
+                                         <!-- 46 (45-2) -->
+                                        <div class="swiper-slide">
+                                            <iframe width="100%" height="100%"
+                                                src="https://www.youtube.com/embed/soA2_5WLV6s?controls=0"
+                                                title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowfullscreen></iframe>
+                                        </div>
+                                        <!-- 47 -->
+                                        <div class="swiper-slide">
+                                            <iframe width="100%" height="100%"
+                                                src="https://www.youtube.com/embed/PQr0ihBuSnE?controls=0"
+                                                title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowfullscreen></iframe>
+                                        </div>
+                                        <!-- 48 -->
+                                        <div class="swiper-slide">
+                                            <iframe width="100%" height="100%"
+                                                src="https://www.youtube.com/embed/B9_nqK_El_k?controls=0"
+                                                title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowfullscreen></iframe>
+                                        </div>
+                                        <!-- 49 -->
+                                        <div class="swiper-slide">
+                                            <iframe width="100%" height="100%"
+                                                src="https://www.youtube.com/embed/0b52Ok21Adk?controls=0"
+                                                title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowfullscreen></iframe>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="swiper-button-next pauseVideo"></div>
-                                <div class="swiper-button-prev pauseVideo"></div>
+                                <div class="swiper-button-next changeAuthor"></div>
+                                <div class="swiper-button-prev changeAuthor"></div>
                             </div>
 
                         </div>
@@ -248,6 +324,7 @@
                 </div>
             </div>
 
+            <!-- 頁尾 -->
             <div class="footer"></div>
         </div>
 
@@ -255,19 +332,25 @@
         <!-- 答題彈窗 -->
         <div class="answer_popup">
             <div class="result_wrapper">
-                <button onclick="closePopup(1)" class="close"><img src="./images/close.png" alt=""></button>
-                <button onclick="closePopup(2)" class="close_certificate"><img src="./images/close.png" alt=""></button>
+                <button class="close close_result"><img src="./images/close.png" alt=""></button>
+                <button class="close_certificate"><img src="./images/close.png" alt=""></button>
                 <img class="ribbon" src="./images/p4ribbon.png" alt="">
                 <img class="result result_current" src="./images/p4ansC.png" alt="">
                 <img class="result result_wrong" src="./images/p4ansW.png" alt="">
-                <img class="certificate" src="./images/p4cxertificateBg.png" alt="">
-                <h1 class="user_name"></h1>
+                <div class="certificate" id="certificate">
+                    <img src="./images/p4cxertificateBg.png" alt="">
+                    <h1 class="user_name"><span class="name"></span><span> 老闆</span></h1>
+                </div>
+                <button class="imgDownload"><img src="./images/p4DLBtn.png" alt=""></button>
             </div>
         </div>
+
         <!-- 作品集彈窗 -->
         <div class="collection_popup" oncontextmenu="return false" onselectstart="return false"
             ondragstart="return false">
             <img class="photo" src="" alt="">
+            <div class="multiple_photo"></div>
+            <div id="video_wrapper"></div>
         </div>
 
 
@@ -278,5 +361,6 @@
 <script src="./js/fullpage.js"></script>
 <script src="./js/all.js"></script>
 <script src="./js/tsparticles.js"></script>
+<script src="./js/html2canvas.min.js"></script>
 
 </html>
