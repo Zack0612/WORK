@@ -1,0 +1,14 @@
+html,
+    body {
+        background:url(images/newsin_01.jpg) repeat center #fff ;
+    }
+    .btn-back {
+        margin-top: 150px;
+    }
+    @media screen and (max-width:760px) {
+    .container {
+        background:url(images/newsin_02.jpg) no-repeat center bottom -90px, url(images/container_bg.png) no-repeat center top,url(images/newsin_01.jpg) repeat center;
+    }
+
+
+}

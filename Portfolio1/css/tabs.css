@@ -1,0 +1,317 @@
+@charset "utf-8";
+/* CSS Document */
+/*-------------------------- 新聞列表頁籤 -----------------------------*/
+
+.tabs {
+    width: 100%;
+    margin:-6px auto;
+    margin-top: 75px;
+	text-align:center;
+}
+
+@media screen and (max-width:768px) {
+.tabs {
+    width: 100%;
+    margin:-6px auto;
+    margin-top: 30px;
+	text-align:center;
+}
+}
+.tabcon{
+	width:60%;
+	margin:0 auto;
+	clear:both;
+	}
+
+.tabs a {
+    display: block;
+    float: left;
+    margin-top: 20px;
+    margin-left: 15px;
+    width: 20%;
+    color: #fff;
+    font-family: Arial, Helvetica, 'Microsoft JhengHei', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+	border-radius:100px;
+	background-color:#45271b;
+ }
+
+.tabs a:hover {
+  color:#f1bc11;
+  }
+.tabs a.active {
+  color:#fff;
+}
+
+
+
+
+@media screen and (max-width:960px) {
+
+    .tabs a {
+        display: block;
+        float: left;
+        margin-left: 4px;
+
+        font-family: Arial, Helvetica, 'Microsoft JhengHei', sans-serif;
+
+        text-align: center;
+        text-decoration: none;
+        border-radius:100px;
+        /*background-color: #686868;*/
+      /*  background: url(../images/tab_bg.png) repeat center center;*/
+
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    .tabs a {
+        display: block;
+        float: left;
+        margin-left: 4px;
+        font-size:0.9em;
+        font-family: Arial, Helvetica, 'Microsoft JhengHei', sans-serif;
+
+        text-align: center;
+        text-decoration: none;
+        border-radius:100px;
+        /*background-color: #686868;*/
+        /*background: url(../images/tab_bg.png) repeat center center;*/
+	    /*margin-top: -19px;*/
+
+    }
+}
+
+@media screen and (max-width:480px) {
+   .tabs {
+    width: 100%;
+    margin: -6px auto;
+    margin-top: 20px;
+    text-align: center;
+   }
+   
+    .tabs a {
+        display: block;
+        font-size: 0.8em;
+        /*margin-top: 25px;*/
+    }
+}
+
+/*
+.tabs {
+	  width:100%;
+	}
+.tabs a {
+	  margin-top:20px;
+	  margin-left:8px;
+	  display: block;
+	  width:21.8%;
+	  color: #c8c8c8;
+	  text-align: center;
+	  border-radius: 5px 5px 0px 0px;
+	  line-height:35px;
+	  font-size: 20px;
+	  font-weight:bold;
+	  font-family:"Arial","微軟正黑體";
+	  text-decoration: none;
+	  background-color:#686868;
+	}
+*/
+
+
+.swiper-container {
+  width: 100%;/*----新增***/
+  color:#333;
+  border-top:0;
+}
+	.swiper-container h2{
+	 color:#333;
+	}
+
+	.swiper-container p{
+	 color:#666;
+	}
+
+.date{
+	float:right;
+	margin-right:20px;
+	}
+
+.swiper-container ul{
+	margin:0px;
+	padding:0pc;
+	list-style:none;
+	color:#666;
+}
+.swiper-container ul li{
+	padding-left:10px;
+	margin-left:0px;
+	line-height:18px;
+
+	list-style:none;
+	color:#666;
+	padding-top:7px;
+
+	text-decoration:none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+
+/*
+.content-slide li:nth-child(odd){}
+.content-slide li:nth-child(even){
+	background-color: rgba(234, 175, 123, .3);
+	/*background-image: url(../images/newlist_bg.png);
+	background-repeat: repeat-x;*/}
+
+.swiper-container ul li a{
+	margin-left:0px;
+	list-style:none;
+	color:#140706;
+	padding-top:5px;
+	text-decoration:none;
+}
+
+.swiper-container ul li a:hover{
+	margin-left:0px;
+	list-style:none;
+	color:#c439ff;
+	padding-top:5px;
+}
+
+.txt_list{
+	}
+
+.news_btn{
+	margin-top:20px;
+	text-align:center;
+	text-decoration:none;
+	width:120px;
+	font-size:16px;
+	font-family:Arial;
+	font-weight:normal;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border:1px solid #e3e3e3;
+	padding:9px 18px;
+	text-decoration:none;
+	background:-moz-linear-gradient( center top, #dbbe87 5%, #c2a877 100% );
+	background:-ms-linear-gradient( top, #dbbe87 5%, #c2a877 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#399b94', endColorstr='#397E8C');
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #9860E8), color-stop(100%, #452B69) );
+	background-color:#399b94;
+	color:#ffffff;
+	display:inline-block;
+	text-align:center;
+	margin-bottom:30px;
+	}
+
+.news_btn a{
+	text-decoration:none;
+	font-weight:bold;
+	color:#ffffff;
+}
+.news_btn a:hover{
+	text-decoration: none;
+	font-weight: bold;
+	color: #FFFFFF;
+	}
+
+
+
+.swiper-slide{
+	text-align:left;
+	width: 100%;/*--新增****/
+	background: none;
+}
+.content-slide{
+	height:300px;
+	overflow:hidden;
+}
+
+.page_btn{
+	display:block;
+	text-align:center;
+	}
+
+.next_btn{
+	width:50px;
+	font-size:16px;
+	font-family:Arial;
+	font-weight:normal;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border:1px solid #e3e3e3;
+	padding:9px 18px;
+	text-decoration:none;
+	background:-moz-linear-gradient( center top, #dbbe87 5%, #c2a877 100% );
+	background:-ms-linear-gradient( top, #dbbe87 5%, #c2a877 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#399b94', endColorstr='#397E8C');
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #9860E8), color-stop(100%, #452B69) );
+	background-color:#dbbe87;
+	color:#ffffff;
+	display:inline-block;
+	}
+
+.guide{
+	font-size:12px;
+	font-family:"新細明體";
+	color:#666;
+	margin-left:10px;
+	}
+
+
+/*@media only screen and (min-width: 481px) {
+	.tabs {
+	    width:85%;
+  		text-align:center;
+  	}
+	.tabs a {
+		margin-top:25px;
+		margin-left:16px;
+	  display: block;
+	  width:20%;
+	  color: #c8c8c8;
+	  text-align: center;
+	  border-radius: 5px 5px 0px 0px;
+	  line-height: 40px;
+	  font-size: 20px;
+	  font-weight:bold;
+	  font-family:"Arial","微軟正黑體";
+	  text-decoration: none;
+	  background-color:#686868;
+	}
+}
+
+@media only screen and (min-width: 769px) {
+	.tabs {
+	  margin-top:5px;
+	  width: 100%;
+	  text-align:center;
+	}
+	.tabs a {
+		margin-left:15px;
+	  display: block;
+	  float: left;
+	  width:23%;
+	  color: #c8c8c8;
+	  text-align: center;
+	  border-radius: 5px 5px 0px 0px;
+	  line-height: 40px;
+	  font-size: 20px;
+	  font-weight:bold;
+	  font-family:"Arial","微軟正黑體";
+	  text-decoration: none;
+	  background-color:#686868;
+	}
+}				*/
+
+
