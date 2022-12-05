@@ -1,0 +1,267 @@
+/*--↓member_star↓--*/
+.membersite_zone {
+	width: 100%;
+	height: auto;
+    padding: 5% 0;
+	letter-spacing: 1px;
+	/*margin: 6.3% auto 0 auto;*/
+
+    display: flex;
+	align-items: flex-start;
+	justify-self:center;
+	background-color: rgba(238, 238, 238, 0.3);
+}
+
+.membersite_main_box {
+	position: relative;
+    width: 90%;
+    max-width: 1400px;
+    height: auto;
+    margin: auto;
+	z-index: 0;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	padding-top: 3.5vh;
+}
+
+.left{
+	width: 25%;
+	height: auto;
+	min-height: 450px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	border: 1px solid #eee;
+	background-color: #fff;
+	border-radius: 10px;
+	padding: 5% 0;
+	transition: .3s;
+
+}
+
+.left:hover{
+	border: 1px solid #78cc31;
+	transition: .3s;
+}
+
+.right{
+	width: 70%;
+	height: auto;
+}
+
+.right_data{
+	width: auto;
+	height: 20%;
+	border: 1px solid #eee;
+	background-color: #fff;
+	border-radius: 10px;
+	padding: 5%;
+	margin: 0 0 30px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	transition: .3s;
+}
+
+.right_data:hover{
+	width: auto;
+	height: 20%;
+	border: 1px solid #78cc31;
+	background-color: #fff;
+	border-radius: 10px;
+	padding: 5%;
+	margin: 0 0 30px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	transition: .3s;
+}
+
+.membersite_photo{
+	width: 50%;
+}
+
+.membersite_name{
+	font-size: 21px;
+	font-weight: 300;
+	line-height: 28px;
+	text-align: center;
+	width: 80%;
+}
+
+.membersite_button{
+	width: 80%;
+	max-width: 220px;
+	height: 50px;
+	font-size: 21px;
+	border: 1px solid #666;
+	border-radius: 10px;
+	outline: none;
+	background-color: #fff;
+	transition: .3s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.membersite_button:hover{
+	color: #fff;
+	cursor: pointer;
+	border: 1px solid #78cc31;
+	outline: none;
+	background-color: #78cc31;
+	transition: .3s;
+}
+
+.membersite_button_already{
+	width: 80%;
+	max-width: 220px;
+	height: 50px;
+	font-size: 21px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	outline: none;
+	background-color: #ccc;
+	color: #fff;
+	transition: .3s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.icon{
+	margin: 0 10px 0 0;
+}
+
+.big-icon{
+	width: 50px;
+	height: 50px;
+	font-size: 50px;
+	margin: 0 10px 0 0;
+	color: #000;
+}
+
+.right_data:hover .big-icon{
+	fill: #78cc31;
+	transition: .3s;
+}
+
+.small-icon{
+	width: 21px;
+	height: 21px;
+	margin: 0 0 0 10px;
+}
+
+.right_data_left{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.right_data_left2{
+	margin: 0 10px;
+}
+
+.data_tittle{
+	font-size: 21px;
+	line-height: 21px;
+	font-weight: 500;
+	margin: 0;
+}
+
+.data_info{
+	font-size: 16px;
+	line-height: 32px;
+	margin: 0%;
+}
+
+
+
+@media (max-width:1440px) {}
+
+@media (max-width:1200px) {
+	.right_data{
+		width: auto;
+		height: 20%;
+		border: 1px solid #eee;
+		background-color: #fff;
+		border-radius: 10px;
+		padding: 5%;
+		margin: 0 0 30px 0;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: space-between;
+		transition: .3s;
+	}
+	.membersite_button,.membersite_button_already{
+		height: 40px;
+		margin-top: 10px;
+	}
+	.right_data:hover{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+
+@media (max-width:850px) {
+	.membersite_zone{
+		margin:0;
+		padding: 15% 0;
+	}
+}
+
+@media (max-width:716px) {}
+
+@media (max-width:600px) {}
+
+@media (max-width:540px) {
+	.membersite_main_box{
+		flex-direction: column;
+	}
+	.left{
+		width: 100%;
+		min-height: 350px;
+		margin-top: 30px;
+		margin-bottom: 20px;
+	}
+	.membersite_photo{
+		width: 35%;
+	}
+	.right{
+		width: 100%;
+	}
+	.right_data{
+		align-items: center;
+	}
+	.right_data:hover{
+		align-items: center;
+	}
+		.right_data_left2{
+		width: 250px;
+		align-items: flex-start;
+	}
+	.membersite_name{
+		font-size: 21px;
+	}
+	.membersite_button,.membersite_button_already{
+		font-size: 18px;
+		letter-spacing: 1px;
+	}
+	.data_info{
+		font-size: 14px;
+		line-height: 21px;
+		display: block;
+		margin: 5px 0 0 0;
+	}
+}
+
+@media (max-width:414px) {}
+
+@media (max-width:365px) {}
+
+/*--↑member_end↑--*/

@@ -1,51 +1,469 @@
-﻿
 <!DOCTYPE html>
-<html>
-
+<html lang="zh-Hant-TW" class="no-js">
 <head>
-<meta charset="utf-8">
-<title>戀戀未來測試</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>無限連結 │ LuLuDu Tech Co.,Ltd.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<style>
-/**
- * Remove the margin in all browsers (opinionated).
- */
+    <!--google plus info-->
+    <meta itemprop="name" content="無限連結 │ LuLuDu Tech Co.,Ltd.">
+    <meta itemprop="image" content="images/seo_1280.jpg">
+    <meta name="description"
+        content="無限連結是一家位於台北，致力於在地研發，全球營運為目標的公司。我們從操作體感出發，遊戲娛樂為宗旨，讓玩家從現實連結到虛擬，進入無限暢遊的遊戲世界。" />
 
-body {
-  margin: 0;
-}
+    <!--FB info-->
+    <meta property="og:title" content="無限連結 │ LuLuDu Tech Co.,Ltd." />
+    <meta property="og:site_name" content="無限連結 │ LuLuDu Tech Co.,Ltd." />
+    <meta property="og:url" content="">
+    <meta property="og:image" content="images/seo_1280.jpg">
+    <meta property="og:description"
+        content="無限連結是一家位於台北，致力於在地研發，全球營運為目標的公司。我們從操作體感出發，遊戲娛樂為宗旨，讓玩家從現實連結到虛擬，進入無限暢遊的遊戲世界。">
+    <meta property="og:type" content="website" />
 
-/**
- * Add the correct display in IE 9-.
- */
+    <!--Icon-->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 
-article,
-aside,
-footer,
-header,
-nav,
-section {
-  display: block;
-}
+    <!--Noto Sans TC-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
 
+    <!--CSS-->
+    <!-- <link rel="stylesheet" href="css/reset.css">-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
 
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
+    <!--slick.css-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="css/slick/slick-theme.css">
 
-h1 {
-  font-size: inherit;
-  margin: 0;
-}
-</style>
+    <!--animeta.css-->
+    <link rel="stylesheet" href="css/animate.min.css" />
 
+    <!--AOS.css-->
+    <link href="css/aos.css" rel="stylesheet">
+
+    <!--hover.css-->
+    <link href="css/hover.css" rel="stylesheet">
+
+    <!--手機nav.css-->
+    <link href="css/sp_nav.css" rel="stylesheet">
 </head>
 
 <body>
+    <div id="top" class="wrapper">
+        <!--↓上方sp_nav_star↓-->
+        <div class="sp_main_nav">
+            <div class="sp_logo">
+                <a hre="" target="_blank">
+                   <img src="images/imoon_logo.png"  alt="">
+                </a>
+            </div>
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <!--內容區-->
+                <div id="menu">
+                    <div class="sp_nav_logo">
+                        <img src="images/imoon_logo.png" alt="">
+                    </div>
+                    <a href="index.html" target="_blank">
+                        <div class="sp_nav_select_1">
+                            <p>首頁</p>
+                        </div>
+                    </a>
+                    <a href="#" target="_blank">
+                        <div class="sp_nav_select_2">
+                            <p>藝人</p>
+                        </div>
+                    </a>
 
-              <img src="bg.jpg" style="max-width:100%">
+                    <a href="news.html" target="_blank">
+                        <div class="sp_nav_select_3">
+                            <p>新聞</p>
+                        </div>
+                    </a>
+
+                    <div class="sp_nav_line">
+                </div>
+                
+                </div>
+            </div>
+        </div>
+        <!--↑上方sp_nav_end↑-->
+
+        <!--↓pc滾動nav_star↓-->
+        <div id="down_nav">
+            <div class="down_imoon_logo">
+                <img src="images/imoon_logo.png" width="100%" height="100%" alt="">
+            </div>
+            <ul class="down_nav_content_box">
+                <li>
+                    <a href="index.html">
+                        <p>首頁</p>
+                    </a>
+                </li>
+                <li class="hvr-underline-from-center">
+                    <a href="games.html">
+                        <p>藝人</p>
+                    </a>
+                </li>
+                <li class="hvr-underline-from-center">
+                    <a href="news.html">
+                        <p>新聞</p>
+                    </a>
+                </li>
+
+            </ul>
+            <div class="down_nav_login_box">
+                <a href="#">
+                    <p class="hvr-underline-from-center">註冊&nbsp;&nbsp;/&nbsp;&nbsp;登入</p>
+                </a>
+            </div>
+        </div>
+        <!--↑pc滾動nav_end↑-->
+      
+        <!--↓主視覺區域_star↓-->
+        <div class="kv_zone">
+
+            <!--↓上方nav_star↓-->
+            <div class="main_nav">
+                <div class="imoon_logo">
+                    <img src="images/imoon_logo.png"  alt="">
+                </div>
+
+                <ul class="nav_content_box">
+                    <li class="hvr-underline-from-center">
+                        <a href="index.html">
+                            <p>新聞</p>
+                        </a>
+                    </li>
+
+                    <li class="hvr-underline-from-center">
+                        <a href="games.html">
+                            <p>藝人</p>
+                        </a>
+                    </li>
+
+                    <li class="hvr-underline-from-center">
+                        <a href="news.html">
+                            <p>首頁</p>
+                        </a>
+                    </li>
+
+                </ul>
         
-</body>
+            </div>
+            <!--↑上方nav_end↑-->
 
+            <!--↓banner_slick_star↓-->
+            <div class="slide-container ">
+                <div class="bn_wrapper">
+                    <div class="clash-card barbarian">
+                        <div class="clash-card__image pchide" style="background-image: url(images/banner_01.png);">
+                        </div>
+                        <div class="clash-card__image mobshow" style="background-image: url(images/mob/banner_01.jpg);">
+                        </div>
+                    </div>
+                </div>
+                <div class="bn_wrapper">
+                    <div class="clash-card barbarian">
+                        <div class="clash-card__image pchide" style="background-image: url(images/banner_01.png);">
+                        </div>
+                        <div class="clash-card__image mobshow" style="background-image: url(images/mob/banner_01.jpg);">
+                        </div>
+                    </div>
+                </div>
+                <div class="bn_wrapper">
+                    <div class="clash-card barbarian">
+                        <div class="clash-card__image pchide" style="background-image: url(images/banner_01.png);">
+                        </div>
+                        <div class="clash-card__image mobshow" style="background-image: url(images/mob/banner_01.jpg);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--↑banner_slick_end↑-->
+
+            <!--↓向下箭頭_star↓-->
+            
+                <div class="LV1_Down_arrow">
+                    <a href="#LV2_news">
+                       <img src="images/LV1_Down_arrow.png" width="100%" height="100%" alt="">
+                    </a>
+                </div>
+            <!--↑向下箭頭_end↑-->
+
+        </div>
+        <!--↑主視覺區域_end↑-->
+
+
+        <!--↓NEWS_star↓-->
+        <div class="LV2_zone" id="LV2_news">
+            <div class="NEWS_main_box ">
+
+                <!--↓NEWS_大標↓-->
+                <div class="NEWS_big_title">
+                    <img src="images/NEWS_title.png" width="100%" height="100%" alt="">
+                </div>
+
+                <div class="NEWS_big_title_line">
+                </div>
+
+                <!--↓more↓-->
+                <div class="NEWS_big_title_more hvr-backward">
+                    <a href="#" target="_blank">
+                        <p class="hide_mob">more</p>
+                        <p class="hide_pc">新聞專區</p>
+                    </a>
+                </div>
+
+                <div class="slide-containernews ">
+                    <div class="NEWS_content_zone">
+
+                        <!--消息1-->
+                        <a class="news_con" href="#" target="_blank">
+                            <div class="news_box">
+                                <!--NEWS照片-->
+                                <div class="news_img_box">
+                                    <img src="images/news_image.jpg" width="100%" height="100%" alt="">
+                                </div>
+
+                                <!--NEWS時間bar-->
+                                <div class="news_time">
+                                    <p>NOV. 13th, 2020</p>
+                                </div>
+
+                                <!--NEWS_鰾題字_最多45字-->
+                                <div class="NEWS_title_word">
+                                    <p>集新作開發人員爾達傳說爾達傳說爾達傳說爾爾爾集新作開發人員爾達傳說爾達傳說爾達傳說爾爾爾爾</p>
+                                </div>
+
+                                <!--NEWS_小字_最多26字-->
+                                <div class="NEWS_msg">
+                                    <p>開啟手機版首發限時特價</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!--消息2-->
+                        <a class="news_con" href="#" target="_blank">
+                            <div class="news_box">
+                                <!--NEWS照片-->
+                                <div class="news_img_box">
+                                    <img src="images/news_image2.jpg" width="100%" height="100%" alt="">
+                                </div>
+
+                                <!--NEWS時間bar-->
+                                <div class="news_time">
+                                    <p>NOV. 13th, 2020</p>
+                                </div>
+
+                                <!--NEWS_鰾題字_最多45字-->
+                                <div class="NEWS_title_word">
+                                    <p>集新作開發人員爾達傳說爾達傳說爾達傳說爾爾爾集新作開發人員爾達傳說爾達傳說爾達傳說爾爾爾爾</p>
+                                </div>
+
+                                <!--NEWS_小字_最多26字-->
+                                <div class="NEWS_msg">
+                                    <p>開啟手機版首發限時特價</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!--消息3-->
+                        <a class="news_con" href="#" target="_blank">
+                            <div class="news_box">
+                                <!--NEWS照片-->
+                                <div class="news_img_box">
+                                    <img src="images/news_image3.jpg" width="100%" height="100%" alt="">
+                                </div>
+
+                                <!--NEWS時間bar-->
+                                <div class="news_time">
+                                    <p>NOV. 13th, 2020</p>
+                                </div>
+
+                                <!--NEWS_鰾題字_最多45字-->
+                                <div class="NEWS_title_word">
+                                    <p>集新作開發人員爾達傳說爾達傳說爾達傳說爾爾爾集新作開發人員爾達傳說爾達傳說爾達傳說爾爾爾爾</p>
+                                </div>
+
+                                <!--NEWS_小字_最多26字-->
+                                <div class="NEWS_msg">
+                                    <p>開啟手機版首發限時特價</p>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--↓向下箭頭_star↓-->
+            <a href="#LV3_banner">
+                <div class="LV2_Down_arrow">
+                    <img src="images/LV1_Down_arrow.png" width="100%" height="100%" alt="">
+                </div>
+            </a>
+            <!--↑向下箭頭_end↑-->
+
+            <div class="cir1">
+                <img src="images/cir01.png"  alt="">
+            </div>
+
+            <div class="cir2">
+                <img src="images/cir02.png"  alt="">
+            </div>
+
+            <div class="cir3">
+                <img src="images/cir03.png"  alt="">
+            </div>
+
+        </div>
+        <!--↑NEWS_end↑-->
+        
+        <!--↓品牌概要_star↓-->
+        <div class="LV3_zone" id="LV3_banner">
+
+                            <!--↓NEWS_大標↓-->
+
+                            <div class="hide_pc">
+                                <div class="ART_big_title">
+                                    <img src="images/ART_title.png" width="100%" height="100%" alt="">
+                                </div>
+                
+                                <div class="ART_big_title_line">
+                                </div>
+                
+                                <!--↓more↓-->
+                                <div class="ART_big_title_more hvr-backward">
+                                    <a href="#" target="_blank">
+                                        <p>藝人專區</p>
+                                    </a>
+                                </div>
+                            </div>
+
+                            
+            <!--品牌概要-->
+            <div class="Ltd_info_box wow">
+                <ul>
+                    <li class="info_big_title animate__animated animate__fadeIn">艾慕藝人</li>
+                    <li class="info_sec_title animate__animated animate__fadeIn">創意無限。夢想連結</li>
+                    <li class="info_s_word animate__animated animate__fadeIn">
+                        透過大數據看市場需求，以確保投資有效益回收。橫向發展將IP從遊戲、動畫朝向戲劇、影遊連動、藝人經紀、文創周邊，讓娛樂多元發展。
+                    </li>
+                </ul>
+            </div>
+
+            <!--↓banner_slick_star 背景及小圖需要替換↓-->
+            <div class="slide-container2">
+                <div class="bn_wrapper2">
+                    <div class="clash-card2 barbarian2">
+                        <div class="clash-card2__image pchide" style="background-image: url(images/artbn_01.png);">
+                        </div>
+                        <div class="clash-card2__image mobshow" style="background-image: url(images/mob/artbn_01.jpg);"></div>
+                    </div>
+                </div>
+                <div class="bn_wrapper2">
+                    <div class="clash-card2 barbarian2">
+                        <div class="clash-card2__image pchide" style="background-image: url(images/artbn_01.png);"></div>
+                            <div class="clash-card2__image mobshow" style="background-image: url(images/mob/artbn_01.jpg);">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bn_wrapper2">
+                    <div class="clash-card2 barbarian2">
+                        <div class="clash-card2__image pchide" style="background-image: url(images/artbn_01.png);"></div>
+                            <div class="clash-card2__image mobshow" style="background-image: url(images/mob/artbn_01.jpg);">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--↑banner_slick_end↑-->
+
+            <!--↓向下箭頭_star↓-->
+            <a href="#LV4_info">
+                <div class="LV3_Down_arrow">
+                    <img src="images/LV3_Down_arrow.png" width="100%" height="100%" alt="">
+                </div>
+            </a>
+            <!--↑向下箭頭_end↑-->
+        </div>
+        <!--↑品牌概要end↑-->
+
+
+        <!--↓公司概述_star↓-->
+        <div class="LV4_zone" id="LV4_info">
+            <!--左邊-->
+            <div class="LV4_ltd_info_left">
+                <img src="images/LV4_ltd_info.jpg" width="100%" height="100%" alt="">
+            </div>
+
+            <!--左邊_sp-->
+            <div class="LV4_ltd_info_sp_left">
+                <img src="images/LV4_ltd_info_sp.jpg" width="100%" height="100%" alt="">
+            </div>
+
+            <!--右邊-->
+            <div class="LV4_ltd_info_right wow">
+                <ul>
+                    <li class="LV4_info_big_title wow animate__animated animate__fadeIn">公司概述</li>
+                    <li class="LV4_info_s_title wow animate__animated animate__fadeIn">
+                        艾慕影藝為艾肯娛樂集團旗下子公司，遊戲代理起家，逐步建立遊戲研發團隊、數位娛樂自媒體、潮流玩具研發公司，運營至今所有營運項目成績皆能以專業網路數據分析，透過大數據看市場需求，以確保投資有效益回收。橫向發展將IP從遊戲、動畫朝向戲劇、影遊連動、藝人經紀、文創周邊，讓娛樂多元發展，期待與業界各方優秀夥伴專業分工，一起創造IP多元價值共好共利產業共榮。
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--↑公司概述_end↑-->
+        <!--↓footer_star↓-->
+        <div class="footer_zone">
+
+            <div class="footer_box">
+                <a class="hide_mob">FACEBOOK</a>
+                <a class="hide_mob">IG</a>
+                <a>關於我們</a>
+                <a>聯絡我們</a>
+                <a><img class="hide_pc" src="images/imoonmob_logo.png" alt=""></a>
+            </div>
+
+        </div>
+        <!--↑footer_end↑-->
+
+        <!--↓copyright_star↓-->
+        <div class="copyright_zone">
+            <div class="copy_word_box">
+                <p>© 2022 iMoon Inc. All rights reserved.</p>
+            </div>
+        </div>
+        <!--↑copyright_end↑-->
+    </div>
+    <!--script-->
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/awesome.js"></script>
+    <script src="js/main.js"></script>
+
+    <!--wow js-->
+    <script src="js/wow.js"></script>
+    <script>
+        var wow = new WOW({
+            mobile: false, // 手機上是否要套用動畫 (預設是true)
+        });
+        wow.init();
+    </script>
+    <!--AOS.js-->
+    <script src="js/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!--slick js-->
+    <script src="js/slick/slick.js"></script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/Slick_Double.js"></script>
+</body>
 </html>

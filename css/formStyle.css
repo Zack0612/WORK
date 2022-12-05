@@ -1,0 +1,468 @@
+@charset "utf-8";
+/*input-resest*/
+input{
+    position: absolute;
+    width:100%;
+    height: 64px;
+    outline: none;
+    border:0px;
+    border-radius: 10px;
+    color:#78cc31;
+    box-sizing: border-box;
+    padding:0 20px;
+    font-size: 21px;
+    z-index: 1;
+    left: 0;
+}
+input::placeholder{
+    color: #909399;
+    visibility: hidden;
+}
+input:focus{
+    color:#78cc31;
+    border: 1px solid #78cc31;
+
+}
+input:active,input:hover{
+    border: 1px solid #78cc31;
+}
+::-ms-clear,::-ms-reveal{
+    display:none;
+}
+button{
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    user-select: none;
+}
+label.tips{
+    position: absolute;
+    z-index: 5;
+    width:100%;
+    height: 100%;
+    line-height: 64px;
+    text-align: left;
+    color: #909399;
+    font-size: 18px;
+    padding:0 20px;
+    box-sizing: border-box;
+    left: 0;
+    pointer-events: none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -o-user-select:none;
+    user-select:none;
+}
+.tips > b{
+    color: #FF13B0;
+    margin-left: 5px;
+}
+input:valid ~ label{
+    display: none;
+}
+select:valid ~ label{
+    display: none;
+}
+@media (max-width:768px){
+    /*input-resest*/
+    input{
+        height:56px;
+        line-height: 56px;
+        border-radius: 10px;
+        padding:0 16px;
+        font-size: 18px;
+    }
+    button{
+        border-radius:10px;
+    }
+    label.tips{
+        width:100%;
+        height: 100%;
+        line-height: 56px;
+        font-size: 18px;
+    }
+    .tips > b{
+        margin-left: 16px;
+    }
+}
+/*form-outer*/
+.form-outer{
+    width:500px;
+    margin: 0 auto;
+    margin: 60px 0 50px 0;
+}
+.form-outer > div{
+    width:100%;
+    height: 64px;
+    position: relative;
+    margin-bottom: 16px;
+    border: 1px s;
+}
+.form-outer > a{
+    display: inline-block;
+    width: 100%;
+    height: 64px;
+    line-height: 64px;
+    border-radius: 10px;
+    font-size: 21px;
+}
+
+@media (max-width:768px){
+    /*form-outer*/
+    .form-outer{
+        width:100%;
+        margin: 0 auto;
+    }
+    .form-outer > div{
+        width:100%;
+        height:56px;
+        line-height: 56px;
+        margin-bottom:20px;   
+    }
+    .form-outer > a{
+        height:56px;
+        line-height:56px;
+        border-radius: 10px;
+        font-size: 16px;
+    }
+}
+/*password-eye-see*/
+.show_pass{
+    position: absolute;
+    width:26px;
+    height: 26px;
+    right: 20px;
+    top:19px;
+    cursor: pointer;
+    z-index: 6;
+}
+.glyphicon-eye-open{
+    background-image:url(../images/icon_eye.png);
+}
+.glyphicon-eye-close{
+    background-image:url(../images/viewer1.png);
+}
+@media (max-width:768px){
+    /*password-eye-see*/
+    .show_pass{
+        width:24px;
+        height:24px;
+        background-size: 100%;
+        right: 16px;
+    }
+}
+/*checkbox*/
+div.check-outer{
+    width: 99%;
+    height: 24px;
+    position: relative;
+}
+.check-outer *{
+    font-size: 16px;
+    color:#606266;
+    height: 24px;
+    line-height:24px;
+    overflow: visible;
+}
+.check-outer > a{
+    float: right;
+}
+.check-outer a:hover,.verification-outer ~ div.notice-text a:hover{
+    color: #78cc31;
+}
+.check-outer > a:nth-last-child(2){
+    margin-left:30px;
+}
+.check-box{
+    cursor: pointer;
+    user-select: none;
+    top: -2px;
+    left: 3%;
+    position: absolute;
+}
+.check-box input[type=checkbox]{
+    width:24px;
+    height: 24px;
+    display: none;
+}
+.check-box input[type=checkbox] ~ div{
+    width:24px;
+    height: 24px;
+    background-image: url(../images/uncheck.png);
+    background-repeat: no-repeat;
+}
+.check-box input[type=checkbox]:checked ~ div{
+    background-image: url(../images/check.png);
+}
+.check-box span,.check-box div{
+    display: inline-block;
+    vertical-align: middle;
+}
+.check-box span{
+    margin-left:14px;
+}
+.check-box span a{
+    text-decoration: underline;
+    border-radius: 0;
+    margin-left: 6px;
+}
+.check-box .fa-external-link-alt{
+    font-size:14px;
+    margin: 0 4px 0 6px;
+    display: inline-block;
+    vertical-align: middle;
+}
+div.check-outer.page-singup{
+    margin: 30px 0 40px 0;
+}
+@media (max-width:768px){
+    /*checkbox*/
+    div.check-outer{
+        height:62px;
+        margin:0 auto -18px auto;
+    }
+    .check-outer *{
+        font-size:14px;
+        height:auto;
+        line-height:1.5;
+    }
+    .check-outer > a:nth-last-child(2){
+        margin-left:20px
+    }
+    .check-box input[type=checkbox]{
+        width:24px;
+        height:24px;
+    }
+    .check-box input[type=checkbox] ~ div{
+        width:24px;
+        height:24px;
+    }
+    label.check-box > span{
+        font-size:14px;
+    }
+    .check-box span a{
+        margin-left:0;
+    }
+    .check-box .fa-external-link-alt{
+        font-size:14px;
+        margin: -3px 0 0 5px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    div.check-outer.page-singup{
+        text-align: left;
+        margin: 0;
+    }
+    div.check-outer.page-singup > label{
+        width: 100%;
+    }
+    div.check-outer.page-singup > label > span{
+        width:calc(100% - 45px);
+    }
+    
+}
+
+
+.btn_arrow{
+    position: absolute;
+    right: 0;
+    z-index: 5;
+    width: 64px;
+    height: 64px;
+    line-height: 64px;
+    color:#DCDFE6;
+    transition:all 0.5s ease;
+    font-size: 24px;
+}
+select:hover ~ div{
+    border: 1px solid #78cc31;
+}
+/*the container must be positioned relative:*/
+.custom-select {
+	overflow: hidden;
+	width: auto;
+	text-align: center;
+    margin: 0;
+    position: relative;
+}
+.custom-select select {
+    padding: 8px 38px 8px 8px;
+	color: #666666;
+	font-size: 18px;
+	text-align: center;
+	width: 100%;
+	height: 60px;
+    padding:0 20px;
+	cursor: pointer;
+	text-indent: 0.01px;
+	text-overflow: ellipsis;
+	border: none;
+	outline: none;
+	background: #ffffff;
+    border-radius: 10px;
+	background-image: none;
+	box-shadow: none;
+	-webkit-appearance: none;
+	appearance: none;
+    overflow: scroll;
+}
+.custom-select select::-ms-expand {
+    display: none;
+}
+.custom-select::before {
+	position: absolute;
+	top: calc(60px - 50%);
+	right: 10px;
+	width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #666666;
+	pointer-events: none;
+}
+
+@media (max-width:768px){
+      .custom-select select ~ label,.custom-select select ~ label.after{
+          height:40px;
+          top:3.5px;
+          left: 2px;
+          line-height: 45px;
+          border-radius:30px;
+      }
+      .select-selected {
+        font-size: 16px;
+        height:56px;
+        line-height: 45px;
+        font-size: 14px;
+      }
+      /*style the arrow inside the select element:*/
+      .select-selected:after {
+        top: 19px;
+        right: 18px;
+        width: 0;
+        height: 0;
+      }
+      /*point the arrow upwards when the select box is open (active):*/
+      .select-selected.select-arrow-active:after {
+        top: 9px;
+      }
+      /*style items (options):*/
+      .select-items {
+        font-size: 14px;
+        }
+      .select-items div{
+          height: 47px;
+          line-height: 47px;
+      }
+}
+/*驗證碼*/
+.verification-outer input{
+    font-size: 30px;
+    letter-spacing: 10px;
+}
+.verification-outer label.tips{
+    font-size: 30px;
+}
+.verification-outer ~ div.notice-text{
+    display: inline-block;
+    width: 460px;
+    line-height: 1.5;
+    font-size: 16px;
+    padding: 0;
+    margin:43px 0 0 0 ;
+}
+.verification-outer ~ div.notice-text a{
+    text-decoration: underline;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.verification-outer ~ div.notice-text .fa-external-link-alt{
+    margin-left: 4px;
+}
+a.btn-small{
+    width:160px;
+}
+a.btn-small ~ a{
+    width: 320px;
+    margin-left: 17px;}
+span.text-center.verification{
+    height:76px;
+    line-height: 76px;
+    display: block;
+    margin-top: -16px;
+}
+div.bouns-outer{
+    height: 215px;
+    line-height: 215px;
+    font-size: 0;
+}
+div.bouns-outer a{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left:75px;
+    width:90px;
+    height:90px;
+}
+div.bouns-outer a:nth-child(1){
+    margin-left: 0;
+}
+div.bouns-outer a img{
+    vertical-align: top;
+}
+@media (max-width:768px){
+    /*驗證碼*/
+    .verification-outer input{
+        font-size:24px;
+    }
+    .verification-outer label.tips{
+        font-size: 14px;
+    }
+    .verification-outer ~ div.notice-text{
+        width:100%;
+        line-height: 1.5;
+        font-size: 14px;
+        text-align: justify;
+    }
+    .verification-outer ~ div.notice-text span{
+        font-size: 14px;
+    }
+    .verification-outer ~ div.notice-text span a{
+        font-size: 14px;
+    }
+    .verification-outer ~ div.notice-text .fa-external-link-alt{
+        margin-left: 2px;
+        font-size: 14px;
+    }
+    a.btn-small{
+        width:100%;
+    }
+    a.btn-small ~ a{
+        width:100%;
+        margin: 20px 0 0 0;
+    }
+    span.text-center.verification{
+        height:76px;
+        line-height: 76px;
+        display: block;
+        margin-top: -16px;
+    }
+    div.bouns-outer{
+        height: auto;
+        line-height: 1;
+    }
+    div.bouns-outer a{
+        margin-left:5%;
+        width:5rem;
+        height:auto;
+    }
+    div.bouns-outer a:nth-child(1){
+        margin-left: 0;
+    }
+    div.bouns-outer a img{
+        vertical-align: top;
+        width: 100%;
+        height: auto;
+    }
+}
