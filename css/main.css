@@ -2093,7 +2093,7 @@ button{
 	height:auto;
 }
 
-.link_box div img:hover{
+.link_box div a img:hover{
 	filter:opacity(0.5);
 }
 
