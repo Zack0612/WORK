@@ -203,6 +203,21 @@
         font-weight: 400;
     }
 
+    .sp_nav_select_log{
+        position: absolute;
+        width:50%;
+        height: auto;
+        background-color: rgba(243, 122, 122, 0);
+        /*顏色標記*/
+        top: 15%;
+        left: 25%;
+        text-align: center;
+    }
+
+    .sp_nav_select_log p{
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
 
     .sp_nav_line{
         position: absolute;

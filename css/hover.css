@@ -2573,11 +2573,11 @@
   border-radius: 10px;
 
 
-background: #ffda1e; /* Old browsers */
-background: -moz-linear-gradient(left,  #ffda1e 1%, #62b026 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(left,  #ffda1e 1%,#62b026 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to right,  #ffda1e 1%,#62b026 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffda1e', endColorstr='#62b026',GradientType=1 ); /* IE6-9 */
+background: #e1bcef; /* Old browsers */
+background: -moz-linear-gradient(left,  #e1bcef 1%, #c6a6ff 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  #e1bcef 1%,#c6a6ff 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  #e1bcef 1%,#c6a6ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1bcef', endColorstr='#c6a6ff',GradientType=1 ); /* IE6-9 */
 
 
 
