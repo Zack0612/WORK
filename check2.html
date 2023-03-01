@@ -49,109 +49,72 @@
 <!--主視覺區域-->
 
 
-
 <main id="fullpage">
 
-<div id="section" class="section stage">
+  <div class="section h5_con missionbg">
 
-
-
-    <div class="logo">
-           <img src="images/logo.png" >
+    <div class="h5_top">
+      <div class="log_box3">
+        <img src="images/slogan_check.png" alt="">
+      </div>
     </div>
 
-    <div class="topicon_con" >
-		
-		<!--進入官網-->
-		<a href="https://ty.icantw.com/" target="_blank" class="icon_btn" title="進入官網" >
-         <img src="images/ico_home.png" >
-		</a>
-		<!--下載遊戲-->
-		<a href="https://ty.icantw.com/" target="_blank" class="icon_btn" title="下載遊戲" >
-         <img src="images/ico_down.png" >
-		</a>
-		<!--分享FB-->
-		<a href="https://ty.icantw.com/" target="_blank" class="icon_btn"  title="分享FB" >
-         <img src="images/ico_share.png" >
-		</a>
-		
-	</div>
-
-   <div class="slogan">
-      <img src="images/slogan01.png" >
-   </div>
-
-    <div class="jin_con">          
-          <img class="jin1" src="images/JIN1.png" >
-          <img class="jin2" src="images/JIN2.png" >
-   </div>
+    <div class="h5_in3">
+         
+      <div class="mission_con">
         
-   <a class="btn_tofb" target="_blank" href="https://www.facebook.com/icantw.TY"> </a>
-   <a class="btn_toig" target="_blank" href="https://www.instagram.com/icantw.ty/"> </a>
+        <a href="check.html" target="_parent" class="check_tab">
+                <img src="images/tomission.png" alt="">
+        </a>
+       
+        <div class="check_stt">
+          <img src="images/check_stt2.jpg" alt="">
+        </div> 
+           
+        <div class="rw_con">
+          <div class="reward1 active"></div>
+          <div class="reward_list">
+            <div class="reward2 active"></div>
+            <div class="reward3"></div>
+          </div>
+          <div class="reward_list">
+            <div class="reward4 active"></div>
+            <div class="reward5"></div>
+          </div>
 
-   <div class="mainbt_con">
-      <a class="mainbtn1" target="_blank" href="check.html"></a>
-      <a class="mainbtn2" target="_blank" href="heart.html"></a>
-      <a class="mainbtn3" target="_blank" href="check2.html"></a>
-      <a class="mainbtn4" target="_blank" href="https://www.facebook.com/icantw.TY"></a>
-      <a class="mainbtn5" target="_blank" href="https://www.icantw.com/"></a>
+        </div>  
+
+        <div class="h5_bottom">
+          <div class="bottombtn">
+             <i class="bmbtn_1hv"></i>
+          </div>
+          <a href="heart1.html" target="_parent" class="bottombtn">
+              <i class="bmbtn_2"></i>
+          </a>
+          <a href="mission.html" target="_parent" class="bottombtn">
+           <i class="bmbtn_3"></i>
+          </a>
+          <a  href="" target="_parent" class="bottombtn">
+           <i class="bmbtn_4"></i>
+          </a>
+     </div>
+
+       </div>
+             
+        </div>
+
+      </div>
+ 
+
+    </div>
+
+
+
   </div>
 
-   <div class="btn_chang">
-      <img  src="images/btn_chang.png" >
-   </div>
-
-
-
-   <div id="btn_turn"  class="btn_turn">
-      <div class="btn_cy"></div>
-   </div>
-
-
-   <div class="nav-wrap">
-      <div class="nav-list">
-         <a href="check.html" target="_parent"  class="nav-item">活動任務</a>
-         <a href="heart.html" target="_parent"class="nav-item">心理測驗</a>
-         <a href="check2.html" target="_parent"class="nav-item">獎勵一覽</a>
-         <a href="https://www.facebook.com/icantw.TY" target="_blank" class="nav-item">活動公告</a>
-      </div>
-   </div>      
-
-   <div class="bg_dow">          
-      <img  src="images/bg_dow.webp" >
-   </div>
-
-      <!--copyright-->
-    <footer>
-      <div class='footer-outer'>
-        <div class='footer-left'>
-          <div class='ican-logo'>
-            <img src='images/gameflier.png' alt='ican'>
-          </div>
-          <div class='all-right'>© ican entertainment Co., Ltd. All Rights Reserved. </div>
-          <div class='wan-logo'>
-            <img src='images/logos.png' alt='wanyi'>
-          </div>
-        </div>
-        <div class='footer-right'>
-          <div class='classLevel'>
-            <img src='images/15.png' alt='15+'>
-          </div>
-          <div class='classTxt'>
-            ◆ 本遊戲部分內容涉及暴力、菸酒、戀愛交友、性，依遊戲軟體分級管理辦法分類為輔15級。
-            <br>◆ 注意使用時間，請避免沉迷遊戲。 <br>◆ 遊戲部分內容需另外支付費用。
-          </div>
-        </div>
-      </div>
-   </footer>
-
- </div>
-</div>
- 
 </main>
    
 
-  
 
 
   
@@ -165,11 +128,23 @@
 
 <script type="text/javascript">
    var myFullpage = new fullpage('#fullpage', {
-       verticalCentered: true,
-     offsetSections: false,
-     autoScrolling: false,
-     scrollBar: false
+     autoScrolling: true,
+     scrollBar: true
    });
+
+
+    $(".testcheck_item").click(function(){
+        $(this).addClass("active").siblings(".testcheck_item").removeClass("active");
+    })
+    $(".testcheck_item2").click(function(){
+        $(this).addClass("active").siblings(".testcheck_item2").removeClass("active");
+    })
+    $(".testcheck_item3").click(function(){
+        $(this).addClass("active").siblings(".testcheck_item3").removeClass("active");
+    })
+    $(".testcheck_item4").click(function(){
+        $(this).addClass("active").siblings(".testcheck_item4").removeClass("active");
+    })
 </script>
 
 
