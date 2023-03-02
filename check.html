@@ -49,7 +49,6 @@
 <!--主視覺區域-->
 
 
-<main id="fullpage">
 
   <div class="section h5_con missionbg">
 
@@ -80,7 +79,7 @@
                   <img  src="images/reward_srar1.png" alt=""> 
                </div>     
               <span class="reward_miss">每日登入簽到可得</span>
-              <a href="" class="reward_button active">去簽到</a>
+              <a href="javascript:void(0);" class="reward_buttonactive">去簽到</a>
             </div>
             
           </div>
@@ -92,7 +91,7 @@
                <img  src="images/reward_srar2.png" alt=""> 
             </div>     
            <span class="reward_miss">完成心理測驗</span>
-           <a href="" class="reward_button">去完成</a>
+           <a href="javascript:void(0);" class="reward_button">去完成</a>
          </div>
          
 
@@ -104,7 +103,7 @@
                <img  src="images/reward_srar3.png" alt=""> 
             </div>     
            <span class="reward_miss">完成S25服創建角色</span>
-           <a href="" class="reward_button">去完成</a>
+           <a href="javascript:void(0);" class="reward_button">去完成</a>
          </div>
         <!--END mission3-->
           <div class="mission_wd">
@@ -113,28 +112,36 @@
 
           </div>
          </div>
+
+
+      
         </div>
-           <div class="h5_bottom">
-            <div class="bottombtn">
-               <i class="bmbtn_1hv"></i>
-            </div>
-            <a href="heart1.html" target="_parent" class="bottombtn">
-                <i class="bmbtn_2"></i>
-            </a>
-            <a href="mission.html" target="_parent" class="bottombtn">
-             <i class="bmbtn_3"></i>
-            </a>
-            <a  href="" target="_parent" class="bottombtn">
-             <i class="bmbtn_4"></i>
-            </a>
-       </div>
+      
+        <div class="h5_bottom">
+          <div class="bottombtn">
+             <i class="bmbtn_1hv"></i>
+          </div>
+          <a href="heart1.html" target="_parent" class="bottombtn">
+              <i class="bmbtn_2"></i>
+          </a>
+          <a href="mission.html" target="_parent" class="bottombtn">
+           <i class="bmbtn_3"></i>
+          </a>
+          <a  href="" target="_parent" class="bottombtn">
+           <i class="bmbtn_4"></i>
+          </a>
+      </div>  
+      
 
        </div>
-             
-       
+
+      
+   
+    
 
       </div>
  
+      
 
     </div>
 
@@ -142,9 +149,28 @@
 
   </div>
 
-</main>
-   
 
+
+
+
+  <div class="popup wanzi_popup">
+    <div class="wanzi_popup_bg">
+    </div>
+    <div class="wanzi_popup_wrapper">
+      <button class="wanzi_popup_close"></button>
+        <div class="wanzi_popup_content">
+            
+            <div class="content" >
+                <h1>
+                  設置成功
+                </h1>
+                <div class="ok" >
+                    <img src="images/popbtn.png" alt="" >
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
 
 
   
@@ -158,8 +184,14 @@
 
 <script type="text/javascript">
    var myFullpage = new fullpage('#fullpage', {
+
      autoScrolling: true,
-     scrollBar: true
+     css3: true,   
+     responsiveWidth: 750,
+     afterResponsive: function(isResponsive){
+
+}
+
    });
 
 
