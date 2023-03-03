@@ -28,5 +28,20 @@ $(document).ready(function(){
     $('.wanzi_popup').fadeOut(100);
   });
     
+   //notice_button
+ $('#notice_btn,#notice_btn2').click(function () {
+  $('.notice_popup').css('display', 'flex').fadeIn(100);
+  $('.notice_popup').delay(100).fadeIn(500);
+
+});
+
+$('.notice_popup_close').click(function () {
+  $('.notice_popup').fadeOut(100);
+});
+
+$('.notice_popup_content .ok').click(function () {
+  $('.notice_popup').fadeOut(100);
+});
+
 });
 
