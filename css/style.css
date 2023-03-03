@@ -353,10 +353,7 @@ img{
     background-size: 100%;
   }
 
-  .btn_toig:hover {
-    background-position:0px 100%;
-    padding-bottom: 50%;
-  }
+
   
   @keyframes up-down1 {
     0% {
