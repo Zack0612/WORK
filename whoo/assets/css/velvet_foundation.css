@@ -1,0 +1,1982 @@
+/* common */
+.global{
+  width: 100%;
+}
+
+p{
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* header */
+header{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  animation: fadeInDown 0.8s linear;
+}
+
+.header_contain{
+  width: 100%;
+  max-width: 1600px;
+  padding: 20px 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.logo{
+  width: 30%;
+  max-width: 80px;
+  margin-left: 0;
+  display: block;
+}
+
+/* footer */
+.velvet_foundation footer {
+  font-size: 15px;
+  letter-spacing: 1px;
+  background-color: #f7ece1;
+  position: relative;
+}
+
+.information{
+  width: 90%;
+  max-width: 1180px;
+  padding: 1.5% 0 1.5% 0;
+  font-size: 15px;
+  color: #a39161;
+  text-align: left;
+}
+
+.information p{
+  margin-bottom: 0;
+}
+
+.copyright{
+  width: 100%;
+  padding: 12px 5%;
+  color: #c36363;
+  text-align: center;
+  background-color: #ecbdbd;
+}
+
+/* Canvas */
+.canvas_bg{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.15;
+  /* -webkit-filter: blur(50px); */
+}
+
+.canvas_bg canvas{
+  width: 100%;
+  height: 100%;
+}
+    
+/* 圖片背景 */
+.kv_bg{
+  width: 100%;
+  padding-top: 59.21875%;
+  margin-top: -1px;
+  background: url(../images/velvet_foundation/kv_bg.jpg) 50% / 100% no-repeat;
+}
+
+.problem_bg{
+  width: 100%;
+  padding-top: 33.177083333%;
+  margin-top: -2px;
+  background: url(../images/velvet_foundation/problem_bg.jpg) 50% / 100% no-repeat;
+}
+
+.threesteps_bg{
+  width: 100%;
+  padding-top: 94.791666666%;
+  margin-top: -1px;
+  background: url(../images/velvet_foundation/threesteps_bg.jpg) 50% / 100% no-repeat;
+}
+
+.activity_bg{
+  width: 100%;
+  padding-top: 93.541666666%;
+  margin-top: -1px;
+  background: url(../images/velvet_foundation/activity_bg.jpg) 50% / 100% no-repeat;
+}
+
+.mainarea{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* KV */
+.kv_wrap{
+  width: 100%;
+  padding-top: 59.236111111%;
+  position: relative;
+}
+
+.kv_product img{
+  position: absolute;
+}
+
+.kv_product1{
+  width: 9.583333333%;
+  top: 22%;
+  left: 11%;
+}
+
+.kv_product2{
+  width: 9.479166666%;
+  top: 42%;
+  left: 23%;
+}
+
+.kv_product3{
+  width: 20.625%;
+  top: 39.5%;
+  left: 34.6%;
+}
+
+.kvtitle_1{
+  width: 25.989583333%;
+  position: absolute;
+  top: 13%;
+  left: 39.5%;
+  animation: flash 6s linear 0.8s infinite;
+}
+
+.kvtitle_2{
+  width: 42.916666%;
+  position: absolute;
+  top: 35%;
+  left: 47%;
+}
+
+.kvtitle_2_word{
+  z-index: 2;
+  position: relative;
+}
+
+.kvtitle_2_shadow{
+  margin-top: -5%;
+}
+
+.kvtitle_3{
+  width: 33.229166666%;
+  position: absolute;
+  top: 52%;
+  left: 56.8%;
+}
+
+/* 底妝困擾 */
+.problem_wrap{
+  width: 72%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.problem_area{
+  width: 100%;
+  padding-top: 39.056742815%;
+  margin-top: 3%;
+  background: url(../images/velvet_foundation/problem_area.png) 50% / 100% no-repeat;
+  text-align: center;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.problem_container{
+  width: 92%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 22.5%;
+  left: 49.5%;
+  transform: translate(-50%, 0);
+}
+
+.problem_item{
+  width: 26.5%;
+}
+
+.problem_item_icon{
+  width: 65%;
+}
+
+.problem_item h2{
+  width: 65%;
+  padding: 10% 0 5% 0;
+  margin: 0 auto;
+}
+
+.problem_item p{
+  width: 100%;
+}
+
+/* 完美底妝三步驟 */
+.threesteps_wrap{
+  width: 86%;
+  max-width: 1700px;
+  margin: 0 auto;
+}
+.threesteps_title{
+  padding-top: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+.threesteps_title_line{
+  width: 68%;
+  margin: -5.5% 2% 0 auto;
+  height: 1px;
+  background: url(../images/velvet_foundation/threesteps_title_line.jpg) 50% / cover no-repeat;
+  position: relative;
+}
+
+.threesteps_title img{
+  width: 30%;
+}
+
+.threesteps_container{
+  margin-top: -5%;
+}
+
+.threesteps_box{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.threesteps_item{
+  width: 27%;
+  padding: 0 0.5%;
+}
+
+.threesteps_item2{
+  margin-top: 10%;
+}
+
+.threesteps_item3{
+  margin-top: 20%;
+}
+
+.threesteps_step{
+  width: 65%;
+  margin: 0 auto 0 0;
+}
+
+.threesteps_img{
+  width: 125%;
+  padding-top: calc(117.966101695% * 1.25);
+  margin-left: -19%;
+  position: relative;
+}
+
+.threesteps_img1{
+  background: url(../images/velvet_foundation/step_img1.png) 50% / 100% no-repeat;
+}
+
+.threesteps_img2{
+  background: url(../images/velvet_foundation/step_img2.png) 50% / 100% no-repeat;
+}
+
+.threesteps_img3{
+  background: url(../images/velvet_foundation/step_img3.png) 50% / 100% no-repeat;
+}
+
+.threesteps_detail{
+  width: 10%;
+  padding-top: 10%;
+  position: absolute;
+  top: 77%;
+  right: 4%;
+  cursor: pointer;
+  transition: transform 0.1s linear;
+}
+
+.threesteps_img1 .threesteps_detail{
+  background: url(../images/velvet_foundation/step_detail1.png) 50% / 100% no-repeat;
+}
+
+.threesteps_img2 .threesteps_detail{
+  background: url(../images/velvet_foundation/step_detail2.png) 50% / 100% no-repeat;
+}
+
+.threesteps_img3 .threesteps_detail{
+  background: url(../images/velvet_foundation/step_detail3.png) 50% / 100% no-repeat;
+}
+
+.threesteps_detail:hover{
+  transform: scale(1.3);
+  transition: transform 0.2s linear;
+}
+
+.threesteps_intro{
+  margin-top: -8px;
+}
+
+.threesteps_word{
+  width: 100%;
+  padding: 3.5% 0 7% 0;
+}
+
+.threesteps_price{
+  width: 38%;
+  margin: 0 auto 5% 0;
+}
+
+.threesteps_buy{
+  width: 50%;
+  padding: calc(40.298507462% * 0.55) 5% 0 0;
+  margin: 0 0 0 auto;
+  background: url(../images/velvet_foundation/threesteps_buy.png) 50% / 100% no-repeat;
+  display: block;
+  position: relative;
+}
+
+.threesteps_buy::after{
+  content: '';
+  width: 90%;
+  padding-top: calc(8.888% * 0.9);
+  background: url(../images/velvet_foundation/threesteps_buy_arrow.png) 50% / 100% no-repeat;
+  position: absolute;
+  top: 46%;
+  /* left: -7%; */
+  animation: threesteps_buy_arrow 1s ease-in-out infinite forwards;
+}
+
+@keyframes threesteps_buy_arrow{
+  0%{
+    left: -10%;
+  }
+  50%{
+    left: -5%;
+  }
+  100%{
+    left: -10%;
+  }
+}
+
+/* 立即預約 */
+.activity_wrap{
+  width: 90%;
+  /* max-width: 1400px; */
+  padding-bottom: 28%;
+  margin: 0 auto;
+}
+
+.activity_title{
+  width: 56.197916666%;
+  padding-top: 3%;
+}
+
+.activity_title1{
+  width: 17%;
+  padding-bottom: 1%;
+}
+
+.activity_title2{
+  width: 35%;
+  position: relative;
+}
+
+.activity_title3{
+  width: 100%;
+  margin-top: -7.6%;
+}
+
+.activity_title4{
+  width: 35%;
+  margin-top: -7.6%;
+}
+
+.activity_container{
+  width: 80%;
+  max-width: 1440px;
+  padding-top: 2%;
+  position: relative;
+}
+
+.activity_box{
+  width: 80%;
+  padding: 4% 5% 21% 5%;
+  background-color: #ffffff;
+  box-shadow: 0 0 20px 5px rgba(110, 55, 55, 0.35);
+  position: relative;
+  z-index: 1;
+}
+
+.activity_word1{
+  width: calc(40% / 0.8);
+}
+
+.activity_gift{
+  width: calc(33% / 0.8);
+  padding: 1.5% 0 4% 0;
+}
+
+/* .activity_gift{
+  width: calc(33% / 0.8);
+  height: 21.6666666667vw;
+  background: url(../images/velvet_foundation/activity_gift.png) 50% / contain no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-image: url(../images/velvet_foundation/activity_gift.png);
+  mask-image: url(../images/velvet_foundation/index/activity_gift.png);
+  position: relative;
+}
+
+.activity_gift:before{
+  position: absolute;
+  width: 50px;
+  height: 100%;
+  top: 0;
+  left: -70%;
+  background: -webkit-gradient(linear,left top,right top,from(hsla(0,0%,100%,.1)),color-stop(50%,hsla(0,0%,100%,.5)),color-stop(60%,hsla(0,0%,96%,.8)),to(hsla(0,0%,100%,0)));
+  background: linear-gradient(
+    90deg
+    ,hsla(0,0%,100%,.1),hsla(0,0%,100%,.5) 50%,hsla(0,0%,96%,.8) 60%,hsla(0,0%,100%,0));
+      -webkit-transform: skewX(
+    -25deg
+    );
+      transform: skewX(
+    -25deg
+    );
+  -webkit-animation: light 4s linear 0s infinite normal;
+  animation: light 4s linear 0s infinite normal;
+  content: "";
+  z-index: 1;
+} */
+
+/* @-webkit-keyframes light {
+  0% {
+      left: -100%;
+      opacity: 0
+  }
+
+  15% {
+      opacity: .8
+  }
+
+  25% {
+      opacity: .8
+  }
+
+  30% {
+      left: 150%;
+      opacity: 0
+  }
+
+  to {
+      left: 150%;
+      opacity: 0
+  }
+}
+
+@keyframes light {
+  0% {
+      left: -100%;
+      opacity: 0
+  }
+
+  15% {
+      opacity: .8
+  }
+
+  25% {
+      opacity: .8
+  }
+
+  30% {
+      left: 150%;
+      opacity: 0
+  }
+
+  to {
+      left: 150%;
+      opacity: 0
+  }
+} */
+
+.activity_word2{
+  width: calc(43% / 0.8);
+}
+
+.activity_word3{
+  width: calc(73% / 0.8);
+  margin-top: 3%;
+}
+
+.activity_deco{
+  position: absolute;
+}
+
+.activity_deco1{
+  width: 17%;
+  padding-top: calc(152.817371608% * 0.17);
+  background: url(../images/velvet_foundation/activity_deco1.png) 50% / 100% no-repeat;
+  top: 8%;
+  right: 0;
+  z-index: 2;
+  transition: transform 0.7s ease-out;
+}
+
+.activity_deco2{
+  width: 30%;
+  padding-top: calc(129.60199005% * 0.3);
+  background: url(../images/velvet_foundation/activity_deco2.png) 50% / 100% no-repeat;
+  top: 28%;
+  left: -6%;
+  z-index: 0;
+  transition: transform 0.5s ease-out;
+}
+
+.activity_deco3{
+  width: 22%;
+  padding-top: calc(181.549815498% * 0.22);
+  background: url(../images/velvet_foundation/activity_deco3.png) 50% / 100% no-repeat;
+  top: 67%;
+  left: 75.5%;
+  z-index: 2;
+}
+
+.activity_photo1{
+  width: 28%;
+  padding-top: calc(111.691542289% * 0.28);
+  background: url(../images/velvet_foundation/activity_photo1.png?v=2) 50% / 100% no-repeat;
+  top: 79%;
+  left: 12%;
+  z-index: 2;
+}
+
+.activity_photo2{
+  width: 31%;
+  padding-top: calc(111.691542289% * 0.31);
+  background: url(../images/velvet_foundation/activity_photo2.png?v=2) 50% / 100% no-repeat;
+  top: 79%;
+  left: 32%;
+  z-index: 2;
+}
+
+.activity_photo3{
+  width: 26%;
+  padding-top: calc(120.285714286% * 0.26);
+  background: url(../images/velvet_foundation/activity_photo3.png) 50% / 100% no-repeat;
+  top: 79%;
+  left: 57%;
+  z-index: 2;
+}
+
+.activity_time_btn{
+  width: 22%;
+  padding-top: calc(21.985815602% * 0.22);
+  background: url(../images/velvet_foundation/activity_time_btn.png) 50% / 100% no-repeat;
+  position: absolute;
+  top: 93.6%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 2;
+  transition: transform 0.2s linear;
+}
+
+.activity_time_btn:hover{
+  transform: translate(-50%, 0) scale(1.1);
+  transition: transform 0.2s linear;
+}
+
+/* 預約表單 */
+.input, .select{
+  width: 100%;
+  margin: 0 auto;
+  letter-spacing: 1px;
+  background: transparent;
+	border: 0;
+  outline: none;
+}
+
+.select{
+  /*移除箭頭樣式*/
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  /*改變右邊箭頭樣式*/
+  background: url(../images/velvet_foundation/select_arow.png) 100% 50% / 12px no-repeat;
+}
+
+/*IE隱藏箭頭樣式*/
+.select::-ms-expand {
+  display: none;
+}
+
+/* 填寫表單 */
+.velvet_foundation .form_wrap{
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.form_title{
+  width: 100%;
+  padding: 1.5% 0;
+  background: url(../images/velvet_foundation/form_title_bg.jpg) 50% / cover no-repeat;
+  overflow: hidden;
+  position: relative;
+}
+
+.form_title img{
+  width: 60%;
+  max-width: 300px;
+}
+
+.formarea{
+  width: 80%;
+  max-width: 1300px;
+  padding: 5% 2.5% 5% 2.5%;
+}
+
+.velvet_foundation .form_wrap .form_box{
+  width: 100%;
+  padding: 4% 0 2.5% 0;
+  background: url(../images/velvet_foundation/form_bg.jpg) 100% 50% / cover no-repeat;
+}
+
+.velvet_foundation .form_wrap .form_box h3{
+  text-align: center;
+  color: #c36464;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1.6;
+}
+
+.form_contain{
+  width: 80%;
+  max-width: 900px;
+  padding: 2% 0 1.5% 0;
+}
+
+.form_item{
+  width: 100%;
+  padding: 10px 0;
+  margin-bottom: 1.5%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+
+.form_item p{
+  width: 170px;
+  padding: 0 3.3%;
+  margin-bottom: 0;
+  color: #000000;
+}
+
+.form_item p, .form_item input, .form_item select{
+  font-family: "Noto Serif TC", serif, "新細明體", "Times New Roman", Times;
+  font-size: 19px;
+  color: #c66a6a;
+}
+
+.form_item input, .form_item select{
+  color: #000000;
+  font-size: 17px;
+}
+
+.form_element{
+  width: calc(100% - 170px);
+  padding: 0 20px;
+}
+
+.form_element_add{
+  /* max-width: 450px; */
+  margin: 0 auto 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+::-webkit-input-placeholder { /* Edge */
+  color: #afafaf;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #afafaf;
+}
+
+::placeholder {
+  color: #afafaf;
+}
+
+.form_item_where{
+  padding: 30px 0 20px 0;
+  display: block;
+  text-align: center;
+}
+
+.form_item_where img{
+  width: 80%;
+  max-width: 430px;
+}
+
+.form_bottom{
+  width: 80%;
+  padding-left: 5%;
+  margin-top: 9%;
+  border-left: 1px solid #c8cea9;
+}
+
+.form_checkBox{
+  padding: 1% 5% 1% 27px;
+}
+
+.form_bottom p{
+  color: #8e8e8e;
+}
+
+.form_checkBox a{
+  color: #868c6f;
+  border-bottom: 1px solid #868c6f;
+}
+
+input[type="checkbox"] {
+  display:none;
+}
+
+input[type="checkbox"] + label {
+  color: #c36363;
+  font-size: 17px;
+  font-family: "Noto Serif TC", serif, "新細明體", "Times New Roman", Times;
+  /* letter-spacing: 1px; */
+  position: relative;
+}
+
+input[type="checkbox"] + label::before{
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: -27px;
+  vertical-align:middle;
+  background: url(../images/velvet_foundation/checkbox_border.png) 50% / 100% no-repeat;
+  cursor:pointer;
+  position: absolute;
+  top: 3px;
+  left: 0;
+}
+
+input[type="checkbox"]:checked + label::before{
+  background: url(../images/velvet_foundation/checkbox_checked.png) 50% / 100% no-repeat;
+}
+
+.form_word{
+  color: #c98d8d;
+  padding: 1% 0;
+}
+
+.form_submit_box{
+  width: 13%;
+  max-width: 200px;
+  padding-top: calc(71.487603305% * 0.15);
+  margin: 0 auto;
+  text-align: center;
+  color: transparent;
+  background: transparent url(../images/velvet_foundation/sendbtn.png) 50% / contain no-repeat;
+  display: block;
+  transition: transform 0.1s linear;
+  cursor: pointer;
+}
+
+.form_submit{
+  width: 100%;
+  display: block;
+}
+
+.form_submit:hover{
+  transform: scale(1.1);
+  transition: transform 0.1s linear;
+}
+
+/* 產品介紹彈跳視窗 */
+.popupbox{
+  width: 100%;
+  height: 100vh;
+  background: #edc4cc url(../images/velvet_foundation/popup_bg.png) 50% / cover no-repeat;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.popupclose{
+  width: 5%;
+  max-width: 80px;
+  display: block;
+  position: absolute;
+  top: 5%;
+  right: 4%;
+}
+
+.popup_contain{
+  width: 80%;
+  max-width: 1000px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.popup_product{
+  width: 100%;
+  display: none;
+}
+
+.popup_product_box{
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.popup_product_photo{
+  width: 60%;
+  padding-top: calc(73.410404624% * 0.6);
+  background: url(../images/velvet_foundation/popup_img1.png) 50% / 100% no-repeat;
+}
+
+.popup_product_word{
+  width: 50%;
+  padding-top: calc(70.48192771% * 0.5);
+  margin: 13% auto 0 -7.5%;
+  background: url(../images/velvet_foundation/popup_word1.png?v=1) 50% / 100% no-repeat;
+}
+
+.popup_product_photo2{
+  background: url(../images/velvet_foundation/popup_img2.png) 50% / 100% no-repeat;
+}
+
+.popup_product_photo3{
+  background: url(../images/velvet_foundation/popup_img3.png) 50% / 100% no-repeat;
+}
+
+.popup_product_word2{
+  padding-top: calc(75.645438898% * 0.5);
+  background: url(../images/velvet_foundation/popup_word2.png) 50% / 100% no-repeat;
+}
+
+.popup_product_word3{
+  padding-top: calc(89.845094664% * 0.5);
+  background: url(../images/velvet_foundation/popup_word3.png) 50% / 100% no-repeat;
+}
+
+/* 填寫完成感謝你 */
+.popup{
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(198, 105, 105, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 99999;
+}
+
+.popup_box{
+  width: 80%;
+  max-width: 600px;
+  max-height: 69.4%;
+  padding: 3% 2% 2% 2%;
+  background-color: #ece5e1;
+  border: 3px solid #c36363;
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+}
+
+.popup_box::-webkit-scrollbar{
+  display: none;
+}
+
+.close_thank_popup{
+  width: 6%;
+  max-width: 32px;
+  display: block;
+  position: absolute;
+  top: 3%;
+  left: 92%;
+  transition: 0.5s transform linear;
+  cursor: pointer;
+}
+
+/* 上傳照片 */
+#upload{
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+.upload_kv{
+  width: 100%;
+  padding-top: 165.364583333%;
+  background: url(../images/velvet_foundation/upload_kv.jpg) 50% / 100% no-repeat;
+}
+
+.upload_form{
+  width: 100%;
+  padding-top: 109.114583333%;
+  background: #eee3da url(../images/velvet_foundation/upload_form.jpg) 50% / 100% no-repeat;
+  position: relative;
+}
+
+.upload_form_box{
+  width: 52%;
+  height: 28.5%;
+  position: absolute;
+  top: 55.43%;
+  left: 34%;
+}
+
+.upload_form_box .form_item{
+  height: 30%;
+  margin-bottom: 3.18%;
+  background-color: transparent;
+}
+
+.upload_form_box .form_element{
+  width: 100%;
+  padding: 0 2%;
+}
+
+.upload_form_box .form_item input,
+.upload_form_box .form_item select{
+  font-size: 23px;
+}
+
+.upload_form_box .select{
+  background: none;
+}
+
+.upload_bottom{
+  width: 100%;
+  padding-top: 101.5625%;
+  background: url(../images/velvet_foundation/upload_bottom.jpg) 50% / 100% no-repeat;
+  position: relative;
+}
+
+.upload_box{
+  width: 71.484375%;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
+}
+
+.upload_btn{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.upload_btn label{
+  width: 100%;
+  padding-top: 12.932604735%;
+  background: url(../images/velvet_foundation/upload_btn.png) 50% / 100% no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.upload_btn input{
+  display: none;
+  opacity: 0;
+}
+
+.upload_box p{
+  padding-top: 12.932604735%;
+  margin-top: 2%;
+  text-align: center;
+  font-size: 20px;
+  color: #c36363;
+  display: none;
+}
+
+.complete_button{
+  width: 25%;
+  padding-top: calc(71.653543307% * 0.25);
+  background: url(../images/velvet_foundation/complete_btn.png) 50% / 100% no-repeat;
+  position: absolute;
+  top: 81%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+/* 照片上傳成功彈跳視窗 */
+.upload_popup_title{
+  width: 50%;
+  max-width: 300px;
+  padding-bottom: 2%;
+}
+
+.upload_popup_photo{
+  width: 90%;
+  max-width: 320px;
+  padding: 5%;
+  background: url(../images/velvet_foundation/upload_popup_photo_top.png) 50% 0 / 100% no-repeat,
+              url(../images/velvet_foundation/upload_popup_photo_bottom.png) 50% 100% / 100% no-repeat;;
+  position: relative;
+}
+
+/* 動態 */
+.animated{
+  animation-fill-mode: forwards;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.fadeInUp{
+  animation: fadeInUp ease-out forwards;
+}
+
+/* 按鈕 */
+.btn_animate{
+  animation: btn_animate 1s infinite forwards;
+}
+
+@keyframes btn_animate {
+  0%{
+    transform: scale3d(1, 1, 1);
+  }
+  50%{
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  100%{
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+/* KV */
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+.kvtitle_2_word{
+  animation: kvtitle_show1 ease-out forwards;
+  -webkit-animation: kvtitle_show1 ease-out forwards;
+}
+
+.kvtitle_2_shadow{
+  animation: kvtitle_show1 ease-out forwards;
+  -webkit-animation: kvtitle_show1 ease-out forwards;
+}
+
+@keyframes kvtitle_show1{
+  0%{
+    transform: translate(-5%, -100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+.kvtitle_3{
+  animation: fadeInUp ease-out forwards;
+  -webkit-animation: fadeInUp ease-out forwards;
+}
+
+/* 底妝困擾 */
+.problem_area{
+  animation: fadeInUp ease-out forwards;
+}
+
+.problem_item,
+.problem_item h2,
+.problem_item p{
+  animation: fadeInUp ease-out forwards;
+}
+
+/* 完美底妝3步驟 */
+.threesteps_title_line{
+  animation: threesteps_title_line_show ease-in-out forwards;
+}
+
+@keyframes threesteps_title_line_show{
+  0%{
+    left: -100%;
+    opacity: 1;
+  }
+  100%{
+    left: 0%;
+    opacity: 1;
+  }
+}
+
+.threesteps_title img{
+  animation: fadeInLeft ease-out forwards;
+}
+
+@keyframes fadeInLeft{
+  0%{
+    transform: translate(-10%, 0);
+    opacity: 0;
+  }
+  100%{
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+.threesteps_img{
+  animation: threesteps_img_scale ease-in-out forwards;
+}
+
+@keyframes threesteps_img_scale{
+  0%{
+    transform: translate(0, 15%) scale(1.05);
+    opacity: 0;
+  }
+  100%{
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+}
+
+.threesteps_buy{
+  animation: tthreesteps_buy_show linear forwards;
+}
+
+@keyframes tthreesteps_buy_show{
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    opacity: 0;
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
+}
+
+.threesteps_step{
+  animation: fadeInDown ease-out forwards;
+}
+
+.activity_title1{
+  animation: fadeIn linear forwards;
+}
+
+.activity_title2{
+  animation: activity_title_show1 ease-out forwards;
+}
+
+@keyframes activity_title_show1{
+  0%{
+    transform: translate(0, -20px);
+    opacity: 0;
+  }
+  100%{
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+.activity_title4{
+  animation: activity_title_show2 ease-out forwards;
+}
+
+@keyframes activity_title_show2{
+  0%{
+    transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100%{
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+.activity_title3{
+  animation: fadeIn linear forwards;
+}
+
+.activity_word1,
+.activity_gift,
+.activity_word2,
+.activity_word3{
+  animation: fadeInUp linear forwards;
+}
+
+.activity_photo1{
+  animation: activity_photo1_show ease-out forwards;
+}
+
+.activity_photo2{
+  animation: activity_photo2_show ease-out forwards;
+}
+
+.activity_photo3{
+  animation: activity_photo3_show ease-out forwards;
+}
+
+@keyframes activity_photo1_show{
+  0%{
+    transform: translate(-20%, 0) rotate(-20deg);
+    opacity: 0;
+  }
+  100%{
+    transform: translate(0, 0) rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes activity_photo2_show{
+  0%{
+    transform: translate(-15%, 0) rotate(-15deg);
+    opacity: 0;
+  }
+  100%{
+    transform: translate(0, 0) rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes activity_photo3_show{
+  0%{
+    transform: translate(-25%, 0) rotate(-25deg);
+    opacity: 0;
+  }
+  100%{
+    transform: translate(0, 0) rotate(0);
+    opacity: 1;
+  }
+}
+
+/* 填寫表單 */
+.velvet_foundation .form_wrap{
+  animation: form_wrap_show linear forwards;
+}
+
+@keyframes form_wrap_show{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from{
+    opacity: 0;
+    transform: translate(0, 30px);
+  }
+  to{
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes fadeInDown {
+  from{
+    opacity: 0;
+    transform: translate(0, -30px);
+  }
+  to{
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@-webkit-keyframes flash {
+  0%{
+    opacity: 1;
+  }
+  5%{
+    opacity: 0;
+  }
+  10%{
+    opacity: 1;
+  }
+  15%{
+    opacity: 0;
+  }
+  30%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes flash {
+  0%{
+    opacity: 1;
+  }
+  5%{
+    opacity: 0;
+  }
+  10%{
+    opacity: 1;
+  }
+  15%{
+    opacity: 0;
+  }
+  30%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+.show .form_title::after {
+  background: #da868b;
+  right: 0;
+  -webkit-animation: secondaryImageOverlayIn 1s 0s,
+                     LsecondaryImageOverlayOut 1s 1s;
+          animation: secondaryImageOverlayIn 1s 0s,
+                     LsecondaryImageOverlayOut 1s 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  position: absolute;
+  content: '';
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.show .form_title::after {
+  background: #da868b;
+  right: 0;
+  -webkit-animation: secondaryImageOverlayIn 1s 0s,
+                     LsecondaryImageOverlayOut 1s 1s;
+          animation: secondaryImageOverlayIn 1s 0s,
+                     LsecondaryImageOverlayOut 1s 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+@-webkit-keyframes secondaryImageOverlayIn {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes secondaryImageOverlayIn {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes LsecondaryImageOverlayOut {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+@keyframes LsecondaryImageOverlayOut {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+@-webkit-keyframes RsecondaryImageOverlayOut {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@keyframes RsecondaryImageOverlayOut {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@media only screen and (max-width: 1290px){
+  .form_item p{
+    width: 100px;
+    padding: 0 0 0 2%;
+    font-size: 16px;
+  }
+
+  .form_element{
+    width: calc(100% - 100px);
+  }
+
+  .input, .select{
+    font-size: 14px;
+  }
+
+  .form_item{
+    padding: 2% 0;
+  }
+
+  input[type="checkbox"] + label{
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  /* header */
+  .header_contain{
+    padding: 20px 15px;
+  }
+
+  .logo{
+    width: 13%;
+  }
+
+  /* footer */
+  .velvet_foundation footer{
+    font-size: 14px;
+  }
+
+  .information{
+    padding: 4% 0 3% 0;
+  }
+
+  .information p{
+    font-size: 12px;
+  }
+
+  .copyright{
+    padding: 10px 5%;
+  }
+
+  /* 圖片背景 */
+  .kv_bg{
+    padding-top: 164.973958333%;
+    background: url(../images/velvet_foundation/kv_bg_m.jpg) 50% / 100% no-repeat;
+  }
+
+  .problem_bg{
+    padding-top: 141.536458333%;
+    background: url(../images/velvet_foundation/problem_bg_m.jpg) 50% / 100% no-repeat;
+  }
+
+  .threesteps_bg{
+    padding-top: 230.208333333%;
+    background: url(../images/velvet_foundation/threesteps_bg_m.jpg) 50% / 100% no-repeat;
+  }
+
+  .activity_bg{
+    padding-top: 273.046875%;
+    background: url(../images/velvet_foundation/activity_bg_m.jpg) 50% / 100% no-repeat;
+  }
+
+  /* KV */
+  .kv_wrap{
+    padding-top: 164.973958333%;
+  }
+
+  .kvtitle_1{
+    width: 60%;
+    top: 57%;
+    left: 45%;
+  }
+
+  .kvtitle_2{
+    width: 92%;
+    left: 4%;
+    top: 77%;
+  }
+
+  .kvtitle_3{
+    width: 93%;
+    left: 4%;
+    top: 85%;
+  }
+
+  /* 底妝困擾 */
+  .problem_wrap{
+    width: 90%;
+  }
+
+  .problem_area{
+    padding-top: 137.444279346%;
+    margin-top: 10%;
+    background: url(../images/velvet_foundation/problem_area_m.png) 50% / 100% no-repeat;
+  }
+
+  .problem_container{
+    top: 10%;
+  }
+
+  .problem_item{
+    width: 95%;
+    margin: 4% 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .problem_item_icon{
+    width: 35%;
+  }
+
+  .problem_item_word{
+    padding-left: 2%;
+  }
+
+  .problem_item h2{
+    padding: 0 0 5% 0;
+    margin: 0 auto 0 0;
+  }
+
+  /* 完美底妝三步驟 */
+  .threesteps_title{
+    padding-top: 14%;
+  }
+
+  .threesteps_title img{
+    width: 80%;
+  }
+
+  .threesteps_container{
+    margin-top: 5%;
+  }
+
+  .threesteps_box{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+  }
+
+  .threesteps_item{
+    width: 100%;
+    /* padding-top: 37.5%; */
+    margin-right: -100%;
+    float: left;
+    position: relative;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    opacity: 0;
+    display: none;
+    transition: opacity 0.3s linear, transform 0.6s ease-out;
+  }
+
+  .threesteps_item.active{
+    opacity: 1;
+    display: block;
+    /* transform: translate(0, 0);
+    transition: transform 0.6s linear;
+    z-index: 2; */
+  }
+
+  .threesteps_item.prev{
+    transform: translate(-100%);
+  }
+
+  .threesteps_item.next{
+    transform: translate(100%);
+  }
+
+  .threesteps_item2,
+  .threesteps_item3{
+    margin-top: 0;
+  }
+
+  .threesteps_step{
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .threesteps_img{
+    width: 100%;
+    padding-top: 117.966101695%;
+    margin: 0 auto;
+  }
+
+  .threesteps_intro{
+    width: 90%;
+    margin: -5% auto 0 auto;
+  }
+
+  .threesteps_price{
+    margin: 0 auto 5% auto;
+  }
+
+  .threesteps_buy{
+    width: 40%;
+    padding: calc(40.298507462% * 0.4) 5% 0 0;
+    margin: 0 auto;
+  }
+
+  .threesteps_selectors{
+    width: auto;
+    padding: 0px 5px 4px 5px;
+    margin-top: 7%;
+    border-radius: 5px;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.4);
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .threesteps_indicator{
+    display: inline-block !important;
+  }
+
+  .threesteps_indicator_item{
+    width: 12px;
+    height: 12px;
+    line-height: 12px;
+    margin: 0 5px;
+    vertical-align: middle;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid #c36464;
+    display: inline-block;
+  }
+
+  .threesteps_indicator_item.active{
+    background-color: #c36464;
+  }
+
+  .threesteps_arrow{
+    width: 8px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .threesteps_arrow_prev{
+    margin: 0 10px 0 auto;
+    background: url(../images/velvet_foundation/threesteps_arrow_prev.png) 50% / 100% no-repeat;
+  }
+
+  .threesteps_arrow_next{
+    margin: 0 auto 0 10px;
+    background: url(../images/velvet_foundation/threesteps_arrow_next.png) 50% / 100% no-repeat;
+  }
+
+  /* 立即預約 */
+  .activity_wrap{
+    padding-bottom: 36%;
+  }
+
+  .activity_title{
+    width: 100%;
+    padding-top: 0;
+  }
+
+  .activity_title1{
+    width: 30%;
+    padding-bottom: 2%;
+  }
+
+  .activity_title2, .activity_title4{
+    width: 60%;
+  }
+
+  .activity_title3{
+    margin-top: -11%;
+  }
+
+  .activity_title4{
+    margin-top: -11%;
+  }
+
+  .activity_container{
+    width: 100%;
+    padding-top: 10%;
+  }
+
+  .activity_box{
+    width: 100%;
+    padding: 6% 5% 40% 5%;
+  }
+
+  .activity_word1{
+    width: 80%;
+    margin-top: 10%;
+  }
+
+  .activity_gift{
+    width: 95%;
+    padding: 4% 0 5% 0;
+  }
+
+  .activity_word2{
+    width: 90%;
+  }
+
+  .activity_word3{
+    width: 100%;
+  }
+
+  .activity_deco1{
+    width: 35%;
+    padding-top: calc(152.817371608% * 0.35);
+    top: 87%;
+    right: -17%;
+    z-index: 3;
+  }
+
+  .activity_deco2{
+    width: 61%;
+    padding-top: calc(129.60199005% * 0.63);
+    z-index: 2;
+    top: 81%;
+    left: -19%;
+    transform: rotate(77deg);
+  }
+
+  .activity_photo1{
+    width: 54%;
+    padding-top: calc(111.691542289% * 0.57);
+    top: 85.5%;
+    left: -2%;
+  }
+
+  .activity_photo2{
+    width: 61%;
+    padding-top: calc(111.691542289% * 0.65);
+    top: 83.5%;
+    left: 38%;
+    transform: rotate(8deg);
+  }
+
+  .activity_time_btn{
+    width: 50%;
+    padding-top: calc(21.985815602% * 0.5);
+    top: 97.4%;
+  }
+
+  /* 預約表單 */
+  .form_title{
+    padding: 4% 0;
+  }
+
+  .formarea{
+    width: 90%;
+    padding: 15% 2.5% 10% 2.5%;
+  }
+  
+  .velvet_foundation .form_wrap .form_box{
+    padding: 6% 4%;
+  }
+
+  .velvet_foundation .form_wrap .form_box h3{
+    font-size: 14px;
+  }
+
+  .form_contain{
+    width: 100%;
+    padding: 5% 0 1.5% 0;
+  }
+
+  .form_item{
+    margin-bottom: 4%;
+  }
+  
+  .form_checkBox{
+    padding: 0 28px;
+  }
+
+  input[type="checkbox"] + label{
+    font-size: 14px;
+  }
+
+  input[type="checkbox"] + label::before{
+    width: 15px;
+    height: 15px;
+    top: 3px;
+  }
+
+  .form_word{
+    padding: 20px 0;
+  }
+
+  .form_submit_box{
+    width: 35%;
+    max-width: 130px;
+    padding-top: calc(71.487603305% * 0.35);
+  }
+
+  .form_item p, .form_item input, .form_item select{
+    font-size: 14px;
+  }
+
+  .select{
+    background: url(../images/velvet_foundation/select_arow.png) 100% 50% / 12px no-repeat;
+  }
+
+  .form_item p{
+    width: 115px;
+  }
+
+  .form_element{
+    width: calc(100% - 115px);
+    padding: 0 10px 0 0;
+  }
+
+  /* 產品說明彈跳視窗 */
+  .popupclose{
+    width: 10%;
+    max-width: 55px;
+    top: 3%;
+  }
+
+  .popup_contain{
+    max-width: 350px;
+    height: 100%;
+    overflow-y: scroll;
+    margin-top: 18vh;
+    padding-bottom: 20%;
+  }
+
+  .popup_product_box{
+    flex-wrap: wrap-reverse;
+  }
+
+  .popup_product_photo{
+    width: 98.5%;
+    padding-top: 73.410404624%;
+    margin-top: -10%;
+    z-index: 2;
+  }
+
+  .popup_product_word{
+    width: 100%;
+    padding-top: 70.48192771%;
+    margin: 0 auto;
+  }
+
+  .popup_product_word2{
+    padding-top: 75.645438898%;
+    background: url(../images/velvet_foundation/popup_word2_m.png) 50% / 100% no-repeat;
+  }
+
+  .popup_product_word3{
+    padding-top: 89.845094664%;
+  }
+
+  /* 上傳照片 */
+  .upload_form_box .form_item input,
+  .upload_form_box .form_item select{
+      font-size: 3.2vw;
+  }
+
+  .upload_box p{
+      font-size: 3vw;
+  }
+
+  /* 動態 */
+  .threesteps_item div,
+  .threesteps_item img,
+  .threesteps_item a{
+    visibility: visible !important;
+  }
+
+  .threesteps_step,
+  .threesteps_item a,
+  .threesteps_img{
+    animation: none;
+  }
+}
+
+@media only screen and (max-width: 512px){
+  /* popup */
+  .popupbox, .popupbox.other{
+    padding: 2% 2% 6% 2%;
+    border-width: 2px;
+  }
+
+  .popword h3{
+    font-size: 18px;
+  }
+
+  .popword p{
+    font-size: 13px;
+  }
+
+  .popword p span a{
+    font-size: 15px;
+  }
+
+  /* 感謝您 */
+  .thank_popup_box{
+    width: 90%;
+    max-height: 80%;
+    padding: 8% 3% 5% 3%;
+  }
+
+  .close_thank_popup{
+    top: 6%;
+    left: 91.5%;
+  }
+}
