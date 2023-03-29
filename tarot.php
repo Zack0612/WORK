@@ -14,7 +14,11 @@
     <meta name="Keywords" content="相親,婚友社,排約,交友,月老,月下老人,戀戀未來,FutureLove" />
     <meta name="Description"
         content="相親排約婚友社-提供最優質的相親婚友服務，戀戀未來不同於一般傳統的婚友社，費用公開平民化，會員素質嚴格篩選認證，並提供線上配對排約服務，是您擺脫單身的最佳選擇" />
-    <title>公益回饋與社會服務|戀戀未來-幸福到來</title>
+    <title>90日脫單|戀戀未來-幸福到來</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">    
     <!-- fontawesome-free-6.0.0-web  -->
     <link rel="stylesheet" href="fontawesome/FontAwesome-6/css/all.css">
     <!-- Jquery  -->
@@ -28,10 +32,35 @@
     <!--引用 Validator 基於bootstrap的表單驗證-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
     <!-- 我的 css -->
-    <link href="css/mycss.css?1117" rel="stylesheet">
-</head>
+    <link href="css/mycss.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/90days.css">
+    <link rel="stylesheet" href="./css/case.css">
+    <link href="css/normalize.css" rel="stylesheet" />
 
-<body class="page_feedack">
+    <!-- Custom styles for this template -->
+    <link href="css/layout.css" rel="stylesheet" />
+    <link href="css/match.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/tarot-styles.css">
+</head>
+<style>
+.bn4_m {
+	display:none;
+}
+.bn4 {
+	display:block;
+}
+@media only screen and (max-width: 600px){
+  .bn4_m {
+  	display:block;
+  }
+  .bn4 {
+  	display:none;
+  }
+  
+}
+
+</style>
+<body style="background-color: #fff;">
     <!-- header 頂部區 -->
     <header id="header">
         <div class="container">
@@ -40,20 +69,8 @@
                     <a class="navbar-brand" href="index.html"><img src="images/logo.svg" alt="戀戀未來"></a>
                     <!--以下button 使用在行動選單的啟用鈕 -->
                     <div class="mobile_button">
-                        <button class="navbar-toggler member have_login" type="button">
-                             <!--由程式判斷若已經登入，則在have_login出現show, 若未登入，則在no_login出現show -->
-                            <span class="user-icon" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-user"></i></span>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="member_center.html">會員中心</a></li>
-                                <li><a class="dropdown-item" href="member_data_manage.html">個人資料管理</a></li>
-                                <li><a class="dropdown-item" href="member_party-manage01.html">聯誼管理</a></li>
-                                <li><a class="dropdown-item" href="member_friend-manageA01.html">速配管理</a></li>
-                                <li><a class="dropdown-item" href="#">登出</a></li>
-                              </ul>
-                        </button>
-                        <button class="navbar-toggler member no_login show" type="button" data-bs-toggle="modal"
+                        <button class="navbar-toggler" type="button" data-bs-toggle="modal"
                             data-bs-target="#login_form-Modal">
-                            <!--由程式判斷若已經登入，則在have_login出現show, 若未登入，則在no_login出現show -->
                             <span class="user-icon"><i class="fa-light fa-user"></i></span>
                         </button>
                         <button class="navbar-toggler main-menu" type="button" data-bs-toggle="offcanvas"
@@ -71,19 +88,21 @@
                                     <a class="nav-link" href="line-match.html">LINE速配</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">實體約會</a>
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">實體約會</a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <li><a class="dropdown-item" href="date.html">實體約會</a></li>
                                         <li><a class="dropdown-item" href="wedding_news.html">新人喜訊</a></li>
-                                      </ul>
+                                    </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">派對聯誼</a>
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">派對聯誼</a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <li><a class="dropdown-item" href="party.html">派對聯誼</a></li>
                                         <li><a class="dropdown-item" href="party_album.html">聯誼花絮</a></li>
                                         <li><a class="dropdown-item" href="couple.html">配對成功</a></li>
-                                      </ul>
+                                    </ul>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="90days.html">90日脫單</a>
@@ -91,16 +110,17 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="tarot.html">脫單塔羅</a>
                                 </li>
-                                <li class="nav-item active">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">聯絡我們</a>
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">聯絡我們</a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <li><a class="dropdown-item" href="about.html">關於我們</a></li>
                                         <li><a class="dropdown-item" href="news-info.html">最新公告</a></li>
                                         <li><a class="dropdown-item" href="https://www.youtube.com/playlist?list=PL7XG9yuWG5vsQmGWQ0OWO22bRCpUxy5_G" target="_blank">結婚見證</a></li>
-                                        <li><a class="dropdown-item active" href="feedback.html">公益回饋</a></li>
+                                        <li><a class="dropdown-item" href="feedback.html">公益回饋</a></li>
                                         <li><a class="dropdown-item" href="faq.html">常見問答</a></li>
                                         <li><a class="dropdown-item" href="recruit.html">斜槓招募</a></li>
-                                      </ul>
+                                    </ul>
                                 </li>
                             </ul>
                             
@@ -114,11 +134,12 @@
                                 <a class="nav-link" href="line-match.html">LINE速配</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="date.html" role="button"  aria-expanded="false">實體約會</a>
+                                <a class="nav-link" href="date.html" role="button" aria-expanded="false">實體約會</a>
+                                
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="date.html">實體約會</a></li>
                                     <li><a class="dropdown-item" href="wedding_news.html">新人喜訊</a></li>
-                                  </ul>
+                                </ul>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="party.html" role="button" aria-expanded="false">派對聯誼</a>
@@ -126,7 +147,7 @@
                                     <li><a class="dropdown-item" href="party.html">派對聯誼</a></li>
                                     <li><a class="dropdown-item" href="party_album.html">聯誼花絮</a></li>
                                     <li><a class="dropdown-item" href="couple.html">配對成功</a></li>
-                                  </ul>
+                                </ul>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="90days.html">90日脫單</a>
@@ -134,22 +155,22 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="tarot.html">脫單塔羅</a>
                             </li>
-                            <li class="nav-item active">
+                            <li class="nav-item">
                                 <a class="nav-link" href="about.html" role="button" aria-expanded="false">聯絡我們</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="about.html">關於我們</a></li>
                                     <li><a class="dropdown-item" href="news-info.html">最新公告</a></li>
                                     <li><a class="dropdown-item" href="https://www.youtube.com/playlist?list=PL7XG9yuWG5vsQmGWQ0OWO22bRCpUxy5_G" target="_blank">結婚見證</a></li>
-                                    <li><a class="dropdown-item active" href="feedback.html">公益回饋</a></li>
+                                    <li><a class="dropdown-item" href="feedback.html">公益回饋</a></li>
                                     <li><a class="dropdown-item" href="faq.html">常見問答</a></li>
                                     <li><a class="dropdown-item" href="recruit.html">斜槓招募</a></li>
-                                  </ul>
+                                </ul>
                             </li>
                         </ul>
-                        <div class="d-flex">
+                        <div class="d-flex active">
                             <!--如果已經登入，請再d-flex這裏加上active，則會出現不同的項目 -->
                             <div class="btn-login">
-                                <a href="#" data-bs-toggle="modal"
+                                <i class="fa-regular fa-user"></i> <a href="#" data-bs-toggle="modal"
                                     data-bs-target="#login_form-Modal">登入</a> / <a href="#" data-bs-toggle="modal"
                                     data-bs-target="#register_form-Modal">註冊</a>
                             </div>
@@ -171,254 +192,73 @@
                 </div>
             </nav>
         </div>
+
     </header>
     <!-- main 主要內容區 -->
-    <main id="main">
-        <div class="unit_title">
-            <h2>公益回饋與社會服務</h2>
+    <main id="main" style="background-color: #fff;">
+
+        <section class="wrapper clearfix index-w">
+
+            <div id="content" class="clearfix" style="float:none;">
+              <!-- content -->
+						
+              <div id="taro-content">
+                    <div class="loadingMask">
+                        <img class="loadingPic" src="./images/tarot/loading.svg">
+                    </div>
+                  <div class="tarotMain">
+                    <div class="tarotBack tarotMain1"></div>
+                    <div class="slogan">
+                        <img src="./images/tarot/Tarologo.png">
+                    </div>
+                    <div class="title1" style="top: -15px;">
+                        選擇您的性別
+                    </div>
+                    <div class="bubblePlz">
+                        <a class="bubble1" href="javascript:void(0)">
+                            <img src="./images/tarot/bubble-man.png">  
+                        </a>
+
+                        <a class="bubble2"  href="javascript:void(0)">
+                            <img src="./images/tarot/bubble-girl.png">    
+                        </a> 
+                    </div>
+                    <div class="bubblePl2">
+                        <div class="bubble1-2">
+                            <img src="./images/tarot/bubble-man.png">  
+                        </div>
+
+                        <div class="bubble2-2">
+                            <img src="./images/tarot/bubble-girl.png">    
+                        </div>  
+                    </div>
+
+                    <div class="p1Txt">       
+                            <img src="./images/tarot/p1-txt.png">          
+                    </div>
+                    
+                  </div>
+              </div> 
+
+            <!-- content end -->
+						
         </div>
 
-        <section id="slidershow">
-            <div class="feedback_banner">
+    </section>
 
-                <div class="txt_con container">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-12">
-                            <img src="images/feedback/pic01.png">
-                        </div>
-                        <div class="col-lg-6 col-md-12">
-                            <p>　　創立之初，戀戀未來夥伴們即決定以未婚聯誼活動之部分盈餘來回饋社會，目前公益回饋的對象設定為國、內外弱勢兒童、受虐婦女及有關兩性福祉的團體，希望藉由這個小小的舉動，可以達到拋磚引玉的效果，也間接鼓勵戀戀未來把聯誼活動辦好的決心，除了擔任稱職的月下老人，速配更多的佳偶，還可以幫助更多弱勢團體。未來隨著公司盈餘的提昇，也將提高聯誼活動盈餘比率來回饋社會。
-                            </p>
-                            <p>　　本站目前透過世界展望會已認養國外孩童1名，她的名字叫Nana，未來不定期會分享她的成長喜悅；並於家扶基金會助養國內孩童1名，戀戀未來希望造福台灣的單身朋友之餘，更希望多進一份心力，改善窮困孩童的環境，讓世界未來的主人翁可以快樂成長。雖然我們的力量不大，但和我們一樣喜歡世界和平的您，一起和戀戀未來努力，期待讓世界更美好！！
-                            </p>
-                        </div>
-                    </div>
-                  
-                </div>
-
-            </div>
-        </section>
-        <section class="feedback_notes">
-            <div class="container">
-                <h3>公益記事</h3>
-                <div class="note_list">
-                    <div class="note_item">
-                        <div class="item_con">
-                            <div class="years"><img src="images/feedback/notes_go-on.svg"></div>
-                            <div class="txt">目前仍持續善盡本站義務與責任，推廣公益活動，拋磚引玉</div>
-                        </div>
-                    </div>
-                    <div class="note_item">
-                        <div class="item_con">
-                            <div class="years"><span class="number">2020</span></div>
-                            <div class="txt">透過世界展望會，戀戀未來認養第3位國外女孩叫Bithika，希望Bithika也可以跟Nana一樣，平安健康長大。</div>
-                        </div>
-                    </div>
-                    <div class="note_item">
-                        <div class="item_con">
-                            <div class="years"><span class="number">2019</span></div>
-                            <div class="txt">
-                                太開心的一件分享，在戀戀未來2011年助養8年多的Nana，已經健康長大並可自力更生，為她的家庭帶來基本的生活能力，這是我們感到最自豪的一份喜悅，希望Nana未來能靠自已力量更加強大。
-                            </div>
-                        </div>
-                    </div>
-                    <div class="note_item">
-                        <div class="item_con">
-                            <div class="years"><span class="number">2018</span></div>
-                            <div class="txt">
-                                幫助0~2歲被遺棄、受虐之嬰幼兒成長，每月定期捐款至「高雄市希恩之家」，希望一份小小的力量，能幫助小寶貝吃飽睡暖、平安長大。
-                            </div>
-                        </div>
-                    </div>
-                    <div class="note_item be_more">
-                        <div class="item_con">
-                            <div class="years"><span class="number">2017</span></div>
-                            <div class="txt">
-                                戀戀未來以小額多家，如：勵馨社會福利基金會、世界和平會、仁愛社會福利基金會、公共電視文化基金會，持續回饋社會。
-                            </div>
-                        </div>
-                    </div>
-                    <div class="note_item be_more">
-                        <div class="item_con">
-                            <div class="years"><span class="number">2016</span></div>
-                            <div class="txt">
-                                捐助羅慧夫顱顏基金會，努力在協助窮困顱顏患者醫療及心理上的支持，戀戀未來很認同理念，以小額捐款盡份心力。
-                            </div>
-                        </div>
-                    </div>
-                    <div class="note_item be_more">
-                        <div class="item_con">
-                            <div class="years"><span class="number">2015</span></div>
-                            <div class="txt">
-                                推廣《50銅板公益》加入會員50元，全額捐款給需要協助的婦幼或偏遠地區學童
-                            </div>
-                        </div>
-                    </div>
-                    <div class="note_item be_more">
-                        <div class="item_con">
-                            <div class="years"><span class="number">其它</span></div>
-                            <div class="txt">
-                                其他資料…
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item_more"><span class="more">MORE</span> <i class="fa-regular fa-chevron-down"></i>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="feedback_albums">
-            <div class="container">
-                <h3>社會回饋與公益捐款</h3>
-                <div class="album_list">
-                    <select id="album_years" class=" ">
-                        <option value="#year_2022">2022</option>
-                        <option value="#year_2021">2021</option>
-                        <option value="#year_2020">2020</option>
-                    </select>
-
-                    <div class="album_photos">
-                        <div class="album_item latest" id="year_2022">
-                            <!-- Swiper -->
-                            <div class="swiper feedback_Swiper2 feedback_Swiper2022b">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="images/feedback/album/2022/202201.jpg" />
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="images/feedback/album/2022/202202.jpg" />
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="images/feedback/album/2022/202203.jpg" />
-                                    </div>
-                                </div>
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
-                            </div>
-                            <div thumbsSlider="" class="swiper feedback_Swiper feedback_Swiper2022s">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="images/feedback/album/2022/202201.jpg" />
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="images/feedback/album/2022/202202.jpg" />
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="images/feedback/album/2022/202203.jpg" />
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- END Swiper -->
-                        </div>
-                        <script>
-                            var swiper = new Swiper(".feedback_Swiper2022s", {
-                                spaceBetween: 0,
-                                slidesPerView: 8,
-                                freeMode: true,
-                                watchSlidesProgress: true,
-                            });
-                            var swiper2 = new Swiper(".feedback_Swiper2022b", {
-                                spaceBetween: 0,
-                                navigation: {
-                                    nextEl: ".swiper-button-next",
-                                    prevEl: ".swiper-button-prev",
-                                },
-                                thumbs: {
-                                    swiper: swiper,
-                                },
-                            });
-                        </script>
-                        <div class="album_item " id="year_2021">
-                            <!-- Swiper -->
-                            <div class="swiper feedback_Swiper2 feedback_Swiper2021b">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="images/feedback/album/2021/202101.jpg" />
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="images/feedback/album/2021/202102.jpg" />
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="images/feedback/album/2021/202103.jpg" />
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="images/feedback/album/2021/202104.jpg" />
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="images/feedback/album/2021/202105.jpg" />
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="images/feedback/album/2021/202106.jpg" />
-                                    </div>
-                                </div>
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
-                            </div>
-                            <div thumbsSlider="" class="swiper feedback_Swiper feedback_Swiper2021s">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="images/feedback/album/2021/202101.jpg" />
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="images/feedback/album/2021/202102.jpg" />
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="images/feedback/album/2021/202103.jpg" />
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="images/feedback/album/2021/202104.jpg" />
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="images/feedback/album/2021/202105.jpg" />
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="images/feedback/album/2021/202106.jpg" />
-                                    </div>
-                                </div>
-                            </div>
-                            <script>
-                                var swiper = new Swiper(".feedback_Swiper2021s", {
-                                    spaceBetween: 0,
-                                    slidesPerView: 8,
-                                    freeMode: true,
-                                    watchSlidesProgress: true,
-                                });
-                                var swiper2 = new Swiper(".feedback_Swiper2021b", {
-                                    spaceBetween: 0,
-                                    navigation: {
-                                        nextEl: ".swiper-button-next",
-                                        prevEl: ".swiper-button-prev",
-                                    },
-                                    thumbs: {
-                                        swiper: swiper,
-                                    },
-                                });
-                            </script>
-                            <!-- END Swiper -->
-                        </div>
-                        <div class="album_item " id="year_2020">2020年資料
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
+        
     </main>
 
+    <div class="btn-top"><img src="./images/date/top-triangle.png" alt=""></div>
+
     <!-- footer 頁底內容區 -->
-    <footer id="footer">
+    <footer id="footer" style="padding-top:80px">
         <div class=" container ">
             <div class="row footer-info">
                 <div class="col-lg-12 contact">
-                    <div class="social"><a href="https://www.facebook.com/futurelove520" target="_blank"><img src="images/footer-social_fb.svg"></a> 
-                        <a href="https://www.youtube.com/channel/UCvERtuDK5FXPe-GBnTUfuhw" target="_blank"><img src="images/footer-social_yt.svg"></a> 
-                        <a href="https://www.instagram.com/lo.ve6411/" target="_blank"><img src="images/footer-social_ig.svg"></a>
-                    </div>
+                    <div class="social"><a href="#"><img src="images/footer-social_fb.svg"></a> <a href="#"><img
+                                src="images/footer-social_yt.svg"></a> <a href="#"><img
+                                src="images/footer-social_ig.svg"></a></div>
                     <div class="mail"><img src="images/footer-icon_mail.svg"> 客服信箱：<a
                             href="mailto:love@futurelove.com.tw">love@futurelove.com.tw</a></div>
                     <div class="phone"><img src="images/footer-icon_phone.svg"> TEL：0986-699521
@@ -606,7 +446,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="login_form-ModalLabel">已寄出認證信件</h5>
+                    <h5 class="modal-title" id="login_form-ModalLabel">忘記密碼</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -642,7 +482,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="login_form-ModalLabel">已寄出認證信件</h5>
+                    <h5 class="modal-title" id="login_form-ModalLabel">忘記密碼</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -666,7 +506,46 @@
 
 </body>
 
-<!-- 我的 js -->
-<script src=" js/myjs.js"></script>
+<script>
+  
+    $(window).on('load', function(){
+        // $(".loadingPic").delay(500).fadeOut(300);
+        $(".loadingMask").delay(500).fadeOut(1000);
+    });
+ 
+
+    $('.bubble1-2').hide(); 
+    $('.bubble2-2').hide();   
+
+
+    $('.bubble1').click(function(){
+        $('.bubble1').fadeOut();
+        $('.tarotMain1').toggleClass('tarotMain2');     
+        $('.bubble2').fadeOut(); 
+        $('.bubble1-2').show(2000)
+        $('.title1').fadeToggle(500); 
+        // $('.tarotMain').removeClass('tarotMain1').delay(1500); 
+        // $('.tarotMain').addClass('tarotMain2').delay(1500);
+        setTimeout(() => {location.href = 'tarot2.php?gender=boy' }   , 500);
+            
+    });
+
+    $('.bubble2').click(function(){
+        $('.bubble2').fadeOut();
+        $('.tarotMain1').toggleClass('tarotMain2');     
+        $('.bubble1').fadeOut();    
+        $('.bubble2-2').show(2000);
+        $('.title1').fadeToggle(500);
+        // $('.tarotMain').removeClass('tarotMain1').delay(1500); 
+        // $('.tarotMain').addClass('tarotMain2').delay(1500);
+        setTimeout(() => {location.href = 'tarot2.php?gender=girl' }   ,500);
+        
+    });
+
+
+
+</script>
+
+
 
 </html>

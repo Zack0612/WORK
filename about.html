@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="fontawesome/FontAwesome-6/css/all.css">
     <!-- Jquery  -->
     <script src="js/jquery.min.js"></script>
+    <!--字型-->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">	<link rel="stylesheet" href="css/animate.css">
     <!-- bootstrap-5.1.1-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <script src="js/bootstrap.min.js"></script>
@@ -29,6 +31,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
     <!-- 我的 css -->
     <link href="css/mycss.css" rel="stylesheet">
+     <!--彈窗插件-->
+    <link rel="stylesheet" href="css/lity.css">
+    <script src="js/lity.js"></script>
+    <!--關於我們新的css-->
+    <link rel="stylesheet" href="css/about_new.css">
+    <script src="js/slick.min.js"></script>
 </head>
 
 <body class="page-about">
@@ -149,7 +157,7 @@
                         <div class="d-flex">
                             <!--如果已經登入，請再d-flex這裏加上active，則會出現不同的項目 -->
                             <div class="btn-login">
-                                <i class="fa-regular fa-user"></i> <a href="#" data-bs-toggle="modal"
+                                <a href="#" data-bs-toggle="modal"
                                     data-bs-target="#login_form-Modal">登入</a> / <a href="#" data-bs-toggle="modal"
                                     data-bs-target="#register_form-Modal">註冊</a>
                             </div>
@@ -173,7 +181,7 @@
         </div>
     </header>
     <!-- main 主要內容區 -->
-    <main id="main">
+    <main id="main" class="about_wrap">
         <div class="unit_title">
             <h2>關於我們</h2>
         </div>
@@ -196,6 +204,59 @@
                 <p>每個人都值得被愛，讓戀戀未來陪你，一起迎接幸福到來</p>
             </div>
         </section>
+        <!--新增新聞 -->
+        <section class="news usual_content">
+            <div class="container">
+                <h3>新聞報導</h3>
+                    <div class="inner_wrap">
+                        <div class="news_slick">
+                            <div>
+                                <div class="news_img">
+                                    <a href="https://youtu.be/88JimlMS5RE" class="pop_video" data-lity>
+                                        <i class="fa-solid fa-play"></i>
+                                        <img src="images/about/banner/01.jpg" alt="">
+                                    </a>
+                                </div>
+                                <p><i class="fa-solid fa-heart"></i><b>報導簡介</b>獲台灣藏寶圖專題採訪 多元活動戀愛平台 牽起你我的未來</p>
+                            </div>
+                            <div>
+                                <div class="news_img">
+                                    <a href="https://pse.is/3ckj54" target="_blank"><img src="images/about/banner/04.jpg" alt=""></a>
+                                </div>
+                                <p><i class="fa-solid fa-heart"></i><b>報導簡介</b>脫單改造計畫！宅男工程師變聲韓系型男</p>
+                            </div>
+                            <div>
+                                <div class="news_img">
+                                    <a href="https://news.pchome.com.tw/living/lifetoutiao/20221215/index-67107534719605315009.html" target="_blank"><img src="images/about/banner/05.jpg" alt=""></a>
+                                </div>
+                                <p><i class="fa-solid fa-heart"></i><b>報導簡介</b>耶誕不落單！婚戀市場提升魅力迎接戀戀未來</p>
+                            </div>
+                        </div>
+                        <div class="news_icon">
+                            <a href="https://youtu.be/88JimlMS5RE" target="_blank"><img src="images/about/icon/01.png" alt=""></a>
+                            <a href="https://pse.is/3ckj54" target="_blank"><img src="images/about/icon/02.png" alt=""></a>
+                            <a href="https://news.pchome.com.tw/living/lifetoutiao/20221215/index-67107534719605315009.html" target="_blank"><img src="images/about/icon/03.png" alt=""></a>
+                            <a href="https://match.net.tw/pc/news/life/20221215/7004339" target="_blank"><img src="images/about/icon/04.png" alt=""></a>
+                            <a href="https://n.yam.com/Article/20221215171352" target="_blank"><img src="images/about/icon/05.png" alt=""></a>
+                            <a href="https://times.hinet.net/news/24308680" target="_blank"><img src="images/about/icon/06.png" alt=""></a>
+                            <a href="https://www.owlting.com/news/articles/235539" target="_blank"><img src="images/about/icon/07.png" alt=""></a>
+                            <a href="https://www.thehubnews.net/archives/174895" target="_blank"><img src="images/about/icon/08.png" alt=""></a>
+                            <a href="https://www.lifetoutiao.news/122191/" target="_blank"><img src="images/about/icon/09.png" alt=""></a>
+                            <a href="https://enn.tw/?p=353721" target="_blank"><img src="images/about/icon/10.png" alt=""></a>
+                            <a href="https://pse.is/4n3nq8" target="_blank"><img src="images/about/icon/11.png" alt=""></a>
+                            <a href="https://www.linews.tw/124255/" target="_blank"><img src="images/about/icon/12.png" alt=""></a>
+                            <a href="http://pingtungtimes.com.tw/?p=124876" target="_blank"><img src="images/about/icon/13.png" alt=""></a>
+                            <a href="https://life.tw/?app=view&no=1810063" target="_blank"><img src="images/about/icon/14.png" alt=""></a>
+                            <a href="https://today.line.me/tw/v2/article/1D08B2p" target="_blank"><img src="images/about/icon/15.png" alt=""></a>
+                            <a href="https://pse.is/4mw2kr" target="_blank"><img src="images/about/icon/16.png" alt=""></a>
+                            <a href="https://www.aplusnews.net/external/lifetoutiao/news/1671075347" target="_blank"><img src="images/about/icon/17.png" alt=""></a>
+                            <a href="https://www.sunmedia.tw/external/lifetoutiao/news/1671075347" target="_blank"><img src="images/about/icon/18.png" alt=""></a>
+                            <a href="https://ammtw.com/16544" target="_blank"><img src="images/about/icon/19.png" alt=""></a>
+                            <a href="https://www.seenews.tw/?p=5992" target="_blank"><img src="images/about/icon/20.png" alt=""></a>
+                        </div>
+                    </div>
+            </div>
+        </section>
         <section id="location" class="location usual_content service_center">
             <div class="container">
                 <h3>交友服務中心</h3>
@@ -215,15 +276,7 @@
                                 <div class="tab-item">
                                     <h4>台北交友服務中心<span>(大台北.基隆.宜蘭)</span></h4>
                                     <p><i class="fa-solid fa-location-dot"></i> 台北市中正區南昌路二段203號二樓之1(捷運古亭站2號出口步行1分鐘)</p>
-                                    <div class="row">
-                                        <div class="col-lg-4">
-                                            <div class="img"><img src="images/about/location_TP.jpg"></div>
-                                        </div>
-                                        <div class="col-lg-8">
-                                            
-                                        </div>
-                                    </div>
-
+                                    <img src="images/about/location_TP.jpg">
                                 </div>
 
                             </div>
@@ -274,7 +327,10 @@
                                     <h4>派對活動</h4>
                                     <div class="row">
                                         <div class="col-lg-4">
-                                            <div class="img"><img src="images/about/team_TP.jpg"></div>
+                                            <div class="img">
+                                                <img src="images/about/team_TP.jpg">
+                                                <a href="https://www.youtube.com/watch?v=Dtoc2utGX4A" data-lity>介紹影片</a>
+                                            </div>
                                         </div>
                                         <div class="col-lg-8">
                                             <div class="person team">
@@ -301,11 +357,14 @@
                                     <p></p>
                                     <div class="row">
                                         <div class="col-lg-4">
-                                            <div class="img"><img src="images/about/team_TY.jpg"></div>
+                                            <div class="img">
+                                                <img src="images/about/team_TY.jpg">
+                                                <a href="https://www.youtube.com/watch?v=Dtoc2utGX4A" data-lity>介紹影片</a>
+                                            </div>
                                         </div>
                                         <div class="col-lg-8">
                                             <div class="person team">
-                                                <div class="title-man location"><span class="title">桃園</span></div>
+                                                <div class="title-man location"><span class="title">桃竹苗</span></div>
                                                 <div class="row">
                                                     <div class="col-md-5">
                                                         <div class="contact"><span
@@ -313,7 +372,6 @@
                                                         
                                                     </div>
                                                     <div class="col-md-7">
-                                                        
                                                         <div class="contact"><span
                                                                 class="title">交友建議</span>做最好的準備，幸福終會來敲門</div>
                                                     </div>
@@ -325,28 +383,7 @@
                                         </div>
                                     </div>
                                     <p></p>
-                                    <div class="row">
-                                        <div class="col-lg-4">
-                                            <div class="img"><img src="images/about/team_TP.jpg"></div>
-                                        </div>
-                                        <div class="col-lg-8">
-                                            <div class="person team">
-                                                <div class="title-man location"><span class="title">新竹</span></div>
-                                                <div class="row">
-                                                    <div class="col-md-5">
-                                                        <div class="contact"><span
-                                                                class="title">主&nbsp;&nbsp;持&nbsp;&nbsp;人</span>雨彤</div>
-                                                        <div class="contact"><span
-                                                                class="title">助　　理</span>Nick，Maggie，琦琦</div>
-                                                    </div>
-                                                    <div class="col-md-7">
 
-                                                    </div>
-                                                </div>
-                                                <div class="team_txt"></div>
-                                            </div>
-                                        </div>
-                                    </div>
 
 
                                 </div>
@@ -356,7 +393,10 @@
                                     <div class="dating"><span class="title">台北</span></div>
                                     <div class="row">
                                         <div class="col-lg-4">
-                                            <div class="img"><img src="images/about/team_TP.jpg"></div>
+                                            <div class="img">
+                                                <img src="images/about/team_TP.jpg">
+                                                <a href="https://www.youtube.com/watch?v=Dtoc2utGX4A" data-lity>介紹影片</a>
+                                            </div>
                                         </div>
                                         <div class="col-lg-8">
                                             <div class="person team">
@@ -376,7 +416,10 @@
                                     <p></p>
                                     <div class="row">
                                         <div class="col-lg-4">
-                                            <div class="img"><img src="images/about/team_TY.jpg"></div>
+                                            <div class="img">
+                                                <img src="images/about/team_TY.jpg">
+                                                <a href="https://www.youtube.com/watch?v=Dtoc2utGX4A" data-lity>介紹影片</a>
+                                            </div>
                                         </div>
                                         <div class="col-lg-8">
                                             <div class="person team">
@@ -397,7 +440,9 @@
                                     <div class="dating"><span class="title">桃園新竹</span></div>
                                     <div class="row">
                                         <div class="col-lg-4">
-                                            <div class="img"><img src="images/about/team_TP.jpg"></div>
+                                            <div class="img"><img src="images/about/team_TP.jpg">
+                                                <a href="https://www.youtube.com/watch?v=Dtoc2utGX4A" data-lity>介紹影片</a>
+                                            </div>
                                         </div>
                                         <div class="col-lg-8">
                                             <div class="person team">
@@ -699,5 +744,28 @@
 
 <!-- 我的 js -->
 <script src=" js/myjs.js"></script>
+<!--新聞輪播-->
+<script>
+    $(document).ready(function() {
+			$('.news_slick').slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				autoplay: true,
+				dots: true,
+				arrow: true,
+				autoplaySpeed: 4000,
+				centerMode: false,
+				infinite: true,
+				responsive: [{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1,
+					}
+				}, ]
+			});
+		});
+
+</script>
 
 </html>

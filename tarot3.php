@@ -1,3 +1,25 @@
+<?php 
+session_start();
+//require_once('Connections/con1.php');
+
+## 接受參數
+$gender = trim($_GET['gender']); //性別
+$number = intval($_GET['number']); //所選牌組
+
+//列出塔羅資料
+/*
+$sql_tarot = "SELECT * FROM `tarot` where id = '".$number."' ";
+$rs_tarot = mysql_query($sql_tarot);
+$data_tarot = mysql_fetch_assoc($rs_tarot);
+
+## 居住地資料
+$sql_city = "SELECT * FROM `city` ORDER BY `id` ASC";
+$rs_city = mysql_query($sql_city);
+while($data_city = mysql_fetch_assoc($rs_city)) {
+    $data_city_array[] = $data_city;
+}
+*/
+?>
 <!DOCTYPE html>
 <!--XHTML語法來自台灣地區 xml:lang="zh-tw"-->
 <html lang="zh-tw">
@@ -14,7 +36,11 @@
     <meta name="Keywords" content="相親,婚友社,排約,交友,月老,月下老人,戀戀未來,FutureLove" />
     <meta name="Description"
         content="相親排約婚友社-提供最優質的相親婚友服務，戀戀未來不同於一般傳統的婚友社，費用公開平民化，會員素質嚴格篩選認證，並提供線上配對排約服務，是您擺脫單身的最佳選擇" />
-    <title>斜槓招募|戀戀未來-幸福到來</title>
+    <title>90日脫單|戀戀未來-幸福到來</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">    
     <!-- fontawesome-free-6.0.0-web  -->
     <link rel="stylesheet" href="fontawesome/FontAwesome-6/css/all.css">
     <!-- Jquery  -->
@@ -29,9 +55,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
     <!-- 我的 css -->
     <link href="css/mycss.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/90days.css">
+    <link rel="stylesheet" href="./css/case.css">
+    <link rel="stylesheet" href="./css/tarot-styles.css">
+    <link rel="stylesheet" href="./css/layout.css">
 </head>
+<style>
+.bn4_m {
+	display:none;
+}
+.bn4 {
+	display:block;
+}
+@media only screen and (max-width: 600px){
+  .bn4_m {
+  	display:block;
+  }
+  .bn4 {
+  	display:none;
+  }
+  
+}
 
-<body class="page-recruit">
+</style>
+<body style="background-color: #fff;">
     <!-- header 頂部區 -->
     <header id="header">
         <div class="container">
@@ -40,20 +87,8 @@
                     <a class="navbar-brand" href="index.html"><img src="images/logo.svg" alt="戀戀未來"></a>
                     <!--以下button 使用在行動選單的啟用鈕 -->
                     <div class="mobile_button">
-                        <button class="navbar-toggler member have_login" type="button">
-                             <!--由程式判斷若已經登入，則在have_login出現show, 若未登入，則在no_login出現show -->
-                            <span class="user-icon" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-user"></i></span>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="member_center.html">會員中心</a></li>
-                                <li><a class="dropdown-item" href="member_data_manage.html">個人資料管理</a></li>
-                                <li><a class="dropdown-item" href="member_party-manage01.html">聯誼管理</a></li>
-                                <li><a class="dropdown-item" href="member_friend-manageA01.html">速配管理</a></li>
-                                <li><a class="dropdown-item" href="#">登出</a></li>
-                              </ul>
-                        </button>
-                        <button class="navbar-toggler member no_login show" type="button" data-bs-toggle="modal"
+                        <button class="navbar-toggler" type="button" data-bs-toggle="modal"
                             data-bs-target="#login_form-Modal">
-                            <!--由程式判斷若已經登入，則在have_login出現show, 若未登入，則在no_login出現show -->
                             <span class="user-icon"><i class="fa-light fa-user"></i></span>
                         </button>
                         <button class="navbar-toggler main-menu" type="button" data-bs-toggle="offcanvas"
@@ -71,19 +106,21 @@
                                     <a class="nav-link" href="line-match.html">LINE速配</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">實體約會</a>
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">實體約會</a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <li><a class="dropdown-item" href="date.html">實體約會</a></li>
                                         <li><a class="dropdown-item" href="wedding_news.html">新人喜訊</a></li>
-                                      </ul>
+                                    </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">派對聯誼</a>
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">派對聯誼</a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <li><a class="dropdown-item" href="party.html">派對聯誼</a></li>
                                         <li><a class="dropdown-item" href="party_album.html">聯誼花絮</a></li>
                                         <li><a class="dropdown-item" href="couple.html">配對成功</a></li>
-                                      </ul>
+                                    </ul>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="90days.html">90日脫單</a>
@@ -91,16 +128,17 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="tarot.html">脫單塔羅</a>
                                 </li>
-                                <li class="nav-item active">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">聯絡我們</a>
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">聯絡我們</a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <li><a class="dropdown-item" href="about.html">關於我們</a></li>
                                         <li><a class="dropdown-item" href="news-info.html">最新公告</a></li>
                                         <li><a class="dropdown-item" href="https://www.youtube.com/playlist?list=PL7XG9yuWG5vsQmGWQ0OWO22bRCpUxy5_G" target="_blank">結婚見證</a></li>
                                         <li><a class="dropdown-item" href="feedback.html">公益回饋</a></li>
                                         <li><a class="dropdown-item" href="faq.html">常見問答</a></li>
-                                        <li><a class="dropdown-item active" href="recruit.html">斜槓招募</a></li>
-                                      </ul>
+                                        <li><a class="dropdown-item" href="recruit.html">斜槓招募</a></li>
+                                    </ul>
                                 </li>
                             </ul>
                             
@@ -114,11 +152,12 @@
                                 <a class="nav-link" href="line-match.html">LINE速配</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="date.html" role="button"  aria-expanded="false">實體約會</a>
+                                <a class="nav-link" href="date.html" role="button" aria-expanded="false">實體約會</a>
+                                
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="date.html">實體約會</a></li>
                                     <li><a class="dropdown-item" href="wedding_news.html">新人喜訊</a></li>
-                                  </ul>
+                                </ul>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="party.html" role="button" aria-expanded="false">派對聯誼</a>
@@ -126,7 +165,7 @@
                                     <li><a class="dropdown-item" href="party.html">派對聯誼</a></li>
                                     <li><a class="dropdown-item" href="party_album.html">聯誼花絮</a></li>
                                     <li><a class="dropdown-item" href="couple.html">配對成功</a></li>
-                                  </ul>
+                                </ul>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="90days.html">90日脫單</a>
@@ -134,7 +173,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="tarot.html">脫單塔羅</a>
                             </li>
-                            <li class="nav-item active">
+                            <li class="nav-item">
                                 <a class="nav-link" href="about.html" role="button" aria-expanded="false">聯絡我們</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="about.html">關於我們</a></li>
@@ -142,14 +181,14 @@
                                     <li><a class="dropdown-item" href="https://www.youtube.com/playlist?list=PL7XG9yuWG5vsQmGWQ0OWO22bRCpUxy5_G" target="_blank">結婚見證</a></li>
                                     <li><a class="dropdown-item" href="feedback.html">公益回饋</a></li>
                                     <li><a class="dropdown-item" href="faq.html">常見問答</a></li>
-                                    <li><a class="dropdown-item active" href="recruit.html">斜槓招募</a></li>
-                                  </ul>
+                                    <li><a class="dropdown-item" href="recruit.html">斜槓招募</a></li>
+                                </ul>
                             </li>
                         </ul>
-                        <div class="d-flex">
+                        <div class="d-flex active">
                             <!--如果已經登入，請再d-flex這裏加上active，則會出現不同的項目 -->
                             <div class="btn-login">
-                                <a href="#" data-bs-toggle="modal"
+                                <i class="fa-regular fa-user"></i> <a href="#" data-bs-toggle="modal"
                                     data-bs-target="#login_form-Modal">登入</a> / <a href="#" data-bs-toggle="modal"
                                     data-bs-target="#register_form-Modal">註冊</a>
                             </div>
@@ -171,341 +210,170 @@
                 </div>
             </nav>
         </div>
+
     </header>
     <!-- main 主要內容區 -->
-    <main id="main">
-        <div class="unit_title">
-            <h2>斜槓招募</h2>
-        </div>
-        <section id="recruit" class="recruit">
-            <div class="container">
-                <div class="slogin"><img src="images/recruit/wd1.png" alt=""></div>
-                <div class="rec_tit">
-                    <h3>▋ 聯誼活動主持人及助理:室內及戶外場次(兼職)</h3>
+    <main id="main" style="background-color: #fff;">
+        <section class="wrapper clearfix index-w">
+
+         
+
+        <div id="content" class="clearfix">
+
+            
+            
+            
+						<!-- content -->
+						
+              <div id="taro-content">
+                <div class="loadingMask">
+                    <img class="loadingPic" src="./images/tarot/loading.svg">
                 </div>
-                <div class="recruit_con">
-                    <div class="recruit_txtcon">
-                        <p>1. 室內活動主持人：台北、桃園、新竹、台中、嘉義、台南、高雄地區。<br>
-                            2. 戶外活動主持人：北部、中部、南部地區。<br>
-                            3. 義工小助理：台北、宜蘭、桃園、新竹、苗栗、台中、嘉義、台南、高雄、屏東 (以女性朋友為主)</p>
-                        <h4><span>條件資格</span></h4>
-                        <p>1. 個性開朗，大方，喜歡幫助他人及與人群接觸者<br>
-                            2. 具熱枕、親合力及配合度高的帥哥、美女均歡迎</p>
-                        <h4><span>工作內容</span></h4>
-                        <p>1. 活動主持人：主持聯誼活動(提醒聯誼參加者該換桌，中場小遊戲互動)<br>
-                            2. 義工小助理：協助主辦單位辦理報到、引導入座。</p>
-                        <h4><span>義工福利</span></h4>
-                        <p>1. 增進自已面對陌生人溝通技巧<br>
-                            2. 訓練臨時應變能力及台風，可豐富您的人生閱歷<br>
-                            3. 認識各行各業的朋友，擴大自己的交友圈，累積人脈存褶<br>
-                            4. 參加聯誼享折扣價
-                        </p>
+                <div class="tarotMain">
+                    <div class="tarotBack tarotMain2"></div>
+                    <div class="slogan">
+                        <img src="./images/tarot/Tarologo.png">
                     </div>
-                </div>
-
-                <div class="recruit_form_wrap">
-                    <h3>招募申請</h3>
-                    <p class="directions">請填寫以下資料並上傳照片1~3張，戀戀未來專員將儘速與您聯繫~~(未錄取者不另行通知)</p>
-                    <form class="form_body recruit_form register_form" novalidate="true">
-                        <div class="container-fluid">
-
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label class="title"><span class="required">＊</span>姓名</label>
-                                        <input id="m_neme" name="m_neme" type="text" class="form-control"
-                                            placeholder="請輸入姓名" data-error=" " required="required">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label class="title"><span class="required">＊</span>年次</label>
-                                        <select name="birth_year" id="birth_year" data-error=" " required="required">
-                                            <option value="" selected="" disabled="" hidden="">民國</option>
-                                            <option value="1994">70</option>
-                                            <option value="1995">71</option>
-                                            <option value="1996">72</option>
-                                            <option value="1997">73</option>
-                                            <option value="1998">74</option>
-                                            <option value="1999">75</option>
-                                            <option value="2000">76</option>
-                                            <option value="2001">77由程式繼續捉數據</option>
-                                            <!--出生年請用程式去捉，這邊只列一些示範-->
-                                        </select>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-lg-6 labels_list">
-                                    <label class="title"><span class="required">＊</span>學歷</label><br>
-                                    <label><input type="radio" id="school01" name="m_school" value="school01"
-                                            checked=""><span>國中</span></label>
-                                    <label><input type="radio" id="school02" name="m_school"
-                                            value="school02"><span>高中職</span></label>
-                                    <label><input type="radio" id="school03" name="m_school"
-                                            value="school03"><span>專科</span></label>
-                                    <label><input type="radio" id="school04" name="m_school"
-                                            value="school04"><span>大學</span></label>
-                                    <label><input type="radio" id="school05" name="m_school"
-                                            value="school05"><span>碩士</span></label>
-                                    <label><input type="radio" id="school07" name="m_school"
-                                            value="school07"><span>博士</span></label>
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                                <div class="col-lg-6 labels_list">
-                                    <div class="form-group m_marital">
-                                        <label class="title"><span class="required">＊</span>婚姻狀態</label><br>
-                                        <label><input type="radio" id="marital01" name="m_marital" value="marital01"
-                                                checked=""><span>未婚(首次)</span></label>
-                                        <label><input type="radio" id="marital02" name="m_marital"
-                                                value="marital02"><span>離婚</span></label>
-                                        <label><input type="radio" id="marital03" name="m_marital"
-                                                value="marital03"><span>喪偶</span></label>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label class="title"><span class="required">＊</span>目前工作縣市</label>
-                                        <select name="working_city" id="working_city" data-error=" "
-                                            required="required">
-                                            <option value="" selected="" disabled="" hidden="">請選擇工作縣市</option>
-                                            <option value="TP">台北</option>
-                                            <option value="TY">桃園</option>
-                                            <option value="HC">新竹</option>
-                                            <option value="TC">台中</option>
-                                            <option value="OT">彰化</option>
-                                            <option value="TN">台南</option>
-                                            <option value="KH">高雄</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label class="title"><span class="required">＊</span>目前居住縣市</label>
-                                        <select name="working_city" id="working_city" data-error=" "
-                                            required="required">
-                                            <option value="" selected="" disabled="" hidden="">請選擇居住縣市</option>
-                                            <option value="TP">台北</option>
-                                            <option value="TY">桃園</option>
-                                            <option value="HC">新竹</option>
-                                            <option value="TC">台中</option>
-                                            <option value="OT">彰化</option>
-                                            <option value="TN">台南</option>
-                                            <option value="KH">高雄</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="form-group">
-                                        <label class="title"><span class="required">＊</span>感興趣的工作項目(可複選)</label>
-                                        <div class="work-pj_list">
-                                            <div><input type="checkbox" name="work-pj01" id="work-pj01">
-                                                <label for="work-pj01">活動組長</label>
-                                            </div>
-                                            <div><input type="checkbox" name="work-pj02" id="work-pj02">
-                                                <label for="work-pj02">聯誼主持人</label>
-                                            </div>
-                                            <div><input type="checkbox" name="work-pj03" id="work-pj03">
-                                                <label for="work-pj03">聯誼小助理</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label class="title"><span class="required">＊</span>可配合工作地區</label>
-                                        <select name="working_city" id="working_city" data-error=" "
-                                            required="required">
-                                            <option value="" selected="" disabled="" hidden="">請選擇工作地區</option>
-                                            <option value="TP">台北</option>
-                                            <option value="TY">桃園</option>
-                                            <option value="HC">新竹</option>
-                                            <option value="TC">台中</option>
-                                            <option value="OT">彰化</option>
-                                            <option value="TN">台南</option>
-                                            <option value="KH">高雄</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label class="title">其他</label>
-                                        <input id="other_working_city" name="other_working_city" type="text"
-                                            class="form-control other_working_city" data-error=" " required="required"
-                                            placeholder="其他">
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label class="title"><span class="required">＊</span>手機</label>
-                                        <input id="m_mobile" name="m_mobile" type="text" class="form-control"
-                                            placeholder="請輸入手機" data-error=" " required="required">
-                                        <div class="help-block with-errors"></div>
-
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label class="title"><span class="required">＊</span>電子信箱</label>
-                                        <input id="m_mail" name="m_mail" type="text" class="form-control"
-                                            placeholder="請輸入電子信箱" data-error=" " required="required">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="form-group">
-                                        <label class="title"><span class="required">＊</span>工作經驗</label>
-                                        <textarea class="form-control" rows="3" aria-label="With textarea"
-                                            placeholder="請輸入工作經驗" data-error=" " required="required"></textarea>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="form-group">
-                                        <label class="title"><span class="required">＊</span>何處知道本站訊息</label>
-                                        <div class="row">
-                                            <div class="col-lg-6">
-                                                <div class="source_list">
-                                                    <div><input type="checkbox" name="sourcej01" id="source01">
-                                                        <label for="source01">Yahoo</label>
-                                                    </div>
-                                                    <div><input type="checkbox" name="source02" id="source02">
-                                                        <label for="source02">Google</label>
-                                                    </div>
-                                                    <div><input type="checkbox" name="source03" id="source03">
-                                                        <label for="source03">Facebook</label>
-                                                    </div>
-                                                    <div><input type="checkbox" name="sourcej04" id="source04">
-                                                        <label for="source04">Email</label>
-                                                    </div>
-                                                    <div><input type="checkbox" name="source05" id="source05">
-                                                        <label for="source05">戀戀未來部落格</label>
-                                                    </div>
-                                                    <div><input type="checkbox" name="source06" id="source06">
-                                                        <label for="source06">親友推薦</label>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <input id="other_source" name="other_source" type="text"
-                                                    class="form-control other_source" placeholder="其他">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label class="title"><span class="required">＊</span>簡單自我介紹</label>
-                                        <textarea class="form-control" aria-label="With textarea" id="introduce"
-                                            name="introduce" rows="3" placeholder="請輸入" data-error=" "
-                                            required="required"></textarea>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label class="title"><span class="required">＊</span>你來戀戀未來的原因</label>
-                                        <textarea class="form-control" aria-label="With textarea" id="why" name="why"
-                                            rows="3" placeholder="請輸入" data-error=" " required="required"></textarea>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label class="title"><span class="required">＊</span>個人照片(至少一張)</label>
-                                        <div class="m_photo">
-                                            <form action=" " enctype="multipart/form-data">
-                                                <div id="preview_progressbarTW_imgs">
-
-                                                </div>
-                                                <label class="input_file_wrap">
-                                                    <input type="file" id="progressbarTWInput"
-                                                        accept="image/gif, image/jpeg, image/png" multiple /></label>
-
-                                            </form>
-                                           
-                                        </div>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label class="title"><span class="required">＊</span>驗證碼</label>
-                                        <div class="checknum_wrap">
-                                            <div class="input_wrap"><input type="text" name="checknum" id="checknum"
-                                                    class="checknum" placeholder="請輸入驗證碼" data-error=" "
-                                                    required="required">
-                                                <a id="reload-img" href="#"><i
-                                                        class="fa-regular fa-arrows-rotate"></i></a>
-                                            </div>
-                                            <div class="rand-img"><img src="images/recruit/showrandimg.png"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-
+                  
+                    <div class="cardStartHide">
+                        <img src="./images/tarot/taro-Card1.png">
+                    </div>
+                    <div class="formBox" style="display: none;">
+                        <div class="title2" style="display: none;margin-top: 15px;">
+                            請輸入您的資料及方位，讓占卜更加「精準」
                         </div>
+                        <div class="cardResult">
 
-                        <div class="buttons">
+                            <div class="flip-card">  
+                                  
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <img src="./images/tarot/taro-Card1.jpg">
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <!--<img src="images/tarot/<?php //echo $data_tarot['img_url'];?>">-->
+                                        <img src="images/tarot/card_1.jpg">
+                                        <!-- <img src="./images/tarot/taro-Card2.jpg"> -->
+                                    </div>
+                                </div>
+                                <!-- <h3>《 王后 The Empress 》</h3>     -->
+                                <h3>王后<?php //echo $data_tarot['name'];?></h3>
+                            </div>
+                        
+                            <!-- <form id="form2" action="tarot4.php" method="post"> -->
+                            <form id="form2" action="tarot_process.php" method="post">    
+                                <input type="hidden" name="number" id="number" value="<?=$number?>">
+                                <input type="hidden" name="gender" id="gender" value="<?=$gender?>">
+                                <div class="mid">
 
-                            <a id="button2" class="btn btn-submit" data-bs-toggle="modal"
-                                data-bs-target="#recruit_success-Modal" href="#" >送出</a>
+                                    <div class="formG">
+                                        <label for="mem_name">姓名:</label>
+                                        <input type="text" id="mem_name" name="mem_name">
+                                    </div>
+
+                                    <div class="formG">
+                                        <label for="address">居住地:</label>
+                                        <select name="address" id="address">
+                                            <option value="">請選填</option>
+                                            <?php
+                                            /*
+                                            foreach($data_city_array as $kk => $vv) {
+                                                ?>
+                                                <option value="<?php echo $vv['id'];?>"><?php echo $vv['name'];?></option>
+                                                <?php
+                                            }*/ //foreach($data_city_array $kk => $vv) {
+                                            ?>
+                                            
+                                        </select>
+                                        <!-- <input type="text" id="address" name="address"> -->
+                                    </div>
+
+                                    <div class="formG">
+                                        <label for="age">年次:</label>
+                                        <select name="age" id="age">
+                                            <?php
+                                            for($i=1945;$i<date("Y");$i++) {
+                                                if($i == 1992) {
+                                                    echo '<option selected="selected"  value="">請選填</option>';
+                                                    continue;
+                                                }
+                                                ?>
+                                                <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                                                <?php
+                                            }
+                                            ?>
+                                        </select>
+
+                                    </div>
+
+                                    <div class="formG">
+                                        <label for="mem_email">email:</label>
+                                        <input type="text" id="mem_email" name="mem_email">
+
+                                    </div>
+
+
+                                    <div class="formG">
+                                        <label for="phone">手機號碼:</label>
+                                        <input type="number" id="phone" name="phone" 
+                                        style="width: calc(100% - 95px);">  
+                                        <div class="formG2">                                
+                                            <button onclick="fm_vfcode()" type="button" id="putvf" style="width: 90px;">
+                                                <span>送出驗證碼</span> 
+                                            </button>
+                                            <button style="display: none;background-color: #c6c6c6;cursor: default;border:#c6c6c6 1px solid;width: 90px;" type="button"  id="putvf1">
+                                                <span>送出驗證碼</span> 
+                                            </button>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="formG">
+                                        <label for="verification">驗證碼:</label>
+                                        <input type="number" id="verification" name="verification">
+
+                                    </div>
+
+                                    
+                                    <div class="downBtn">       
+                                        <button type="submit" class="submit">          
+                                            占卜結果
+                                        </button>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                
+                            </form>
+                            
                         </div>
-                    </form>
-
+                        <div class="remark">※ 按下「占卜結果」表示同意戀戀未來與您聯繫</div> 
+                    </div>
+                    
+                  
                 </div>
+              </div>
 
-            </div>
-        </section>
+						<!-- content end -->
+						
+        </div>
 
+    </section>
 
-
-
-
-
+        
+        
     </main>
+
+    <div class="btn-top"><img src="./images/date/top-triangle.png" alt=""></div>
 
     <!-- footer 頁底內容區 -->
     <footer id="footer">
         <div class=" container ">
             <div class="row footer-info">
                 <div class="col-lg-12 contact">
-                    <div class="social"><a href="https://www.facebook.com/futurelove520" target="_blank"><img src="images/footer-social_fb.svg"></a> 
-                        <a href="https://www.youtube.com/channel/UCvERtuDK5FXPe-GBnTUfuhw" target="_blank"><img src="images/footer-social_yt.svg"></a> 
-                        <a href="https://www.instagram.com/lo.ve6411/" target="_blank"><img src="images/footer-social_ig.svg"></a>
-                    </div>
+                    <div class="social"><a href="#"><img src="images/footer-social_fb.svg"></a> <a href="#"><img
+                                src="images/footer-social_yt.svg"></a> <a href="#"><img
+                                src="images/footer-social_ig.svg"></a></div>
                     <div class="mail"><img src="images/footer-icon_mail.svg"> 客服信箱：<a
                             href="mailto:love@futurelove.com.tw">love@futurelove.com.tw</a></div>
                     <div class="phone"><img src="images/footer-icon_phone.svg"> TEL：0986-699521
@@ -693,7 +561,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="login_form-ModalLabel">已寄出認證信件</h5>
+                    <h5 class="modal-title" id="login_form-ModalLabel">忘記密碼</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -729,7 +597,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="login_form-ModalLabel">已寄出認證信件</h5>
+                    <h5 class="modal-title" id="login_form-ModalLabel">忘記密碼</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -751,30 +619,209 @@
         </div>
     </div>
 
-    <!--.recruit_success-Modal 派對註冊成功   -->
-    <div class="modal fade recruit_success" id="recruit_success-Modal" tabindex="-1" aria-labelledby="recruit_success-Modal"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="img"><img src="images/party/detail/party_sign_up.svg"></div>
-                    <h3>資料已送出，感謝您！</h3>
-                    <div class="button"><button id="party_sign_up" class="btn btn-danger btn-block"
-                            onclick=" ">確定</button></div>
-                </div>
-                <div class="modal-footer">
-                </div>
-            </div>
-        </div>
-    </div>
-
 </body>
 
 <!-- 我的 js -->
 <script src=" js/myjs.js"></script>
+<script src="js/marketing.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/additional-methods.js"></script>  -->
+
+<script type="text/javascript"  src="js/popup_nav.js"></script>
+
+
+<script>
+    //上方漢堡選單jquery版本衝突，因此獨立拉出
+    // function myFunction() {
+    //     var x = document.getElementById("s_nav");
+    //     if (x.className === "topnav") {
+    //         x.className += " responsive";
+    //     } else {
+    //         x.className = "topnav";
+    //     }
+    // }
+
+
+    $(window).on('load', function(){
+        // $(".loadingPic").delay(500).fadeOut(300);
+        $(".loadingMask").delay(500).fadeOut(1000);
+    });
+
+    $.urlParam = function(name){
+	var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+	return results[1] || 0;
+    }
+    // console.log($.urlParam('gender'));  
+
+    var gender = $.urlParam('gender')
+
+
+    $('.formBox').hide(); 
+    $('.cardStartHide').fadeIn(500);
+    $('.txt-r').hide();
+
+    setTimeout(() => {
+        $('.title2').fadeIn(1000); 
+        $('.tarotBack').removeClass('tarotMain2').delay(1500); 
+        $('.tarotBack').addClass('tarotMain1').delay(1500);
+        $('.cardStartHide').fadeOut(1500);
+        $('.formBox').fadeIn(1500); 
+        if($('.formBox')){
+            $('.txt-r').fadeIn(3500);
+            $('.flip-card-front').fadeOut(2500);
+            $('.flip-card h3').fadeIn(2500);
+        }
+        
+    }, 1500);
+
+
+
+//若需要再開吧 下方 倒數計時 & 表單驗證
+//倒數計時--->
+function fm_vfcode() {
+    
+    if( $("#phone").valid() ){
+        var phone = $('#phone').val();
+        $('#putvf').css('display','none');
+        $('#putvf1').css('display','block');
+
+        //使用ajax產生驗證碼  
+        
+        $.post( "ajax_phoneCaptcha_check.php", { phone: phone })
+            .done(function( data ) {
+                // alert( "sms code: " + data );
+                if( data != 'ok') {
+                    alert(data);
+
+                    //因不符合計時，直接開放
+                    $('#putvf1').css('display','none');//修改狀態
+                    $('#putvf').css('display','block');
+                    clearInterval(down);//銷燬計時器
+                    return;
+
+                } else {
+                    editvfput(120);
+                }
+        });
+        /*
+        $.post( "ajax_phoneCaptcha_check.php", { phone: phone }, function( data ) {
+            console.log( data ); // John
+        }, "json");
+        */
+    }     //if( $("#phone").valid() ){
+    
+} //function fm_vfcode() {
+
+//讀秒
+function editvfput(count) {
+    var down = setInterval(CountDown, 1000);//每秒執行一次，賦值
+    function CountDown() {
+        $('#putvf1').text('剩餘 ' + count + ' 秒');//寫入
+        if (count == 0) {
+        $('#putvf1').css('display','none');//修改狀態
+        $('#putvf').css('display','block');
+        clearInterval(down);//銷燬計時器
+        return;
+    }
+        count--;
+    }
+}
+// <---倒數計時
+
+
+//表單認證
+$(function(){
+// function JqValidate() {
+
+    $('#form2').validate({
+        // debug:true,
+        onkeyup: function(element, event) {
+            var value = this.elementValue(element).replace(/^\s+/g, "");
+            $(element).val(value);
+        },
+        rules: {  
+            mem_name: { 
+                required: true 
+            },
+            address: { 
+                required: true 
+            },
+            age: { 
+                required: true 
+            },
+            
+            // address: { notEqualsto: "0" },
+            // age: { notEqualsto: "0" },
+            // address: 'required',
+            phone:{
+                required: true,
+                minlength: 10,
+                number: true
+            },
+            verification: {
+                required: true
+                // error: true
+            }
+        },
+        messages: {
+            mem_name: {
+                required:'*請輸入姓名'
+            },
+            address: {
+                required:'*請選擇居住地'
+                // notEqualsto: "請選擇居住地"
+            },
+            age: {
+                required:'*請選擇年次'
+                // notEqualsto: "請選擇年次"
+            },
+            phone: {
+                required:'*必填',
+                minlength:'*不得少於10位',
+                number:'*電話需為數字'
+            },
+            verification: {
+                required:'*必填'
+                // error:'*驗證碼錯誤'
+            }
+
+        },
+
+        success:function(error){
+            //單項有輸入資料時的回應
+            error.addClass('valid').text('');
+            // return true;
+        },
+        invalidHandler:function(form){       
+            // $("#summary").fadeOut().fadeIn();
+            // console.log('驗證失敗');
+            return false;
+        }
+        // submitHandler: function(form) {
+            //執行寫入表單
+            // console.log('全部OK');
+            // const mem_name = $('#mem_name').val(); //姓名
+            // const address = $('#address').val(); //居住地
+            // const age = $('#age').val(); //年次
+            // console.log('123');
+            // console.log(form);
+            // alert('valid form submitted');
+            // return false; 
+        // }
+    });
+// }
+});
+
+// function submitBtn()
+// {
+// 	 if( JqValidate() ){  
+//          console.log('進度submit');
+// 		//  $( '#form2' ).submit();
+// 	 }
+// }
+
+</script>
 
 </html>
