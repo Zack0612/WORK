@@ -1,0 +1,25 @@
+	div#abgne_marquee {
+		position: relative;
+		overflow: hidden;	/* 超出範圍的部份要隱藏 */
+		/* width: 375px; */
+		width: 90%;
+		height: 25px;
+		border: 0px solid #ccc;
+	}
+	div#abgne_marquee ul, div#abgne_marquee li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	div#abgne_marquee ul {
+		position: absolute;
+	}
+	div#abgne_marquee ul li a {
+		padding-left:18px;
+		display: block;
+		overflow: hidden;	/* 超出範圍的部份要隱藏 */
+		font-size:12px;
+		height: 25px;
+		line-height: 25px;
+		text-decoration: none;
+	}

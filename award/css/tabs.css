@@ -1,0 +1,237 @@
+ /* root element for tabs  */
+ul.tabs {
+    list-style:none;
+    margin:0 !important;
+    padding:0;
+    border-bottom:1px solid #eee;
+    height:34px;
+}
+
+/* single tab */
+ul.tabs li {
+    float:left;
+    text-indent:0;
+    padding:0;
+    margin:0 !important;
+    list-style-image:none !important;
+}
+
+/* link inside the tab. uses a background image */
+ul.tabs a {
+    font-size:11px;
+    display:block;
+    height: 30px;
+    line-height:30px;
+    text-align:center;
+    text-decoration:none;
+    color:#333;
+    padding:0px;
+    margin:4px 3px 0;
+    position:relative;
+    padding: 0 15px;
+    top:1px;
+    background-color:#fff;
+    border: 1px solid #eee;
+    border-top: 1px solid #975aa9;
+    top: 3px;
+    height: 27px;
+    color:#555;
+}
+
+ul.tabs a:active {
+    outline:none;
+}
+
+/* when mouse enters the tab move the background image */
+ul.tabs a:hover {
+    background-position: 0 -31px;
+    color:#995eab;
+}
+
+ul.tabs a.current{
+    top: 0;
+    border-top: 2px solid #975aa9;
+    border-bottom: none;
+    height: 31px;
+    font-weight: bold;
+	margin:0 3px
+}
+
+/* active tab uses a class name "current". its highlight is also done by moving the background image. */
+ul.tabs a.current, ul.tabs a.current:hover, ul.tabs li.current a {
+    background-position: 0 -62px;
+    cursor:default !important;
+    color:#555 !important;
+}
+
+/* Different widths for tabs: use a class name: w1, w2, w3 or w2 */
+ul.tabs li#top_member a{ width:80px; padding-left: 28px;}
+ul.tabs li#fpop a{background: url(../images/icon-female.png) no-repeat 10px 5px; width:80px; padding-left: 28px;}
+ul.tabs li#fnew a{ width:80px; padding-left: 28px;}
+ul.tabs li#mpop a{background: url(../images/icon-male.png) no-repeat 10px 5px; width:80px; padding-left: 28px;}
+ul.tabs li#mnew a{ width:80px; padding-left: 28px;}
+
+.index #index_mem ul.tabs a{ line-height: 32px; padding: 0 15px;}
+.index_information .tabs i{ margin:0 5px 3px 0}
+ul.tabs li#top_member i{ background: url(../images/index-icon.png) no-repeat 0 0; display:inline-block; height:20px; vertical-align:middle; width:30px; }
+ul.tabs li#fnew i{ background: url(../images/index-icon.png) no-repeat -30px 0; display:inline-block; height:22px; vertical-align:middle; width:13px; }
+ul.tabs li#mnew i{ background: url(../images/index-icon.png) no-repeat -44px 0; display:inline-block; height:22px; vertical-align:middle; width:20px; }
+
+.index_information ul.tabs { border:0}
+.index_information ul.tabs a {
+	border: 1px solid #fdc0c6;
+    border-top: 3px solid #BE1D2C;
+	color: #BE1D2C;
+	font-size: 15px;
+	height: 31px;
+	top: 0;    
+}
+
+.index_information ul.tabs a.current {
+	background: #f2a2be;
+	background: -moz-linear-gradient(left, #f2a2be 0%, #ea66a1 100%);
+	background: -webkit-linear-gradient(left, #f2a2be 0%,#ea66a1 100%);
+	background: linear-gradient(to right, #f2a2be 0%,#ea66a1 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2a2be', endColorstr='#ea66a1',GradientType=1 );
+	border:0;
+	color:#fff !important;
+	margin: 4px 3px;
+    height: 35px;
+	line-height: 35px
+}
+/*
+ul.tabs li#top_member a.current{
+	background: url(../images/icon_crown.png) no-repeat 10px 8px, linear-gradient(to right, #f2a2be 0%,#ea66a1 100%);
+	color:#fff
+	}
+ul.tabs li#fnew a.current{
+	background: url(../images/icon-female.png) no-repeat 10px 8px, linear-gradient(to right, #f2a2be 0%,#ea66a1 100%);
+	color:#fff;
+}
+ul.tabs li#mnew a.current{
+	background: url(../images/icon-male.png) no-repeat 10px 8px, linear-gradient(to right, #f2a2be 0%,#ea66a1 100%);
+	color:#fff;
+}*/
+
+ul.tabs li#top_member a.current i{ background: url(../images/index-icon.png) no-repeat 0 -26px; display:inline-block; height:20px; vertical-align:middle; width:30px; }
+ul.tabs li#fnew a.current i{ background: url(../images/index-icon.png) no-repeat -30px -26px; display:inline-block; height:22px; vertical-align:middle; width:13px; }
+ul.tabs li#mnew a.current i{ background: url(../images/index-icon.png) no-repeat -44px -26px; display:inline-block; height:22px; vertical-align:middle; width:20px; }
+
+#index_area .index_information ul.tabs a {
+	border: 1px solid #9A87BD;
+    border-top: 3px solid #9A87BD;
+	color: #9A87BD;
+}
+#index_area .index_information ul.tabs a.current{
+	background: #c7a1c9;
+	background: -moz-linear-gradient(left, #c7a1c9 0%, #8471b2 100%);
+	background: -webkit-linear-gradient(left, #c7a1c9 0%,#8471b2 100%);
+	background: linear-gradient(to right, #c7a1c9 0%,#8471b2 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c7a1c9', endColorstr='#8471b2',GradientType=1 );
+	border:0;
+	color:#fff !important;
+	margin: 4px 3px;
+    height: 35px;
+	line-height: 35px
+}
+
+/* initially all panes are hidden */
+.panes .pane {
+    display:none;
+}
+
+/* tab pane styling */
+.panes > div {
+    display:none;
+    padding:15px 10px;
+    border:1px solid #eee;
+	border-left:none;
+	border-right:none;
+    border-top:0;
+    height:auto;
+    font-size:13px;
+    background-color:#fff;
+}
+.panes > div > div{display:block; line-height:20px;}
+
+.index_information .panes > div{
+	padding:15px 0;
+	border:0;
+}
+/*
+@media screen and (max-width:768px){
+	ul.tabs li{ width:25%}
+	ul.tabs li#mpop a,ul.tabs li#fpop a,ul.tabs li#mnew a,ul.tabs li#fnew a{ width:auto}
+}
+@media screen and (max-width:640px){
+	ul.tabs li{ width:33.3333%}
+}*/
+@media screen and (max-width:768px){
+	ul.tabs{ height:auto; margin:5px 0 0 !important}
+	ul.tabs a.current{ height:27px; border-top: 1px solid #975aa9}
+	ul.tabs a.current{ background:#f8e7fc } 
+	ul.tabs a{ border-bottom:none; border-top:1px solid #975aa9; top:0; margin:0 3px}
+	.index_information ul.tabs a{ font-size:12px}
+	/*ul.tabs li#top_member a.current{background: url(../images/icon_crown.png) no-repeat 10px 5px #f8e7fc}
+	ul.tabs li#fpop a.current{background: url(../images/icon-female.png) no-repeat 10px 5px #f8e7fc}
+	ul.tabs li#fnew a.current{background: url(../images/icon-female.png) no-repeat 10px 5px #f8e7fc}
+	ul.tabs li#mpop a.current{background: url(../images/icon-male.png) no-repeat 10px 5px #f8e7fc}
+	ul.tabs li#mnew a.current{background: url(../images/icon-male.png) no-repeat 10px 5px #f8e7fc}*/
+	ul.tabs li#fpop a, ul.tabs li#fnew a, ul.tabs li#mpop a, ul.tabs li#mnew a,ul.tabs li#top_member a{ width:auto}
+	ul.tabs li{ width:50%}
+	
+	.tabs li a,ul.tabs a.current{ height:auto; line-height:normal; padding:7px}
+	.index_information ul.tabs a.current { margin: 0 3px}
+	.index #index_area .index_information ul.tabs a.current { margin: 0 3px}
+	
+	.tabs.ts03 li{ width:33.33333%}
+	.tabs.ts04 li{ width:25%}
+	.tabs.ts05 li{ width:20%}
+	.tabs.ts06 li{ width:16.666666%}
+	.tabs.ts07 li{ width:14.285714%}
+	.tabs.ts08 li{ width:12.5%}
+	.tabs.ts09 li{ width:11.111111%}
+	.tabs.ts10 li{ width:10%}
+
+    .index_tab_select {
+        border-bottom:1px solid #eee;
+    }
+	#index_area .index_information ul.tabs a {
+		height: auto;
+	}
+	#index_area .index_information ul.tabs a.current{
+		height: auto;
+        line-height: 20px;
+	}
+	
+}
+@media screen and (max-width:580px){ 
+	.index #index_mem ul.tabs a {
+		line-height: 20px;
+		height: 40px;
+		padding: 5px;
+	}
+	.index #index_mem ul.tabs a.current {
+		padding: 8px 5px 5px;
+	}
+	ul.tabs li#top_member a i,ul.tabs li#fnew i,ul.tabs li#mnew i {
+		display: block;
+		 margin: 0 auto;
+	}
+	ul.tabs li#top_member a.current i,ul.tabs li#fnew a.current i, ul.tabs li#mnew a.current i{
+		display: block;
+		margin: 0 auto;
+	}
+	
+}
+@media screen and (max-width:480px){ 
+	ul.tabs li#fpop a, ul.tabs li#fnew a, ul.tabs li#mpop a, ul.tabs li#mnew a,ul.tabs li#top_member a{ padding:25px 5px 5px; background-position: center 5px}
+	ul.tabs li#fpop a.current,ul.tabs li#fnew a.current,ul.tabs li#mpop a.current,ul.tabs li#mnew a.current,ul.tabs li#top_member a.current{  background-position: center 5px}
+	
+}
+@media screen and (max-width:416px){ 
+	#index_area .index_information ul.tabs a.current{
+		line-height: 18px;
+		padding: 7px 8px;
+	}
+}

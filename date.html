@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<!--XHTML語法來自台灣地區 xml:lang="zh-tw"-->
+<html lang="zh-tw">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html" />
+    <meta charset="UTF-8">
+    <meta property="og:image" content="images/og_image/og_images_homepage.jpg" />
+    <!--作者-->
+    <meta name="author" content="戀戀未來聯誼交友相親排約婚友社" />
+    <!--搜尋索引-->
+    <meta name="robots" content="all" />
+    <meta name="Keywords" content="相親,婚友社,排約,交友,月老,月下老人,戀戀未來,FutureLove" />
+    <meta name="Description"
+        content="相親排約婚友社-提供最優質的相親婚友服務，戀戀未來不同於一般傳統的婚友社，費用公開平民化，會員素質嚴格篩選認證，並提供線上配對排約服務，是您擺脫單身的最佳選擇" />
+    <title>實體約會|戀戀未來-幸福到來</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">    
+    <!-- fontawesome-free-6.0.0-web  -->
+    <link rel="stylesheet" href="fontawesome/FontAwesome-6/css/all.css">
+    <!-- Jquery  -->
+    <script src="js/jquery.min.js"></script>
+    <!-- bootstrap-5.1.1-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Swiper 滑動外掛-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!--引用 Validator 基於bootstrap的表單驗證-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+    <!-- 我的 css -->
+    <link href="css/mycss.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/date.css">
+    <link rel="stylesheet" href="./css/case.css">
+</head>
+
+<body style="background-color: #fff;">
+    <!-- header 頂部區 -->
+    <header id="header">
+        <div class="container">
+            <nav class="navbar navbar-light navbar-expand-lg fixed-top">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html"><img src="images/logo.svg" alt="戀戀未來"></a>
+                    <!--以下button 使用在行動選單的啟用鈕 -->
+                    <div class="mobile_button">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="modal"
+                            data-bs-target="#login_form-Modal">
+                            <span class="user-icon"><i class="fa-light fa-user"></i></span>
+                        </button>
+                        <button class="navbar-toggler main-menu" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                            <span class="navbar-icon"><i class="fa-regular fa-bars"></i> <i class="fa-regular fa-xmark-large"></i></span>
+                        </button>
+                    </div>
+                    <!--以下offcanvas 使用在行動選單 -->
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                        aria-labelledby="offcanvasNavbarLabel">
+                       
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="line-match.html">LINE速配</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">實體約會</a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="date.html">實體約會</a></li>
+                                        <li><a class="dropdown-item" href="wedding_news.html">新人喜訊</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">派對聯誼</a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="party.html">派對聯誼</a></li>
+                                        <li><a class="dropdown-item" href="party_album.html">聯誼花絮</a></li>
+                                        <li><a class="dropdown-item" href="couple.html">配對成功</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="90days.html">90日脫單</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="tarot.html">脫單塔羅</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">聯絡我們</a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="about.html">關於我們</a></li>
+                                        <li><a class="dropdown-item" href="news-info.html">最新公告</a></li>
+                                        <li><a class="dropdown-item" href="https://www.youtube.com/playlist?list=PL7XG9yuWG5vsQmGWQ0OWO22bRCpUxy5_G" target="_blank">結婚見證</a></li>
+                                        <li><a class="dropdown-item" href="feedback.html">公益回饋</a></li>
+                                        <li><a class="dropdown-item" href="faq.html">常見問答</a></li>
+                                        <li><a class="dropdown-item" href="recruit.html">斜槓招募</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+
+                    <!--以下collapse 使用在PC選單 -->
+                    <div class="collapse navbar-collapse main-menu-collapse" id="main-menu-collapse">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="line-match.html">LINE速配</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="date.html" role="button" aria-expanded="false">實體約會</a>
+                                
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="date.html">實體約會</a></li>
+                                    <li><a class="dropdown-item" href="wedding_news.html">新人喜訊</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="party.html" role="button" aria-expanded="false">派對聯誼</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="party.html">派對聯誼</a></li>
+                                    <li><a class="dropdown-item" href="party_album.html">聯誼花絮</a></li>
+                                    <li><a class="dropdown-item" href="couple.html">配對成功</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="90days.html">90日脫單</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="tarot.html">脫單塔羅</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html" role="button" aria-expanded="false">聯絡我們</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="about.html">關於我們</a></li>
+                                    <li><a class="dropdown-item" href="news-info.html">最新公告</a></li>
+                                    <li><a class="dropdown-item" href="https://www.youtube.com/playlist?list=PL7XG9yuWG5vsQmGWQ0OWO22bRCpUxy5_G" target="_blank">結婚見證</a></li>
+                                    <li><a class="dropdown-item" href="feedback.html">公益回饋</a></li>
+                                    <li><a class="dropdown-item" href="faq.html">常見問答</a></li>
+                                    <li><a class="dropdown-item" href="recruit.html">斜槓招募</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="d-flex active">
+                            <!--如果已經登入，請再d-flex這裏加上active，則會出現不同的項目 -->
+                            <div class="btn-login">
+                                <i class="fa-regular fa-user"></i> <a href="#" data-bs-toggle="modal"
+                                    data-bs-target="#login_form-Modal">登入</a> / <a href="#" data-bs-toggle="modal"
+                                    data-bs-target="#register_form-Modal">註冊</a>
+                            </div>
+                            <div class="member_menu">
+                                <div class="menu_icon"><img src="images/member_menu_btn.svg">
+                                    <div class="sub-menu">
+                                        <ul class="menu_list">
+                                            <li class="nav-item"><a href="member_center.html">會員中心</a></li>
+                                            <li class="nav-item"><a href="member_data_manage.html">個人資料管理</a></li>
+                                            <li class="nav-item"><a href="member_party-manage01.html">派對活動管理</a></li>
+                                            <li class="nav-item"><a href="member_friend-manageA01.html">交友約會管理</a></li>
+                                            <li class="nav-item login-out"><a href="#">登出</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+    </header>
+    <!-- main 主要內容區 -->
+    <main id="main" style="background-color: #fff;">
+
+        <div class="date_banner">
+            <img class="w-100 d-md-block d-none" src="./images/date/date_banner.png" alt="">
+            <img class="w-100 d-md-none d-block" src="./images/date/date_banner_m.png" alt="">
+            <div class="date_banner_scroll"><img src="./images/date/scroll.png" alt=""></div>
+        </div>
+
+        <div class="date_path">
+            <div class="date_path_text">
+                <p>
+                    有人說<span class="highlight">尋覓真愛</span>，<br>
+                    要耐心等待、仔細尋找、感覺很重要<br>
+                    可有時，等了大半輩子<br>
+                    還是盼不到那個人的出現…
+                </p>
+            </div>
+            <div class="date_path_main">
+                <div class="inner">
+                    <div class="bg">
+                        <div class="date_title">
+                            <h2>選對管道  <span class="highlight">幸福報到</span></h2>
+                            <h3>ADVANTAGE</h3>
+                        </div>
+                        <div class="date_compare d-sm-flex justify-content-center">
+                            <div class="date_compare_item other mx-sm-2 mx-auto mb-sm-0 mb-5">
+                                <h4>其他交友平台或APP</h4>
+                                <ul>
+                                    <li>售後服務不佳，<span class="highlight">無申訴管道</span></li>
+                                    <li>容易因照片顏值導致<span class="highlight">配對率低</span></li>
+                                    <li>配對對象資料難以查辯真偽</li>
+                                    <li>充斥<span class="highlight">槍手</span>代打上陣</li>
+                                    <li>配對對象意圖<span class="highlight">難以分辨</span></li>
+                                    <li><span class="highlight">盲配</span>聊天容易被句點</li>
+                                </ul>
+                            </div>
+                            <div class="date_compare_item futurelove mx-sm-2 mx-auto">
+                                <h4>戀戀未來 1對1實體約會</h4>
+                                <ul>
+                                    <li>快速認識<span class="highlight">認真交往</span>對象</li>
+                                    <li><span class="highlight">謹慎審查</span>會員資料</li>
+                                    <li>強調<span class="highlight">內外在條件</span>並重</li>
+                                    <li>顧問諮詢給予<span class="highlight">專業建議</span></li>
+                                    <li>專人指導提升<span class="highlight">個人魅力</span></li>
+                                    <li>約會後<span class="highlight">持續關懷</span>提供相處建議</li>
+                                </ul>
+                                <div class="win"><span>大</span><span>勝</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="date_service">
+            <div class="date_title">
+                <h2>全方位的   <span class="highlight">服務內容</span></h2>
+                <h3>SERVICE</h3>
+            </div>
+            <div class="date_service_content row">
+                <div class="col-md-4 col-6">
+                    <div class="date_service_item">
+                        <img src="./images/date/icon-consult.png" alt="">
+                        <h4>顧問諮詢</h4>
+                        <p>面談了解需求</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="date_service_item">
+                        <img src="./images/date/icon-advice.png" alt="">
+                        <h4>脫單建議</h4>
+                        <p>給予專業意見</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="date_service_item">
+                        <img src="./images/date/icon-charm.png" alt="">
+                        <h4>魅力升級</h4>
+                        <p>內外在吸引力up</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="date_service_item">
+                        <img src="./images/date/icon-match.png" alt="">
+                        <h4>智能配對</h4>
+                        <p>系統顧問雙向配對</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="date_service_item">
+                        <img src="./images/date/icon-date.png" alt="">
+                        <h4>甜蜜約會</h4>
+                        <p>一對一約會</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="date_service_item">
+                        <img src="./images/date/icon-concern.png" alt="">
+                        <h4>約會關懷</h4>
+                        <p>關心約會狀況</p>
+                    </div>
+                </div>
+            </div>
+            <h5 class="date_service_slogan">業界唯一<br class="d-sm-none"><span class="highlight ms-sm-4 ms-0">30天</span>不滿意保證退費</h5>
+        </div>
+
+        <div class="date_feedback">
+            <div class="inner">
+                <div class="date_title">
+                    <h2><span class="highlight">佳評</span>如潮</h2>
+                    <h3>FEEDBACK</h3>
+                </div>
+                <div class="swiper-container date_feedback_swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="date_feedback_item">
+                            <img src="./images/date/date_feedback_cellphone.png" alt="">
+                            <div class="date_feedback_pic"><img src="./images/date/date_feedback_talk1.png" alt=""></div>
+                            <img src="./images/date/date_feedback_cellphone-style.png" alt="">
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="date_feedback_item">
+                            <img src="./images/date/date_feedback_cellphone.png" alt="">
+                            <div class="date_feedback_pic"><img src="./images/date/date_feedback_talk2.png" alt=""></div>
+                            <img src="./images/date/date_feedback_cellphone-style.png" alt="">
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="date_feedback_item">
+                            <img src="./images/date/date_feedback_cellphone.png" alt="">
+                            <div class="date_feedback_pic"><img src="./images/date/date_feedback_talk3.png" alt=""></div>
+                            <img src="./images/date/date_feedback_cellphone-style.png" alt="">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="date_assurance">
+            <div class="date_title">
+                <h2><span class="highlight">九大</span>品質保證</h2>
+                <h3>ASSURANCE</h3>
+            </div>
+            <p class="date_assurance_intro">讓你安心交友輕鬆脫單，戀愛之路有如神助</p>
+            <table class="date_assurance_table">
+                <tr>
+                    <td>
+                        <div class="date_assurance_item">合法<span class="highlight">政府立案</span>安全安心</div>
+                    </td>
+                    <td>
+                        <div class="date_assurance_item">量身打造，<span class="highlight">個人魅力</span>提升</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="date_assurance_item">業界唯一<span class="highlight">30天不滿意</span>保證退費</div>
+                    </td>
+                    <td>
+                        <div class="date_assurance_item">提供<span class="highlight">戀愛、兩性</span>相關課程</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="date_assurance_item">嚴格<span class="highlight">審查資料</span>，100%絕無槍手</div>
+                    </td>
+                    <td>
+                        <div class="date_assurance_item">分享喜訊再<span class="highlight">送結婚禮金</span></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="date_assurance_item">經驗豐富的<span class="highlight">專業顧問團隊</span>協助脫單</div>
+                    </td>
+                    <td>
+                        <div class="date_assurance_item">享<span class="highlight">婚禮主持VIP</span>優惠</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="date_assurance_item">每月20場以上精彩<span class="highlight">多元主題性</span>聯誼活動</div>
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="date_pic">
+            <div class="row">
+                <div class="col-md-6"><img src="./images/date/date_pic1.png" alt=""></div>
+                <div class="col-md-6"><img src="./images/date/date_pic2.png" alt=""></div>
+            </div>
+            <div class="date_pic_brand"><img src="./images/date/date_logo.png" alt=""></div>
+        </div>
+
+        <div class="date_case">
+            <div class="date_case_inner">
+                <div class="date_title">
+                    <h2><span class="highlight">愛情</span>見證</h2>
+                    <h3>CASE</h3>
+                </div>
+                <div class="swiper-container case_swiper date_case_swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="case_item">
+                            <img class="case_pic" src="./images/date/case-1.png" alt="">
+                            <h4>賀璞&經寶</h4>
+                            <p>我們透過戀戀未來線上LINE聊天認識，感謝戀戀讓我遇到天命真女我們透過戀戀未來線上LINE聊天認識，感謝戀戀讓我遇到天命真女</p>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="case_item">
+                            <img class="case_pic" src="./images/date/case-2.png" alt="">
+                            <h4>俊棠&瀞雅</h4>
+                            <p>我們透過戀戀未來線上LINE聊天認識，感謝戀戀讓我遇到天命真女我們透過戀戀未來線上LINE聊天認識，感謝戀戀讓我遇到天命真女</p>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="case_item">
+                            <img class="case_pic" src="./images/date/case-3.png" alt="">
+                            <h4>政哲&慧芳</h4>
+                            <p>我們透過戀戀未來線上LINE聊天認識，感謝戀戀讓我遇到天命真女我們透過戀戀未來線上LINE聊天認識，感謝戀戀讓我遇到天命真女</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination d-md-none"></div>
+                </div>
+            </div>
+        </div>
+
+        <img class="date_ad" src="./images/date/date_ad.png" alt="">
+
+        <div class="date_join">
+            <div class="date_title">
+                <h2>
+                    立即加入<br>
+                    <span class="highlight">諮詢約會服務</span>
+                </h2>
+                <h3>JOIN</h3>
+            </div>
+            <div class="date_join_form">
+                <div class="date_join_item">
+                    <label for="">姓氏</label>
+                    <div class="require">
+                        <div class="require_tag">必填</div>
+                    </div>
+                    <div class="date_join_input">
+                        <input type="text" placeholder="請輸入你的姓氏">
+                    </div>
+                </div>
+                <div class="date_join_item">
+                    <label for="">性別</label>
+                    <div class="require">
+                        <div class="require_tag">必填</div>
+                    </div>
+                    <div class="date_join_input">
+                        <div class="check_item">
+                            <div class="check_item_square"><img src="./images/date/date_check.png" alt=""></div>
+                            <span>男</span>
+                        </div>
+                        <div class="check_item">
+                            <div class="check_item_square"><img src="./images/date/date_check.png" alt=""></div>
+                            <span>女</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="date_join_item">
+                    <label for="">年次</label>
+                    <div class="require"></div>
+                    <div class="date_join_input">
+                        <select name="" id="">
+                            <option value="" selected disabled>請選擇你的年次</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="date_join_item">
+                    <label for="">居住地</label>
+                    <div class="require"></div>
+                    <div class="date_join_input">
+                        <select name="" id="">
+                            <option value="" selected disabled>請選擇你的居住地</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="date_join_item">
+                    <label for="">手機號碼</label>
+                    <div class="require">
+                        <div class="require_tag">必填</div>
+                    </div>
+                    <div class="date_join_input justify-content-between">
+                        <input type="text" placeholder="請輸入你的手機號碼">
+                        <button>獲取驗證碼</button>
+                    </div>
+                </div>
+                <div class="date_join_item">
+                    <label for="">手機驗證碼</label>
+                    <div class="require">
+                        <div class="require_tag">必填</div>
+                    </div>
+                    <div class="date_join_input justify-content-between">
+                        <input type="text" placeholder="請輸入你的手機驗證碼">
+                    </div>
+                </div>
+                <div class="date_join_item">
+                    <label for="">電子信箱</label>
+                    <div class="require">
+                        <div class="require_tag">必填</div>
+                    </div>
+                    <div class="date_join_input justify-content-between">
+                        <input type="text" placeholder="請輸入你的電子信箱">
+                    </div>
+                </div>
+                <a href="date_signin.html"><button class="date_join_btn">確認送出</button></a>
+            </div>
+        </div>
+    </main>
+
+    <div class="btn-top"><img src="./images/date/top-triangle.png" alt=""></div>
+
+    <!-- footer 頁底內容區 -->
+    <footer id="footer">
+        <div class=" container ">
+            <div class="row footer-info">
+                <div class="col-lg-12 contact">
+                    <div class="social"><a href="#"><img src="images/footer-social_fb.svg"></a> <a href="#"><img
+                                src="images/footer-social_yt.svg"></a> <a href="#"><img
+                                src="images/footer-social_ig.svg"></a></div>
+                    <div class="mail"><img src="images/footer-icon_mail.svg"> 客服信箱：<a
+                            href="mailto:love@futurelove.com.tw">love@futurelove.com.tw</a></div>
+                    <div class="phone"><img src="images/footer-icon_phone.svg"> TEL：0986-699521
+                        <span>服務時間10：00~18：00(日一公休)</span>
+                    </div>
+                </div>
+                <div class="col-lg-12 copyright">©Since 2008 戀戀未來 All Rights Reserved.</div>
+            </div>
+        </div>
+        <div class="line_link"><a href="https://line.me/R/ti/p/%40futurelove" target="_blank"><img
+                    src="images/line_icon.svg"></a></div>
+    </footer>
+
+    <!--以下是彈跳出來的Modal視窗   -->
+    <!--#login_form-Modal 登入表單   -->
+    <div class="modal fade" id="login_form-Modal" tabindex="-1" aria-labelledby="login_form-ModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="login_form-ModalLabel">會員登入</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form_body">
+                        <form id="register_form" role="form" data-toggle="validator">
+                            <div class="form-group">
+                                <input id="inputName" name="Name" type="text" class="form-control" placeholder="手機/電子信箱"
+                                    data-error="格式錯誤或尚未填寫" required="required">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="form-group">
+                                <input id="inputPassword" name="Password" class="form-control" type="password"
+                                    placeholder="密碼" data-error="格式錯誤或尚未填寫" required="required">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="button"><button id="register_check" class="btn btn-danger btn-block"
+                                    onclick="">登入</button></div>
+                        </form>
+                        <div class="forget-register"> <a href="#" data-bs-target="#forgetpwd-Modal"
+                                data-bs-toggle="modal">忘記密碼</a> <a href="#" data-bs-target="#register_form-Modal"
+                                data-bs-toggle="modal">快速註冊</a></div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--#register_form-Modal 註冊表單   -->
+    <div class="modal fade" id="register_form-Modal" tabindex="-1" aria-labelledby="register_form-ModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="register_form-ModalLabel">免費註冊會員</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form_body">
+                        <form id="register_form" role="form" data-toggle="validator" class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group m_sex">
+                                        <label class="title">性別:</label>
+                                        <label><input type="radio" id="female" name="m_sex" value="F"
+                                                checked><span>女性</span></label>
+                                        <label><input type="radio" id="male" name="m_sex"
+                                                value="M"><span>男性</span></label>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="m_email" name="m_email" type="text" class="form-control"
+                                            placeholder="電子信箱" data-error=" " required="required">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="m_nickname" name="m_nickname" type="text" class="form-control"
+                                            placeholder="暱稱" data-error=" " required="required">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="m_password" name="m_password" type="password" class="form-control"
+                                            placeholder="密碼" data-error=" " required="required">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="m_sec_password" name="m_sec_password" type="password"
+                                            class="form-control" placeholder="確認密碼" data-error=" " required="required">
+                                        <div class="help-block ">請輸入8~12字元密碼</div>
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <select name="Love_Account_live" id="Love_Account_live">
+                                            <option value="0">居住地</option>
+                                            <option value="1">台北</option>
+                                            <option value="2">新北</option>
+                                            <option value="3">基隆</option>
+                                            <option value="4">宜蘭</option>
+                                            <option value="5">桃園</option>
+                                            <option value="6">新竹</option>
+                                            <option value="7">苗栗</option>
+                                            <option value="8">台中</option>
+                                            <option value="9">彰化</option>
+                                            <option value="10">南投</option>
+                                            <option value="11">嘉義</option>
+                                            <option value="12">雲林</option>
+                                            <option value="13">台南</option>
+                                            <option value="14">高雄</option>
+                                            <option value="15">屏東</option>
+                                            <option value="16">台東</option>
+                                            <option value="17">花蓮</option>
+                                            <option value="18">澎湖</option>
+                                            <option value="19">金門</option>
+                                            <option value="20">馬祖</option>
+                                            <option value="21">其它</option>
+                                        </select>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <select name="Love_Account_msg" id="Love_Account_msg">
+                                            <option value="0">何處知道本站</option>
+                                            <option value="02">google搜尋引擎</option>
+                                            <option value="01">yahoo搜尋引擎</option>
+                                            <option value="04">親友推薦</option>
+                                            <option value="03">FB</option>
+                                            <option value="07">戀戀未來部落格</option>
+                                            <option value="06">其它</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="Love_Account_recommendNumber" name="Love_Account_recommendNumber"
+                                            type="text" class="form-control" placeholder="推薦碼 / 優惠代碼 ( 若無請跳過 )">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-8"> <input id="m_tel" name="m_tel" type="text"
+                                                    class="form-control" placeholder="手機號碼" data-error=" "
+                                                    required="required">
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                            <div class="col-4"><button class="verify">獲取驗證碼</button></div>
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="m_tel_checkword" name="m_tel_checkword" type="text"
+                                            class="form-control" placeholder="手機驗證碼" data-error=" " required="required">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 agree_member">
+                                    <input type="checkbox" name="agree_member" id="agree_member">
+                                    <label for="agree_member">我已同意戀戀未來<a href="clause.html" target="_blank">會員條款</a>及<a
+                                            href="privacy.html" target="_blank">隱私權政策</a></label>
+                                </div>
+                                <div class="col-lg-6 goto_login only_pc">
+                                    <a href="#" data-bs-target="#login_form-Modal" data-bs-toggle="modal">立即登入</a>
+                                </div>
+                            </div>
+                            <div class="button"> <button id="register_check" class="btn btn-danger btn-block"
+                                    onclick="">註冊</button></div>
+                            <div class="goto_login only_mobile">
+                                <a href="#" data-bs-target="#login_form-Modal" data-bs-toggle="modal">立即登入</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--#forgetpwd-Modal 忘記密碼   -->
+    <div class="modal fade" id="forgetpwd-Modal" tabindex="-1" aria-labelledby="forgetpwd-ModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="login_form-ModalLabel">忘記密碼</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form_body">
+                        <p>請輸入手機與電子信箱，我們將發送帳號及密碼。<br>若沒收到通知信，請檢查是否被歸類為垃圾信件。<br>（有時需等候才會收到信件，敬請耐心等候）</p>
+                        <form id="register_form" role="form" data-toggle="validator">
+                            <div class="form-group">
+                                <input name="Love_Account_phone" id="Love_Account_phone" type="text"
+                                    class="form-control" placeholder="手機" data-error="格式錯誤或尚未填寫" required="required">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="form-group">
+                                <input name="Love_Account_mail" id="Love_Account_mail" type="text" class="form-control"
+                                    placeholder="電子信箱" data-error="格式錯誤或尚未填寫" required="required">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="button"><button id="register_check" class="btn btn-danger btn-block" onclick=""
+                                    data-bs-target="#forgetpwd_end-Modal" data-bs-toggle="modal">送出</button></div>
+                        </form>
+                        <div class="forget-register"> <a href="#" data-bs-target="#login_form-Modal"
+                                data-bs-toggle="modal">返回登入畫面</a></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--#forgetpwd-Modal 忘記密碼   -->
+    <div class="modal fade" id="forgetpwd_end-Modal" tabindex="-1" aria-labelledby="forgetpwd-ModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="login_form-ModalLabel">忘記密碼</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form_body">
+                        <p>已透過官方信箱love@futurelove.com.tw寄出認證信件<br>
+                            請至您留下的註冊E-MAIL：<span>yourname@yourdoname.com</span><br>
+                            收認證信件，並點選信件開通此帳號，即註冊完成<br>
+                            若您未收到認證信，請至垃圾郵件或促銷郵件確認</p>
+                        <form id="register_form" role="form" data-toggle="validator">
+                            <div class="button"><button id="register_check" class="btn btn-danger btn-block"
+                                    onclick="">重寄認證信件</button></div>
+                        </form>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<!-- 我的 js -->
+<script src=" js/myjs.js"></script>
+<script src="js/marketing.js"></script>
+
+
+<script>
+    var swiper = new Swiper(".date_feedback_swiper", {
+        slidesPerView: 2.5,
+        spaceBetween: 20,
+        centeredSlides: true, 
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+            500: {
+                spaceBetween: 30,
+                slidesPerView: 2.8,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+            1000: {
+                slidesPerView: 3,
+                spaceBetween: 60,
+            }
+        }
+    });
+
+    var swiper = new Swiper(".date_case_swiper", {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        // centeredSlides: true, 
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+            576: {
+                slidesPerView: 2,
+                spaceBetween: 40,
+            },
+            992: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+            },
+            1100: {
+                slidesPerView: 3,
+                spaceBetween: 85,
+            }
+        }
+    });
+
+    let assuWidth, assuMaxWidth = 0;
+    function assurance(){
+        $(".date_assurance_item").each(function(){
+            if($(window).width() < 992) {
+                assuWidth = $(this).width();
+                if(assuWidth > assuMaxWidth) {
+                    assuMaxWidth = assuWidth;
+                }
+            }
+        })
+        $(".date_assurance_item").each(function(){
+            if($(window).width() < 992) {
+                $(this).width(assuMaxWidth);
+            }else {
+                $(this).css("width","100%");
+            }
+        })
+    }
+    assurance();
+    $(window).on("resize scroll",function(){
+        assurance();
+        if($(window).width() < (assuMaxWidth + 40 + 30)){
+            $(".date_assurance_item").each(function(){
+                if($(window).width() < 992) {
+                    $(this).css("width","100%");
+                }
+            })
+        }
+    })
+
+    $(".check_item").click(function(){
+        $(this).addClass("active").siblings(".check_item").removeClass("active");
+    })
+
+    $(".date_banner_scroll").click(function(){
+        let pathTop = $(".date_path").offset().top;
+        $("body, html").animate({scrollTop: pathTop}, 100);
+    })
+</script>
+
+</html>
