@@ -181,9 +181,18 @@
 
     <!-- main 主要內容區 -->
     <main id="main">
-        <section id="slidershow">
-            <div class="big_banner"> <img class="only_pc" src="images/home_big_banner.jpg"> <img class="only_mobile"
-                    src="images/home_big_banner_mobile.jpg"></div>
+        <section id="slidershow" class="swiper ">
+            <div class="swiper-wrapper">
+                <div class="big_banner swiper-slide"> 
+                    <img class="only_pc" src="images/home_big_banner.jpg"> 
+                    <img class="only_mobile" src="images/home_big_banner_mobile.jpg">
+                </div>
+                <div class="big_banner swiper-slide"> 
+                    <img class="only_pc" src="images/home_big_banner.jpg"> 
+                    <img class="only_mobile" src="images/home_big_banner_mobile.jpg">
+                </div>               
+            </div>   
+            <div class="swiper-pagination"></div> 
         </section>
 
         <section id="main_services">
@@ -550,5 +559,25 @@
 
 <!-- 我的 js -->
 <script src=" js/myjs.js"></script>
+
+<script>
+var swiperkv = new Swiper("#slidershow ", {
+  speed: 600,
+  loop: true,
+  autoplay:{
+    delay:4000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true
+  },
+
+  grabCursor: true,
+  pagination: {
+		el: ".swiper-pagination",
+		clickable: true,
+	},
+
+});
+
+</script>
 
 </html>

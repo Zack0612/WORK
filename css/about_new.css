@@ -292,44 +292,8 @@
     width: 80%;
 }
 
-/*標題區*/
-.unit_title {
-    background-image: url(../images/about/top_bg.jpg);
-    background-repeat: no-repeat;
-    height: 205px;
-    background-position: center top;
-    padding-top: 0;
-    margin-bottom: 0;
-}
 
-.unit_title h2 {
-    background-image: none;
-    font-size: 60px;
-    letter-spacing: 0.2em;
-    height: 100%;
-    width: 100%;
-    line-height: 205px;
-    text-align: center;
-    padding: 0;
-}
 
-.unit_title h2::before {
-    display: none;
-}
-
-@media (max-width:575px) {
-
-    .unit_title h2 {
-        font-size:38px;
-        zoom: 0;
-    }
-
-    .unit_title {
-        background-size: cover;
-        height: 200px;
-        line-height: 200px;
-    }
-}
 
 /*改背景*/
 .about_wrap {
