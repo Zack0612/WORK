@@ -1219,7 +1219,7 @@ background-clip: text;
     }
 
     #main_project .project_pic img {
-        border-radius: 25px;
+        border-radius: 0px;
     }
 
     #main_project .have_swiper .swiper-wrapper .swiper-slide {
@@ -1931,6 +1931,10 @@ ol.cjk {
 /*********以下是 page-party 派對聯誼頁面的設定*/
 
 body.page-party.party-list {}
+
+.party-kv{
+    border-radius: 30px;
+}
 
 .party-list{
     margin-top:5%;
