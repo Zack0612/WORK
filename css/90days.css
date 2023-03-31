@@ -911,20 +911,22 @@
   outline: none;
 }
 
+
+
 .day90_reserve_input input::-webkit-input-placeholder {
-  color: #3e3e3e;
+  color: #a8a8a8;
 }
 
 .day90_reserve_input input:-ms-input-placeholder {
-  color: #3e3e3e;
+  color: #a8a8a8;
 }
 
 .day90_reserve_input input::-ms-input-placeholder {
-  color: #3e3e3e;
+  color: #a8a8a8;
 }
 
 .day90_reserve_input input::placeholder {
-  color: #3e3e3e;
+  color: #a8a8a8;
 }
 
 .day90_reserve_input .btn-certify {

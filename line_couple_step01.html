@@ -156,7 +156,7 @@
                         <div class="d-flex active">
                             <!--如果已經登入，請再d-flex這裏加上active，則會出現不同的項目 -->
                             <div class="btn-login">
-                                <i class="fa-regular fa-user"></i> <a href="#" data-bs-toggle="modal"
+                                <a href="#" data-bs-toggle="modal"
                                     data-bs-target="#login_form-Modal">登入</a> / <a href="#" data-bs-toggle="modal"
                                     data-bs-target="#register_form-Modal">註冊</a>
                             </div>
@@ -356,6 +356,48 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="title"><span class="required">＊</span>LINE ID</label>
+                                        <input id="m1_other" name="personality_other" type="text" class="form-control"
+                                            placeholder="請輸入LINE ID">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="title"><span class="required">＊</span>重要價值觀(可複選最多3個)</label>
+                                        <select id='m2' class="interest_select" multiple="multiple" name="m1[]">
+                                            <option value="1">重要價值觀1</option>
+                                            <option value="2">重要價值觀2</option>
+                                            <option value="3">重要價值觀3</option>
+                                            <option value="4">重要價值觀4</option>
+                                            <option value="5">重要價值觀5</option>
+                                            <option value="6">重要價值觀6</option>
+                                            <option value="7">重要價值觀7</option>
+                                            <option value="8">重要價值觀8</option>
+                                        </select>
+                                        <input id="m2_other" name="interest_other" type="text" class="form-control"
+                                            placeholder="其他…">
+                                    </div>
+                                </div>
+                            </div>        
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="title"><span class="required">＊</span>宗教</label>
+                                        <input id="m1_other" name="personality_other" type="text" class="form-control"
+                                            placeholder="請輸入宗教">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="title"><span class="required">＊</span>職業(職稱)</label>
+                                        <input id="m1_other" name="personality_other" type="text" class="form-control"
+                                            placeholder="請輸入職業(職稱)">
+                                    </div>
+                                </div>
+                            </div>                              
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group">

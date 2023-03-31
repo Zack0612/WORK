@@ -1242,3 +1242,57 @@
   }
 }
 /*# sourceMappingURL=linematch.css.map */
+
+
+
+.lineMatch_video {
+  padding: 55px 20px 75px;
+  background-size: 41.82vw;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 110px) bottom;
+}
+
+.lineMatch_video_title {
+  max-width: 524px;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.lineMatch_video_content {
+  max-width: 915px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.lineMatch_video_content_bg {
+  width: 100%;
+}
+
+.lineMatch_video_content_inner {
+  width: 88%;
+  padding-bottom: calc(88% * 0.5625);
+  position: absolute;
+  top: 8.2%;
+  left: 6.7%;
+}
+
+.lineMatch_video_content_inner iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .lineMatch_video {
+    background-image: none;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .lineMatch_video_title {
+    max-width: 200px;
+  }
+}
