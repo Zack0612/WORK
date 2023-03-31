@@ -1969,9 +1969,10 @@ body.page-party.party-list {}
 
 @media (max-width:768px) {
 
-    .unit_title h2 {
+    .unit_title h1 {
         font-size:44px;
         zoom: 0;
+        line-height: 200px;
     }
 
 }
