@@ -1202,7 +1202,7 @@ background-clip: text;
     }
 
     #main_project .project_txt .slogin {
-        font-size: 1.4em;
+        font-size: 1em;
         letter-spacing: 0;
         line-height: 30px;
         margin-top: 25px;
@@ -1215,7 +1215,7 @@ background-clip: text;
     #main_project .project_txt a.project_href {
         font-size: 1.2em;
         letter-spacing: normal;
-
+        width: 100%;
     }
 
     #main_project .project_pic img {
@@ -1244,7 +1244,7 @@ background-clip: text;
 
 @media (max-width: 413px) {
     #main_project .project_txt h1 {
-        font-size: 42px;
+        font-size: 30px;
     }
 }
 
