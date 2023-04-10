@@ -1015,6 +1015,7 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   overflow: hidden;
+  color:#2b2a2a;
 }
 
 .wedding_item:hover .wedding_list_name {

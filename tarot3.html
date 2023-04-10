@@ -1,3 +1,25 @@
+<?php 
+session_start();
+//require_once('Connections/con1.php');
+
+## 接受參數
+$gender = trim($_GET['gender']); //性別
+$number = intval($_GET['number']); //所選牌組
+
+//列出塔羅資料
+/*
+$sql_tarot = "SELECT * FROM `tarot` where id = '".$number."' ";
+$rs_tarot = mysql_query($sql_tarot);
+$data_tarot = mysql_fetch_assoc($rs_tarot);
+
+## 居住地資料
+$sql_city = "SELECT * FROM `city` ORDER BY `id` ASC";
+$rs_city = mysql_query($sql_city);
+while($data_city = mysql_fetch_assoc($rs_city)) {
+    $data_city_array[] = $data_city;
+}
+*/
+?>
 <!DOCTYPE html>
 <!--XHTML語法來自台灣地區 xml:lang="zh-tw"-->
 <html lang="zh-tw">
@@ -35,12 +57,8 @@
     <link href="css/mycss.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/90days.css">
     <link rel="stylesheet" href="./css/case.css">
-    <link href="css/normalize.css" rel="stylesheet" />
-
-    <!-- Custom styles for this template -->
-    <link href="css/layout.css" rel="stylesheet" />
-    <link href="css/match.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/tarot-styles.css">
+    <link rel="stylesheet" href="./css/layout.css">
 </head>
 <style>
 .bn4_m {
@@ -196,63 +214,160 @@
     </header>
     <!-- main 主要內容區 -->
     <main id="main" style="background-color: #fff;">
-
         <section class="wrapper clearfix index-w">
 
-            <div id="content" class="clearfix" style="float:none;">
-              <!-- content -->
+         
+
+        <div id="content" class="clearfix">
+
+            
+            
+            
+						<!-- content -->
 						
               <div id="taro-content">
-                    <div class="loadingMask">
-                        <img class="loadingPic" src="./images/tarot/loading.svg">
-                    </div>
-                  <div class="tarotMain">
-                    <div class="tarotBack tarotMain1"></div>
+                <div class="loadingMask">
+                    <img class="loadingPic" src="./images/tarot/loading.svg">
+                </div>
+                <div class="tarotMain">
+                    <div class="tarotBack tarotMain2"></div>
                     <div class="slogan">
                         <img src="./images/tarot/Tarologo.png">
                     </div>
-                    <div class="title1" style="top: -15px;">
-                        選擇您的性別
+                  
+                    <div class="cardStartHide">
+                        <img src="./images/tarot/taro-Card1.png">
                     </div>
-                    <div class="bubblePlz">
-                        <a class="bubble1" href="javascript:void(0)">
-                            <img src="./images/tarot/bubble-man.png">  
-                        </a>
-
-                        <a class="bubble2"  href="javascript:void(0)">
-                            <img src="./images/tarot/bubble-girl.png">    
-                        </a> 
-                    </div>
-                    <div class="bubblePl2">
-                        <div class="bubble1-2">
-                            <img src="./images/tarot/bubble-man.png">  
+                    <div class="formBox" style="display: none;">
+                        <div class="title2" style="display: none;margin-top: 15px;">
+                            請輸入您的資料及方位，讓占卜更加「精準」
                         </div>
+                        <div class="cardResult">
 
-                        <div class="bubble2-2">
-                            <img src="./images/tarot/bubble-girl.png">    
-                        </div>  
-                    </div>
+                            <div class="flip-card">  
+                                  
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <img src="./images/tarot/taro-Card1.jpg">
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <!--<img src="images/tarot/<?php //echo $data_tarot['img_url'];?>">-->
+                                        <img src="images/tarot/card_1.jpg">
+                                        <!-- <img src="./images/tarot/taro-Card2.jpg"> -->
+                                    </div>
+                                </div>
+                                <!-- <h3>《 王后 The Empress 》</h3>     -->
+                                <h3>王后<?php //echo $data_tarot['name'];?></h3>
+                            </div>
+                        
+                            <!-- <form id="form2" action="tarot4.php" method="post"> -->
+                            <form id="form2" action="tarot_process.php" method="post">    
+                                <input type="hidden" name="number" id="number" value="<?=$number?>">
+                                <input type="hidden" name="gender" id="gender" value="<?=$gender?>">
+                                <div class="mid">
 
-                    <div class="p1Txt">       
-                            <img src="./images/tarot/p1-txt.png">          
+                                    <div class="formG">
+                                        <label for="mem_name">姓名:</label>
+                                        <input type="text" id="mem_name" name="mem_name">
+                                    </div>
+
+                                    <div class="formG">
+                                        <label for="address">居住地:</label>
+                                        <select name="address" id="address">
+                                            <option value="">請選填</option>
+                                            <?php
+                                            /*
+                                            foreach($data_city_array as $kk => $vv) {
+                                                ?>
+                                                <option value="<?php echo $vv['id'];?>"><?php echo $vv['name'];?></option>
+                                                <?php
+                                            }*/ //foreach($data_city_array $kk => $vv) {
+                                            ?>
+                                            
+                                        </select>
+                                        <!-- <input type="text" id="address" name="address"> -->
+                                    </div>
+
+                                    <div class="formG">
+                                        <label for="age">年次:</label>
+                                        <select name="age" id="age">
+                                            <?php
+                                            for($i=1945;$i<date("Y");$i++) {
+                                                if($i == 1992) {
+                                                    echo '<option selected="selected"  value="">請選填</option>';
+                                                    continue;
+                                                }
+                                                ?>
+                                                <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                                                <?php
+                                            }
+                                            ?>
+                                        </select>
+
+                                    </div>
+
+                                    <div class="formG">
+                                        <label for="mem_email">email:</label>
+                                        <input type="text" id="mem_email" name="mem_email">
+
+                                    </div>
+
+
+                                    <div class="formG">
+                                        <label for="phone">手機號碼:</label>
+                                        <input type="number" id="phone" name="phone" 
+                                        style="width: calc(100% - 95px);">  
+                                        <div class="formG2">                                
+                                            <button onclick="fm_vfcode()" type="button" id="putvf" style="width: 90px;">
+                                                <span>送出驗證碼</span> 
+                                            </button>
+                                            <button style="display: none;background-color: #c6c6c6;cursor: default;border:#c6c6c6 1px solid;width: 90px;" type="button"  id="putvf1">
+                                                <span>送出驗證碼</span> 
+                                            </button>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="formG">
+                                        <label for="verification">驗證碼:</label>
+                                        <input type="number" id="verification" name="verification">
+
+                                    </div>
+
+                                    
+                                    <div class="downBtn">       
+                                        <button type="submit" class="submit">          
+                                            占卜結果
+                                        </button>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                
+                            </form>
+                            
+                        </div>
+                        <div class="remark">※ 按下「占卜結果」表示同意戀戀未來與您聯繫</div> 
                     </div>
                     
-                  </div>
-              </div> 
+                  
+                </div>
+              </div>
 
-            <!-- content end -->
+						<!-- content end -->
 						
         </div>
 
     </section>
 
         
+        
     </main>
 
     <div class="btn-top"><img src="./images/date/top-triangle.png" alt=""></div>
 
     <!-- footer 頁底內容區 -->
-    <footer id="footer" style="padding-top:80px">
+    <footer id="footer">
         <div class=" container ">
             <div class="row footer-info">
                 <div class="col-lg-12 contact">
@@ -506,46 +621,207 @@
 
 </body>
 
+<!-- 我的 js -->
+<script src=" js/myjs.js"></script>
+<script src="js/marketing.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/additional-methods.js"></script>  -->
+
+<script type="text/javascript"  src="js/popup_nav.js"></script>
+
+
 <script>
-  
+    //上方漢堡選單jquery版本衝突，因此獨立拉出
+    // function myFunction() {
+    //     var x = document.getElementById("s_nav");
+    //     if (x.className === "topnav") {
+    //         x.className += " responsive";
+    //     } else {
+    //         x.className = "topnav";
+    //     }
+    // }
+
+
     $(window).on('load', function(){
         // $(".loadingPic").delay(500).fadeOut(300);
-        $(".loadingMask").delay(100).fadeOut(500);
-    });
- 
-
-    $('.bubble1-2').hide(); 
-    $('.bubble2-2').hide();   
-
-
-    $('.bubble1').click(function(){
-        $('.bubble1').fadeOut();
-        $('.tarotMain1').toggleClass('tarotMain2');     
-        $('.bubble2').fadeOut(); 
-        $('.bubble1-2').show(2000)
-        $('.title1').fadeToggle(500); 
-        // $('.tarotMain').removeClass('tarotMain1').delay(1500); 
-        // $('.tarotMain').addClass('tarotMain2').delay(1500);
-        setTimeout(() => {location.href = 'tarot2.php?gender=boy' }   , 500);
-            
+        $(".loadingMask").delay(500).fadeOut(1000);
     });
 
-    $('.bubble2').click(function(){
-        $('.bubble2').fadeOut();
-        $('.tarotMain1').toggleClass('tarotMain2');     
-        $('.bubble1').fadeOut();    
-        $('.bubble2-2').show(2000);
-        $('.title1').fadeToggle(500);
-        // $('.tarotMain').removeClass('tarotMain1').delay(1500); 
-        // $('.tarotMain').addClass('tarotMain2').delay(1500);
-        setTimeout(() => {location.href = 'tarot2.php?gender=girl' }   ,500);
+    $.urlParam = function(name){
+	var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+	return results[1] || 0;
+    }
+    // console.log($.urlParam('gender'));  
+
+    var gender = $.urlParam('gender')
+
+
+    $('.formBox').hide(); 
+    $('.cardStartHide').fadeIn(500);
+    $('.txt-r').hide();
+
+    setTimeout(() => {
+        $('.title2').fadeIn(1000); 
+        $('.tarotBack').removeClass('tarotMain2').delay(1500); 
+        $('.tarotBack').addClass('tarotMain1').delay(1500);
+        $('.cardStartHide').fadeOut(1500);
+        $('.formBox').fadeIn(1500); 
+        if($('.formBox')){
+            $('.txt-r').fadeIn(3500);
+            $('.flip-card-front').fadeOut(2500);
+            $('.flip-card h3').fadeIn(2500);
+        }
         
+    }, 1500);
+
+
+
+//若需要再開吧 下方 倒數計時 & 表單驗證
+//倒數計時--->
+function fm_vfcode() {
+    
+    if( $("#phone").valid() ){
+        var phone = $('#phone').val();
+        $('#putvf').css('display','none');
+        $('#putvf1').css('display','block');
+
+        //使用ajax產生驗證碼  
+        
+        $.post( "ajax_phoneCaptcha_check.php", { phone: phone })
+            .done(function( data ) {
+                // alert( "sms code: " + data );
+                if( data != 'ok') {
+                    alert(data);
+
+                    //因不符合計時，直接開放
+                    $('#putvf1').css('display','none');//修改狀態
+                    $('#putvf').css('display','block');
+                    clearInterval(down);//銷燬計時器
+                    return;
+
+                } else {
+                    editvfput(120);
+                }
+        });
+        /*
+        $.post( "ajax_phoneCaptcha_check.php", { phone: phone }, function( data ) {
+            console.log( data ); // John
+        }, "json");
+        */
+    }     //if( $("#phone").valid() ){
+    
+} //function fm_vfcode() {
+
+//讀秒
+function editvfput(count) {
+    var down = setInterval(CountDown, 1000);//每秒執行一次，賦值
+    function CountDown() {
+        $('#putvf1').text('剩餘 ' + count + ' 秒');//寫入
+        if (count == 0) {
+        $('#putvf1').css('display','none');//修改狀態
+        $('#putvf').css('display','block');
+        clearInterval(down);//銷燬計時器
+        return;
+    }
+        count--;
+    }
+}
+// <---倒數計時
+
+
+//表單認證
+$(function(){
+// function JqValidate() {
+
+    $('#form2').validate({
+        // debug:true,
+        onkeyup: function(element, event) {
+            var value = this.elementValue(element).replace(/^\s+/g, "");
+            $(element).val(value);
+        },
+        rules: {  
+            mem_name: { 
+                required: true 
+            },
+            address: { 
+                required: true 
+            },
+            age: { 
+                required: true 
+            },
+            
+            // address: { notEqualsto: "0" },
+            // age: { notEqualsto: "0" },
+            // address: 'required',
+            phone:{
+                required: true,
+                minlength: 10,
+                number: true
+            },
+            verification: {
+                required: true
+                // error: true
+            }
+        },
+        messages: {
+            mem_name: {
+                required:'*請輸入姓名'
+            },
+            address: {
+                required:'*請選擇居住地'
+                // notEqualsto: "請選擇居住地"
+            },
+            age: {
+                required:'*請選擇年次'
+                // notEqualsto: "請選擇年次"
+            },
+            phone: {
+                required:'*必填',
+                minlength:'*不得少於10位',
+                number:'*電話需為數字'
+            },
+            verification: {
+                required:'*必填'
+                // error:'*驗證碼錯誤'
+            }
+
+        },
+
+        success:function(error){
+            //單項有輸入資料時的回應
+            error.addClass('valid').text('');
+            // return true;
+        },
+        invalidHandler:function(form){       
+            // $("#summary").fadeOut().fadeIn();
+            // console.log('驗證失敗');
+            return false;
+        }
+        // submitHandler: function(form) {
+            //執行寫入表單
+            // console.log('全部OK');
+            // const mem_name = $('#mem_name').val(); //姓名
+            // const address = $('#address').val(); //居住地
+            // const age = $('#age').val(); //年次
+            // console.log('123');
+            // console.log(form);
+            // alert('valid form submitted');
+            // return false; 
+        // }
     });
+// }
+});
 
-
+// function submitBtn()
+// {
+// 	 if( JqValidate() ){  
+//          console.log('進度submit');
+// 		//  $( '#form2' ).submit();
+// 	 }
+// }
 
 </script>
-
-
 
 </html>

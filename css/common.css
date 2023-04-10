@@ -90,8 +90,8 @@
   margin: 0 auto;
   padding: 10px 20px;
   border-radius: 100px;
-  background-color: #F6EBFF;
-  color: #896BA5;
+  background-color: #5a597a;
+  color: #ff93b7;
 }
 
 .modal_line {
@@ -107,7 +107,7 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  margin: 0 auto;
+  margin: 5% auto;
 }
 
 .modal_line img {

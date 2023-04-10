@@ -1,3 +1,19 @@
+<?php 
+session_start();
+//require_once('Connections/con1.php');
+
+## 接受參數
+foreach($_GET as $kk => $vv) {
+    $$kk = $vv;
+}
+
+//列出塔羅資料
+/*
+$sql_tarot = "SELECT * FROM `tarot` where id = '".$number."' ";
+$rs_tarot = mysql_query($sql_tarot);
+$data_tarot = mysql_fetch_assoc($rs_tarot);
+*/
+?>
 <!DOCTYPE html>
 <!--XHTML語法來自台灣地區 xml:lang="zh-tw"-->
 <html lang="zh-tw">
@@ -35,12 +51,21 @@
     <link href="css/mycss.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/90days.css">
     <link rel="stylesheet" href="./css/case.css">
-    <link href="css/normalize.css" rel="stylesheet" />
-
-    <!-- Custom styles for this template -->
-    <link href="css/layout.css" rel="stylesheet" />
-    <link href="css/match.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/tarot-styles.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <!-- Event snippet for 塔羅 conversion page -->
+    <script>
+        gtag('event', 'conversion', {'send_to': 'AW-1020242668/9NkdCLH1jKMDEOzVvuYD'});
+    </script>
+    <script>
+        _lt('send', 'cv', {
+        type: 'Conversion'
+        },['588f014a-50f0-4f14-a5c8-116976618c04']);
+    </script>
+
+    <script>
+        window.dadk('track', 'ViewContent')
+    </script>
 </head>
 <style>
 .bn4_m {
@@ -196,63 +221,132 @@
     </header>
     <!-- main 主要內容區 -->
     <main id="main" style="background-color: #fff;">
-
         <section class="wrapper clearfix index-w">
 
-            <div id="content" class="clearfix" style="float:none;">
+         
+
+        <div id="content" class="clearfix">
+
               <!-- content -->
 						
+						
               <div id="taro-content">
-                    <div class="loadingMask">
-                        <img class="loadingPic" src="./images/tarot/loading.svg">
-                    </div>
-                  <div class="tarotMain">
-                    <div class="tarotBack tarotMain1"></div>
+                <div class="loadingMask">
+                    <img class="loadingPic" src="./images/tarot/loading.svg">
+                </div>
+                <div class="tarotMain">
+                    <div class="tarotBack tarotMain2"></div>
                     <div class="slogan">
                         <img src="./images/tarot/Tarologo.png">
                     </div>
-                    <div class="title1" style="top: -15px;">
-                        選擇您的性別
-                    </div>
-                    <div class="bubblePlz">
-                        <a class="bubble1" href="javascript:void(0)">
-                            <img src="./images/tarot/bubble-man.png">  
-                        </a>
-
-                        <a class="bubble2"  href="javascript:void(0)">
-                            <img src="./images/tarot/bubble-girl.png">    
-                        </a> 
-                    </div>
-                    <div class="bubblePl2">
-                        <div class="bubble1-2">
-                            <img src="./images/tarot/bubble-man.png">  
+                    
+                    <div class="cardStartHide"><img src="./images/tarot/taro-Card1.png"></div>    
+                    
+                    
+                    <div class="formBox">
+                    
+                        <div class="title1" style="display: none;margin: 15px 0 30px 0;">
+                            結果說明
+                        </div>
+                        <div class="cardResult" style="min-height: 380px;">
+                            <div class="flip-card">        
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <img src="./images/tarot/taro-Card1.jpg">
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <img src="./images/tarot/taro-Card2.jpg">
+                                        <!--<img src='images/tarot/<?php //echo $data_tarot['img_url'];?>'>-->
+                                    </div>
+                                </div>
+                                <!-- <h3>《 王后 The Empress 》</h3>   -->
+                            </div>  
+                            <div class="cardResult-txt">
+                                <!-- <h2>《 王后 The Empress 》</h2> -->
+                                <h2>王后<?php //echo $data_tarot['name'];?></h2>
+                            </div>  
+                            <div class="tarotBG"></div>   
+                        </div>
+                        
+                        <div class="cardResult2">
+                            <div class="cardResult-txt2">
+                                <div class="txt-title">
+                                    <img src="./images/tarot/p4-banner1.jpg" alt="">
+                                    <!-- <h2>三個月內脫單機率:</h2> -->
+                                </div>
+                                <div class="txt-r">
+                                    <h1>
+                                        50%
+                                        <?php //echo $data_tarot['probability'].'%';?>
+                                    </h1>
+                                </div>   
+                            </div>  
                         </div>
 
-                        <div class="bubble2-2">
-                            <img src="./images/tarot/bubble-girl.png">    
-                        </div>  
-                    </div>
+                        <div class="cardResult2">
+                            <div class="cardResult-txt2">
+                                <div class="txt-title"><img src="./images/tarot/p4-banner2.jpg" alt=""></div>           
+                                <div class="txt-r">
+                                    
+                                    <p>
+                                        三個月內脫單機率一半一半；最近認識的對象，關係充滿曖昧氛圍，模糊的界線若有似無；讓你猜不透又看不清，心情是既忐忑又懷抱著期待；想前進又不知所措，充滿著不確定性的感覺；騷動著滋潤著，內心深處的情緒感受。
+                                    </p>
+                                    <p>
+                                        這樣反反覆覆，來來回回，迂回的互動模式，實在是考驗著你的耐性，常常會懷疑對方對自己是否有感覺？有沒有更進一步的可能？但又缺乏直球對決的勇氣。
+                                    </p>
+                                    
+                                    <?php //echo nl2br($data_tarot['content']);?>
+                                </div>   
+                            </div>  
+                        </div>
 
-                    <div class="p1Txt">       
-                            <img src="./images/tarot/p1-txt.png">          
+                        <div class="cardResult2">
+
+                            <div class="txt-title"><img src="./images/tarot/p4-banner3.jpg" alt=""></div>
+                            <div class="txt-r">
+                                
+                                <p>
+                                    莫急莫慌莫害怕，就跟著直覺走吧，有道是曖昧的時光最美麗，請讓自己在每個當下的過程中去享受，用心感受彼此的相處模式，是不是真的是心底想要的呢？還是沒多久就夢幻破滅了？請相信在這三個月裡，心裡自然會有對這段感情的定見，就好好關照自己內心的小聲音吧，跟著直覺走準沒錯噢！
+                                </p>
+                                
+                                <?php //echo nl2br($data_tarot['suggestion']);?>
+                                <p class="remark2">※以上占卜由潔思米老師提供</p>
+                            </div>   
+
+                        </div>
+
+                        <div class="cardResult2" style="margin-bottom: 0;">
+                            <div class="txt-title"><img src="./images/tarot/p4-banner4.jpg" alt=""></div>               
+                        </div>
+                                
+                        <div class="d4banner">                
+                            <a href="https://www.futurelove.com.tw/matchonline.php"><img src="./images/tarot/d4banner1.png" alt=""></a>             
+                            <a href="https://www.futurelove.com.tw/match.php"><img src="./images/tarot/d4banner2.png" alt=""></a>
+                            <a href="https://www.futurelove.com.tw/news-info.php?Love_Admin_MSid=1187"><img src="./images/tarot/d4banner3.png" alt=""></a>
+                            <a href="https://www.futurelove.com.tw/activity.php"><img src="./images/tarot/d4banner4.png" alt=""></a>
+                        </div>  
+                            
+                        
                     </div>
                     
-                  </div>
-              </div> 
+                
+                </div>
+              </div>
 
-            <!-- content end -->
+						<!-- content end -->
 						
         </div>
 
     </section>
 
         
+        
     </main>
 
     <div class="btn-top"><img src="./images/date/top-triangle.png" alt=""></div>
 
     <!-- footer 頁底內容區 -->
-    <footer id="footer" style="padding-top:80px">
+    <footer id="footer">
         <div class=" container ">
             <div class="row footer-info">
                 <div class="col-lg-12 contact">
@@ -506,46 +600,33 @@
 
 </body>
 
+<!-- 我的 js -->
+<script src=" js/myjs.js"></script>
+<script src="js/marketing.js"></script>
+
 <script>
-  
     $(window).on('load', function(){
-        // $(".loadingPic").delay(500).fadeOut(300);
-        $(".loadingMask").delay(100).fadeOut(500);
+        $(".loadingMask").delay(800).fadeOut(1000);
     });
- 
+    $('.formBox').hide(); 
+    $('.cardStartHide').fadeIn(500);
+    $('.txt-r').hide();
 
-    $('.bubble1-2').hide(); 
-    $('.bubble2-2').hide();   
-
-
-    $('.bubble1').click(function(){
-        $('.bubble1').fadeOut();
-        $('.tarotMain1').toggleClass('tarotMain2');     
-        $('.bubble2').fadeOut(); 
-        $('.bubble1-2').show(2000)
-        $('.title1').fadeToggle(500); 
-        // $('.tarotMain').removeClass('tarotMain1').delay(1500); 
-        // $('.tarotMain').addClass('tarotMain2').delay(1500);
-        setTimeout(() => {location.href = 'tarot2.php?gender=boy' }   , 500);
-            
-    });
-
-    $('.bubble2').click(function(){
-        $('.bubble2').fadeOut();
-        $('.tarotMain1').toggleClass('tarotMain2');     
-        $('.bubble1').fadeOut();    
-        $('.bubble2-2').show(2000);
-        $('.title1').fadeToggle(500);
-        // $('.tarotMain').removeClass('tarotMain1').delay(1500); 
-        // $('.tarotMain').addClass('tarotMain2').delay(1500);
-        setTimeout(() => {location.href = 'tarot2.php?gender=girl' }   ,500);
+    setTimeout(() => {
+        $('.title1').fadeIn(1000); 
+        $('.tarotBack').removeClass('tarotMain2').delay(1500); 
+        $('.tarotBack').addClass('tarotMain1').delay(1500);
+        $('.cardStartHide').fadeOut(1500);
+        $('.formBox').fadeIn(1500); 
+        if($('.formBox')){
+            $('.txt-r').fadeIn(3500);
+            $('.flip-card-front').fadeOut(2500);
+            $('.flip-card h3').fadeIn(2500);
+        }
         
-    });
-
-
-
+    }, 1500);
+    
 </script>
-
 
 
 </html>

@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <!--XHTML語法來自台灣地區 xml:lang="zh-tw"-->
 <html lang="zh-tw">
@@ -35,12 +38,8 @@
     <link href="css/mycss.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/90days.css">
     <link rel="stylesheet" href="./css/case.css">
-    <link href="css/normalize.css" rel="stylesheet" />
-
-    <!-- Custom styles for this template -->
-    <link href="css/layout.css" rel="stylesheet" />
-    <link href="css/match.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/tarot-styles.css">
+    <link rel="stylesheet" href="./css/layout.css">
 </head>
 <style>
 .bn4_m {
@@ -58,7 +57,6 @@
   }
   
 }
-
 </style>
 <body style="background-color: #fff;">
     <!-- header 頂部區 -->
@@ -196,63 +194,86 @@
     </header>
     <!-- main 主要內容區 -->
     <main id="main" style="background-color: #fff;">
-
         <section class="wrapper clearfix index-w">
 
-            <div id="content" class="clearfix" style="float:none;">
+         
+
+        <div id="content" class="clearfix">
+
+            
+            
+            
               <!-- content -->
 						
               <div id="taro-content">
-                    <div class="loadingMask">
-                        <img class="loadingPic" src="./images/tarot/loading.svg">
-                    </div>
+                  <div class="loadingMask">
+                      <img class="loadingPic" src="./images/tarot/loading.svg">
+                  </div>
                   <div class="tarotMain">
-                    <div class="tarotBack tarotMain1"></div>
-                    <div class="slogan">
-                        <img src="./images/tarot/Tarologo.png">
-                    </div>
-                    <div class="title1" style="top: -15px;">
-                        選擇您的性別
-                    </div>
-                    <div class="bubblePlz">
-                        <a class="bubble1" href="javascript:void(0)">
-                            <img src="./images/tarot/bubble-man.png">  
-                        </a>
-
-                        <a class="bubble2"  href="javascript:void(0)">
-                            <img src="./images/tarot/bubble-girl.png">    
-                        </a> 
-                    </div>
-                    <div class="bubblePl2">
-                        <div class="bubble1-2">
-                            <img src="./images/tarot/bubble-man.png">  
-                        </div>
-
-                        <div class="bubble2-2">
-                            <img src="./images/tarot/bubble-girl.png">    
-                        </div>  
-                    </div>
-
-                    <div class="p1Txt">       
-                            <img src="./images/tarot/p1-txt.png">          
-                    </div>
+                    <div class="tarotBack tarotMain2"></div>
+                      <div class="slogan">
+                          <img src="./images/tarot/Tarologo.png">
+                      </div>
+                      
+                      <div class="cardStartHide"><img src="./images/tarot/taro-Card1.png"></div>
+                      <div class="cardPlc">
+                          <div class="title1" style="display: none;margin-bottom: 15px;">
+                              請心中默想3個月內我能擺脫單身嗎？憑直覺選出1張牌
+                          </div>
+                          <?php
+                          //隨機產生0-21的亂數排列
+                          $number = range(1,22);
+                          shuffle($number);
+                          foreach ($number as $n) {
+                          ?>
+                            <a class="card" href="javascript: void(0)" data-info="<?php echo $n; ?>"><img src="./images/tarot/taro-Card1.png"></a>
+                          <?php
+                          } //foreach ($number as $n) {
+                          ?>
+                          <!--
+                          <a class="card" href="javascript: void(0)"><img src="./images/tarot/taro-Card1.png"></a>
+                          <a class="card" href="javascript: void(0)"><img src="./images/tarot/taro-Card1.png"></a>
+                          <a class="card" href="javascript: void(0)"><img src="./images/tarot/taro-Card1.png"></a>
+                          <a class="card" href="javascript: void(0)"><img src="./images/tarot/taro-Card1.png"></a>
+                          <a class="card" href="javascript: void(0)"><img src="./images/tarot/taro-Card1.png"></a>
+                          <a class="card" href="javascript: void(0)"><img src="./images/tarot/taro-Card1.png"></a>
+                          <a class="card" href="javascript: void(0)"><img src="./images/tarot/taro-Card1.png"></a>
+                          <a class="card" href="javascript: void(0)"><img src="./images/tarot/taro-Card1.png"></a>
+                          <a class="card" href="javascript: void(0)"><img src="./images/tarot/taro-Card1.png"></a>
+                          <a class="card" href="javascript: void(0)"><img src="./images/tarot/taro-Card1.png"></a>
+                          <a class="card" href="javascript: void(0)"><img src="./images/tarot/taro-Card1.png"></a>
+                          <a class="card" href="javascript: void(0)"><img src="./images/tarot/taro-Card1.png"></a>
+                          <a class="card" href="javascript: void(0)"><img src="./images/tarot/taro-Card1.png"></a>
+                          <a class="card" href="javascript: void(0)"><img src="./images/tarot/taro-Card1.png"></a>
+                          <a class="card" href="javascript: void(0)"><img src="./images/tarot/taro-Card1.png"></a>
+                          <a class="card" href="javascript: void(0)"><img src="./images/tarot/taro-Card1.png"></a>
+                          <a class="card" href="javascript: void(0)"><img src="./images/tarot/taro-Card1.png"></a>
+                          <a class="card" href="javascript: void(0)"><img src="./images/tarot/taro-Card1.png"></a>
+                          <a class="card" href="javascript: void(0)"><img src="./images/tarot/taro-Card1.png"></a>
+                          <a class="card" href="javascript: void(0)"><img src="./images/tarot/taro-Card1.png"></a>
+                          <a class="card" href="javascript: void(0)"><img src="./images/tarot/taro-Card1.png"></a>
+                          <a class="card" href="javascript: void(0)"><img src="./images/tarot/taro-Card1.png"></a>
+                          -->
+                      </div>
+                      
                     
                   </div>
-              </div> 
+              </div>
 
-            <!-- content end -->
+						<!-- content end -->
 						
         </div>
 
     </section>
 
         
+ 
     </main>
 
     <div class="btn-top"><img src="./images/date/top-triangle.png" alt=""></div>
 
     <!-- footer 頁底內容區 -->
-    <footer id="footer" style="padding-top:80px">
+    <footer id="footer">
         <div class=" container ">
             <div class="row footer-info">
                 <div class="col-lg-12 contact">
@@ -506,46 +527,54 @@
 
 </body>
 
+<!-- 我的 js -->
+<script src=" js/myjs.js"></script>
+<script src="js/marketing.js"></script>
+
 <script>
-  
     $(window).on('load', function(){
-        // $(".loadingPic").delay(500).fadeOut(300);
-        $(".loadingMask").delay(100).fadeOut(500);
-    });
- 
-
-    $('.bubble1-2').hide(); 
-    $('.bubble2-2').hide();   
-
-
-    $('.bubble1').click(function(){
-        $('.bubble1').fadeOut();
-        $('.tarotMain1').toggleClass('tarotMain2');     
-        $('.bubble2').fadeOut(); 
-        $('.bubble1-2').show(2000)
-        $('.title1').fadeToggle(500); 
-        // $('.tarotMain').removeClass('tarotMain1').delay(1500); 
-        // $('.tarotMain').addClass('tarotMain2').delay(1500);
-        setTimeout(() => {location.href = 'tarot2.php?gender=boy' }   , 500);
-            
+        $(".loadingMask").delay(800).fadeOut(1000);
     });
 
-    $('.bubble2').click(function(){
-        $('.bubble2').fadeOut();
-        $('.tarotMain1').toggleClass('tarotMain2');     
-        $('.bubble1').fadeOut();    
-        $('.bubble2-2').show(2000);
-        $('.title1').fadeToggle(500);
-        // $('.tarotMain').removeClass('tarotMain1').delay(1500); 
-        // $('.tarotMain').addClass('tarotMain2').delay(1500);
-        setTimeout(() => {location.href = 'tarot2.php?gender=girl' }   ,500);
-        
-    });
+    $.urlParam = function(name){
+        var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+        return results[1] || 0;
+    }
+    // console.log($.urlParam('gender'));  
 
+    var gender = $.urlParam('gender')
+
+    $('.cardStartHide').fadeIn(500);
+
+    setTimeout(() => {
+        $('.title1').fadeIn(1000); 
+        $('.tarotBack').removeClass('tarotMain2').delay(1500); 
+        $('.tarotBack').addClass('tarotMain1').delay(1500);
+        $('.cardStartHide').fadeOut(1500);
+        $('.cardPlc').animate({
+            opacity:'1',
+            width:'100%'
+        }).delay(2500);
+
+    }, 1500);
+    
+    
+
+    //$('.formBox').hide(); 
+
+    $(function(){
+        $('.card').click(function(){
+            $('.cardPlc').animate({
+                opacity:'0'
+            },'fast');
+            var val = $(this).attr("data-info");
+
+            window.location = 'tarot3.php' + '?' + 'gender=' + gender + '&' + 'number=' + val;
+        });
+    });
 
 
 </script>
-
 
 
 </html>

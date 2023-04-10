@@ -75,7 +75,7 @@ i.login_3 {
 .right-nav span {color:#662479; margin:0 5px;}
 .right-nav a:hover{text-decoration:underline;}
 
-#content{ width:940px; background:#fff; border:1px solid #dcd0c8; margin:0 auto; padding:15px; float:left; position:relative; z-index:1000;}
+#content{ width:940px; height:auto;background:#fff; border:1px solid #dcd0c8; margin:5% auto; padding:15px; float:left; position:relative; z-index:1000;display:block}
 
 #left-col{width:250px; float:left;}
 #left-col .login{ background:url(../images/login-bg.jpg) no-repeat; width:238px; height:145px; float:left; margin:0 0 0; position:relative;}
@@ -186,26 +186,6 @@ ul.news-list li a:hover{text-decoration:none;}
 	
 
 
-footer{background:#f9dbe6; position:relative; margin-top:-50px; z-index:10;}
-footer .wrapper{max-width: 900px; height:auto}
-footer nav{ line-height:25px; position:relative; top: 10px; margin-bottom: 5px; padding-bottom: 10px;}
-footer nav a{color: #555;font-size: 13px; text-decoration: none;}
-footer nav a:hover{color: #995eab;}
-footer nav img{position:relative; top:5px; margin: 0 5px;}
-footer nav span{color:#555;}
-footer .left-wrapper{float:left; margin-top:20px; position:relative;width: 100%;}
-footer .left-wrapper .footer-phone{position:absolute; left:170px; top:3px;width: 370px;line-height: 15px; color:#C70B6A;margin: 0 0 0 60px;}
-footer .left-wrapper .footer-phone img{position:relative; top:2px;}
-footer .left-wrapper .footer-link{position:absolute; left:170px;top: 28px; width: 500px; color:#C70B6A;; margin: 0 0 0 60px;}
-.footer-phone a { color: #C70B6A; text-decoration: none;}
-.footer-link img { vertical-align: middle; padding: 0 5px 0 0;}
-.footer-link br { display:none; }
-footer .left-wrapper .footer-link a{color:#C70B6A;;text-decoration: none; padding: 0 10px 0 0;}
-footer .left-wrapper .footer-link a:hover{text-decoration: none;}
-footer .left-wrapper .footer-email{position:absolute; left: 600px; top: 5px;}
-footer .left-wrapper .line-img{position:absolute; right:0; top: -32px;}
-footer .copyright{ background:url(../images/footer-copyright-bg.gif) repeat-x; width:100%; height:22px; padding-top:22px; color:#666;}
-footer .left-wrapper .footer-link img { display: inline-block;}
 
 
 

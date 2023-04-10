@@ -659,7 +659,7 @@ ul.menu_list>li.active>a {
 
 .form_body input.btn.btn-block:hover,
 .form_body button.btn.btn-block:hover {
-    background: #ef47ae;
+    background: #5a597a;
     border: 1px solid #E074AA;
     color: #fff;
 }
@@ -1192,7 +1192,7 @@ background-clip: text;
     }
 
     #main_project .project_txt h1 {
-        font-size: 56px;
+        font-size: 48px;
     }
 
     #main_project .project_txt h1:before {
@@ -1358,12 +1358,12 @@ a.photo-video_href h3 {
 
 /***#footer 頁底區域 */
 #footer {
-    background-color: #5a5977;
+    background-color: #b5b2d0;
     font-size: 16px;
     line-height: 23px;
     letter-spacing: 0.05em;
     padding: 40px 0px;
-    color:#fff;
+    color:#5d6386;
 }
 
 .footer-info {
@@ -1398,7 +1398,7 @@ a.photo-video_href h3 {
 
 
 .footer-info .mail>a {
-    color:#fff;
+    color:#5d6386;
 }
 
 
@@ -1872,8 +1872,8 @@ body.page-clause {}
     font-size: 22px;
     line-height: 35px;
     letter-spacing: 0.05em;
-    color: #fbdbe9;
-    background-color: #5a5977;
+    color: #ffe3f4;
+    background-color: #7a69a0;
     display: inline-block;
     border-radius: 100px;
     padding: 13px 65px;
@@ -1920,6 +1920,9 @@ ol.cjk {
     #text_content .clause .title h3>span {
         display: block;
     }
+    .mob-center{
+        margin: 0 auto !important;
+    }
 }
 
 @media (max-width: 575px) {
@@ -1963,7 +1966,7 @@ body.page-party.party-list {}
     color: #FFFFFF;
 }
 
-.unit_title h2::before {
+.unit_title h1::before {
     display: none;
 }
 
@@ -2027,11 +2030,12 @@ body.page-party.party-list {}
 #party-list .county .county-item {
     margin-bottom: 60px;
     border: 1px solid #DFDFDF;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 #party-list .county .county-item .pic {
     overflow: hidden;
+    border-radius: 10px 10px 0 0;
 }
 
 @media (max-width: 575px) {
@@ -2257,6 +2261,7 @@ li.page-item.pre_next:before {
     line-height: 56px;
     letter-spacing: 0.05em;
     color: #533e58;
+    width:100%;
 }
 
 .share_list {
@@ -2266,12 +2271,18 @@ li.page-item.pre_next:before {
 }
 
 @media (max-width: 991px) {
+    .detail_title h1 {
+        font-size: 24px;
+        line-height: 30px;
+    }
     .detail_title {
         display: block;
     }
 
     .share_list {
         text-align: right;
+        display:block;
+        width:100%;
     }
 
     .detail_title h2 {
@@ -2281,7 +2292,13 @@ li.page-item.pre_next:before {
 }
 
 @media (max-width: 767px) {
+    .detail_title h1 {
+
+        word-break: break-all;
+    }
     .detail_title {
+
+       
         margin-top: 20px;
     }
 
@@ -2825,7 +2842,7 @@ label.label_title {
 
 
 .btn.btn-submit:hover {
-    background: #f47fc7;
+    background: #5a597a;
     color: #fff;
 }
 
@@ -3684,7 +3701,7 @@ body.page-about #main {
     }
 
     .album_photos .album_item .feedback_Swiper2 .swiper-wrapper .swiper-slide {
-        margin-bottom: 0px;
+        margin-bottom: 5%;
         height: 244px;
     }
 
@@ -6614,4 +6631,56 @@ main.line_couple_pair .pair_partner {
 @media (max-width: 575px) {
     .row {}
 
+}
+
+
+
+.susess-body{
+    display: block;
+    position: relative;
+    width:40%;
+    margin:5% auto;
+    padding:5% 0;
+    box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.15);
+    border: none;
+    background-image: url(../images/member/pop_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: top;
+}
+
+.susess-tit{
+    font-size:30px;
+}
+
+.susess-tit>h3{
+    font-size:54px;
+    color:#5a597a;
+    margin-left:2%;
+}
+
+@media (max-width: 991px) {
+    .susess-body{
+        display: block;
+        position: relative;
+        width:96%;
+        margin:15% auto;
+        padding:20% 0;
+    }
+    
+    .susess-tit{
+        font-size:28px;
+    }
+    
+    .susess-tit>img{
+       width:15%;
+    }
+
+    .susess-tit>h3{
+        font-size:28px;
+        margin-bottom:0;
+        color:#5a597a;
+        margin-left:2%;
+    }
 }
