@@ -718,7 +718,7 @@
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label class="title"><span class="required">＊</span>興趣</label>
+                                                        <label class="title"><span class="required">＊</span>興趣(可複選最多3個)</label>
                                                         <select id='m2' class="interest_select" multiple="multiple" name="m1[]">
                                                             <option value="1">興趣1</option>
                                                             <option value="2">興趣2</option>
@@ -864,7 +864,7 @@
                                                 </div>
                                             </div>
                                             <div class="buttons">
-                                                <a id="button" class="btn btn-submit" href="#">儲存</a>
+                                                <a data-bs-toggle="modal" data-bs-target="#notice-lineid" id="button" class="btn btn-submit" href="#">儲存</a>
                                             </div>
                 
 
@@ -1138,6 +1138,28 @@
             </div>
         </div>
     </div>
+
+        <!-- 提醒您！LINE ID -->
+            <!--#party_sign_up-Modal 派對報名成功   -->
+    <div class="modal fade party_success" id="notice-lineid" tabindex="-1" aria-labelledby="party_sign_up-Modal"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="img"><img src="images/party/detail/party_sign_up.svg"></div>
+                <h4>提醒您！您已是line速配會員，<br/>請儘速至<span style="color:#ee5d7e;font-weight:600">"個人資料管理>LINE速配資料"</span><br/>補填您的LINE ID，讓交友過程更順利！脫單變簡單~</h4>
+                <div class="button"><button id="party_sign_up" class="btn btn-danger btn-block" data-bs-dismiss="modal"
+                       >確定</button></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+
 
 </body>
 

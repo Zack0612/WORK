@@ -2257,7 +2257,7 @@ li.page-item.pre_next:before {
 .detail_title h1 {
     font-style: normal;
     font-weight: 600;
-    font-size: 36px;
+    font-size: 30px;
     line-height: 56px;
     letter-spacing: 0.05em;
     color: #533e58;
@@ -2740,6 +2740,14 @@ ul.process_list span.time {
     margin-bottom: 10px;
 }
 
+.party_success .modal-content .modal-body h4 {
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.05em;
+    color: #4D4D4D;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
 .party_success .modal-content {
     background-image: url(../images/party/detail/party_sign_up-Modal_bg.png);
     background-repeat: no-repeat;
@@ -2821,15 +2829,15 @@ label.label_title {
 
 .btn.btn-reset,
 .btn.btn-submit {
-    font-size: 30px;
-    line-height: 36px;
+    font-size: 26px;
+    line-height: 32px;
     text-align: center;
     letter-spacing: 0.08em;
     color: #fff;
-    padding: 20px 0px;
+    padding: 10px 0px;
     margin: 0 17px;
     font-weight: 400;
-    width: 250px;
+    width: 200px;
     border-radius: 100px;
     background: -webkit-linear-gradient(90deg, rgb(255, 159, 184), rgb(205, 155, 241));
     background: -webkit-linear-gradient(left, rgb(255, 159, 184), rgb(205, 155, 241));
@@ -5383,7 +5391,8 @@ input#m_lineID {
         position: relative;
         top: unset;
         right: unset;
-        margin-top: 10px;
+        margin:5% auto;
+        width:35%;
     }
 
     .party-menage_wrap .for_manage02 .show_bar .show_more a {
@@ -5394,6 +5403,22 @@ input#m_lineID {
     #return_form .row>div {
         margin-bottom: 0px;
     }
+}
+
+@media (max-width: 420px) {
+
+    .party-menage_wrap .for_manage02 .show_bar .show_more {
+        width:40%;
+    }
+
+}
+
+@media (max-width: 360px) {
+
+    .party-menage_wrap .for_manage02 .show_bar .show_more {
+        width:96%;
+    }
+
 }
 
 /****************member_friend-manage 交友管理*/
