@@ -3383,6 +3383,38 @@ body.page-about #main {
 }
 
 /*********feedback 公益頁*/
+
+
+.feedback::before {
+    content: '';
+    position: absolute;
+    width: 27.3%;
+    height: 0;
+    padding-bottom: 40%;
+    left: 0;
+    top: 60%;
+    margin-top: 6%;
+    background-image: url(../images/about/o_01.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.feedback::after {
+    content: '';
+    position: absolute;
+    width: 32%;
+    height: 0;
+    padding-bottom: 30%;
+    right: 0;
+    top: 120%;
+    background-image: url(../images/about/o_02.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    z-index: 0;
+}
+
 .feedback_banner {
     position: relative;
     /* background-image: url(../images/feedback/feedback_banner_BG.jpg); */
@@ -3724,6 +3756,42 @@ body.page-about #main {
 }
 
 /*********FAQ 常見問題頁*/
+
+.faq .container{
+  z-index: 5;
+  position: relative;
+}
+
+.faq::before {
+    content: '';
+    position: absolute;
+    width: 27.3%;
+    height: 0;
+    padding-bottom: 40%;
+    left: 0;
+    top: -10%;
+    margin-top: 30%;
+    background-image: url(../images/about/o_01.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.faq::after {
+    content: '';
+    position: absolute;
+    width: 32%;
+    height: 0;
+    padding-bottom: 30%;
+    right: 0;
+    top: 70%;
+    background-image: url(../images/about/o_02.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    z-index: 0;
+}
+
 .faq_wrap {
     padding-bottom: 150px;
 }
@@ -5679,7 +5747,7 @@ td.reply a.no {
 .form_body .stored-value input[type="radio"]+div {
     cursor: pointer;
     color: #fff;
-    margin: 0px 19px 10px 19px;
+    margin: 0 auto;
     background-color: #DD96B4;
     border-radius: 5px;
     font-weight: 500;
@@ -5687,7 +5755,11 @@ td.reply a.no {
     letter-spacing: 0.08em;
     text-align: left;
     position: relative;
-    padding: 8px 75px 15px 70px
+    padding: 15px 75px 15px 70px;
+    overflow: hidden;
+    height:auto;
+    float:left;
+    
 }
 
 .form_body .stored-value input[type="radio"]+div span {
@@ -5750,8 +5822,8 @@ td.reply a.no {
 }
 
 .form_body .stored-value input[type="radio"]+div {
-    padding-right: 20px;
-    width: 364px;
+
+    width: 96%;
 }
 
 @media (max-width: 575px) {
@@ -5771,7 +5843,7 @@ td.reply a.no {
     }
 
     .form_body .stored-value input[type="radio"]+div span {
-        width: 11em;
+        /* width: 11em; */
     }
 
     .friend-menage_wrap .form_body .button a#next_check {
@@ -6708,4 +6780,26 @@ main.line_couple_pair .pair_partner {
         color:#5a597a;
         margin-left:2%;
     }
+}
+
+
+.datemn-con{
+    display:block;
+    width:100%;
+    position: relative;
+}
+
+.datemn-con>span{
+    display:block;
+    width:20%;
+    position: relative;
+    float:left;
+}
+
+.data-form-control{
+    
+    display: block;
+    position: relative;
+    width:80%;
+    float:right;
 }
