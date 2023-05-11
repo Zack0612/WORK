@@ -20,6 +20,15 @@ window.onload = function () {
   }
   // ---------- 進場畫面 ---------- 結束 //
 
+  // ------ 新聞頁面 背景人物右側出現 ------ 開始 //
+  const newRole = document.querySelector(".news_page .news_wrapper .news_role");
+  if (newRole) {
+    setTimeout(() => {
+      newRole.classList.add("active");
+    }, 100);
+  }
+  // ------ 新聞頁面 背景人物右側出現 ------ 結束 //
+
   // ---------- 手機版選單 ---------- 開始 //
   const hamburger = document.querySelector(".hamburger");
   const iconLink = document.querySelector(".icon-link");
@@ -44,7 +53,7 @@ window.onload = function () {
       iconLink.style.display = "none";
     }, 300);
   };
- // ---------- 手機版選單 ---------- 結束 //
+  // ---------- 手機版選單 ---------- 結束 //
 
   // ---------- 滾動 ---------- 開始 //
   let isScrolling = false;
@@ -83,14 +92,6 @@ window.onload = function () {
       }
     });
 
-    // 日程通告 背景人物右側滑動出現
-    const bgPeople = document.querySelector(".news_bonus .peo");
-    if (bgPeople) {
-      const bgPeopleTop = bgPeople.getBoundingClientRect().top;
-      if (bgPeopleTop <= window.innerHeight / 3) {
-        bgPeople.classList.add("active");
-      }
-    }
     // 出道福利
     const bonusDiv = document.querySelector(".bonus");
     if (bonusDiv) {
@@ -137,15 +138,15 @@ window.onload = function () {
     {
       id: "role1",
       name: "程廷羽",
-      slogan: "盛光之下，歡迎來到我的舞台",
-      detail: ["藝人", "星芒集團", "19歲", "183cm"],
+      slogan: "盛光之下，歡迎來到我的舞台。",
+      detail: ["偶像", "星芒集團", "19歲", "183cm"],
       characteristic: "圈內當仁不讓的演藝天王。舞技、演技雙棲的實力派。",
     },
     {
       id: "role2",
       name: "唐芯",
       slogan: "在星空之下閃耀。",
-      detail: ["藝人", "風娛傳媒", "20歲", "162cm"],
+      detail: ["演員", "風娛傳媒", "20歲", "162cm"],
       characteristic:
         "温柔甜美，謙虛低調的女演員。因為拍戲經常一條過，人稱「唐一條」。",
     },
@@ -199,6 +200,10 @@ window.onload = function () {
   const rolePopup = document.querySelector(".role_popup");
   const roleContent = document.querySelector(".role_popup .content");
   roleButton.forEach((item, index) => {
+    let company = "";
+    if (roleList[index].detail[1] !== "") {
+      company = `<h1><span>所屬公司：</span><span>${roleList[index].detail[1]}</span></h1>`;
+    }
     const innerHtml = `
   <div class="photo_wrapper"><div class="photo_border role${
     index + 1
@@ -206,11 +211,13 @@ window.onload = function () {
   <div class="name_bar">${roleList[index].name}</div>
   <div class="info">
     <h1 class="name">${roleList[index].name}</h1>
-    <h1 class="slogan">${roleList[index].slogan}</h1>
+    <h1 class="slogan role${index + 1}">${roleList[index].slogan}</h1>
     <div class="detail">
-      <h1><span>身份：</span><span>${roleList[index].detail[0]}</span></h1>
-      <h1><span>所屬公司：</span><span>星芒集團</span></h1>
-      <h1><span>年齡：</span><span>${roleList[index].detail[2]}</span></h1>
+      <h1><span>身份：</span><span>${
+        roleList[index].detail[0]
+      }</span></h1>${company}<h1><span>年齡：</span><span>${
+      roleList[index].detail[2]
+    }</span></h1>
       <h1><span>身高：</span><span>${roleList[index].detail[3]}</span></h1>
     </div>
     <h1 class="characteristic">${roleList[index].characteristic}</h1>
