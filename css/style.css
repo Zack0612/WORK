@@ -359,7 +359,7 @@ header nav .icon-link a span {
   margin-right: auto;
   width: 100%;
   overflow: hidden;
-  background: url("/img/kv.jpg") no-repeat;
+  background: url("../img/kv.jpg") no-repeat;
   background-size: 100% auto;
   height: 56.7vw;
 }
@@ -462,7 +462,7 @@ header nav .icon-link a span {
   height: 5vw;
   top: 4.5vw;
   left: 6.5vw;
-  background: url('/img/slogan_all.png') no-repeat center top;
+  background: url('../img/slogan_all.png') no-repeat center top;
   background-size: 100% auto;
   animation: light 2s ease-out 0s infinite both;
 }
@@ -472,7 +472,7 @@ header nav .icon-link a span {
   height: 0.5vw;
   top: 13vw;
   left: 54vw;
-  background: url('/img/slogan_cir.png') no-repeat center top;
+  background: url('../img/slogan_cir.png') no-repeat center top;
   background-size: 100% auto;
   animation: light 2s ease-out 0.5s infinite both;
 }
@@ -482,7 +482,7 @@ header nav .icon-link a span {
   height: 4vw;
   top: 4.5vw;
   left: 43.5vw;
-  background: url('/img/slogan_star.png') no-repeat center top;
+  background: url('../img/slogan_star.png') no-repeat center top;
   background-size: 100% auto;
   animation: light 2s ease-out 0.4s infinite both;
 }
@@ -545,7 +545,7 @@ header nav .icon-link a span {
   left: 0;
   right: 0;
   padding-bottom: 10.6vw;
-  background: url("/img/kv_app_bg.png") no-repeat;
+  background: url("../img/kv_app_bg.png") no-repeat;
   background-size: 100% auto;
 }
 
@@ -633,14 +633,14 @@ header nav .icon-link a span {
   bottom: 0px;
   width: 100%;
   z-index: 9;
-  background: url("/img/kv_down.png") no-repeat;
+  background: url("../img/kv_down.png") no-repeat;
   background-size: 100% auto;
   height: 13vw;
 }
 
 @media (max-width: 768px) {
   .kv {
-    background: url("/img/kv_mob.jpg") no-repeat;
+    background: url("../img/kv_mob.jpg") no-repeat;
     background-size: 100% auto;
     height: 168.8vw;
   }
@@ -729,7 +729,7 @@ header nav .icon-link a span {
   }
 
   .kv .kv_bottom_bg {
-    background: url("/img/kv_down_mob.png") no-repeat;
+    background: url("../img/kv_down_mob.png") no-repeat;
     background-size: 100% auto;
     height: 23.7vw;
   }
@@ -762,7 +762,7 @@ header nav .icon-link a span {
   top: 13.8vw;
   right: 0.7vw;
   padding-bottom: 31vw;
-  background: url("/img/right_nav_bg.png") no-repeat;
+  background: url("../img/right_nav_bg.png") no-repeat;
   background-size: 100% auto;
 }
 
@@ -852,7 +852,7 @@ header nav .icon-link a span {
   flex-direction: column;
   align-items: center;
   overflow: hidden;
-  background: url("/img/zone1_bg.jpg") no-repeat;
+  background: url("../img/zone1_bg.jpg") no-repeat;
   background-size: 100% auto;
   padding-bottom: 9vw;
 }
@@ -862,7 +862,7 @@ header nav .icon-link a span {
   right: 0px;
   opacity: 0;
   top: 6.9vw;
-  background: url("/img/zone1_peo.png") no-repeat;
+  background: url("../img/zone1_peo.png") no-repeat;
   background-size: 100% auto;
   width: 32vw;
   height: 43vw;
@@ -892,7 +892,7 @@ header nav .icon-link a span {
 
 .news_bonus>.news .content {
   position: relative;
-  background: url("/img/zone1_frame.png") no-repeat;
+  background: url("../img/zone1_frame.png") no-repeat;
   background-size: 100% auto;
   width: 63vw;
   height: 28.6vw;
@@ -940,7 +940,7 @@ header nav .icon-link a span {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
   transition-duration: 500ms;
-  background: url("/img/btn_news_nomal.png") no-repeat;
+  background: url("../img/btn_news_nomal.png") no-repeat;
   background-size: 100% auto;
   color: #313452;
   font-size: 1.45vw;
@@ -951,7 +951,7 @@ header nav .icon-link a span {
 }
 
 .news_bonus>.news .content .news_list .nav .item:hover {
-  background: url("/img/btn_news_hover.png") no-repeat;
+  background: url("../img/btn_news_hover.png") no-repeat;
   background-size: 100% auto;
   color: #faf0c1;
 }
@@ -960,7 +960,7 @@ header nav .icon-link a span {
 
 .news_bonus>.news .content .news_list .nav .item.red_dot span {
   position: absolute;
-  background: url("/img/zone1_reddot.png") no-repeat;
+  background: url("../img/zone1_reddot.png") no-repeat;
   background-size: 100% auto;
   top: 0.25vw;
   right: 0.5vw;
@@ -969,7 +969,7 @@ header nav .icon-link a span {
 }
 
 .news_bonus>.news .content .news_list .nav .item.red_dot.item {
-  background: url("/img/btn_news_hover.png") no-repeat;
+  background: url("../img/btn_news_hover.png") no-repeat;
   background-size: 100% auto;
   color: #faf0c1;
 }
@@ -999,22 +999,22 @@ header nav .icon-link a span {
 }
 
 .news_bonus>.news .content .news_list .list .item .type.hot {
-  background: url("/img/btn_news_red.png") no-repeat;
+  background: url("../img/btn_news_red.png") no-repeat;
   background-size: 100% auto;
 }
 
 .news_bonus>.news .content .news_list .list .item .type.news {
-  background: url("/img/btn_news_ora.png") no-repeat;
+  background: url("../img/btn_news_ora.png") no-repeat;
   background-size: 100% auto;
 }
 
 .news_bonus>.news .content .news_list .list .item .type.event {
-  background: url("/img/btn_news_pink.png") no-repeat;
+  background: url("../img/btn_news_pink.png") no-repeat;
   background-size: 100% auto;
 }
 
 .news_bonus>.news .content .news_list .list .item .type.system {
-  background: url("/img/btn_news_blue.png") no-repeat;
+  background: url("../img/btn_news_blue.png") no-repeat;
   background-size: 100% auto;
 }
 
@@ -1035,7 +1035,7 @@ header nav .icon-link a span {
   margin: auto;
   display: flex;
   justify-content: center;
-  background: url("/img/btn_more.png") no-repeat;
+  background: url("../img/btn_more.png") no-repeat;
   background-size: 100% auto;
   width: 11.1vw;
   height: 3.2vw;
@@ -1043,7 +1043,7 @@ header nav .icon-link a span {
 }
 
 .news_bonus>.news .content .news_list .more:hover {
-  background: url("/img/btn_more_hover.png") no-repeat;
+  background: url("../img/btn_more_hover.png") no-repeat;
   background-size: 100% auto;
 }
 
@@ -1097,7 +1097,7 @@ header nav .icon-link a span {
 
 @media (max-width: 768px) {
   .news_bonus {
-    background: url("/img/zone1_bg_mob.jpg") no-repeat;
+    background: url("../img/zone1_bg_mob.jpg") no-repeat;
     background-size: 100% auto;
     padding-bottom: 10vw;
   }
@@ -1119,7 +1119,7 @@ header nav .icon-link a span {
     width: 100%;
     flex-direction: column;
     align-items: center;
-    background: url("/img/zone1_frame_mob.png") no-repeat;
+    background: url("../img/zone1_frame_mob.png") no-repeat;
     background-size: 100% auto;
     height: 144.5vw;
   }
@@ -1193,7 +1193,7 @@ header nav .icon-link a span {
   }
 
   .news_bonus>.news .content .news_list .more:hover {
-    background: url("/img/btn_more.png") no-repeat;
+    background: url("../img/btn_more.png") no-repeat;
     background-size: 100% auto;
   }
 
@@ -1263,7 +1263,7 @@ header nav .icon-link a span {
   width: 100%;
   flex-direction: column;
   align-items: center;
-  background: url("/img/zone3_bg.jpg") no-repeat;
+  background: url("../img/zone3_bg.jpg") no-repeat;
   background-size: 100vw;
   height: 55vw;
 }
@@ -1309,7 +1309,7 @@ header nav .icon-link a span {
   position: absolute;
   display: none;
   content: "";
-  background: url("/img/zone3_notice.png") no-repeat;
+  background: url("../img/zone3_notice.png") no-repeat;
   background-size: 100% auto;
   width: 1.8vw;
   height: 1.8vw;
@@ -1317,7 +1317,7 @@ header nav .icon-link a span {
 }
 
 .role .role_people .people:nth-child(1) {
-  background: url("/img/zone3_role1.png") no-repeat;
+  background: url("../img/zone3_role1.png") no-repeat;
   background-size: 100% auto;
   z-index: 5;
   width: 24.5vw;
@@ -1331,7 +1331,7 @@ header nav .icon-link a span {
 }
 
 .role .role_people .people:nth-child(2) {
-  background: url("/img/zone3_role2.png") no-repeat;
+  background: url("../img/zone3_role2.png") no-repeat;
   background-size: 100% auto;
   z-index: 5;
   width: 13.2vw;
@@ -1345,7 +1345,7 @@ header nav .icon-link a span {
 }
 
 .role .role_people .people:nth-child(3) {
-  background: url("/img/zone3_role3.png") no-repeat;
+  background: url("../img/zone3_role3.png") no-repeat;
   background-size: 100% auto;
   z-index: 5;
   width: 24.8vw;
@@ -1359,7 +1359,7 @@ header nav .icon-link a span {
 }
 
 .role .role_people .people:nth-child(4) {
-  background: url("/img/zone3_role4.png") no-repeat;
+  background: url("../img/zone3_role4.png") no-repeat;
   background-size: 100% auto;
   z-index: 5;
   width: 34.5vw;
@@ -1373,7 +1373,7 @@ header nav .icon-link a span {
 }
 
 .role .role_people .people:nth-child(5) {
-  background: url("/img/zone3_role5.png") no-repeat;
+  background: url("../img/zone3_role5.png") no-repeat;
   background-size: 100% auto;
   z-index: 4;
   width: 23.8vw;
@@ -1387,7 +1387,7 @@ header nav .icon-link a span {
 }
 
 .role .role_people .people:nth-child(6) {
-  background: url("/img/zone3_role6.png") no-repeat;
+  background: url("../img/zone3_role6.png") no-repeat;
   background-size: 100% auto;
   z-index: 3;
   width: 27.3vw;
@@ -1401,7 +1401,7 @@ header nav .icon-link a span {
 }
 
 .role .role_people .people:nth-child(7) {
-  background: url("/img/zone3_role7.png") no-repeat;
+  background: url("../img/zone3_role7.png") no-repeat;
   background-size: 100% auto;
   z-index: 1;
   width: 20.7vw;
@@ -1415,7 +1415,7 @@ header nav .icon-link a span {
 }
 
 .role .role_people .people:nth-child(8) {
-  background: url("/img/zone3_role8.png") no-repeat;
+  background: url("../img/zone3_role8.png") no-repeat;
   background-size: 100% auto;
   z-index: 1;
   width: 23.1vw;
@@ -1460,7 +1460,7 @@ header nav .icon-link a span {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url("/img/popup_cancel_bg.png") no-repeat;
+  background: url("../img/popup_cancel_bg.png") no-repeat;
   background-size: 100% auto;
   width: 3vw;
   height: 3vw;
@@ -1483,7 +1483,7 @@ header nav .icon-link a span {
   position: relative;
   z-index: 10;
   width: 100%;
-  background: url("/img/role_popup_bg.png") no-repeat;
+  background: url("../img/role_popup_bg.png") no-repeat;
   background-position: 50%;
   background-size: 100% auto;
   height: 23.6vw;
@@ -1558,7 +1558,7 @@ header nav .icon-link a span {
   align-items: center;
   justify-content: center;
   font-weight: 300;
-  background: url("/img/role_name_bar.png") 50% no-repeat;
+  background: url("../img/role_name_bar.png") 50% no-repeat;
   background-size: 100% auto;
   width: 23.5vw;
   top: 21vw;
@@ -1571,7 +1571,7 @@ header nav .icon-link a span {
 
 .role_popup .role_popup_wrapper .content .info {
   position: absolute;
-  background: url("/img/role_info_bg.png") no-repeat;
+  background: url("../img/role_info_bg.png") no-repeat;
   background-size: 100% auto;
   color: #fef1d2;
   width: 22vw;
@@ -1660,7 +1660,7 @@ header nav .icon-link a span {
     width: 100%;
     flex-direction: column;
     align-items: center;
-    background: url("/img/zone3_bg_mob.jpg") no-repeat;
+    background: url("../img/zone3_bg_mob.jpg") no-repeat;
     background-size: 100% auto;
     height: 205vw;
   }
@@ -1765,7 +1765,7 @@ header nav .icon-link a span {
   }
 
   .role_popup .role_popup_wrapper {
-    background: url("/img/role_popup_bg_mob.png") no-repeat;
+    background: url("../img/role_popup_bg_mob.png") no-repeat;
     background-position: 0 0;
     background-position: initial;
     background-size: 100% auto;
@@ -1916,7 +1916,7 @@ header nav .icon-link a span {
   flex-direction: column;
   align-items: center;
   overflow: hidden;
-  background: url("/img/zone4_bg.jpg") no-repeat;
+  background: url("../img/zone4_bg.jpg") no-repeat;
   background-size: 100% auto;
   height: 55vw;
 }
@@ -1985,11 +1985,11 @@ header nav .icon-link a span {
 }
 
 .filmography .card_wrapper .item:nth-child(1) .card.front {
-  background-image: url("/img/zone4_book1.png");
+  background-image: url("../img/zone4_book1.png");
 }
 
 .filmography .card_wrapper .item:nth-child(1) .card.back {
-  background-image: url("/img/zone4_book1_after.png");
+  background-image: url("../img/zone4_book1_after.png");
 }
 
 .filmography .card_wrapper .item:nth-child(2) {
@@ -1998,11 +1998,11 @@ header nav .icon-link a span {
 }
 
 .filmography .card_wrapper .item:nth-child(2) .card.front {
-  background-image: url("/img/zone4_book2.png");
+  background-image: url("../img/zone4_book2.png");
 }
 
 .filmography .card_wrapper .item:nth-child(2) .card.back {
-  background-image: url("/img/zone4_book2_after.png");
+  background-image: url("../img/zone4_book2_after.png");
 }
 
 .filmography .card_wrapper .item:nth-child(3) {
@@ -2011,11 +2011,11 @@ header nav .icon-link a span {
 }
 
 .filmography .card_wrapper .item:nth-child(3) .card.front {
-  background-image: url("/img/zone4_book3.png");
+  background-image: url("../img/zone4_book3.png");
 }
 
 .filmography .card_wrapper .item:nth-child(3) .card.back {
-  background-image: url("/img/zone4_book3_after.png");
+  background-image: url("../img/zone4_book3_after.png");
 }
 
 .filmography .card_wrapper .item:nth-child(4) {
@@ -2024,11 +2024,11 @@ header nav .icon-link a span {
 }
 
 .filmography .card_wrapper .item:nth-child(4) .card.front {
-  background-image: url("/img/zone4_book4.png");
+  background-image: url("../img/zone4_book4.png");
 }
 
 .filmography .card_wrapper .item:nth-child(4) .card.back {
-  background-image: url("/img/zone4_book4_after.png");
+  background-image: url("../img/zone4_book4_after.png");
 }
 
 .filmography .card_wrapper .item:nth-child(5) {
@@ -2037,11 +2037,11 @@ header nav .icon-link a span {
 }
 
 .filmography .card_wrapper .item:nth-child(5) .card.front {
-  background-image: url("/img/zone4_book5.png");
+  background-image: url("../img/zone4_book5.png");
 }
 
 .filmography .card_wrapper .item:nth-child(5) .card.back {
-  background-image: url("/img/zone4_book5_after.png");
+  background-image: url("../img/zone4_book5_after.png");
 }
 
 .filmography .card_wrapper .item:nth-child(6) {
@@ -2050,11 +2050,11 @@ header nav .icon-link a span {
 }
 
 .filmography .card_wrapper .item:nth-child(6) .card.front {
-  background-image: url("/img/zone4_book6.png");
+  background-image: url("../img/zone4_book6.png");
 }
 
 .filmography .card_wrapper .item:nth-child(6) .card.back {
-  background-image: url("/img/zone4_book6_after.png");
+  background-image: url("../img/zone4_book6_after.png");
 }
 
 .filmography .card_wrapper .item:nth-child(7) {
@@ -2063,11 +2063,11 @@ header nav .icon-link a span {
 }
 
 .filmography .card_wrapper .item:nth-child(7) .card.front {
-  background-image: url("/img/zone4_book7.png");
+  background-image: url("../img/zone4_book7.png");
 }
 
 .filmography .card_wrapper .item:nth-child(7) .card.back {
-  background-image: url("/img/zone4_book7_after.png");
+  background-image: url("../img/zone4_book7_after.png");
 }
 
 .filmography .card_wrapper .item:nth-child(8) {
@@ -2076,11 +2076,11 @@ header nav .icon-link a span {
 }
 
 .filmography .card_wrapper .item:nth-child(8) .card.front {
-  background-image: url("/img/zone4_book8.png");
+  background-image: url("../img/zone4_book8.png");
 }
 
 .filmography .card_wrapper .item:nth-child(8) .card.back {
-  background-image: url("/img/zone4_book8_after.png");
+  background-image: url("../img/zone4_book8_after.png");
 }
 
 .filmography .card_wrapper .center {
@@ -2106,7 +2106,7 @@ header nav .icon-link a span {
 
 @media (max-width: 768px) {
   .filmography {
-    background: url("/img/zone4_bg.jpg") no-repeat top;
+    background: url("../img/zone4_bg.jpg") no-repeat top;
     background-size: 350%;
     height: 152vw;
   }
@@ -2163,67 +2163,67 @@ header nav .icon-link a span {
   }
 
   .filmography .card_swiper_wrapper .swiper-slide .item.card1 .card.front {
-    background-image: url("/img/zone4_book1.png");
+    background-image: url("../img/zone4_book1.png");
   }
 
   .filmography .card_swiper_wrapper .swiper-slide .item.card1 .card.back {
-    background-image: url("/img/zone4_book1_after.png");
+    background-image: url("../img/zone4_book1_after.png");
   }
 
   .filmography .card_swiper_wrapper .swiper-slide .item.card2 .card.front {
-    background-image: url("/img/zone4_book2.png");
+    background-image: url("../img/zone4_book2.png");
   }
 
   .filmography .card_swiper_wrapper .swiper-slide .item.card2 .card.back {
-    background-image: url("/img/zone4_book2_after.png");
+    background-image: url("../img/zone4_book2_after.png");
   }
 
   .filmography .card_swiper_wrapper .swiper-slide .item.card3 .card.front {
-    background-image: url("/img/zone4_book3.png");
+    background-image: url("../img/zone4_book3.png");
   }
 
   .filmography .card_swiper_wrapper .swiper-slide .item.card3 .card.back {
-    background-image: url("/img/zone4_book3_after.png");
+    background-image: url("../img/zone4_book3_after.png");
   }
 
   .filmography .card_swiper_wrapper .swiper-slide .item.card4 .card.front {
-    background-image: url("/img/zone4_book4.png");
+    background-image: url("../img/zone4_book4.png");
   }
 
   .filmography .card_swiper_wrapper .swiper-slide .item.card4 .card.back {
-    background-image: url("/img/zone4_book4_after.png");
+    background-image: url("../img/zone4_book4_after.png");
   }
 
   .filmography .card_swiper_wrapper .swiper-slide .item.card5 .card.front {
-    background-image: url("/img/zone4_book5.png");
+    background-image: url("../img/zone4_book5.png");
   }
 
   .filmography .card_swiper_wrapper .swiper-slide .item.card5 .card.back {
-    background-image: url("/img/zone4_book5_after.png");
+    background-image: url("../img/zone4_book5_after.png");
   }
 
   .filmography .card_swiper_wrapper .swiper-slide .item.card6 .card.front {
-    background-image: url("/img/zone4_book6.png");
+    background-image: url("../img/zone4_book6.png");
   }
 
   .filmography .card_swiper_wrapper .swiper-slide .item.card6 .card.back {
-    background-image: url("/img/zone4_book6_after.png");
+    background-image: url("../img/zone4_book6_after.png");
   }
 
   .filmography .card_swiper_wrapper .swiper-slide .item.card7 .card.front {
-    background-image: url("/img/zone4_book7.png");
+    background-image: url("../img/zone4_book7.png");
   }
 
   .filmography .card_swiper_wrapper .swiper-slide .item.card7 .card.back {
-    background-image: url("/img/zone4_book7_after.png");
+    background-image: url("../img/zone4_book7_after.png");
   }
 
   .filmography .card_swiper_wrapper .swiper-slide .item.card8 .card.front {
-    background-image: url("/img/zone4_book8.png");
+    background-image: url("../img/zone4_book8.png");
   }
 
   .filmography .card_swiper_wrapper .swiper-slide .item.card8 .card.back {
-    background-image: url("/img/zone4_book8_after.png");
+    background-image: url("../img/zone4_book8_after.png");
   }
 
   .filmography .card_swiper_wrapper .swiper-button-prev,
@@ -2244,13 +2244,13 @@ header nav .icon-link a span {
 
   .filmography .card_swiper_wrapper .swiper-button-prev,
   .filmography .card_swiper_wrapper .swiper-container-rtl .swiper-button-next {
-    background-image: url("/img/swiper_prevbtn.png");
+    background-image: url("../img/swiper_prevbtn.png");
     left: 23vw;
   }
 
   .filmography .card_swiper_wrapper .swiper-button-next,
   .filmography .card_swiper_wrapper .swiper-container-rtl .swiper-button-prev {
-    background-image: url("/img/swiper_nextbtn.png");
+    background-image: url("../img/swiper_nextbtn.png");
     left: 107vw;
   }
 
@@ -2277,7 +2277,7 @@ header nav .icon-link a span {
   width: 100%;
   flex-direction: column;
   align-items: center;
-  background: url("/img/zone5_bg.png") no-repeat;
+  background: url("../img/zone5_bg.png") no-repeat;
   background-size: 100% auto;
   height: 58vw;
   margin-top: -7vw;
@@ -2341,7 +2341,7 @@ header nav .icon-link a span {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
   transition-duration: 500ms;
-  background: url("/img/zone5_coverbg.png") no-repeat;
+  background: url("../img/zone5_coverbg.png") no-repeat;
   background-size: 100% auto;
 }
 
@@ -2370,12 +2370,12 @@ header nav .icon-link a span {
 }
 
 .video .video_swiper_wrapper .swiper-button-prev-video {
-  background-image: url("/img/swiper_prevbtn.png");
+  background-image: url("../img/swiper_prevbtn.png");
   left: 10vw;
 }
 
 .video .video_swiper_wrapper .swiper-button-next-video {
-  background-image: url("/img/swiper_nextbtn.png");
+  background-image: url("../img/swiper_nextbtn.png");
   right: 10vw;
 }
 
@@ -2397,17 +2397,17 @@ header nav .icon-link a span {
   width: 2vw;
   height: 2vw;
   margin: 0 0.2vw;
-  background: url("/img/swiper_list_normal.png") no-repeat;
+  background: url("../img/swiper_list_normal.png") no-repeat;
   background-size: 100% auto;
 }
 
 .video .video_swiper_wrapper .swiper-pagination-video .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background: url("/img/swiper_list_light.png") no-repeat;
+  background: url("../img/swiper_list_light.png") no-repeat;
   background-size: 100% auto;
 }
 
 .video .video_swiper_wrapper .swiper-pagination-video .swiper-pagination-bullet:hover {
-  background: url("/img/swiper_list_light.png") no-repeat;
+  background: url("../img/swiper_list_light.png") no-repeat;
   background-size: 100% auto;
 }
 
@@ -2443,7 +2443,7 @@ header nav .icon-link a span {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url("/img/popup_cancel_bg.png") no-repeat;
+  background: url("../img/popup_cancel_bg.png") no-repeat;
   background-size: 100% auto;
   width: 3vw;
   height: 3vw;
@@ -2489,8 +2489,8 @@ header nav .icon-link a span {
   left: 0px;
   z-index: 10;
   margin: auto;
-  background: url(/img/video_popup_star1.png) no-repeat,
-    url(/img/video_popup_star2.png) no-repeat;
+  background: url(../img/video_popup_star1.png) no-repeat,
+    url(../img/video_popup_star2.png) no-repeat;
   background-position: top left, 98% bottom;
   background-size: 4.7vw, 4.7vw;
   width: 50.8vw;
@@ -2508,7 +2508,7 @@ header nav .icon-link a span {
   overflow: hidden;
   width: 46vw;
   height: 28vw;
-  background: url("/img/video_popup_bg.png") no-repeat;
+  background: url("../img/video_popup_bg.png") no-repeat;
   background-size: 100% auto;
 }
 
@@ -2632,7 +2632,7 @@ header nav .icon-link a span {
   width: 100%;
   flex-direction: column;
   align-items: center;
-  background: url("/img/zone6_bg.jpg") no-repeat;
+  background: url("../img/zone6_bg.jpg") no-repeat;
   background-size: 100% auto;
   height: 47vw;
   margin-top: -6.5vw;
@@ -2673,7 +2673,7 @@ header nav .icon-link a span {
 }
 
 .feature .feature_swiper_wrapper .swiper .swiper-slide.swiper-slide-active {
-  background: url("/img/zone6_coverbg.png") no-repeat;
+  background: url("../img/zone6_coverbg.png") no-repeat;
   background-size: 100% auto;
 }
 
@@ -2702,12 +2702,12 @@ header nav .icon-link a span {
 }
 
 .feature .feature_swiper_wrapper .swiper-button-prev-feature {
-  background-image: url("/img/swiper_prevbtn.png");
+  background-image: url("../img/swiper_prevbtn.png");
   left: 10vw;
 }
 
 .feature .feature_swiper_wrapper .swiper-button-next-feature {
-  background-image: url("/img/swiper_nextbtn.png");
+  background-image: url("../img/swiper_nextbtn.png");
   right: 10vw;
 }
 
@@ -2729,17 +2729,17 @@ header nav .icon-link a span {
   width: 2vw;
   height: 2vw;
   margin: 0 0.2vw;
-  background: url("/img/swiper_list_normal.png") no-repeat;
+  background: url("../img/swiper_list_normal.png") no-repeat;
   background-size: 100% auto;
 }
 
 .feature .feature_swiper_wrapper .swiper-pagination-feature .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background: url("/img/swiper_list_light.png") no-repeat;
+  background: url("../img/swiper_list_light.png") no-repeat;
   background-size: 100% auto;
 }
 
 .feature .feature_swiper_wrapper .swiper-pagination-feature .swiper-pagination-bullet:hover {
-  background: url("/img/swiper_list_light.png") no-repeat;
+  background: url("../img/swiper_list_light.png") no-repeat;
   background-size: 100% auto;
 }
 
@@ -2800,7 +2800,7 @@ header nav .icon-link a span {
   z-index: 10;
   margin: auto;
   width: 100%;
-  background: url("/img/os_bg.png") no-repeat;
+  background: url("../img/os_bg.png") no-repeat;
   background-size: 100% auto;
   padding-top: 3vw;
   padding-bottom: 1vw;
@@ -2856,7 +2856,7 @@ header nav .icon-link a span {
 @media (max-width: 768px) {
   .info {
     text-align: center;
-    background: url("/img/os_bg_mob.png") no-repeat center;
+    background: url("../img/os_bg_mob.png") no-repeat center;
     background-size: cover;
     margin-top: -6vw;
     padding: 8vw 0;
@@ -3034,7 +3034,7 @@ footer .container .age .age12 {
   transition-duration: 500ms;
   transition-timing-function: linear;
   bottom: -15vw;
-  background: url("/img/fix_bg.jpg") no-repeat;
+  background: url("../img/fix_bg.jpg") no-repeat;
   background-size: 100% auto;
   height: 5.2vw;
 }
@@ -3077,8 +3077,8 @@ footer .container .age .age12 {
   width: 100%;
   flex-direction: column;
   align-items: center;
-  background: url("/img/news_bg1.jpg") no-repeat top,
-    url("/img/news_bg2.jpg") no-repeat bottom;
+  background: url("../img/news_bg1.jpg") no-repeat top,
+    url("../img/news_bg2.jpg") no-repeat bottom;
   background-size: 100% auto;
 }
 
@@ -3116,7 +3116,7 @@ footer .container .age .age12 {
   align-items: flex-end;
   justify-content: center;
   margin-top: 26vw;
-  background: url("/img/news_frame1.png") no-repeat;
+  background: url("../img/news_frame1.png") no-repeat;
   background-size: 100% auto;
   height: 13.5vw;
 }
@@ -3133,7 +3133,7 @@ footer .container .age .age12 {
   width: 100%;
   flex-direction: column;
   align-items: center;
-  background: url("/img/news_frame2.png") repeat;
+  background: url("../img/news_frame2.png") repeat;
   background-size: 100% auto;
   padding: 2.7vw 0 0;
 }
@@ -3154,7 +3154,7 @@ footer .container .age .age12 {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
   transition-duration: 500ms;
-  background: url("/img/btn_news_nomal.png") no-repeat;
+  background: url("../img/btn_news_nomal.png") no-repeat;
   background-size: 100% auto;
   color: #313452;
   font-size: 2.1vw;
@@ -3167,7 +3167,7 @@ footer .container .age .age12 {
 }
 
 .news_page .news_wrapper .news_list .nav .item:hover {
-  background: url("/img/btn_news_hover.png") no-repeat;
+  background: url("../img/btn_news_hover.png") no-repeat;
   background-size: 100% auto;
   color: #faf0c1;
 }
@@ -3176,7 +3176,7 @@ footer .container .age .age12 {
 
 .news_page .news_wrapper .news_list .nav .item.red_dot span {
   position: absolute;
-  background: url("/img/zone1_reddot.png") no-repeat;
+  background: url("../img/zone1_reddot.png") no-repeat;
   background-size: 100% auto;
   top: 0.25vw;
   right: 0.5vw;
@@ -3185,7 +3185,7 @@ footer .container .age .age12 {
 }
 
 .news_page .news_wrapper .news_list .nav .item.red_dot.item {
-  background: url("/img/btn_news_hover.png") no-repeat;
+  background: url("../img/btn_news_hover.png") no-repeat;
   background-size: 100% auto;
   color: #faf0c1;
 }
@@ -3216,22 +3216,22 @@ footer .container .age .age12 {
 }
 
 .news_page .news_wrapper .news_list .list .item .type.hot {
-  background: url("/img/btn_news_red.png") no-repeat;
+  background: url("../img/btn_news_red.png") no-repeat;
   background-size: 100% auto;
 }
 
 .news_page .news_wrapper .news_list .list .item .type.news {
-  background: url("/img/btn_news_ora.png") no-repeat;
+  background: url("../img/btn_news_ora.png") no-repeat;
   background-size: 100% auto;
 }
 
 .news_page .news_wrapper .news_list .list .item .type.event {
-  background: url("/img/btn_news_pink.png") no-repeat;
+  background: url("../img/btn_news_pink.png") no-repeat;
   background-size: 100% auto;
 }
 
 .news_page .news_wrapper .news_list .list .item .type.system {
-  background: url("/img/btn_news_blue.png") no-repeat;
+  background: url("../img/btn_news_blue.png") no-repeat;
   background-size: 100% auto;
 }
 
@@ -3357,7 +3357,7 @@ footer .container .age .age12 {
   width: 100%;
   flex-direction: column;
   align-items: center;
-  background: url("/img/news_frame2.png") repeat;
+  background: url("../img/news_frame2.png") repeat;
   background-size: 100% auto;
   padding: 2.7vw 0 0;
   color: #444444;
@@ -3382,7 +3382,7 @@ footer .container .age .age12 {
 
 .news_page .news_wrapper .news_content .content_wrapper .news_title .type {
   text-align: center;
-  background: url("/img/btn_news_red.png") no-repeat;
+  background: url("../img/btn_news_red.png") no-repeat;
   background-size: 100% auto;
   font-size: 1.6vw;
   width: 9vw;
@@ -3451,7 +3451,7 @@ footer .container .age .age12 {
 }
 
 .news_page .news_wrapper .news_bottom {
-  background: url("/img/news_frame3.png") no-repeat;
+  background: url("../img/news_frame3.png") no-repeat;
   background-size: 100% auto;
   height: 13.5vw;
 }
@@ -3465,8 +3465,8 @@ footer .container .age .age12 {
     width: 100%;
     flex-direction: column;
     align-items: center;
-    background: url("/img/news_bg1_mob.jpg") no-repeat top left,
-      url("/img/news_bg2_mob.jpg") no-repeat bottom;
+    background: url("../img/news_bg1_mob.jpg") no-repeat top left,
+      url("../img/news_bg2_mob.jpg") no-repeat bottom;
     background-size: 100% auto;
   }
 
@@ -3488,7 +3488,7 @@ footer .container .age .age12 {
   .news_page .news_wrapper .news_page_title {
     width: 100%;
     margin-top: 65.5vw;
-    background: url("/img/news_frame1_mob.png") no-repeat;
+    background: url("../img/news_frame1_mob.png") no-repeat;
     background-size: 100% auto;
     height: 35vw;
   }
@@ -3498,7 +3498,7 @@ footer .container .age .age12 {
   }
 
   .news_page .news_wrapper .news_list {
-    background: url("/img/news_frame2_mob.png") repeat;
+    background: url("../img/news_frame2_mob.png") repeat;
     background-size: 100% auto;
     padding: 24.7vw 0 0;
     margin-top: -21vw;
@@ -3583,7 +3583,7 @@ footer .container .age .age12 {
   /*新聞內文*/
 
   .news_page .news_wrapper .news_content {
-    background: url(/img/news_frame2_mob.png) repeat;
+    background: url(../img/news_frame2_mob.png) repeat;
     background-size: 100% auto;
     padding: 24.7vw 0 0;
     margin-top: -21vw;
@@ -3635,7 +3635,7 @@ footer .container .age .age12 {
   }
 
   .news_page .news_wrapper .news_bottom {
-    background: url("/img/news_frame3_mob.png") no-repeat;
+    background: url("../img/news_frame3_mob.png") no-repeat;
     background-size: 100% auto;
     height: 17vw;
   }
