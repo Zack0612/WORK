@@ -68,7 +68,8 @@
       <li><a href="https://ican.tw/bcux2" target="_blank"><img src="./image/google-play.svg" alt="Google Play"
             class="icon">Google Play</a>
       </li>
-      <li><a href="#popup-inquiry" class="popup-btn">查詢獎勵</a></li>
+      <li><a href="#popup-inquiry" class="popup-btn"><img src="./image/gifticon.svg" alt="查詢獎勵"
+        class="icon">查詢獎勵</a></li>
       <li><a href="https://ican.tw/mswQR" target="_blank"><img src="./image/facebook-f.svg" alt="官方粉專"
             class="icon">官方粉專</a>
       </li>
@@ -81,7 +82,10 @@
     <ul class="nav-bg sp-d-none">
       <li><a href="#"><img src="./image/go-reserve.png" alt="立即預約" class="go-reserve2"></a>
       </li>
-      <li><img src="./image/tw_miao.png" alt="台灣貓靈"></li>
+      
+      <li>
+        <a href="#"><img class="go-reserve2" src="./image/tw_miao.png" alt="台灣貓靈"></a>
+      </li>
       <li><img src="./image/qr_code.png" alt="立即掃描QRCODE"></li>
       <li><a href="https://ican.tw/bcux2" target="_blank"><img src="./image/btn_App_Store.png" alt="app store"
             class="btn-app"></a></li>
@@ -205,7 +209,7 @@
             <div class="VerificationCode">
               <input type="tel" name="tel" placeholder="請輸入驗證碼" class="form-frame">
               <button class="submit">傳送驗證碼</button>
-              <!-- <button class="submit">再次發送60s</button> -->
+              <!-- <button class="submit null">再次發送60s</button>  -->
             </div>
             <!-- 同意 -->
             <div class="checkBox">
@@ -219,7 +223,7 @@
             </div>
             <!-- 送出 -->
             <div class="sendBox">
-              <a href="#order" class="popup-btn">
+              <a href="#popup-sucess" class="popup-btn">
                 <img src="./image/btn_order.png" alt="完成預約" class="send">
               </a>
             </div>
@@ -360,7 +364,7 @@
       <!-- 裝飾喵 -->
       <img src="./image/float_01.png" alt="裝飾喵" class="float-03">
       <h2><img src="./image/h2_title03.png" alt="門檻獎勵" class="title" data-aos="fade-up" data-aos-duration="500"></h2>
-      <h4><img src="./image/h2_reserve.png" alt="回到最想改變的歷史節點" class="subtitle aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+      <h4 class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><img src="./image/h2_reserve.png" alt="當前預約人數" class="subtitle " >
           <span>000,000</span>
       </h4>
       <div class="sp-d-none">
@@ -415,7 +419,7 @@
             <a href="#popup-award" class="popup-btn">
               <img src="./image/pc_card_02.png" alt="" class="sec4-card2" data-aos="flip-right" data-aos-delay="200">
             </a>
-            <a href="#popup-award" class="popup-btn">
+            <a href="#popup-notime" class="popup-btn">
               <img src="./image/pc_card_03.png" alt="" class="sec4-card3" data-aos="flip-right" data-aos-delay="400">
             </a>
             <a href="#popup-award" class="popup-btn">
@@ -440,14 +444,14 @@
             <ul class="inivte_con">
               <!-- 已達成時 圖片換成檔名有 _done 的 -->
               <li >
-                <a href="" target="_blank>">
+               
                   <img src="./image/friend_invitation_01.png" alt="邀請一位">
-                </a>
+               
             </li>
               <li >
-                <a href="" target="_blank>">
+              
                   <img src="./image/friend_invitation_02.png" alt="邀請二位">
-                </a>
+               
               </li>
               <li >
                 <a href="#popup-invitefriend" class="popup-btn">
@@ -474,7 +478,7 @@
       <img src="./image/ch_YingZheng.png" alt="裝飾喵" class="float-042 sp-d-none" data-aos="zoom-in-left"
       data-aos-duration="1000" data-aos-delay="400">
       <!-- 裝飾人物 -->
-      <img src="./image/ch_Zijianmiao_sp.png" alt="裝飾人物" class="taipinggongjhu pc-d-none">
+      <img src="./image/ch_YingZhengsp.png" alt="裝飾人物" class="taipinggongjhu pc-d-none">
       <h2><img src="./image/h2_title05.png" alt="遊戲特色" class="title sp-d-none" data-aos="fade-up"
           data-aos-duration="1000">
       </h2>
@@ -585,7 +589,7 @@
             </li>
             <li>
               <div class="item">貓靈贈禮1</div>
-              <div class="serial-number">99f75ecb</div>
+              <div class="serial-number"></div>
               <div class="status-off">尚未選取</div>
             </li>
             <li>
@@ -619,6 +623,34 @@
     </div>
     <!-- END popup 尚未開獎 -->
 
+        <!-- popup 預約成功 -->
+        <div class="popup-wrap" id="popup-sucess">
+          <div class="popup-box transform-out">
+            <div class="pop-body">
+              <div class="content3">
+                
+               
+                <a class="close-btn popup-close" href="#"><img src="./image/btn_close.png" alt="關閉"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END popup 預約成功 -->
+
+                <!-- popup 預約次數不足 -->
+                <div class="popup-wrap" id="popup-notime">
+                  <div class="popup-box transform-out">
+                    <div class="pop-body">
+                      <div class="content_notime">
+                        
+                       
+                        <a class="close-btn popup-close" href="#"><img src="./image/btn_close.png" alt="關閉"></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- END popup 預約次數不足 -->
+
         <!-- popup 邀請好友-->
         <div class="popup-wrap" id="popup-invitefriend">
           <div class="popup-box transform-out">
@@ -639,12 +671,13 @@
                   </div>
                 </div>
               
-        
+             
 
-                <a class="close-btn popup-close" href="#"><img src="./image/btn_close.png" alt="關閉"></a>
+               
               </div>
+              <a class="close-btn3 popup-close" href="#"><img src="./image/btn_close.png" alt="關閉"></a>
             </div>
-
+         
             <div class="black">
               <div class="copy-susess">複製成功</div>
             </div>
@@ -662,10 +695,18 @@
                       <div class="content5">
                         
                         <div class="pop-giftlist">
-                          <img src="./image/card_01.png" class="pop-gift">
-                          <img src="./image/card_01.png" class="pop-gift">
-                          <img src="./image/card_01.png" class="pop-gift">
-                          <img src="./image/card_01.png" class="pop-gift">
+                          <a href=""><img src="./image/card_01.png" class="pop-gift"></a>
+                          <a href=""><img src="./image/card_01.png" class="pop-gift"></a>
+                          <a href=""><img src="./image/card_01.png" class="pop-gift"></a>
+                          <a href=""><img src="./image/card_01.png" class="pop-gift"></a>
+                          <a href=""><img src="./image/card_01.png" class="pop-gift"></a>
+                          <a href=""><img src="./image/card_01.png" class="pop-gift"></a>
+                          <a href=""><img src="./image/card_01.png" class="pop-gift"></a>
+                          <a href=""><img src="./image/card_01.png" class="pop-gift"></a>
+                          <a href=""><img src="./image/card_01.png" class="pop-gift"></a>
+                          <a href=""><img src="./image/card_01.png" class="pop-gift"></a>
+                          <a href=""><img src="./image/card_01.png" class="pop-gift"></a>
+                          <a href=""><img src="./image/card_01.png" class="pop-gift"></a>
                         </div>
 
                         <div class="pop_btlist2">

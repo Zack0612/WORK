@@ -12,6 +12,11 @@ body {
 html {
 	font-size: 5.2083333333vw
 }
+
+.overhidden{
+	overflow: hidden;
+}
+
 @media(max-width: 768px) {
 	html {
 		font-size: 13.0208333333vw;
@@ -189,6 +194,12 @@ input[type=radio] {
 	background-color: #b03423;
 	cursor: pointer
 }
+.null {
+	color: #fff;
+	background-color: #555555;
+	cursor:default;
+}
+
 .nav {
 	position: fixed;
 	z-index: 50;
@@ -199,8 +210,8 @@ input[type=radio] {
 }
 .nav .nav-bg {
 	background: url("../image/nav_bg.png") no-repeat center;
-	background-size: 1.68rem 8.63rem;
-	height: 8.63rem;
+	background-size: 1.68rem 8.2rem;
+	height: 8.2rem;
 	padding: .24rem;
 	padding-top: 1.2rem;
 	-webkit-animation: bounceInDown 1s cubic-bezier(0.1, -1, 0.2, -0.5);
@@ -493,8 +504,11 @@ input[type=radio] {
 @media(max-width: 768px) {
 	.section1 .box2 {
 		margin-top:-5%;
-		gap: .0rem;
+		gap: .4rem;
 		width: 85%
+	}
+	.section1 .step3-box .fb-box{
+       margin-top:5%;
 	}
 }
 .section1 .box2 .step-title03 {
@@ -830,8 +844,8 @@ input[type=radio] {
 }
 @media(max-width: 768px) {
 	.section1 .step2-box .gift04 {
-		transform: scale(1.2);
-		margin-right: -2rem;
+		transform: scale(1);
+		margin-right: -3.5rem;
 		margin-top: -1rem !important;
 		position: relative;
 		z-index: -1
@@ -1385,8 +1399,9 @@ input[type=radio] {
 
 .section5 .taipinggongjhu {
 	position: absolute;
-	top: -1rem;
-	width: 7.68rem
+	top: -1.5rem;
+	width: 6.5rem;
+	right:0;
 }
 .section5 .title04 {
 	width: 2.15rem;
@@ -2022,8 +2037,7 @@ input[type=radio] {
 		transform: rotateY(0deg)
 	}
 }
-ase-in-out;
-}
+
 .menu-icon .line-1 {
 	animation: animate-line-1-rev 0.7s ease-in-out;
 }
@@ -2148,11 +2162,19 @@ ase-in-out;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	background: url("../image/award_bg.png") no-repeat center;
-	background-size: 616px 821px;
-	width: 616px;
-	height: 821px;
+	background-size: 100%;
+	width: 600px;
+	height: 800px;
 	padding: 100px;
 }
+@media (max-width: 1400px) {
+	.pop-body .content2 {
+		width: 550px;
+		height: 750px;
+		padding: 100px;
+	}
+}
+
 @media (max-width: 768px) {
 	.pop-body .content2 {
 		background-size: 105%;
@@ -2245,7 +2267,7 @@ ase-in-out;
 	width: 0.7rem;
 	display: inline-block;
 	position: absolute;
-	top: 0;
+	top: 10%;
 	right: -0.5rem;
 	transform: translate(50%, -50%);
 	transition: 0.5s;
@@ -2502,8 +2524,13 @@ ase-in-out;
     z-index: 3;
     width: 1.5rem;
     height: auto;
-    top: 78%;
-    left: 17%;
+    top: 73%;
+    left: 10%;
+}
+
+.KV-playyt:hover {
+	-webkit-filter: brightness(120%);
+	filter: brightness(120%)
 }
 
 @media (max-width: 768px) {
@@ -2536,7 +2563,7 @@ ase-in-out;
 }
 .section3 h4 span {
     color:#ffdb9c;
-    margin: -0.28rem auto 0.24rem auto;
+    margin: -0.12rem auto 0.24rem auto;
 	font-size:0.4rem;
 	display:block;
 	position:absolute;
@@ -2681,7 +2708,7 @@ ase-in-out;
 	.sec4-card2{
 		position: absolute;
 		z-index: 2;
-		top: 27%;
+		top: 32%;
 		left:6%;
 		width: 40%;
 		height: auto;
@@ -2691,7 +2718,7 @@ ase-in-out;
 		position: absolute;
 		z-index: 3;
 		top: 26%;
-		left:32%;
+		left:33%;
 		width: 33%;
 		height: auto;
 	}
@@ -2699,7 +2726,7 @@ ase-in-out;
 	.sec4-card4{
 		position: absolute;
 		z-index:4;
-	    top: 27%;
+	    top: 32%;
 		left: 54%;
 		width: 41%;
 		height: auto;
@@ -2712,7 +2739,7 @@ ase-in-out;
 		font-size:0.3rem;
 		text-align: center;
 		padding-top: 0%;
-		top:85%;
+		top:92%;
 	}
 }
 
@@ -2790,16 +2817,16 @@ ase-in-out;
 @media(max-width: 768px) {
 	.invite-part{
 		width:70%;
-		margin:17% auto 0;
+		margin:19% auto 0;
 	}
 	
 	.inivte_frame{
 		
 		width:100%;
 		margin:0% auto 0;
-		background-size: 5rem 2.8rem;
+		background-size: 5.4rem 2.8rem;
 		height: 2.8rem;
-		width:5rem;
+		width:5.4rem;
 	}
 	.inivte_con {
 		margin-top: 0.6rem;
@@ -2838,7 +2865,7 @@ ase-in-out;
 		width:60%;
 		height:auto;
 		margin:0 auto;
-		top:90%;
+		top:93%;
 	}
 
 	.float-07 {
@@ -2857,10 +2884,10 @@ ase-in-out;
     left: 50%;
     transform: translate(-50%, -50%);
     background: url(../image/bg_friends.png) no-repeat center;
-    background-size: 616px 821px;
-    width: 616px;
-    height: 821px;
-    padding: 100px;
+    background-size: 100%;
+    width: 500px;
+    height: 750px;
+    padding: 50px;
 }
 
 .pop-body .content4.brightness {
@@ -2893,8 +2920,8 @@ ase-in-out;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90%;
-	max-width:550px;
+    width: 80%;
+	max-width:450px;
 	height:auto;
 }
 
@@ -2914,7 +2941,7 @@ ase-in-out;
 	display:block;
 	width:60%;
 	overflow: hidden;
-	margin-top: 12%;
+	margin-top: 8%;
 	margin-left:auto;
 	margin-right:auto;
 }
@@ -2938,15 +2965,21 @@ ase-in-out;
 .pop-giftlist{
 	display:block;
 	position:relative;
-	width:70%;
+	width:78%;
+	height:50vh;
 	margin:34% auto 0;
-	overflow: hidden;
+	overflow-y: auto;
 }
 .pop-gift{
 	display:block;
 	position:relative;
 	width:50%;
 	float:left;
+	margin-top:-2%;
+}
+
+.popgift-check{
+	-webkit-filter:brightness(.2);
 }
 
 .contentMV{
@@ -2963,12 +2996,12 @@ ase-in-out;
 	.pop-body .content4  {
 		background-size: 100%;
 		width: 7rem;
-		height: 9rem;
+		height: 9.5rem;
 		padding: 1rem 1rem;
 	}
 
 	.pop_btlist{
-		margin-top: 125%;
+		margin-top: 128%;
 	}
 	
 	.pop-body .content5  {
@@ -3021,7 +3054,7 @@ ase-in-out;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-	font-size:0.6rem;
+	font-size:0.5rem;
 	text-align: center;
     color:#fff;
 }
@@ -3118,4 +3151,49 @@ ase-in-out;
 	display:block;
 	width:98%;
 	margin:1% 1%;
+}
+
+
+.close-btn3 {
+	width: .7rem;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 62%;
+	margin-top:-15%;
+	transform: translate(50%, -50%);
+	transition: .5s;
+}
+@media(max-width: 768px) {
+	.close-btn3 {
+		width: 48px;
+		top: 0;
+		left: 39%;
+		margin-top:-66%;
+		transform: translate(50%, -50%)
+	}
+}
+.close-btn3:hover {
+	transform: translate(50%, -50%) rotate(270deg)
+}
+
+.pop-body .content_notime {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url(../image/notime_bg.png) no-repeat center;
+    background-size: 629px 323px;
+    width: 629px;
+    height: 323px;
+    padding: 100px;
+}
+
+@media (max-width: 768px){
+	.pop-body .content_notime  {
+		background-size: 105%;
+		width: 7rem;
+		height: 4em;
+		padding: 1.5rem 1rem;
+	}
 }

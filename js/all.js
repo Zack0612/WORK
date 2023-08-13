@@ -371,6 +371,7 @@ $(document).ready(function () {
     $(".content5").removeClass("brightness");
     $(".cat-gift1").removeClass("none");
     $(".cat-gift2").removeClass("active");
+    $("html").removeClass("overhidden");
   });
 
 
@@ -424,3 +425,15 @@ $(document).ready(function () {
     $(".cat-gift2").toggleClass("active");
     $(".cat-gift1").toggleClass("none");
   });
+
+
+
+
+
+    $(".pop-gift").click(function (e) {
+      e.preventDefault();
+      $(this).toggleClass("popgift-check");
+    });
+
+
+
