@@ -2554,12 +2554,6 @@ input[type=radio] {
 		left:auto;
 		right:7%;
 
-<<<<<<< HEAD
-=======
-		width: 1.5rem;
-		top: 86%;
-		left: 2.5%;
->>>>>>> 735f44c2ca8d96a078b7f73d55769037495e3e24
 	}
 }
 
@@ -3261,18 +3255,13 @@ input[type=radio] {
 	}
 }
 
-<<<<<<< HEAD
 
 
 .pop-body .content_fincard {
-=======
-.pop-body .content-sucess {
->>>>>>> 735f44c2ca8d96a078b7f73d55769037495e3e24
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-<<<<<<< HEAD
     background: url(../image/exchange_bg.png) no-repeat center;
     background-size: 100%;
     width: 460px;
@@ -3304,17 +3293,10 @@ input[type=radio] {
     background-size: 100%;
     width: 616px;
     height: 390px;
-=======
-    background: url(../image/sucess_bg.png) no-repeat center;
-    background-size: 629px 323px;
-    width: 629px;
-    height: 323px;
->>>>>>> 735f44c2ca8d96a078b7f73d55769037495e3e24
     padding: 100px;
 }
 
 @media (max-width: 768px){
-<<<<<<< HEAD
 	.pop-body .content-notice  {
 		background-size: 100%;
 		width: 7rem;
@@ -3322,13 +3304,3 @@ input[type=radio] {
 		padding: 1.5rem 1rem;
 	}
 }
-=======
-	.pop-body .content-sucess  {
-		background-size: 105%;
-		width: 7rem;
-		height: 4em;
-		padding: 1.5rem 1rem;
-	}
-}
-
->>>>>>> 735f44c2ca8d96a078b7f73d55769037495e3e24
