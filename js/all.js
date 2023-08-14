@@ -140,9 +140,17 @@ document.addEventListener("DOMContentLoaded", function () {
         step3.style.display = "none";
         dragContainer.style.display = "none";
 
-        // 修改 .section2 的 margin-bottom 為 13rem
+        // 修改 .section2 的 margin-bottom 為 11.5rem
+        x = $(window).width();
+      if (x  < 780) {
         var section2 = document.querySelector(".section2");
         section2.style.marginBottom = "11.5rem";
+        } else
+        {
+          var section2 = document.querySelector(".section2");
+          section2.style.marginBottom = "7.5rem";
+        }
+
       });
     })(i);
   }
@@ -425,9 +433,6 @@ $(document).ready(function () {
     $(".cat-gift2").toggleClass("active");
     $(".cat-gift1").toggleClass("none");
   });
-
-
-
 
 
     $(".pop-gift").click(function (e) {
