@@ -3200,3 +3200,25 @@ input[type=radio] {
 		padding: 1.5rem 1rem;
 	}
 }
+
+.pop-body .content-sucess {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url(../image/sucess_bg.png) no-repeat center;
+    background-size: 629px 323px;
+    width: 629px;
+    height: 323px;
+    padding: 100px;
+}
+
+@media (max-width: 768px){
+	.pop-body .content-sucess  {
+		background-size: 105%;
+		width: 7rem;
+		height: 4em;
+		padding: 1.5rem 1rem;
+	}
+}
+
