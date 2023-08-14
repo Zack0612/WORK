@@ -484,11 +484,7 @@ input[type=radio] {
 }
 @media(max-width: 768px) {
 	.section1 .step-gift .gift img:nth-child(odd) {
-<<<<<<< HEAD
 		margin-top: -0.5%;
-=======
-		margin-top: 0
->>>>>>> 02a862d2f8a97b99c3c11c7dbeb234093e55ade6
 	}
 }
 .section1 .box1 {
@@ -843,7 +839,6 @@ input[type=radio] {
 	align-items: start
 }
 .section1 .step2-box .gift04 {
-<<<<<<< HEAD
 	width: 3.1rem;
 	height: 2.8rem;
 	margin-left:20%;
@@ -856,18 +851,6 @@ input[type=radio] {
 		position: relative;
 		z-index: -1;
 	  
-=======
-	width: 3.2rem;
-	height: 3rem
-}
-@media(max-width: 768px) {
-	.section1 .step2-box .gift04 {
-		transform: scale(1);
-		margin-right: -3.5rem;
-		margin-top: -1rem !important;
-		position: relative;
-		z-index: -1
->>>>>>> 02a862d2f8a97b99c3c11c7dbeb234093e55ade6
 	}
 }
 .section1 .step2-box .app {
@@ -881,10 +864,7 @@ input[type=radio] {
 	width: 1.7rem
 }
 @media(max-width: 768px) {
-<<<<<<< HEAD
 
-=======
->>>>>>> 02a862d2f8a97b99c3c11c7dbeb234093e55ade6
 	.section1 .step2-box .app img {
 		width: 3rem
 	}
@@ -1829,11 +1809,7 @@ input[type=radio] {
 	border-radius: 8px;
 	text-align: center;
 	background-color: #903d2c;
-<<<<<<< HEAD
 	font-size:0.15rem;
-=======
-	font-size:0.2rem;
->>>>>>> 02a862d2f8a97b99c3c11c7dbeb234093e55ade6
 }
 @media(max-width: 768px) {
 	.pop-body .content2 .note-list2 .status-off {
@@ -1850,11 +1826,7 @@ input[type=radio] {
 	border-radius: 8px;
 	text-align: center;
 	background-color: #e7ce90;
-<<<<<<< HEAD
 	font-size:0.15rem;
-=======
-	font-size:0.2rem;
->>>>>>> 02a862d2f8a97b99c3c11c7dbeb234093e55ade6
 }
 @media(max-width: 768px) {
 	.pop-body .content2 .note-list2 .status-on {
@@ -2577,11 +2549,7 @@ input[type=radio] {
 	.KV-playyt {
 
 		width: 1.5rem;
-<<<<<<< HEAD
 		top: 86%;
-=======
-		top: 90%;
->>>>>>> 02a862d2f8a97b99c3c11c7dbeb234093e55ade6
 		left: 2.5%;
 	}
 }
@@ -2976,11 +2944,7 @@ input[type=radio] {
 	display:block;
 	width:60%;
 	overflow: hidden;
-<<<<<<< HEAD
 	margin-top: 12%;
-=======
-	margin-top: 8%;
->>>>>>> 02a862d2f8a97b99c3c11c7dbeb234093e55ade6
 	margin-left:auto;
 	margin-right:auto;
 }
@@ -3050,11 +3014,7 @@ input[type=radio] {
 		padding: 1rem 1rem;
 	}
 	.pop-giftlist{
-<<<<<<< HEAD
         height:75%;
-=======
-
->>>>>>> 02a862d2f8a97b99c3c11c7dbeb234093e55ade6
 		width:96%;
 		margin:20% auto 0;
 

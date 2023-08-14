@@ -140,7 +140,6 @@ document.addEventListener("DOMContentLoaded", function () {
         step3.style.display = "none";
         dragContainer.style.display = "none";
 
-<<<<<<< HEAD
         // 修改 .section2 的 margin-bottom 為 11.5rem
         x = $(window).width();
       if (x  < 780) {
@@ -152,11 +151,6 @@ document.addEventListener("DOMContentLoaded", function () {
           section2.style.marginBottom = "7.5rem";
         }
 
-=======
-        // 修改 .section2 的 margin-bottom 為 13rem
-        var section2 = document.querySelector(".section2");
-        section2.style.marginBottom = "11.5rem";
->>>>>>> 02a862d2f8a97b99c3c11c7dbeb234093e55ade6
       });
     })(i);
   }
