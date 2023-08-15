@@ -435,9 +435,6 @@ $(document).ready(function () {
   });
 
 
-
-
-
     $(".pop-gift").click(function (e) {
       e.preventDefault();
       $(this).toggleClass("popgift-check");

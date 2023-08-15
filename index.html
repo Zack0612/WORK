@@ -115,7 +115,7 @@
       <li > <a href="#sec3" class="gosec2"><img  class="pane_03" src="./image/pane_03.png"></a></li>
       <li > <a href="#sec4" class="gosec3"><img  class="pane_04" src="./image/pane_04.png"></a></li>
       <li > <a href="#sec5" class="gosec4"><img  class="pane_05" src="./image/pane_05.png"></a></li>
-      <li class="last-pane"> <a href="#popup-notyet"  class="popup-btn"><img  class="pane_06" src="./image/pane_06.png"></a></li>
+      <li class="last-pane"> <a href="#popup-inquiry"  class="popup-btn"><img  class="pane_06" src="./image/pane_06.png"></a></li>
     </ul>
   </section>
 
@@ -132,10 +132,10 @@
         </div>
     <!-- 人物 -->
     <div class="KV-ch">
-      <img src="./image/KV_ch02_sp.png" alt="張良" class="KV-ch03 pc-d-none">
-      <img src="./image/KV_ch02.png" alt="杜甫" class="KV-ch02 sp-d-none" data-aos="zoom-in-up" data-aos-duration="1000">
-      <img src="./image/KV_ch01.png" alt="虞姬" class="KV-ch01 sp-d-none" data-aos="zoom-in-up" data-aos-duration="1000">
-      <img src="./image/KV_ch01_sp.png" alt="虞姬" class="KV-ch01 pc-d-none">
+      <img src="./image/KV_ch02_sp.png" alt="虞姬" class="KV-ch03 pc-d-none">
+      <img src="./image/KV_ch02.png" alt="虞姬" class="KV-ch02 sp-d-none" data-aos="zoom-in-up" data-aos-duration="1000">
+      <img src="./image/KV_ch01.png" alt="花木蘭" class="KV-ch01 sp-d-none" data-aos="zoom-in-up" data-aos-duration="1000">
+      <img src="./image/KV_ch01_sp.png" alt="花木蘭" class="KV-ch01 pc-d-none">
     </div>
   </section>
 
@@ -413,16 +413,16 @@
         data-aos-duration="1000" data-aos-delay="800">
  
         <div class="rollcard">
-            <a href="#popup-award" class="popup-btn">
+            <a href="#popup-overtime" class="popup-btn">
               <img src="./image/pc_card_01.png" alt="" class="sec4-card1 sp-d-none" data-aos="flip-right">
             </a>
-            <a href="#popup-award" class="popup-btn">
+            <a href="#popup-notice" class="popup-btn">
               <img src="./image/pc_card_02.png" alt="" class="sec4-card2" data-aos="flip-right" data-aos-delay="200">
             </a>
             <a href="#popup-notime" class="popup-btn">
               <img src="./image/pc_card_03.png" alt="" class="sec4-card3" data-aos="flip-right" data-aos-delay="400">
             </a>
-            <a href="#popup-award" class="popup-btn">
+            <a href="#popup-overtime" class="popup-btn">
               <img src="./image/pc_card_04.png" alt="" class="sec4-card4" data-aos="flip-right" data-aos-delay="600">
             </a>
             <a href="#popup-award" class="popup-btn">
@@ -433,7 +433,7 @@
               每日登入可獲取次數  <span class="daytime">剩餘次數:2次</span>
             </div>
             
-            <a href="#popup-cardbag" class="bag-btn popup-btn pc-d-none""><img src="./image/btn_cardbackpack.png"></a>
+            <a href="#popup-cardbagfin" class="bag-btn popup-btn pc-d-none""><img src="./image/btn_cardbackpack.png"></a>
 
         </div>
 
@@ -462,7 +462,7 @@
           </div> 
 
           <div class="bag-frame sp-d-none">
-            <a href="#popup-cardbag" class="popup-btn"><img src="./image/btn_cardbackpack.png" alt="" class="bag-btn"></a>
+            <a href="#popup-cardbagfin" class="popup-btn"><img src="./image/btn_cardbackpack.png" alt="" class="bag-btn"></a>
             <span>點擊背包選取獎勵</span>
           </div> 
           
@@ -542,11 +542,15 @@
   <footer class="footer">
     <div class="container">
       <div class="ican">
-        <img src="./image/ican.png" alt="艾肯娛樂" class="ican-logo">
+        <img src="./image/ican.png" alt="艾肯娛樂" class="ican-logo  sp-d-none">
+        <div class="logos pc-d-none">
+          <img src="./image/ican-sp.png" alt="艾肯娛樂" class="ican-logo">
+          <img src="./image/logos.png" alt="網易遊戲" class="logo">
+        </div>
         <div class="all-right">©ican entertainment co.,ltd. All Rights Reserved.
         </div>
       </div>
-      <div class="logos">
+      <div class="logos sp-d-none">
         <img src="./image/logos.png" alt="網易遊戲" class="logo">
       </div>
       <div class="age">
@@ -651,6 +655,34 @@
                 </div>
                 <!-- END popup 預約次數不足 -->
 
+                                <!-- popup 活動已結束 -->
+                                <div class="popup-wrap" id="popup-overtime">
+                                  <div class="popup-box transform-out">
+                                    <div class="pop-body">
+                                      <div class="content_overtime">
+                                        
+                                       
+                                        <a class="close-btn popup-close" href="#"><img src="./image/btn_close.png" alt="關閉"></a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- END popup 活動已結束  -->
+                                
+                 <!-- popup 提醒要先預約 -->
+                <div class="popup-wrap" id="popup-notice">
+                  <div class="popup-box transform-out">
+                    <div class="pop-body">
+                      <div class="content-notice">
+                        
+                       
+                        <a class="close-btn popup-close" href="#"><img src="./image/btn_close.png" alt="關閉"></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- END popup 提醒要先預約 -->
+
         <!-- popup 邀請好友-->
         <div class="popup-wrap" id="popup-invitefriend">
           <div class="popup-box transform-out">
@@ -752,6 +784,55 @@
                 </div>
         <!-- END popup 卡牌背包-->
 
+          <!-- popup 已參加過貓靈 -->
+          <div class="popup-wrap" id="popup-cardbagfin">
+            <div class="popup-box transform-out">
+              <div class="pop-body">
+                <div class="content_fincard">
+                  
+                  <div class="pop-giftlist">
+                    <a href=""><img src="./image/card_01.png" class="pop-gift"></a>
+                    <a href=""><img src="./image/card_01.png" class="pop-gift"></a>
+                    <a href=""><img src="./image/card_01.png" class="pop-gift"></a>
+                    <a href=""><img src="./image/card_01.png" class="pop-gift"></a>
+                    <a href=""><img src="./image/card_01.png" class="pop-gift"></a>
+                    <a href=""><img src="./image/card_01.png" class="pop-gift"></a>
+                    <a href=""><img src="./image/card_01.png" class="pop-gift"></a>
+                    <a href=""><img src="./image/card_01.png" class="pop-gift"></a>
+                    <a href=""><img src="./image/card_01.png" class="pop-gift"></a>
+                    <a href=""><img src="./image/card_01.png" class="pop-gift"></a>
+                    <a href=""><img src="./image/card_01.png" class="pop-gift"></a>
+                    <a href=""><img src="./image/card_01.png" class="pop-gift"></a>
+                  </div>
+                 
+                  <a class="close-btn popup-close" href="#"><img src="./image/btn_close.png" alt="關閉"></a>
+                </div>
+              </div>
+
+              <div class="black2">
+                <div class="cat-gift1">
+                 <h4>【貓靈贈禮】</h4>
+                 <p>最多可選取三項，送出後不可更改.</p>
+                  <div class="catbtlist">
+                    <a href=""> <img class="catbt cat-close" src="./image/cardbag_btn_cancel.png" alt="關閉"> </a>
+                    <a href=""> <img class="catbt cat-send" src="./image/cardbag_btn_sendout.png" alt="關閉"> </a>
+                  </div>
+                </div>
+
+                <div class="cat-gift2">
+                  <p>貓貓已將獎勵送至望川，請至<span style="color:#ffffa0">【獎勵查詢】</span>查看</p>
+                   <div class="catbtlist2">
+                     <a href=""> <img class="catbt2 cat-close" src="./image/cardbag_btn_cancel.png" alt="關閉"> </a>
+                
+                   </div>
+                 </div>
+
+              </div>
+
+
+            </div>
+          </div>
+         <!-- END popup 已參加過貓靈-->      
         
         <!-- popup 抽卡獎勵-->
         <div class="popup-wrap" id="popup-award">
