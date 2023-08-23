@@ -101,7 +101,8 @@ input[type=radio] {
 	justify-content: center;
 	align-items: center;
 	background-color: rgba(129, 6, 24, .5);
-	z-index:999 !important;
+	position: relative;
+	z-index:999 ;
 }
 @media(max-width: 820px) {
 	.header .nav2 {
@@ -124,7 +125,7 @@ input[type=radio] {
 }
 .header .dropdown {
 	position: absolute;
-	z-index: -1;
+	z-index: 51;
 	right: 0;
 	top: 0vh;
 	width: 0vw;
