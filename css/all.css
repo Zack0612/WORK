@@ -125,7 +125,7 @@ input[type=radio] {
 }
 .header .dropdown {
 	position: absolute;
-	z-index: 51;
+	z-index: 900;
 	right: 0;
 	top: 0vh;
 	width: 0vw;
@@ -1632,7 +1632,7 @@ input[type=radio] {
 	width: 30px;
 	height: 30px;
 	cursor: pointer;
-	z-index: 50
+
 }
 .menu-icon .line-1, .menu-icon .line-2, .menu-icon .line-3 {
 	height: 4px;
