@@ -205,6 +205,7 @@ document.addEventListener("DOMContentLoaded", function () {
 $(".menu-icon").bind("click", function () {
   $(this).toggleClass("active");
   $(this).find("div").removeClass("no-animation");
+  $(".section2").toggleClass("zindex5");
 });
 
 $(function () {
