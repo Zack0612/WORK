@@ -930,6 +930,7 @@ input[type=radio] {
 }
 .section2 {
 	position: relative;
+	z-index:5;
 	margin-bottom: 3.5rem
 }
 @media(max-width: 1400px) {
