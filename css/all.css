@@ -1591,7 +1591,9 @@ input[type=radio] {
 }
 @media(max-width: 768px) {
 	.footer .container .ican .ican-logo {
-		width: 3rem
+		width: 46%;
+		float:left;
+		margin:2% 2%;
 	}
 }
 .footer .container .ican .all-right {
@@ -1603,7 +1605,9 @@ input[type=radio] {
 }
 @media(max-width: 768px) {
 	.footer .container .logo {
-		width: 3.5rem
+		width: 46%;
+		float: left;
+		margin:2% 2%;
 	}
 }
 .footer .container .age {
@@ -3304,4 +3308,12 @@ input[type=radio] {
 		height: 5em;
 		padding: 1.5rem 1rem;
 	}
+}
+
+@media (max-width: 768px){
+   .logos {
+	width:100%;
+	display:block;
+	margin:0 auto;
+   }
 }
