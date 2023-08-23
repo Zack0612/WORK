@@ -98,6 +98,7 @@ input[type=radio] {
 	font-size: 24px;
 	padding: .2rem;
 	display: flex;
+	position: relative;
 	justify-content: center;
 	align-items: center;
 	background-color: rgba(129, 6, 24, .5);
@@ -113,7 +114,7 @@ input[type=radio] {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-direction: column
+	flex-direction: column;
 }
 @media(max-width: 1200px) {
 	.header .nav2 .material-symbols-outlined {
@@ -124,7 +125,7 @@ input[type=radio] {
 }
 .header .dropdown {
 	position: absolute;
-	z-index: -1;
+	z-index: 45;
 	right: 0;
 	top: 0vh;
 	width: 0vw;
@@ -1626,7 +1627,7 @@ input[type=radio] {
 	width: 30px;
 	height: 30px;
 	cursor: pointer;
-	z-index: 50
+	z-index: 50;
 }
 .menu-icon .line-1, .menu-icon .line-2, .menu-icon .line-3 {
 	height: 4px;
