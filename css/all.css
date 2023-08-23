@@ -3322,5 +3322,5 @@ input[type=radio] {
 
 .zindex5{
 	position: relative;
-	z-index: 5;
+	z-index: -1;
 }
