@@ -1,445 +1,328 @@
-$(function () {
-  // 顯示gotop
-  $(".anchor").hide(); // 20230210 新增
-  $(window).on("scroll", function (e) {
-    e.preventDefault();
-    if ($(window).scrollTop() >= 50) {
-      $(".anchor").fadeIn(300);
+window.onload = function () {
+
+  // ---------- 進場畫面 ---------- 結束 //
+
+  // ------ 新聞頁面 背景人物右側出現 ------ 開始 //
+  const newRole = document.querySelector(".news_page .news_wrapper .news_role");
+  if (newRole) {
+    setTimeout(() => {
+      newRole.classList.add("active");
+    }, 100);
+  }
+  // ------ 新聞頁面 背景人物右側出現 ------ 結束 //
+
+  // ---------- 手機版選單 ---------- 開始 //
+  const hamburger = document.querySelector(".hamburger");
+  const iconLink = document.querySelector(".icon-link");
+  hamburger.addEventListener("click", function () {
+    if (this.classList.contains("active")) {
+      // close the menu
+      hiddenNav();
     } else {
-      $(".anchor").fadeOut(300);
+      this.classList.add("active");
+      iconLink.style.display = "block";
+      setTimeout(() => {
+        iconLink.style.opacity = "100";
+      }, 100);
     }
   });
 
-  // right nav
-  // go top
-  // 向上捲動
-  $(".goTop").on("click", function (e) {
-    e.preventDefault();
-    $("html,body").animate({ scrollTop: 0 }, 1000);
-  });
+  // 關閉選單
+  const hiddenNav = () => {
+    hamburger.classList.remove("active");
+    iconLink.style.opacity = "0";
+    setTimeout(() => {
+      iconLink.style.display = "none";
+    }, 300);
+  };
+  // ---------- 手機版選單 ---------- 結束 //
 
-  // go reserve
-  // 向上捲動
-  $(".goOrder").on("click", function (e) {
-    e.preventDefault();
-    $("html,body").animate({ scrollTop: $(".section1").offset().top }, 1000);
-  });
-
-  // go reserve
-  // 向上捲動
-  $(".go-reserve2").on("click", function (e) {
-    e.preventDefault();
-    $("html,body").animate({ scrollTop: $(".section1").offset().top }, 1000);
-  });
-
-  // right nav
-  $(".btn-app").hover(
-    function () {
-      $(this).attr("src", "./image/btn_App_Store_hover.png");
-    },
-    function () {
-      $(this).attr("src", "./image/btn_App_Store.png");
+  // ---------- 滾動 ---------- 開始 //
+  let isScrolling = false;
+  window.addEventListener("scroll", () => {
+    // 置頂按鈕 & 底部選單
+    const up = document.querySelector(".up");
+    const bottomNav = document.querySelector(".bottom_nav");
+    const newsBonus = document.querySelector(".news_wrapper");
+    if (window.pageYOffset >= 50) {
+      // up.style.opacity = "100";
+      bottomNav.classList.add("active");
+    } else {
+      // up.style.opacity = "0";
+      bottomNav.classList.remove("active");
     }
-  );
-  $(".btn-google").hover(
-    function () {
-      $(this).attr("src", "./image/btn_Google_Play_hover.png");
-    },
-    function () {
-      $(this).attr("src", "./image/btn_Google_Play.png");
-    }
-  );
-  $(".btn-inquiry").hover(
-    function () {
-      $(this).attr("src", "./image/btn_Inquire_hover.png");
-    },
-    function () {
-      $(this).attr("src", "./image/btn_Inquire.png");
-    }
-  );
-  $(".btn-fb").hover(
-    function () {
-      $(this).attr("src", "./image/btn_FB_hover.png");
-    },
-    function () {
-      $(this).attr("src", "./image/btn_FB.png");
-    }
-  );
-  $(".btn-ig").hover(
-    function () {
-      $(this).attr("src", "./image/btn_IG_hover.png");
-    },
-    function () {
-      $(this).attr("src", "./image/btn_IG.png");
-    }
-  );
-});
-
-// 翻轉禮物
-$(document).ready(function () {
-  $(".gift01").on("mouseenter", function () {
-    $(this).toggleClass("rotateY360");
-  });
-  $(".gift02").on("mouseenter", function () {
-    $(this).toggleClass("rotateY360");
-  });
-  $(".gift03").on("mouseenter", function () {
-    $(this).toggleClass("rotateY360");
-  });
-  $(".gift04").on("mouseenter", function () {
-    $(this).toggleClass("rotateY360");
-  });
-  $(".gift05").on("mouseenter", function () {
-    $(this).toggleClass("rotateY360");
-  });
-  $(".gift06").on("mouseenter", function () {
-    $(this).toggleClass("rotateY360");
-  });
-  $(".gift07").on("mouseenter", function () {
-    $(this).toggleClass("rotateY360");
-  });
-
-
-
-});
-
-// 壁紙的所有點擊事件
-document.addEventListener("DOMContentLoaded", function () {
-  var events = [
-    "event01",
-    "event02",
-    "event03",
-    "event04",
-    "event05",
-    "event06",
-  ];
-
-  var step1 = document.querySelector(".step1");
-  var step2 = document.querySelector(".step2");
-  var step3 = document.querySelector(".step3");
-  var closeWallpaperBtn = document.querySelector(".colse-wallpaper");
-  var openStep2Btn = document.querySelector(".open-step2");
-  var openStep1Btn = document.querySelector(".open-step1");
-  var openStep3Btn = document.querySelector(".open-step3");
-  var dragContainer = document.querySelector("#drag-container");
-  var wallpaperContent = document.querySelector(".wallpaper-content");
-
-  // 點擊事件01
-  for (var i = 0; i < events.length; i++) {
-    (function (eventId) {
-      var event = document.getElementById(events[eventId]);
-      event.addEventListener("click", function (event) {
-        event.preventDefault(); // 阻止預設行為
-        var wallpaperContent = document.querySelector(".wallpaper-content");
-        var eventPapper = document.getElementById(events[eventId] + "-papper");
-
-        wallpaperContent.style.display = "flex";
-        eventPapper.style.display = "block";
-        step1.style.display = "block";
-        step2.style.display = "none";
-        step3.style.display = "none";
-        dragContainer.style.display = "none";
-
-        // 修改 .section2 的 margin-bottom 為 11.5rem
-        x = $(window).width();
-      if (x  < 780) {
-        var section2 = document.querySelector(".section2");
-        section2.style.marginBottom = "11.5rem";
-        } else
-        {
-          var section2 = document.querySelector(".section2");
-          section2.style.marginBottom = "7.5rem";
+    up.addEventListener("click", function () {
+      if (isScrolling) return; // 如正在滾動則不執行動作
+      isScrolling = true; // 將滾動裝太設置為 true
+      scrollToTop();
+      function scrollToTop() {
+        var currentPosition = window.pageYOffset;
+        if (currentPosition > 0) {
+          window.scrollTo(
+            {
+              top: 0,
+              behavior: "smooth",
+            },
+            currentPosition - 150
+          );
+          requestAnimationFrame(scrollToTop);
+        } else {
+          isScrolling = false; // 滾動完成後設置滾動狀態為 false
         }
-
-      });
-    })(i);
-  }
-
-  // 關閉所有事件
-  closeWallpaperBtn.addEventListener("click", function (event) {
-    event.preventDefault(); // 阻止預設行為
-    var wallpaperContent = document.querySelector(".wallpaper-content");
-
-    wallpaperContent.style.display = "none";
-    step1.style.display = "none";
-    step2.style.display = "none";
-    step3.style.display = "none";
-    dragContainer.style.display = "block";
-
-    // 隱藏之前開啟的事件壁紙
-    for (var i = 0; i < events.length; i++) {
-      var eventPapper = document.getElementById(events[i] + "-papper");
-      eventPapper.style.display = "none";
-    }
-    // 修改 .section2 的 margin-bottom 回原來的值 (9rem)
-    var section2 = document.querySelector(".section2");
-    section2.style.marginBottom = "9rem";
-  });
-
-  // 開啟步驟2，關閉步驟1
-  openStep2Btn.addEventListener("click", function (event) {
-    event.preventDefault(); // 阻止預設行為
-    step1.style.display = "none";
-    step2.style.display = "block";
-    step3.style.display = "none";
-  });
-
-  // 開啟步驟1，關閉步驟2
-  openStep1Btn.addEventListener("click", function (event) {
-    event.preventDefault(); // 阻止預設行為
-    step1.style.display = "block";
-    step2.style.display = "none";
-    step3.style.display = "none";
-  });
-
-  // 開啟步驟3，關閉步驟2
-  openStep3Btn.addEventListener("click", function (event) {
-    event.preventDefault(); // 阻止預設行為
-    step1.style.display = "none";
-    step2.style.display = "none";
-    step3.style.display = "block";
-  });
-});
-
-// menu-icon 動畫
-$(".menu-icon").bind("click", function () {
-  $(this).toggleClass("active");
-  $(this).find("div").removeClass("no-animation");
-  $(".section2").toggleClass("zindex5");
-});
-
-$(function () {
-  // ham icon 漢堡選單
-  $(".menu-icon").click(function (e) {
-    e.preventDefault();
-    $(".dropdown").toggleClass("active");
-  });
-
-  $(".dropdown li a").click(function (e) {
-    $(".dropdown").toggleClass("active");
-  });
-
-  // $("body").click(function (e) {
-  //   $(".dropdown").removeClass("active");
-  // });
-});
-
-$("body").click(function (e) {
-  var container = $(".dropdown");
-  var btn = $(".menu-icon");
-  // 判斷點擊的地方不是DIV或按鈕
-  if (
-    !container.is(e.target) &&
-    !container.has(e.target).length &&
-    !btn.is(e.target) &&
-    !btn.has(e.target).length
-  ) {
-    container.removeClass("active");
-    $(".menu-icon").removeClass("active");
-  }
-});
-
-// 抽卡滑入效果
-$(document).ready(function () {
-  $(".sec4-card1").hover(
-    function () {
-      $(".sec4-card2").attr("src", "./image/pc_card_02-off.png");
-      $(".sec4-card3").attr("src", "./image/pc_card_03-off.png");
-      $(".sec4-card4").attr("src", "./image/pc_card_04-off.png");
-      $(".sec4-card5").attr("src", "./image/pc_card_05-off.png");
-    },
-    function () {
-      $(".sec4-card2").attr("src", "./image/pc_card_02.png");
-      $(".sec4-card3").attr("src", "./image/pc_card_03.png");
-      $(".sec4-card4").attr("src", "./image/pc_card_04.png");
-      $(".sec4-card5").attr("src", "./image/pc_card_05.png");
-    }
-  );
-
-  $(".sec4-card2").hover(
-    function () {
-      $(".sec4-card1").attr("src", "./image/pc_card_01-off.png");
-      $(".sec4-card3").attr("src", "./image/pc_card_03-off.png");
-      $(".sec4-card4").attr("src", "./image/pc_card_04-off.png");
-      $(".sec4-card5").attr("src", "./image/pc_card_05-off.png");
-    },
-    function () {
-      $(".sec4-card1").attr("src", "./image/pc_card_01.png");
-      $(".sec4-card3").attr("src", "./image/pc_card_03.png");
-      $(".sec4-card4").attr("src", "./image/pc_card_04.png");
-      $(".sec4-card5").attr("src", "./image/pc_card_05.png");
-    }
-  );
-
-  $(".sec4-card3").hover(
-    function () {
-      $(".sec4-card2").attr("src", "./image/pc_card_02-off.png");
-      $(".sec4-card1").attr("src", "./image/pc_card_01-off.png");
-      $(".sec4-card4").attr("src", "./image/pc_card_04-off.png");
-      $(".sec4-card5").attr("src", "./image/pc_card_05-off.png");
-    },
-    function () {
-      $(".sec4-card2").attr("src", "./image/pc_card_02.png");
-      $(".sec4-card1").attr("src", "./image/pc_card_01.png");
-      $(".sec4-card4").attr("src", "./image/pc_card_04.png");
-      $(".sec4-card5").attr("src", "./image/pc_card_05.png");
-    }
-  );
-  $(".sec4-card4").hover(
-    function () {
-      $(".sec4-card2").attr("src", "./image/pc_card_02-off.png");
-      $(".sec4-card3").attr("src", "./image/pc_card_03-off.png");
-      $(".sec4-card1").attr("src", "./image/pc_card_01-off.png");
-      $(".sec4-card5").attr("src", "./image/pc_card_05-off.png");
-    },
-    function () {
-      $(".sec4-card2").attr("src", "./image/pc_card_02.png");
-      $(".sec4-card3").attr("src", "./image/pc_card_03.png");
-      $(".sec4-card1").attr("src", "./image/pc_card_01.png");
-      $(".sec4-card5").attr("src", "./image/pc_card_05.png");
-    }
-  );
-
-  $(".sec4-card5").hover(
-    function () {
-      $(".sec4-card2").attr("src", "./image/pc_card_02-off.png");
-      $(".sec4-card3").attr("src", "./image/pc_card_03-off.png");
-      $(".sec4-card1").attr("src", "./image/pc_card_01-off.png");
-      $(".sec4-card4").attr("src", "./image/pc_card_04-off.png");
-    },
-    function () {
-      $(".sec4-card2").attr("src", "./image/pc_card_02.png");
-      $(".sec4-card3").attr("src", "./image/pc_card_03.png");
-      $(".sec4-card1").attr("src", "./image/pc_card_01.png");
-      $(".sec4-card4").attr("src", "./image/pc_card_04.png");
-    }
-  );
-
-  $(".pane_01").hover(
-    function () {
-      $(".pane_01").attr("src", "./image/pane_01hover.png");
-    },
-    function () {
-      $(".pane_01").attr("src", "./image/pane_01.png");
-    }
-  );
-
-  $(".pane_02").hover(
-    function () {
-      $(".pane_02").attr("src", "./image/pane_02hover.png");
-    },
-    function () {
-      $(".pane_02").attr("src", "./image/pane_02.png");
-    }
-  );
-  $(".pane_03").hover(
-    function () {
-      $(".pane_03").attr("src", "./image/pane_03hover.png");
-    },
-    function () {
-      $(".pane_03").attr("src", "./image/pane_03.png");
-    }
-  );
-  $(".pane_04").hover(
-    function () {
-      $(".pane_04").attr("src", "./image/pane_04hover.png");
-    },
-    function () {
-      $(".pane_04").attr("src", "./image/pane_04.png");
-    }
-  );
-  $(".pane_05").hover(
-    function () {
-      $(".pane_05").attr("src", "./image/pane_05hover.png");
-    },
-    function () {
-      $(".pane_05").attr("src", "./image/pane_05.png");
-    }
-  );
-  $(".pane_06").hover(
-    function () {
-      $(".pane_06").attr("src", "./image/pane_06hover.png");
-    },
-    function () {
-      $(".pane_06").attr("src", "./image/pane_06.png");
-    }
-  );
-  //MV pop
-  $('.mvpop').click(function () {
-
-    $(".youtube-video").attr('src',
-      'https://www.youtube.com/embed/Sr1sjU0nsJ8'
-    ); 
-  });
-
-  $('.popup-close,.cat-close').click(function () {
-    $(".youtube-video").attr('src', ''); 
-    $(".content4").removeClass("brightness");
-    $(".black").removeClass("active");
-    $(".black2").removeClass("active");
-    $(".content5").removeClass("brightness");
-    $(".cat-gift1").removeClass("none");
-    $(".cat-gift2").removeClass("active");
-    $("html").removeClass("overhidden");
-  });
-
-
-
-  
-
-});
-
-
-
-  // go reserve
- 
-  $(".goindex").on("click", function (e) {
-    e.preventDefault();
-    $("html,body").animate({ scrollTop: $(".main").offset().top }, 1000);
-  });
-  $(".gosec1").on("click", function (e) {
-    e.preventDefault();
-    $("html,body").animate({ scrollTop: $(".section1").offset().top-100 }, 1000);
-  });
-  $(".gosec2").on("click", function (e) {
-    e.preventDefault();
-    $("html,body").animate({ scrollTop: $(".section2").offset().top-100 }, 1000);
-  });
-  $(".gosec3").on("click", function (e) {
-    e.preventDefault();
-    $("html,body").animate({ scrollTop: $(".section3").offset().top-100 }, 1000);
-  });
-  $(".gosec4").on("click", function (e) {
-    e.preventDefault();
-    $("html,body").animate({ scrollTop: $(".section4").offset().top-100 }, 1000);
-  });
-
-
-
-  $(".friend-copy").click(function (e) {
-    e.preventDefault();
-    $(".black").toggleClass("active");
-    $(".content4").toggleClass("brightness");
-  });
-
-  $(".reward-select").click(function (e) {
-    e.preventDefault();
-    $(".black2").toggleClass("active");
-    $(".content5").toggleClass("brightness");
-  });
-
-  
-  $(".cat-send").click(function (e) {
-    e.preventDefault();
-    $(".cat-gift2").toggleClass("active");
-    $(".cat-gift1").toggleClass("none");
-  });
-
-
-    $(".pop-gift").click(function (e) {
-      e.preventDefault();
-      $(this).toggleClass("popgift-check");
+      }
     });
 
+    // 出道福利
+    const bonusDiv = document.querySelector(".bonus");
+    if (bonusDiv) {
+      const bonusDivTop = bonusDiv.getBoundingClientRect().top;
+      // div 頂端進入畫面 1/3
+      if (bonusDivTop <= window.innerHeight / 3) {
+        bonusDiv.classList.add("active");
+      }
+    }
+  });
+  // ---------- 滾動 ---------- 結束 //
+
+  // ---------- 人脈經營 ---------- 開始 //
+  const people = document.querySelectorAll(".people");
+  people.forEach((item) => {
+    item.addEventListener("mouseover", (event) => {
+      // 當前元素
+      const target = event.target;
+      // 父元素
+      const parent = target.parentNode;
+      // 父元素下所有元素
+      const children = parent.children;
+      for (let i = 0; i < children.length; i++) {
+        //  不包含當前 hover 元素
+        if (children[i] !== target) {
+          children[i].classList.add("dark");
+        }
+      }
+    });
+    item.addEventListener("mouseleave", (event) => {
+      const target = event.target;
+      const parent = target.parentNode;
+      const children = parent.children;
+      for (let i = 0; i < children.length; i++) {
+        children[i].classList.remove("dark");
+      }
+    });
+  });
+  // ---------- 人脈經營 ---------- 結束 //
+
+  // --------------- 人脈經營 彈窗 --------------- 開始 //
+  // 人物資料
+  const roleList = [
+    {
+      id: "role1",
+      name: "程廷羽",
+      slogan: "盛光之下，歡迎來到我的舞台。",
+      detail: ["偶像", "星芒集團", "19歲", "183cm"],
+      characteristic: "圈內當仁不讓的演藝天王。影視歌三棲的實力派。",
+    },
+    {
+      id: "role2",
+      name: "唐芯",
+      slogan: "在星空之下閃耀。",
+      detail: ["演員", "風娛傳媒", "20歲", "162cm"],
+      characteristic:
+        "温柔甜美，謙虛低調的女演員。因為拍戲經常一條過，人稱「唐一條」。",
+    },
+    {
+      id: "role3",
+      name: "霍廉",
+      slogan: "時光無法倒流，但從未忘卻。",
+      detail: ["考古學家", "", "28歲", "187cm"],
+      characteristic:
+        "主角的青梅竹馬。從小熱愛畫畫，因為家中的變故一度消失，毅然投身進考古中。",
+    },
+    {
+      id: "role4",
+      name: "顧梵",
+      slogan: "我不喜歡半途而廢。",
+      detail: ["星芒集團總裁", "星芒集團", "28歲", "186cm"],
+      characteristic: "將星芒集團帶上高峰的新銳總裁。容貌端正，性格高冷。",
+    },
+    {
+      id: "role5",
+      name: "沐川",
+      slogan: "我能創造一切，也能毀滅一切。",
+      detail: ["金牌作家", "", "秘密", "178cm"],
+      characteristic:
+        "常年霸榜作家富豪榜榜首的神秘作家，因劇本改編而與主角有了交集。",
+    },
+    {
+      id: "role6",
+      name: "高伊同",
+      slogan: "作為經紀人，除了外型和實力，我更看重你的潛力。",
+      detail: ["經紀人", "個人工作室", "24歲", "178cm"],
+      characteristic: "常年遊走於各大娛樂公司與劇組，帥氣又可靠的經紀人。",
+    },
+    {
+      id: "role7",
+      name: "顧念",
+      slogan: "只要你自身有價值，就會受到無數人的吹捧。",
+      detail: ["星芒集團藝人經紀部總監", "星芒集團", "30歲", "170cm"],
+      characteristic: "星芒集團藝人經紀部總監，實力和手段兼具的女強人。",
+    },
+    {
+      id: "role8",
+      name: "宋清時",
+      slogan: "你也有一段時間沒來了，近來還好嗎？",
+      detail: ["調香師", "", "25歲 ", "188cm"],
+      characteristic:
+        "主角的香薰理療師，行蹤神祕，養了一隻皮毛油亮的貓叫「眠眠」。",
+    },
+  ];
+  const roleButton = document.querySelectorAll(".role_people .people");
+  const rolePopup = document.querySelector(".role_popup");
+  const roleContent = document.querySelector(".role_popup .content");
+  roleButton.forEach((item, index) => {
+    let company = "";
+    if (roleList[index].detail[1] !== "") {
+      company = `<h1><span>所屬公司：</span><span>${roleList[index].detail[1]}</span></h1>`;
+    }
+    const innerHtml = `
+  <div class="photo_wrapper"><div class="photo_border role${
+    index + 1
+  }"><img class="photo"src="images/role${index + 1}_peo.png" alt=""></div></div>
+  <div class="name_bar">${roleList[index].name}</div>
+  <div class="info">
+    <h1 class="name">${roleList[index].name}</h1>
+    <h1 class="slogan role${index + 1}">${roleList[index].slogan}</h1>
+    <div class="detail">
+      <h1><span>身份：</span><span>${
+        roleList[index].detail[0]
+      }</span></h1>${company}<h1><span>年齡：</span><span>${
+      roleList[index].detail[2]
+    }</span></h1>
+      <h1><span>身高：</span><span>${roleList[index].detail[3]}</span></h1>
+    </div>
+    <h1 class="characteristic">${roleList[index].characteristic}</h1>
+  </div>`;
+    item.addEventListener("click", () => {
+      roleContent.innerHTML = innerHtml;
+      rolePopup.style.display = "flex";
+      setTimeout(() => {
+        rolePopup.style.opacity = "100";
+      }, 50);
+    });
+  });
+  // 彈窗關閉 button
+  if (rolePopup) {
+    const rolePopupClose = document.querySelector(".role_popup .popup_close");
+    rolePopupClose.addEventListener("click", () => {
+      rolePopup.style.opacity = "0";
+      setTimeout(() => {
+        rolePopup.style.display = "none";
+      }, 300);
+    });
+    // 點擊遮罩overlay關閉彈窗
+    const roleOverlay = document.querySelector(".role_popup_overlay");
+    roleOverlay.addEventListener("click", () => {
+      rolePopup.style.opacity = "0";
+      setTimeout(() => {
+        rolePopup.style.display = "none";
+      }, 300);
+    });
+  }
+  // --------------- 人脈經營 彈窗 --------------- 結束 //
+
+};
+
+// -------- kv 影片彈窗 -------- 開始 //
+// 彈窗關閉 button
+const kvPlay = document.querySelector(".kv .play_btn");
+const kvVideoPopup = document.querySelector(".kv_video_popup");
+// 點擊輪播開啟彈窗
+if (kvPlay) {
+  kvPlay.addEventListener("click", () => {
+    kvVideoPopup.style.display = "flex";
+    setTimeout(() => {
+      kvVideoPopup.style.opacity = "100";
+    }, 50);
+  });
+  const kvVideoPopupClose = document.querySelector(
+    ".kv_video_popup .popup_close"
+  );
+  kvVideoPopupClose.addEventListener("click", () => {
+    closeKvVideo();
+    kvVideoPopup.style.opacity = "0";
+    setTimeout(() => {
+      kvVideoPopup.style.display = "none";
+    }, 300);
+  });
+  // 點擊遮罩overlay關閉彈窗
+  const kvVideoPopupOverlay = document.querySelector(
+    ".kv_video_popup .popup_overlay"
+  );
+  kvVideoPopupOverlay.addEventListener("click", () => {
+    closeKvVideo();
+    kvVideoPopup.style.opacity = "0";
+    setTimeout(() => {
+      kvVideoPopup.style.display = "none";
+    }, 300);
+  });
+}
+// 關閉影片
+const closeKvVideo = () => {
+  let currentVideoId = "kv_video1";
+  let iframe = document.querySelector(`iframe#${currentVideoId}`).contentWindow;
+  iframe.postMessage('{"event":"command","func":"pauseVideo","args":""}', "*");
+};
+// -------- kv 影片彈窗 -------- 結束 //
+
+// -------- 視聽劇院 點擊輪播開啟彈窗 -------- 開始 //
+// 彈窗關閉 button
+const videoPopup = document.querySelector(".video_popup");
+// 點擊輪播開啟彈窗
+const openVideoPopup = () => {
+  videoPopup.style.display = "flex";
+  setTimeout(() => {
+    videoPopup.style.opacity = "100";
+  }, 50);
+};
+const videoPopupClose = document.querySelector(".video_popup .popup_close");
+if (videoPopupClose) {
+  videoPopupClose.addEventListener("click", () => {
+    closeVideo();
+    videoPopup.style.opacity = "0";
+    setTimeout(() => {
+      videoPopup.style.display = "none";
+    }, 300);
+  });
+  // 點擊遮罩overlay關閉彈窗
+  const videoPopupOverlay = document.querySelector(
+    ".video_popup .popup_overlay"
+  );
+  videoPopupOverlay.addEventListener("click", () => {
+    closeVideo();
+    videoPopup.style.opacity = "0";
+    setTimeout(() => {
+      videoPopup.style.display = "none";
+    }, 300);
+  });
+}
+// 關閉影片
+const closeVideo = () => {
+  let currentVideoId = "video1";
+  let iframe = document.querySelector(`iframe#${currentVideoId}`).contentWindow;
+  iframe.postMessage('{"event":"command","func":"pauseVideo","args":""}', "*");
+};
+// -------- 視聽劇院 點擊輪播開啟彈窗 -------- 結束 //
 
 
+// const avatar_swiper = document.querySelector('.avatar_swiper .swiper-wrapper');
+//   console.log('avatar_swiper', avatar_swiper);
+//   let html = '';
+//   for (let i = 2; i <= 104; i++) {
+//     let imageName; if (i < 10) { imageName = '00' + i; } else if (i < 100) {
+//       imageName = '0' +
+//       i;
+//     } else { imageName = i.toString(); } html += `<div class="swiper-slide">
+// <img src="img/character/${imageName}.png" alt="">
+// </div>`;
+//   }
+//   avatar_swiper.innerHTML = html;
