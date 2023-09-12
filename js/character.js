@@ -1122,9 +1122,29 @@ menuSwiper = new Swiper(".menu_swiper", {
       // 將屬性設定為 "全"
       setAttributeToAll();
       updateAvatarSlides(index);
+      // updateSpecialSlideSizes(this);
     },
+    // init: function () {
+    //   updateSpecialSlideSizes(this);
+    // },
   },
 });
+
+function updateSpecialSlideSizes(swiper) {
+  // 首先，移除所有slides上的 'first-visible-slide' 和 'last-visible-slide' 类
+  Array.from(swiper.slides).forEach(slide => {
+    slide.classList.remove('first-visible-slide');
+    slide.classList.remove('last-visible-slide');
+  });
+
+  // 然后，为当前可见的第一个和最后一个slide添加相应的类
+  const firstVisibleSlide = swiper.slides[swiper.activeIndex];
+  const lastVisibleSlide = swiper.slides[swiper.activeIndex + swiper.params.slidesPerView - 1];
+
+  if (firstVisibleSlide) firstVisibleSlide.classList.add('first-visible-slide');
+  if (lastVisibleSlide) lastVisibleSlide.classList.add('last-visible-slide');
+}
+
 
 function setAttributeToAll() {
   const types = document.querySelectorAll(".type");
@@ -1206,13 +1226,10 @@ document
         showRoleImg.setAttribute("data-id", match[1]);
         showRoleImg.classList.add("fade-out");
 
-        var newImage = new Image();
-        newImage.src = "img/character/" + match[1] + ".png";
-        
-        newImage.onload = function() { // When the new image has loaded
-            showRoleImg.src = newImage.src; // Change the src of showRoleImg to the new image's src
-            showRoleImg.classList.remove('fade-out'); // Fade in the image
-        }
+        setTimeout(function () {
+          showRoleImg.src = "img/character/" + match[1] + ".png";
+          showRoleImg.classList.remove("fade-out");
+        }, 500);
       }
     }
   });
@@ -1238,7 +1255,7 @@ document
     if (e.target.tagName === "IMG" && e.target.closest(".avatar-slide")) {
       // 確保點擊的是 .avatar-slide 下的 img
       const srcFilename = e.target.src.split("/").pop().split("_")[0]; // 從 src 屬性中提取檔名的 "0xx" 部分
-      chSpeakerElement.classList.remove('active');
+      chSpeakerElement.classList.remove("active");
       // 尋找匹配的角色數據
       let matchedCharacter = null;
       for (let dynasty of characterList) {
