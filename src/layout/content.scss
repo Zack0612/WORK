@@ -1,0 +1,697 @@
+.content {
+    @apply relative mx-auto;
+    right: 0;
+    left: 0;
+    width: 62vw;
+
+    & .title {
+        @apply mx-auto;
+        width: 62%;
+        margin-top: 1.8vw;
+        margin-bottom: 1.2vw;
+    }
+
+    & .deposit {
+        @apply mx-auto w-1/2;
+        margin-bottom: 1.5vw;
+
+        & img {
+            width: 22.5%;
+        }
+    }
+
+    & .member {
+        @apply mx-auto w-1/2;
+        margin-bottom: 1.5vw;
+
+        & img {
+            width: 22.5%;
+        }
+    }
+
+    & .list {
+        @apply mx-auto;
+        width: 58%;
+        padding-left: .2vw;
+
+        & .bones_list {
+            @apply p-0;
+            background: url("/img/VIP_bones_list.png") no-repeat;
+            background-size: 100% auto;
+            height: 44vw;
+                filter: drop-shadow(0 1vw 1vw rgba(0, 0, 0, 0.3)) drop-shadow(0 1vw 1vw rgba(0, 0, 0, 0.06));
+        }
+
+        & h3 {
+            padding: 0 .8vw 0 2vw;
+            font-size: .76vw;
+            margin-bottom: .8vw;
+        }
+
+        & a {
+            & .back {
+                @apply ml-auto z-10;
+                margin-bottom: 2vw;
+                color: #0000;
+                background: url("/img/VIP_bones_btn_back_off.png") no-repeat;
+                background-size: 100% auto;
+                width: 15%;
+                height: 5vw;
+            }
+        }
+    }
+}
+
+.content_record {
+    @apply relative mx-auto;
+    right: 0;
+    left: 0;
+    width: 62vw;
+
+    & .title {
+        @apply mx-auto;
+        width: 62%;
+        margin-top: 1.8vw;
+        margin-bottom: 1.2vw;
+    }
+
+    & .list {
+        @apply mx-auto;
+        width: 62%;
+        padding-left: .2vw;
+
+        & .record_list {
+            @apply p-0 relative;
+            // background: url("/img/VIP_record_list.png") no-repeat;
+            background-size: 100% auto;
+            height: 55.7vw;
+            margin-top: 3vw;
+
+            & .text_list {
+                @apply mx-auto drop-shadow;
+                text-align: center;
+                width: 98%;
+                height: 98%;
+                filter: drop-shadow(0 1vw 2vw rgba(0, 0, 0, 0.7)) drop-shadow(0 1vw 1vw rgba(0, 0, 0, 0.06));
+
+                & tr {
+                    & th {
+                        height: 6.4vw;
+
+                        &:nth-child(1) {
+                            width: 32%;
+                        }
+
+                        &:nth-child(2) {
+                            width: 22%;
+                        }
+
+                        &:nth-child(4) {
+                            border-top-right-radius: 15%;
+                        }
+
+                        &:nth-child(5) {
+                            @apply hidden;
+                        }
+                    }
+
+                    & td {
+                        font-size: 1vw;
+                        align-items: center;
+
+                        &:not(:nth-child(3)) {
+                            color: #f7d4af;
+                        }
+
+                        &:nth-child(5) {
+                            @apply hidden;
+                        }
+
+
+                    }
+
+                    &:last-child {
+                        & td:first-child {
+                            position: relative;
+                            z-index: 1;
+
+                            &:after {
+                                content: "";
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                width: 2vw;
+                                height: 2vw;
+                                background-color: #2e2e3c;
+                                border-radius: 0 0 0 100%;
+                                z-index: -1;
+                            }
+
+                            &:before {
+                                content: "";
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                width: 2vw;
+                                height: 2vw;
+                                background-color: #0009;
+                                z-index: -1;
+                            }
+                        }
+                    }
+
+                    &:nth-child(odd) {
+                        background-color: #2e2e3c;
+                    }
+
+                    &:nth-child(even) {
+                        background-color: #23232f;
+                    }
+                }
+            }
+        }
+
+        & a {
+            & .back {
+                @apply relative ml-auto z-10;
+                margin: -2vw 1.5vw 2vw auto;
+                color: #0000;
+                background: url("/img/VIP_activity_btn_off.png") no-repeat;
+                background-size: 100% auto;
+                width: 20%;
+                height: 5vw;
+
+                &:hover {
+                    background: url("/img/VIP_activity_btn_on.png") no-repeat;
+                    background-size: 100% auto;
+                }
+            }
+        }
+    }
+}
+
+.content_activity {
+    @apply relative mx-auto;
+    right: 0;
+    left: 0;
+    width: 62vw;
+
+    & .title {
+        @apply mx-auto;
+        width: 62%;
+        margin-top: 2.5vw;
+        margin-bottom: 2.5vw;
+    }
+
+    & .list {
+        @apply mx-auto;
+        width: 62%;
+        padding-left: .2vw;
+
+        & .activity_list {
+            @apply p-0 relative;
+
+            & .activity_card {
+                @apply my-10 flex justify-center;
+                background: url("/img/VIP_activity_list_bg.png") no-repeat;
+                background-size: 100% auto;
+                height: 10.7vw;
+                filter: drop-shadow(0 1vw 1vw rgba(0, 0, 0, 0.7)) drop-shadow(0 1vw 1vw rgba(0, 0, 0, 0.06));
+
+                & .img {
+                    @apply my-auto;
+                    margin-right: 5%;
+                    width: 42.5%;
+
+                    & img {
+                        @apply w-full;
+                    }
+                }
+
+                & .text {
+                    @apply my-auto px-5;
+                    width: 42.5%;
+                    text-align: center;
+                    font-size: 1.3vw;
+
+                    & h5 {
+                        color: #f7d4af;
+                    }
+                }
+            }
+
+            & .comingsoon {
+                @apply my-10;
+                background: url("/img/VIP_activity_comingsoon.png") no-repeat;
+                background-size: 100% auto;
+                height: 10.7vw;
+            }
+
+        }
+
+        & a {
+            & .back {
+                @apply relative ml-auto z-10;
+                margin: -1vw 1.5vw 2vw auto;
+                color: #0000;
+                background: url("/img/VIP_activity_btn_off.png") no-repeat;
+                background-size: 100% auto;
+                width: 20%;
+                height: 5vw;
+
+                &:hover {
+                    background: url("/img/VIP_activity_btn_on.png") no-repeat;
+                    background-size: 100% auto;
+                }
+            }
+        }
+    }
+}
+
+.content_gift {
+    @apply relative mx-auto h-full;
+    right: 0;
+    left: 0;
+    width: 42vw;
+
+    // swiper
+    .swiper {
+        @apply overflow-hidden relative;
+        width: 100%;
+        height: 40vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .swiper-slide {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .mySwiper2 {
+        height: 30vw;
+        width: 40vw;
+        margin: -2vw auto;
+
+        & img {
+            filter: drop-shadow(0 1vw 1vw rgba(0, 0, 0, 0.3)) drop-shadow(0 1vw 1vw rgba(0, 0, 0, 0.06));
+        }
+    }
+
+    .swiper-pagination {
+        @apply hidden;
+    }
+
+    .mySwiper {
+        height: 9vw;
+        margin-top: 3vw;
+        box-sizing: border-box;
+    }
+
+    .mySwiper .swiper-slide {
+        width: 100%;
+        height: 100%;
+        opacity: 0.4;
+    }
+
+    .mySwiper .swiper-slide-thumb-active {
+        opacity: 1;
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 73%;
+        object-fit: cover;
+    }
+
+    & .swiper-pagination {
+        @apply absolute left-0 right-0 mx-auto hidden;
+        top: 21.2vw;
+
+        & .swiper-pagination-bullet {
+            @apply transition-all duration-500 opacity-100;
+            width: 1vw;
+            height: 1vw;
+            margin: 0 0.2vw;
+            background-color: #343547;
+
+            &.swiper-pagination-bullet-active {
+                background: #8b8ba5;
+            }
+
+            // &:hover {
+            //   background: url("/images/swiper_list_light.png") no-repeat;
+            //   background-size: 100% auto;
+            // }
+        }
+    }
+
+    & .title {
+        @apply mx-auto;
+        width: 95%;
+        margin-top: -5.5vw;
+        margin-bottom: 2.5vw;
+    }
+
+    & .list {
+        @apply mx-auto w-full;
+
+        & .gift_list {
+            @apply flex m-0 flex-col;
+
+            & .card_list {
+                @apply flex justify-between m-0 p-3;
+                & .card{
+                    cursor: pointer;
+                    &:hover{
+                        filter: brightness(1.5);
+                    }
+                }
+            }
+
+
+        }
+
+        & a {
+            & .back {
+                @apply relative ml-auto z-10;
+                margin: -1vw 1.5vw 2vw auto;
+                color: #0000;
+                background: url("/img/VIP_activity_btn_off.png") no-repeat;
+                background-size: 100% auto;
+                width: 20%;
+                height: 5vw;
+
+                &:hover {
+                    background: url("/img/VIP_activity_btn_on.png") no-repeat;
+                    background-size: 100% auto;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        @apply w-full m-0;
+
+        & .title {
+            @apply w-full;
+            margin-top: 5vw;
+        }
+
+        & .deposit {
+            width: 86%;
+            font-size: 3.3vw;
+        }
+
+        & .member {
+            width: 86%;
+            font-size: 3.3vw;
+        }
+
+        & .list {
+            @apply mx-auto w-full;
+
+            // line-height: 3.5vw;
+            & .bones_list {
+                @apply w-full;
+                background: url("/img/SP-VIP_bones_list.png") no-repeat;
+                background-size: 100% auto;
+                height: 135vw;
+            }
+
+            & h3 {
+                @apply mx-auto;
+                width: 86%;
+                font-size: 2vw;
+                padding-right: 1.2vw;
+            }
+
+            & a {
+                & .back {
+                    margin-bottom: 4vw;
+                    margin-right: 8vw;
+                    height: 8vw;
+                }
+            }
+        }
+    }
+
+    .content_record {
+        @apply w-full;
+
+        & .title {
+            @apply w-full;
+            margin-top: 5vw;
+        }
+
+        & .list {
+            @apply mx-auto w-full;
+            margin-top: 8vw;
+
+            & .record_list {
+                @apply p-0 relative;
+                background-size: 100% auto;
+                height: 275vw;
+                margin-top: 3vw;
+
+                & .text_list {
+                    @apply mx-auto;
+                    text-align: center;
+                    width: 90%;
+                    height: 98%;
+
+                    & tr {
+                        & th {
+                            padding: 3vw 0;
+
+                            &:nth-child(1) {
+                                width: 40%;
+                            }
+
+                            &:nth-child(2) {
+                                width: 30%;
+                            }
+
+                            &:nth-child(3) {
+                                @apply hidden;
+                            }
+
+                            &:nth-child(4) {
+                                @apply hidden;
+                            }
+
+                            &:nth-child(5) {
+                                @apply table-cell;
+                                position: relative;
+                                z-index: 1;
+
+                                &:after {
+                                    content: "";
+                                    position: absolute;
+                                    top: 0;
+                                    right: 0;
+                                    width: 2vw;
+                                    height: 2vw;
+                                    background-color: #2e2e3c;
+                                    border-radius: 0 100% 0 0;
+                                    z-index: -1;
+                                }
+
+                                &:before {
+                                    content: "";
+                                    position: absolute;
+                                    top: 0;
+                                    right: 0;
+                                    width: 2vw;
+                                    height: 2vw;
+                                    background-color: #1b1b25;
+                                    z-index: -1;
+                                }
+                            }
+                        }
+
+                        & td {
+                            font-size: 3.5vw;
+                            padding: 1.5vw 0;
+
+                            // color: #f7d4af;
+                            & span {
+                                color: rgba(107, 114, 128, var(--tw-text-opacity));
+                            }
+
+                            &:nth-child(3) {
+                                @apply hidden;
+                            }
+
+                            &:nth-child(4) {
+                                @apply hidden;
+                            }
+
+                            &:nth-child(5) {
+                                @apply table-cell;
+                            }
+                        }
+
+                    }
+
+                    &:nth-child(1) {
+                        height: 17.5vw;
+                    }
+                }
+            }
+
+            & a {
+                & .back {
+                    @apply relative mx-auto z-10;
+                    margin-top: -3vw;
+                    margin-bottom: 15vw;
+                    background: url("/img/SP-VIP_activity_btn_off.png") no-repeat;
+                    background-size: 100% auto;
+                    width: 60%;
+                    height: 10vw;
+
+                    &:hover {
+                        background: url("/img/SP-VIP_activity_btn_on.png") no-repeat;
+                        background-size: 100% auto;
+                    }
+                }
+            }
+        }
+    }
+
+    .content_activity {
+        @apply w-full;
+
+        & .title {
+            @apply w-full;
+            margin-top: 5vw;
+        }
+
+        & .list {
+            @apply mx-auto w-full;
+            margin-top: 8vw;
+
+            & .activity_list {
+                @apply p-0 relative;
+                background-size: 100% auto;
+                height: 220vw;
+                margin-top: 3vw;
+
+                & .activity_card {
+                    @apply my-10 flex flex-col text-center;
+                    background: url("/img/SP-VIP_activity_list_bg.png") no-repeat;
+                    background-size: 100% auto;
+                    height: 50vw;
+
+                    & .img {
+                        @apply my-2 mx-auto w-3/4;
+                        margin-bottom: 0;
+                        & img {
+                            @apply w-full;
+                            margin-top: 3vw;
+                        }
+                    }
+
+                    & .text {
+                        @apply my-5 mx-auto w-3/4 flex justify-evenly align-middle;
+                        font-size: 2.8vw;
+
+                        & h5 {
+                            @apply flex my-auto justify-center;
+                            width: 30%;
+                        }
+
+                        & span {
+                            @apply flex my-auto justify-center text-left;
+                            width: 60%;
+                        }
+                    }
+                }
+
+                & .comingsoon {
+                    @apply my-10;
+                    background: url("/img/SP-VIP_activity_comingsoon.png") no-repeat;
+                    background-size: 100% auto;
+                    height: 50vw;
+                }
+            }
+
+            & a {
+                & .back {
+                    @apply relative mx-auto z-10;
+                    margin-top: -3vw;
+                    margin-bottom: 15vw;
+                    background: url("/img/SP-VIP_activity_btn_off.png") no-repeat;
+                    background-size: 100% auto;
+                    width: 60%;
+                    height: 10vw;
+
+                    &:hover {
+                        background: url("/img/SP-VIP_activity_btn_on.png") no-repeat;
+                        background-size: 100% auto;
+                    }
+                }
+            }
+        }
+    }
+
+    .content_gift {
+        @apply w-full;
+
+        & .swiper {
+            height: 83vw;
+
+            & .mySwiper2 {
+                @apply mb-0 mx-auto;
+                width: 90vw;
+                height: 50vw;
+                margin-top: 8vw;
+            }
+
+            & .mySwiper {
+                width: 90vw;
+                height: 20vw;
+            }
+
+            & .swiper-pagination {
+                @apply block w-full;
+                top: 27vw;
+
+                & .swiper-pagination-bullet {
+                    width: 2vw;
+                    height: 2vw;
+                    margin: 0 1.5vw;
+                }
+            }
+
+            & .swiper-slide img {
+                height: 100%;
+            }
+        }
+
+        & .title {
+            @apply w-full;
+            margin-top: 5vw;
+        }
+
+        & .list {
+            @apply mx-auto w-full;
+            margin-top: 8vw;
+
+            & .gift_list {
+                @apply p-0 relative;
+                height: 100vw;
+                margin-top: 3vw;
+
+                & .card_list {
+                    @apply flex justify-between mx-auto p-3;
+                    width: 95%;
+                }
+
+            }
+        }
+    }
+}

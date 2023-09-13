@@ -1,0 +1,20 @@
+& .kv {
+    @apply relative;
+
+    & .title {
+        // @apply absolute mx-auto;
+        width: 40vw;
+        margin:  12vw 0 6vw 0;
+    }
+}
+
+@media (max-width: 768px) {
+    & .kv {
+        margin-bottom: 18vw;
+        & .title{
+            @apply m-0;
+            width: 85vw;
+            margin-top: 32vw;
+        }
+    }
+}

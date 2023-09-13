@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700;800&display=swap');
+@import "./layout/base.scss";
+@import "./layout/main.scss";
+@import "./layout/header.scss";
+@import "./layout/footer.scss";
+@import "./layout/kv.scss";
+@import "./layout/nav.scss";
+@import "./layout/content.scss";
+@import "./layout/popup.scss";

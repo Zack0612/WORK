@@ -1,0 +1,81 @@
+footer {
+    @apply hidden;
+}
+
+@media (max-width: 768px) {
+    footer {
+        @apply w-full mx-auto block;
+
+        & .sp_login {
+            @apply flex justify-evenly;
+            background: url("/img/SP_nav_bg.png") no-repeat;
+            background-size: 100% auto;
+            background-color: #1b1b25;
+            height: 19vw;
+            margin-bottom: 0;
+
+            & a {
+                @apply mx-3;
+                margin-top: 10vw;
+                font-size: 3.2vw;
+
+                &:hover {
+                    color: #f7d4af;
+                }
+            }
+
+            & .active {
+                color: #f7d4af;
+            }
+
+            & .img {
+                background: url("/img/SP_nav_login.png") no-repeat;
+                background-size: 100% auto;
+                text-align: center;
+                margin-bottom: 0;
+                width: 18vw;
+                & .user-img{
+                    // @apply my-auto;
+                    font-size: 2.5vw;
+                    margin-top: 2.5vw;
+                    color: #0000;
+                }
+                & h6{
+                    // @apply my-auto;
+                    color: #000;
+                    font-size: 2.5vw;
+                }
+            }
+        }
+
+        & .sp_unlogin {
+            @apply flex justify-between;
+            background: url("/img/SP_nav_bg.png") no-repeat;
+            background-size: 100% auto;
+            background-color: #1b1b25;
+            height: 19vw;
+            margin-bottom: 0;
+
+            & a {
+                @apply mx-3;
+                margin-top: 10vw;
+                font-size: 3.2vw;
+
+                &:hover {
+                    color: #f7d4af;
+                }
+            }
+
+            & .active {
+                color: #f7d4af;
+            }
+
+            & .img {
+                background: url("/img/SP_nav_unlogin.png") no-repeat;
+                background-size: 100% auto;
+                margin-bottom: 0;
+                width: 18vw;
+            }
+        }
+    }
+}
