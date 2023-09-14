@@ -1,6 +1,6 @@
 .main {
     @apply relative w-full h-full flex flex-col items-center m-auto overflow-hidden;
-    background: url("/img/PC_bg_01.jpg") no-repeat;
+    background: url("../img/PC_bg_01.jpg") no-repeat;
     background-size: 100% auto;
     background-color: #1b1b25;
 }
@@ -8,7 +8,7 @@
 
 @media (max-width: 768px) {
     .main {
-        background: url("/img/SP_bg_01.jpg") no-repeat;
+        background: url("../img/SP_bg_01.jpg") no-repeat;
         background-size: 100% auto;
         background-color: #1b1b25;
         //   margin-top: -78vw;

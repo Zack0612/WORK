@@ -25,7 +25,7 @@ body{
   background-color: rgba(107, 114, 128, var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgba(107, 114, 128, var(--tw-text-opacity));
-  background: #ffffff;
+  background: #1b1b25;
 }
 
 .wrapper{
@@ -35,7 +35,7 @@ body{
   width: 100%;
   flex-direction: column;
   justify-content: center;
-  background: #ffffff;
+  background: #1b1b25;
 }
 
 a,
@@ -145,14 +145,14 @@ button{
   flex-direction: column;
   align-items: center;
   overflow: hidden;
-  background: url("/img/PC_bg_01.jpg") no-repeat;
+  background: url("../img/PC_bg_01.jpg") no-repeat;
   background-size: 100% auto;
   background-color: #1b1b25;
 }
 
 @media (max-width: 768px) {
   .main {
-    background: url("/img/SP_bg_01.jpg") no-repeat;
+    background: url("../img/SP_bg_01.jpg") no-repeat;
     background-size: 100% auto;
     background-color: #1b1b25;
     /*   margin-top: -78vw; */
@@ -174,25 +174,40 @@ footer{
 
 @media (max-width: 768px) {
   footer{
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+    position: sticky;
+    z-index: 30;
+    margin: 0px;
+    display: flex;
     width: 100%;
+    left: 0;
+    bottom: 0;
+    background: url("../img/SP_nav_bg.png") no-repeat;
+    background-size: 100% auto;
+  }
+
+  footer:before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3vw;
+    background-color: #131320;
   }
 
   footer .sp_login{
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
     display: flex;
+    width: 100%;
     justify-content: space-evenly;
-    background: url("/img/SP_nav_bg.png") no-repeat;
-    background-size: 100% auto;
-    background-color: #1b1b25;
-    height: 19vw;
-    margin-bottom: 0;
+    height: 20vw;
   }
 
   footer .sp_login a{
-    margin-left: 0.75rem;
-    margin-right: 0.75rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
     margin-top: 10vw;
     font-size: 3.2vw;
   }
@@ -201,44 +216,72 @@ footer{
     color: #f7d4af;
   }
 
+  footer .sp_login span::after{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10vw;
+    content: "";
+    display: flex;
+    width: 1px;
+    height: 4vw;
+    background-color: #6e6e6e;
+  }
+
   footer .sp_login .active {
     color: #f7d4af;
   }
 
   footer .sp_login .img {
-    background: url("/img/SP_nav_login.png") no-repeat;
+    /* @apply relative; */
+    background: url("../img/SP_nav_login.png") no-repeat;
     background-size: 100% auto;
     text-align: center;
-    margin-bottom: 0;
-    width: 18vw;
+    margin-top: -4.5vw;
+    width: 23vw;
   }
 
   footer .sp_login .img .user-img{
-    /* @apply my-auto; */
+    margin: 0px;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
     font-size: 2.5vw;
-    margin-top: 2.5vw;
+  }
+
+  footer .sp_login .img .user-img h5 {
     color: rgba(0,0,0,0);
   }
 
-  footer .sp_login .img h6{
-    /* @apply my-auto; */
+  footer .sp_login .img .user-img h6{
+    margin-left: auto;
+    margin-right: auto;
     color: #000;
-    font-size: 2.5vw;
+  }
+
+  footer .sp_login .img .user-img h6:nth-child(1){
+    margin-top: 1.5vw;
   }
 
   footer .sp_unlogin{
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
     display: flex;
+    width: 100%;
     justify-content: space-between;
-    background: url("/img/SP_nav_bg.png") no-repeat;
+    background: url("../img/SP_nav_bg.png") no-repeat;
     background-size: 100% auto;
     background-color: #1b1b25;
-    height: 19vw;
+    height: 20vw;
     margin-bottom: 0;
   }
 
   footer .sp_unlogin a{
-    margin-left: 0.75rem;
-    margin-right: 0.75rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
     margin-top: 10vw;
     font-size: 3.2vw;
   }
@@ -247,15 +290,26 @@ footer{
     color: #f7d4af;
   }
 
+  footer .sp_unlogin span::after{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10vw;
+    content: "";
+    display: flex;
+    width: 1px;
+    height: 4vw;
+    background-color: #6e6e6e;
+  }
+
   footer .sp_unlogin .active {
     color: #f7d4af;
   }
 
   footer .sp_unlogin .img {
-    background: url("/img/SP_nav_unlogin.png") no-repeat;
+    background: url("../img/SP_nav_unlogin.png") no-repeat;
     background-size: 100% auto;
-    margin-bottom: 0;
-    width: 18vw;
+    margin-top: -4.5vw;
+    width: 23vw;
   }
 }
 
@@ -291,14 +345,14 @@ footer{
 
 .nav .login{
   position: relative;
-  background: url("/img/nav_login.png") no-repeat;
+  background: url("../img/nav_login.png") no-repeat;
   background-size: 100% auto;
   width: 15vw;
   height: 50vw;
 }
 
-.nav .login :nth-child(1){
-  background: url("/img/nav_logout.png") no-repeat;
+.nav .login :nth-child(1) {
+  background: url("../img/nav_logout.png") no-repeat;
   background-size: 100% auto;
   height: 2.5vw;
   width: 4vw;
@@ -317,43 +371,43 @@ footer{
   right: auto;
 }
 
-.nav .login :nth-child(2){
+.nav .login :nth-child(2) {
   font-size: 1.5vw;
   top: 10vw;
   left: 3.8vw;
 }
 
-.nav .login :nth-child(3){
+.nav .login :nth-child(3) {
   font-size: 1.25vw;
   top: 12.5vw;
   left: 5.3vw;
 }
 
-.nav .login :nth-child(4){
+.nav .login :nth-child(4) {
   font-size: 0.8vw;
   top: 14vw;
   left: 4.3vw;
 }
 
-.nav .login :nth-child(5){
+.nav .login :nth-child(5) {
   font-size: 0.8vw;
   top: 19vw;
   left: 3.6vw;
 }
 
-.nav .login :nth-child(6){
+.nav .login :nth-child(6) {
   font-size: 0.8vw;
   top: 19vw;
   right: 3.6vw;
 }
 
-.nav .login :nth-child(7){
+.nav .login :nth-child(7) {
   font-size: 0.8vw;
   top: 23.5vw;
   left: 3.6vw;
 }
 
-.nav .login :nth-child(8){
+.nav .login :nth-child(8) {
   font-size: 0.8vw;
   top: 23.5vw;
   right: 3.6vw;
@@ -368,37 +422,37 @@ footer{
   letter-spacing: .3vw;
 }
 
-.nav .login a:hover{
+.nav .login a:hover {
   color: #f7d4af;
 }
 
-.nav .login :nth-child(9){
+.nav .login :nth-child(9) {
   top: 32vw;
   left: 4.1vw;
 }
 
-.nav .login :nth-child(10){
+.nav .login :nth-child(10) {
   top: 35.3vw;
   left: 4.1vw;
 }
 
-.nav .login :nth-child(11){
+.nav .login :nth-child(11) {
   top: 38.5vw;
   left: 4.1vw;
 }
 
-.nav .login :nth-child(12){
+.nav .login :nth-child(12) {
   top: 41.8vw;
   left: 4.1vw;
 }
 
-.nav .login .active{
+.nav .login .active {
   color: #f7d4af;
 }
 
 .nav .unlogin{
   display: flex;
-  background: url("/img/nav_unlogin.png") no-repeat;
+  background: url("../img/nav_unlogin.png") no-repeat;
   background-size: 100% auto;
   width: 15vw;
   height: 50vw;
@@ -413,41 +467,41 @@ footer{
   letter-spacing: .3vw;
 }
 
-.nav .unlogin a:hover{
+.nav .unlogin a:hover {
   color: #f7d4af;
 }
 
-.nav .unlogin :nth-child(1){
+.nav .unlogin :nth-child(1) {
   top: 12.4vw;
   left: 4.4vw;
   color: rgba(0,0,0,0);
 }
 
-.nav .unlogin :nth-child(1):hover{
+.nav .unlogin :nth-child(1):hover {
   color: rgba(0,0,0,0);
 }
 
-.nav .unlogin :nth-child(2){
+.nav .unlogin :nth-child(2) {
   top: 20.5vw;
   left: 4.1vw;
 }
 
-.nav .unlogin :nth-child(3){
+.nav .unlogin :nth-child(3) {
   top: 23.8vw;
   left: 4.1vw;
 }
 
-.nav .unlogin :nth-child(4){
+.nav .unlogin :nth-child(4) {
   top: 27.2vw;
   left: 4.1vw;
 }
 
-.nav .unlogin :nth-child(5){
+.nav .unlogin :nth-child(5) {
   top: 30.5vw;
   left: 4.1vw;
 }
 
-.nav .unlogin .active{
+.nav .unlogin .active {
   color: #f7d4af;
 }
 
@@ -477,8 +531,8 @@ footer{
 .content .deposit{
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
   margin-bottom: 1.5vw;
+  width: 55%;
 }
 
 .content .deposit img {
@@ -488,8 +542,8 @@ footer{
 .content .member{
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
   margin-bottom: 1.5vw;
+  width: 55%;
 }
 
 .content .member img {
@@ -499,21 +553,203 @@ footer{
 .content .list{
   margin-left: auto;
   margin-right: auto;
-  width: 58%;
+  width: 55%;
   padding-left: .2vw;
+  /* & .bones_list { */
+  /*     @apply p-0; */
+  /*     background: url("../img/VIP_bones_list.png") no-repeat; */
+  /*     background-size: 100% auto; */
+  /*     height: 44vw; */
+  /*         filter: drop-shadow(0 1vw 1vw rgba(0, 0, 0, 0.3)) drop-shadow(0 1vw 1vw rgba(0, 0, 0, 0.06)); */
+  /* } */
 }
 
 .content .list .bones_list{
-  padding: 0px;
-  background: url("/img/VIP_bones_list.png") no-repeat;
-  background-size: 100% auto;
-  height: 44vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #2e2e3c;
+  margin-bottom: 2.5vw;
   filter: drop-shadow(0 1vw 1vw rgba(0, 0, 0, 0.3)) drop-shadow(0 1vw 1vw rgba(0, 0, 0, 0.06));
 }
 
+.content .list .bones_list div{
+  display: flex;
+  flex-direction: row;
+}
+
+.content .list .bones_list div .item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.content .list .bones_list div .item h3{
+  margin: 0px;
+  padding: 0px;
+  text-align: left;
+  font-size: 1.3vw;
+  padding-top: 0.5vw;
+  font-weight: bolder;
+}
+
+.content .list .bones_list div .item span{
+  text-align: left;
+  font-size: 0.8vw;
+  margin-bottom: 0.5vw;
+}
+
+.content .list .bones_list div .item:nth-child(1){
+  display: flex;
+  align-items: center;
+  width: 40%;
+  font-size: 1.5vw;
+}
+
+.content .list .bones_list div .item:nth-child(2){
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+.content .list .bones_list div.v4{
+  padding-bottom: 0.5vw;
+}
+
+.content .list .bones_list div.v5 .item{
+  padding-bottom: 0.5vw;
+}
+
+.content .list .bones_list .v_title{
+  color: #f7d4af;
+  height: 5vw;
+}
+
+.content .list .bones_list .v_title .item:nth-child(1){
+  font-size: 1.7vw;
+}
+
+.content .list .bones_list .v_title .item:nth-child(2){
+  font-size: 1.7vw;
+}
+
+.content .list .bones_list .v_title .item:nth-child(2):after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5%;
+  height: 2.5%;
+  background-color: #2e2e3c;
+  border-radius: 0 100% 0 0;
+  z-index: -1;
+}
+
+.content .list .bones_list .v_title .item:nth-child(2):before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5%;
+  height: 2.5%;
+  background-color: #1b1b25;
+  z-index: -1;
+}
+
+.content .list .bones_list .img_list:nth-child(even){
+  background-color: #23232e;
+}
+
+.content .list .bones_list .v1{
+  position: relative;
+}
+
+.content .list .bones_list .v1 .item:nth-child(1){
+  z-index: 10;
+  background: linear-gradient(to right, #2e2e3c 50%, #23232e 50%);
+}
+
+.content .list .bones_list .v1 .item:nth-child(1):after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 2vw;
+  width: 18%;
+  height: 100%;
+  background-color: #23232e;
+  border-radius: 100% 0 0 100%;
+  z-index: -1;
+}
+
+.content .list .bones_list .v5{
+  position: relative;
+}
+
+.content .list .bones_list .v5 .item:nth-child(2){
+  z-index: 10;
+  background: linear-gradient(to right, #23232e 85%, #2e2e3c 15%);
+}
+
+.content .list .bones_list .v5 .item:nth-child(2):after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 1vw;
+  width: 10%;
+  height: 100%;
+  background-color: #23232e;
+  border-radius: 0 100% 100% 0;
+  z-index: -1;
+}
+
+.content .list .bones_list .special .item:nth-child(1) span{
+  text-align: center;
+}
+
+.content .list .bones_list .special .item:nth-child(1):after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 5%;
+  height: 2.5%;
+  background-color: #2e2e3c;
+  border-radius: 0 0 0 100%;
+  z-index: -1;
+}
+
+.content .list .bones_list .special .item:nth-child(1):before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 5%;
+  height: 2.5%;
+  background-color: #16161e;
+  z-index: -1;
+}
+
+.content .list .bones_list .bones_list_img{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+  background-color: #f7d4b0;
+  color: #222;
+  border-radius: 1vw;
+  font-size: 1.4vw;
+  top: 1.4vw;
+  left: -1.8vw;
+  width: 4vw;
+  height: 2.2vw;
+  padding-right: 0.1vw;
+}
+
 .content .list h3 {
-  padding: 0 .8vw 0 2vw;
-  font-size: .76vw;
+  /* padding: 0 .8vw 0 0; */
+  font-size: .80vw;
   margin-bottom: .8vw;
 }
 
@@ -522,7 +758,7 @@ footer{
   margin-left: auto;
   margin-bottom: 2vw;
   color: rgba(0,0,0,0);
-  background: url("/img/VIP_bones_btn_back_off.png") no-repeat;
+  background: url("../img/VIP_bones_btn_back_off.png") no-repeat;
   background-size: 100% auto;
   width: 15%;
   height: 5vw;
@@ -555,7 +791,7 @@ footer{
 .content_record .list .record_list{
   position: relative;
   padding: 0px;
-  /* background: url("/img/VIP_record_list.png") no-repeat; */
+  /* background: url("../img/VIP_record_list.png") no-repeat; */
   background-size: 100% auto;
   height: 55.7vw;
   margin-top: 3vw;
@@ -647,14 +883,14 @@ footer{
   margin-left: auto;
   margin: -2vw 1.5vw 2vw auto;
   color: rgba(0,0,0,0);
-  background: url("/img/VIP_activity_btn_off.png") no-repeat;
+  background: url("../img/VIP_activity_btn_off.png") no-repeat;
   background-size: 100% auto;
   width: 20%;
   height: 5vw;
 }
 
 .content_record .list a .back:hover {
-  background: url("/img/VIP_activity_btn_on.png") no-repeat;
+  background: url("../img/VIP_activity_btn_on.png") no-repeat;
   background-size: 100% auto;
 }
 
@@ -692,7 +928,7 @@ footer{
   margin-bottom: 2.5rem;
   display: flex;
   justify-content: center;
-  background: url("/img/VIP_activity_list_bg.png") no-repeat;
+  background: url("../img/VIP_activity_list_bg.png") no-repeat;
   background-size: 100% auto;
   height: 10.7vw;
   filter: drop-shadow(0 1vw 1vw rgba(0, 0, 0, 0.7)) drop-shadow(0 1vw 1vw rgba(0, 0, 0, 0.06));
@@ -726,7 +962,7 @@ footer{
 .content_activity .list .activity_list .comingsoon{
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
-  background: url("/img/VIP_activity_comingsoon.png") no-repeat;
+  background: url("../img/VIP_activity_comingsoon.png") no-repeat;
   background-size: 100% auto;
   height: 10.7vw;
 }
@@ -737,14 +973,14 @@ footer{
   margin-left: auto;
   margin: -1vw 1.5vw 2vw auto;
   color: rgba(0,0,0,0);
-  background: url("/img/VIP_activity_btn_off.png") no-repeat;
+  background: url("../img/VIP_activity_btn_off.png") no-repeat;
   background-size: 100% auto;
   width: 20%;
   height: 5vw;
 }
 
 .content_activity .list a .back:hover {
-  background: url("/img/VIP_activity_btn_on.png") no-repeat;
+  background: url("../img/VIP_activity_btn_on.png") no-repeat;
   background-size: 100% auto;
 }
 
@@ -756,6 +992,7 @@ footer{
   right: 0;
   left: 0;
   width: 42vw;
+  padding-bottom: 5vw;
   /* swiper */
   .swiper{
     position: relative;
@@ -831,14 +1068,6 @@ footer{
   background: #8b8ba5;
 }
 
-/* &:hover { */
-
-/*   background: url("/images/swiper_list_light.png") no-repeat; */
-
-/*   background-size: 100% auto; */
-
-/* } */
-
 .content_gift .title{
   margin-left: auto;
   margin-right: auto;
@@ -880,14 +1109,14 @@ footer{
   margin-left: auto;
   margin: -1vw 1.5vw 2vw auto;
   color: rgba(0,0,0,0);
-  background: url("/img/VIP_activity_btn_off.png") no-repeat;
+  background: url("../img/VIP_activity_btn_off.png") no-repeat;
   background-size: 100% auto;
   width: 20%;
   height: 5vw;
 }
 
 .content_gift .list a .back:hover {
-  background: url("/img/VIP_activity_btn_on.png") no-repeat;
+  background: url("../img/VIP_activity_btn_on.png") no-repeat;
   background-size: 100% auto;
 }
 
@@ -916,14 +1145,69 @@ footer{
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    /* line-height: 3.5vw; */
   }
 
   .content .list .bones_list{
-    width: 100%;
-    background: url("/img/SP-VIP_bones_list.png") no-repeat;
-    background-size: 100% auto;
-    height: 135vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5vw;
+    width: 85%;
+  }
+
+  .content .list .bones_list .img_list .item h3{
+    font-size: 4vw;
+    padding-top: 1.5vw;
+  }
+
+  .content .list .bones_list div.v5 .item {
+    padding-bottom: 1.5vw;
+}
+
+.content .list .bones_list div .item span {
+  margin-bottom: 1.5vw;
+}
+.content .list .bones_list div .item:nth-child(2) {
+  padding-right: 3vw;
+}
+
+  .content .list .bones_list .img_list .item span{
+    font-size: 2.5vw;
+  }
+
+  .content .list .bones_list .img_list .item:nth-child(1) h3{
+    text-align: center;
+  }
+
+  .content .list .bones_list .v_title{
+    height: 12vw;
+  }
+
+  .content .list .bones_list .v_title .item:nth-child(1){
+    font-size: 4vw;
+  }
+
+  .content .list .bones_list .v_title .item:nth-child(2){
+    font-size: 4vw;
+  }
+
+  .content .list .bones_list .v1 .item:nth-child(1):after{
+    left: 5vw;
+    width: 25%;
+  }
+
+  .content .list .bones_list .bones_list_img{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    font-style: italic;
+    background-color: #f7d4b0;
+    border-radius: 15% / 50%;
+    padding: 1vw;
+    font-size: 4vw;
+    top: 3vw;
+    left: -3.8vw;
+    width: 11vw;
+    height: 6vw;
   }
 
   .content .list h3{
@@ -931,6 +1215,7 @@ footer{
     margin-right: auto;
     width: 86%;
     font-size: 2vw;
+    margin-bottom: 3vw;
     padding-right: 1.2vw;
   }
 
@@ -1054,14 +1339,14 @@ footer{
     margin-right: auto;
     margin-top: -3vw;
     margin-bottom: 15vw;
-    background: url("/img/SP-VIP_activity_btn_off.png") no-repeat;
+    background: url("../img/SP-VIP_activity_btn_off.png") no-repeat;
     background-size: 100% auto;
     width: 60%;
     height: 10vw;
   }
 
   .content_record .list a .back:hover {
-    background: url("/img/SP-VIP_activity_btn_on.png") no-repeat;
+    background: url("../img/SP-VIP_activity_btn_on.png") no-repeat;
     background-size: 100% auto;
   }
 
@@ -1085,17 +1370,17 @@ footer{
     position: relative;
     padding: 0px;
     background-size: 100% auto;
-    height: 220vw;
+    height: 200vw;
     margin-top: 3vw;
   }
 
   .content_activity .list .activity_list .activity_card{
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
     display: flex;
     flex-direction: column;
     text-align: center;
-    background: url("/img/SP-VIP_activity_list_bg.png") no-repeat;
+    background: url("../img/SP-VIP_activity_list_bg.png") no-repeat;
     background-size: 100% auto;
     height: 50vw;
   }
@@ -1115,23 +1400,23 @@ footer{
   }
 
   .content_activity .list .activity_list .activity_card .text{
-    margin-top: 1.25rem;
-    margin-bottom: 1.25rem;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
     margin-left: auto;
     margin-right: auto;
     display: flex;
-    width: 75%;
     justify-content: space-evenly;
     vertical-align: middle;
-    font-size: 2.8vw;
+    font-size: 3.5vw;
+    width: 85%;
   }
 
   .content_activity .list .activity_list .activity_card .text h5{
     margin-top: auto;
     margin-bottom: auto;
     display: flex;
-    justify-content: center;
-    width: 30%;
+    justify-content: flex-start;
+    width: 36%;
   }
 
   .content_activity .list .activity_list .activity_card .text span{
@@ -1140,13 +1425,13 @@ footer{
     display: flex;
     justify-content: center;
     text-align: left;
-    width: 60%;
+    width: 67%;
   }
 
   .content_activity .list .activity_list .comingsoon{
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
-    background: url("/img/SP-VIP_activity_comingsoon.png") no-repeat;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    background: url("../img/SP-VIP_activity_comingsoon.png") no-repeat;
     background-size: 100% auto;
     height: 50vw;
   }
@@ -1158,19 +1443,20 @@ footer{
     margin-right: auto;
     margin-top: -3vw;
     margin-bottom: 15vw;
-    background: url("/img/SP-VIP_activity_btn_off.png") no-repeat;
+    background: url("../img/SP-VIP_activity_btn_off.png") no-repeat;
     background-size: 100% auto;
     width: 60%;
     height: 10vw;
   }
 
   .content_activity .list a .back:hover {
-    background: url("/img/SP-VIP_activity_btn_on.png") no-repeat;
+    background: url("../img/SP-VIP_activity_btn_on.png") no-repeat;
     background-size: 100% auto;
   }
 
   .content_gift{
     width: 100%;
+    padding-bottom: 10vw;
   }
 
   .content_gift .swiper {
@@ -1281,7 +1567,7 @@ footer{
   margin: auto;
   width: 25vw;
   height: 25vw;
-  background: url("/img/popup_comingsoon.png") no-repeat;
+  background: url("../img/popup_comingsoon.png") no-repeat;
   background-size: 100% auto;
 }
 
@@ -1289,7 +1575,7 @@ footer{
   margin: auto;
   width: 25vw;
   height: 25vw;
-  background: url("/img/popup_gift_success.png") no-repeat;
+  background: url("../img/popup_gift_success.png") no-repeat;
   background-size: 100% auto;
 }
 
@@ -1297,7 +1583,7 @@ footer{
   margin: auto;
   width: 25vw;
   height: 25vw;
-  background: url("/img/popup_gift_done.png") no-repeat;
+  background: url("../img/popup_gift_done.png") no-repeat;
   background-size: 100% auto;
 }
 
@@ -1305,7 +1591,7 @@ footer{
   margin: auto;
   width: 25vw;
   height: 25vw;
-  background: url("/img/popup_incorrect.png") no-repeat;
+  background: url("../img/popup_incorrect.png") no-repeat;
   background-size: 100% auto;
 }
 

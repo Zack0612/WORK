@@ -10,12 +10,12 @@ body {
   font-family: "Helvetica", "Noto Sans TC", sans-serif, -apple-system,
     BlinkMacSystemFont, "Segoe UI", Roboto, "spHelvetica Neue",
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
-  background: #ffffff;
+  background: #1b1b25;
 }
 
 .wrapper {
   @apply relative flex flex-col justify-center w-full h-full;
-  background: #ffffff;
+  background: #1b1b25;
 }
 
 a,

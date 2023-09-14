@@ -17,28 +17,28 @@
             @apply m-auto;
             width: 25vw;
             height: 25vw;
-            background: url("/img/popup_comingsoon.png") no-repeat;
+            background: url("../img/popup_comingsoon.png") no-repeat;
             background-size: 100% auto;
         }
         & .popup_gift_success{
             @apply m-auto;
             width: 25vw;
             height: 25vw;
-            background: url("/img/popup_gift_success.png") no-repeat;
+            background: url("../img/popup_gift_success.png") no-repeat;
             background-size: 100% auto;
         }
         & .popup_gift_done{
             @apply m-auto;
             width: 25vw;
             height: 25vw;
-            background: url("/img/popup_gift_done.png") no-repeat;
+            background: url("../img/popup_gift_done.png") no-repeat;
             background-size: 100% auto;
         }
         & .popup_incorrect{
             @apply m-auto;
             width: 25vw;
             height: 25vw;
-            background: url("/img/popup_incorrect.png") no-repeat;
+            background: url("../img/popup_incorrect.png") no-repeat;
             background-size: 100% auto;
         }
     }

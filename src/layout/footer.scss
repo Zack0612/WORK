@@ -4,24 +4,35 @@ footer {
 
 @media (max-width: 768px) {
     footer {
-        @apply w-full mx-auto block;
+        @apply m-0 flex sticky w-full z-30;
+        left: 0;
+        bottom: 0;
+        background: url("../img/SP_nav_bg.png") no-repeat;
+        background-size: 100% auto;
 
         & .sp_login {
-            @apply flex justify-evenly;
-            background: url("/img/SP_nav_bg.png") no-repeat;
-            background-size: 100% auto;
-            background-color: #1b1b25;
-            height: 19vw;
-            margin-bottom: 0;
+            @apply flex justify-evenly mx-0 my-auto w-full;
+            height: 18vw;
 
             & a {
-                @apply mx-3;
+                @apply mx-2;
                 margin-top: 10vw;
                 font-size: 3.2vw;
 
                 &:hover {
                     color: #f7d4af;
                 }
+
+            }
+
+            & span::after {
+                @apply mx-auto;
+                margin-top: 10vw;
+                content: "";
+                display: flex;
+                width: 1px;
+                height: 4vw;
+                background-color: #6e6e6e;
             }
 
             & .active {
@@ -29,31 +40,35 @@ footer {
             }
 
             & .img {
-                background: url("/img/SP_nav_login.png") no-repeat;
+                // @apply relative;
+                background: url("../img/SP_nav_login.png") no-repeat;
                 background-size: 100% auto;
                 text-align: center;
-                margin-bottom: 0;
-                width: 18vw;
-                & .user-img{
-                    // @apply my-auto;
+                margin-top: -2.5vw;
+                width: 22vw;
+
+                & .user-img {
+                    @apply m-0 w-full h-full flex flex-col justify-center;
                     font-size: 2.5vw;
-                    margin-top: 2.5vw;
-                    color: #0000;
-                }
-                & h6{
-                    // @apply my-auto;
-                    color: #000;
-                    font-size: 2.5vw;
+
+                    & h5 {
+                        color: #0000;
+                    }
+
+                    & h6 {
+                        @apply mx-auto;
+                        color: #000;
+                    }
                 }
             }
         }
 
         & .sp_unlogin {
-            @apply flex justify-between;
-            background: url("/img/SP_nav_bg.png") no-repeat;
+            @apply flex justify-between mx-0 my-auto w-full;
+            background: url("../img/SP_nav_bg.png") no-repeat;
             background-size: 100% auto;
             background-color: #1b1b25;
-            height: 19vw;
+            height: 18vw;
             margin-bottom: 0;
 
             & a {
@@ -66,15 +81,26 @@ footer {
                 }
             }
 
+            & span::after {
+                @apply mx-auto;
+                margin-top: 10vw;
+                content: "";
+                display: flex;
+                width: 1px;
+                height: 4vw;
+                background-color: #6e6e6e;
+            }
+
             & .active {
                 color: #f7d4af;
             }
 
             & .img {
-                background: url("/img/SP_nav_unlogin.png") no-repeat;
+                background: url("../img/SP_nav_unlogin.png") no-repeat;
                 background-size: 100% auto;
-                margin-bottom: 0;
-                width: 18vw;
+                margin-top: -2.5vw;
+                // margin-bottom: 0;
+                width: 22vw;
             }
         }
     }
