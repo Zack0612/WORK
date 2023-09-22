@@ -26,21 +26,102 @@
 
 <body>
     <div class="wrapper">
+    <header>
+        <nav>
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <!-- 登入 -->
+          <div class="icon-link">
+            <button class="active" onclick="hiddenNav()"></button>
+            <a href="" title="" target="_blank">
+              <div><img src="img/nav_item_email.png" alt="" />
+              <span>尚未認證</span>
+              </div>
+            </a>
+            <a href="" title="" target="_blank">
+              <div><img src="img/nav_item_phone.png" alt="" />
+              <span>尚未認證</span>
+              </div>
+            </a>
+            <a href="" title="" target="_blank">
+              <div><img src="img/nav_item_member.png" alt="" />
+              <span>尚未認證</span>
+              </div>
+            </a>
+            <a href="" title="" target="_blank">
+                <div><img src="img/nav_item_vip_email.png" alt="" />
+                <span>VIP信箱</span>
+                </div>
+              </a>
+              <a href="" title="" target="_blank">
+                <div class="logout">
+                <span>登出</span>
+                </div>
+              </a>
+          </div>
+          <!-- 未登入 -->
+          <!-- <div class="icon-link login">
+              <div class="bear"><img src="img/hamburger_bear.png" alt="" /></div>
+            <a href="" title="" target="_blank">
+                <div class="logout">
+                    <span>登入</span>
+                    </div>
+              </a>
+          </div> -->
+          <!-- 未登入結束 -->
+        </nav>
+      </header>
         <main class="main">
             <section class="kv">
-                <img class="title" src="img/KV_title.png" alt="">
+                <!-- 未登入 -->
+                <!-- <div class="title">
+                    <a href=""><div class="login">登入</div></a>
+                </div> -->
+                <!-- 銅階 -->
+                <!-- <div class="title copper">
+                    <div class="text">ABCDEFGHIJK</div>
+                    <div class="money">$99,999,999</div>
+                    <a href=""><div class="logout">登出</div></a>
+                </div> -->
+                <!-- 銀階 -->
+                <!-- <div class="title silver">
+                    <div class="text">ABCDEFGHIJK</div>
+                    <div class="money">$99,999,999</div>
+                    <a href=""><div class="logout">登出</div></a>
+                </div> -->
+                <!-- 金段階 -->
+                <!-- <div class="title gold">
+                    <div class="text">ABCDEFGHIJK</div>
+                    <div class="money">$99,999,999</div>
+                    <a href=""><div class="logout">登出</div></a>
+                </div> -->
+                <!-- 黑曜階 -->
+                <!-- <div class="title black">
+                    <div class="text">ABCDEFGHIJK</div>
+                    <div class="money">$99,999,999</div>
+                    <a href=""><div class="logout">登出</div></a>
+                </div> -->
+                <!-- 白金階 -->
+                <div class="title platinum">
+                    <div class="text">ABCDEFGHIJK</div>
+                    <div class="money">$99,999,999</div>
+                    <a href=""><div class="logout">登出</div></a>
+                </div>
             </section>
             <section class="nav">
                 <!-- 登錄狀態 -->
                 <div class="login">
-                    <a href="" class="logout"></a>
-                    <span>使用者名稱</span>
-                    <span>VIP期效</span>
-                    <span>9999/09/09 99:99</span>
-                    <span>尚未認證</span>
-                    <span>尚未認證</span>
-                    <span>尚未認證</span>
-                    <span>VIP信箱</span>
+                    <a href="" class="logout">儲值</a>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <a href="#" class="img_link"><img src="img/nav_item_email.png" alt=""><span>尚未認證</span></a>
+                    <a href="#" class="img_link"><img src="img/nav_item_phone.png" alt=""><span>尚未認證</span></a>
+                    <a href="#" class="img_link"><img src="img/nav_item_member.png" alt=""><span>尚未認證</span></a>
+                    <a href="#" class="img_link"><img src="img/nav_item_vip_email.png" alt=""><span>VIP信箱</span></a>
                     <a href="index.html" class="bones">福利公告</a>
                     <a href="gift.html" class="gift">獨享禮包</a>
                     <a href="record.html" class="record active">領取紀錄</a>
@@ -139,27 +220,27 @@
                             </tr>
                         </table>
                     </div>
-                    <a href="#">
-                        <div class="back">
-                            下一頁
-                        </div>
-                    </a>
+                    <div class="back">
+                        <a href="#"><</a>
+                        <div class="point"><img src="img/record-btn-point.png" alt=""></div>
+                        <a href="#" class="active">1</a>
+                        <a href="#" class="">2</a>
+                        <a href="#" class="">3</a>
+                        <div class="point"><img src="img/record-btn-point.png" alt=""></div>
+                        <a href="#">></a>
+                    </div>
                 </div>
 
             </section>
         </main>
         <footer class="footer">
-            <!-- 手機－登錄狀態 -->
+            
             <div class="sp_login">
                 <a href="index.html" class="bones">福利公告</a>
                 <span></span>
                 <a href="gift.html" class="gift">獨享禮包</a>
-                <div class="img">
-                    <div class="user-img">
-                        <h6>使用者名稱</h6>
-                        <h6>使用者</h6>
-                    </div>
-                </div>
+                <a class="img" href="#">
+                </a>
                 <a href="record.html" class="record active">領取紀錄</a>
                 <span></span>
                 <a href="activity.html" class="activity">特約活動</a>

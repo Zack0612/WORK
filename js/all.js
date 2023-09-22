@@ -29,4 +29,34 @@ window.onload = function () {
             }
         });
     });
+
+  // ---------- 手機版選單 ---------- 開始 //
+  const hamburger = document.querySelector(".hamburger");
+  const iconLink = document.querySelector(".icon-link");
+  hamburger.addEventListener("click", function () {
+    if (this.classList.contains("active")) {
+      // close the menu
+      hiddenNav();
+    } else {
+      hamburger.style.opacity = "0";
+      iconLink.style.display = "flex";
+      setTimeout(() => {
+        hamburger.style.display = "none";
+        iconLink.style.opacity = "100";
+      }, 100);
+    }
+  });
+
+  // ---------- 手機版選單 ---------- 結束 //
 };
+
+function hiddenNav(){
+    const hamburger = document.querySelector(".hamburger");
+    const iconLink = document.querySelector(".icon-link");
+    hamburger.style.display = "flex";
+    iconLink.style.opacity = "0";
+    setTimeout(() => {
+      hamburger.style.opacity = "100";
+      iconLink.style.display = "none";
+    }, 300);
+}

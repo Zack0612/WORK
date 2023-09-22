@@ -206,8 +206,8 @@ footer{
   }
 
   footer .sp_login a{
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+    /* margin-left: 0.5rem;
+    margin-right: 0.5rem; */
     margin-top: 10vw;
     font-size: 3.2vw;
   }
@@ -233,7 +233,7 @@ footer{
 
   footer .sp_login .img {
     /* @apply relative; */
-    background: url("../img/SP_nav_login.png") no-repeat;
+    background: url("../img/SP_deposip.png") no-repeat;
     background-size: 100% auto;
     text-align: center;
     margin-top: -4.5vw;
@@ -274,7 +274,7 @@ footer{
     justify-content: space-between;
     background: url("../img/SP_nav_bg.png") no-repeat;
     background-size: 100% auto;
-    background-color: #1b1b25;
+    /* background-color: #1b1b25; */
     height: 20vw;
     margin-bottom: 0;
   }
@@ -313,25 +313,125 @@ footer{
   }
 }
 
-& .kv{
+.kv{
   position: relative;
 }
 
-& .kv .title {
+.kv .title {
   /* @apply absolute mx-auto; */
+  background: url("../img/KV_title.png") no-repeat;
+  background-size: 100% auto;
+  position: relative;
   width: 40vw;
+  height: 25vw;
   margin:  12vw 0 6vw 0;
 }
 
+.kv .title div{
+    position: absolute;
+    font-size: 1.3vw;
+}
+
+.kv .title a div{
+    position: absolute;
+}
+
+.kv .title a .login{
+    bottom: 5vw;
+    right: 3vw;
+    border-radius: 20% / 100% ;
+    text-align: center;
+    font-size: 1.3vw;
+    font-weight: bolder;
+    width: 8vw;
+    background-color: #f7d4b0;
+}
+
+.kv .title a .logout{
+    bottom: 5vw;
+    right: 3vw;
+    border-radius: 20% / 100% ;
+    text-align: center;
+    font-size: 1.3vw;
+    width: 8vw;
+    border: 2px solid;
+}
+
+.kv .title a .logout:hover{
+    filter: brightness(1.5);
+}
+
+.kv .title .text{
+    bottom: 6.2vw;
+    left: 3vw;
+    color: #F8F8F8;
+}
+
+.kv .title .money{
+    bottom: 4.5vw;
+    left: 3vw;
+}
+
+.kv .copper {
+    background: url("../img/KV_copper.png") no-repeat;
+    background-size: 100% auto;
+}
+
+.kv .silver {
+    background: url("../img/KV_silver.png") no-repeat;
+    background-size: 100% auto;
+}
+
+.kv .gold {
+    background: url("../img/KV_gold.png") no-repeat;
+    background-size: 100% auto;
+}
+
+.kv .black {
+    background: url("../img/KV_black.png") no-repeat;
+    background-size: 100% auto;
+}
+
+.kv .platinum {
+    background: url("../img/KV_platinum.png") no-repeat;
+    background-size: 100% auto;
+}
+
 @media (max-width: 768px) {
-  & .kv {
+  .kv {
     margin-bottom: 18vw;
   }
 
-  & .kv .title{
+  .kv .title{
     margin: 0px;
     width: 85vw;
     margin-top: 32vw;
+    height: 48vw;
+  }
+
+  
+  .kv .title a .login {
+    width: 20vw;
+    right: 5vw;
+    font-size: 4vw;
+  }
+
+  .kv .title .text {
+    bottom: 7.2vw;
+    left: 5vw;
+    font-size: 2.3vw;
+  }
+
+  .kv .title .money {
+    bottom: 3.5vw;
+    left: 5vw;
+    font-size: 2.3vw;
+  }
+
+  .kv .title a .logout {
+    width: 20vw;
+    right: 5vw;
+    font-size: 4vw;
   }
 }
 
@@ -352,64 +452,61 @@ footer{
 }
 
 .nav .login :nth-child(1) {
-  background: url("../img/nav_logout.png") no-repeat;
-  background-size: 100% auto;
+  color: #0000;
   height: 2.5vw;
-  width: 4vw;
-  top: 7.3vw;
-  left: 1vw;
+  width: 7.4vw;
+  top: 11.9vw;
+  left: 3.7vw;
 }
 
-.nav .login span{
+.nav .login .logout:hover {
+    color: #0000;
+  }
+
+.nav .login .img_link{
   position: absolute;
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
   color: #f7d4af;
-  font-size: 1.1vw;
+  width: 3.3vw;
+  margin: auto;
   left: auto;
   right: auto;
 }
 
-.nav .login :nth-child(2) {
-  font-size: 1.5vw;
-  top: 10vw;
-  left: 3.8vw;
-}
-
-.nav .login :nth-child(3) {
-  font-size: 1.25vw;
-  top: 12.5vw;
-  left: 5.3vw;
-}
-
-.nav .login :nth-child(4) {
-  font-size: 0.8vw;
-  top: 14vw;
-  left: 4.3vw;
-}
+.nav .login .img_link span{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #f7d4af;
+    width: 3.5vw;
+    font-size: .8vw;
+    letter-spacing: 0;
+  }
 
 .nav .login :nth-child(5) {
   font-size: 0.8vw;
-  top: 19vw;
+  top: 16.5vw;
   left: 3.6vw;
 }
 
 .nav .login :nth-child(6) {
   font-size: 0.8vw;
-  top: 19vw;
+  top: 16.5vw;
   right: 3.6vw;
 }
 
 .nav .login :nth-child(7) {
   font-size: 0.8vw;
-  top: 23.5vw;
+  top: 21vw;
   left: 3.6vw;
 }
 
 .nav .login :nth-child(8) {
   font-size: 0.8vw;
-  top: 23.5vw;
+  top: 21vw;
   right: 3.6vw;
 }
 
@@ -753,14 +850,18 @@ footer{
   margin-bottom: .8vw;
 }
 
-.content .list a .back{
+.content .list a.back{ 
+  display: block;
+  margin-left: auto;
+  width: 15%;
+}
+.content .list a .text{
   z-index: 10;
   margin-left: auto;
   margin-bottom: 2vw;
   color: rgba(0,0,0,0);
   background: url("../img/VIP_bones_btn_back_off.png") no-repeat;
   background-size: 100% auto;
-  width: 15%;
   height: 5vw;
 }
 
@@ -877,7 +978,69 @@ footer{
   background-color: #23232f;
 }
 
-.content_record .list a .back{
+.content_record .list .record_list .text_list tr:last-child td{
+  padding-bottom: 1vw;
+}
+
+.content_record .list div.back{
+    display: flex;
+    justify-content: center;
+    margin: 2vw 0;
+
+}
+.content_record .list .back a{
+    display: flex;
+    margin: 1vw .2vw 2vw;
+    margin: auto .2vw;
+    padding: 0 0.6vw;
+    border: 2px solid;
+    border-radius: 20%;
+    font-weight: bolder;
+    font-size: 1.4vw;
+}
+
+.content_record .list .back .active{
+    background-color: #f7d4b0;
+}
+
+.content_record .list .back a:hover{
+    background-color: #f7d4b0;
+}
+
+.content_record .list .back a:first-child{
+    background: url("../img/record-btn-off.png") no-repeat;
+    background-size: 100% auto;  
+    color: #0000;
+}
+
+.content_record .list .back a:first-child:hover{
+    background: url("../img/record-btn-on.png") no-repeat;
+    background-size: 100% auto;  
+}
+
+.content_record .list .back a:last-child{
+    background: url("../img/record-btn-off.png") no-repeat;
+    background-size: 100% auto;  
+    color: #0000;
+    transform: rotate(180deg);
+}
+
+.content_record .list .back a:last-child:hover{
+    background: url("../img/record-btn-on.png") no-repeat;
+    background-size: 100% auto;  
+    transform: rotate(180deg);
+}
+
+.content_record .list .back .point{
+    display: flex;
+    margin: auto 0 ;
+}
+
+.content_record .list .back .point img{
+    margin: auto;
+}
+
+.content_record .list a .text{
   position: relative;
   z-index: 10;
   margin-left: auto;
@@ -885,11 +1048,10 @@ footer{
   color: rgba(0,0,0,0);
   background: url("../img/VIP_activity_btn_off.png") no-repeat;
   background-size: 100% auto;
-  width: 20%;
-  height: 5vw;
+  height: 2.5vw;
 }
 
-.content_record .list a .back:hover {
+.content_record .list a .text:hover {
   background: url("../img/VIP_activity_btn_on.png") no-repeat;
   background-size: 100% auto;
 }
@@ -967,7 +1129,13 @@ footer{
   height: 10.7vw;
 }
 
-.content_activity .list a .back{
+
+.content_activity .list a.back {
+  display: block;
+  width: 9vw;
+  margin-left: auto;
+}
+.content_activity .list a .text{
   position: relative;
   z-index: 10;
   margin-left: auto;
@@ -975,11 +1143,10 @@ footer{
   color: rgba(0,0,0,0);
   background: url("../img/VIP_activity_btn_off.png") no-repeat;
   background-size: 100% auto;
-  width: 20%;
   height: 5vw;
 }
 
-.content_activity .list a .back:hover {
+.content_activity .list a .text:hover {
   background: url("../img/VIP_activity_btn_on.png") no-repeat;
   background-size: 100% auto;
 }
@@ -1219,7 +1386,11 @@ footer{
     padding-right: 1.2vw;
   }
 
-  .content .list a .back {
+  .content .list a.back{ 
+    width: 25%;
+  }
+
+  .content .list a .text {
     margin-bottom: 4vw;
     margin-right: 8vw;
     height: 8vw;
@@ -1245,7 +1416,7 @@ footer{
     position: relative;
     padding: 0px;
     background-size: 100% auto;
-    height: 275vw;
+    height: 265vw;
     margin-top: 3vw;
   }
 
@@ -1332,20 +1503,39 @@ footer{
     height: 17.5vw;
   }
 
-  .content_record .list a .back{
+  .content_record .list div.back{
+    margin: auto;
+    width: 60%;
+    padding: 11vw 0 10vw;
+    /* padding-bottom: 8vw; */
+  }
+
+  .content_record .list .back a{
+    padding: 0 2.5vw;
+    height: 8vw;
+    align-items: center;
+    font-size: 4vw;
+  }
+  .content_record .list .back a:last-child {
+    height: 9vw;
+}
+.content_record .list .back a:first-child {
+    height: 9vw;
+}
+
+  .content_record .list a .text{
     position: relative;
     z-index: 10;
     margin-left: auto;
     margin-right: auto;
-    margin-top: -3vw;
-    margin-bottom: 15vw;
+    margin-top: -11vw;
+    margin-bottom: 10vw;
     background: url("../img/SP-VIP_activity_btn_off.png") no-repeat;
     background-size: 100% auto;
-    width: 60%;
     height: 10vw;
   }
 
-  .content_record .list a .back:hover {
+  .content_record .list a .text:hover {
     background: url("../img/SP-VIP_activity_btn_on.png") no-repeat;
     background-size: 100% auto;
   }
@@ -1436,20 +1626,25 @@ footer{
     height: 50vw;
   }
 
-  .content_activity .list a .back{
+  .content_activity .list a.back {
+    display: block;
+    width: 60%;
+    margin: auto;
+}
+
+  .content_activity .list a .text{
     position: relative;
     z-index: 10;
     margin-left: auto;
     margin-right: auto;
-    margin-top: -3vw;
-    margin-bottom: 15vw;
+    margin-top: -18vw;
+    margin-bottom: 7vw;
     background: url("../img/SP-VIP_activity_btn_off.png") no-repeat;
     background-size: 100% auto;
-    width: 60%;
     height: 10vw;
   }
 
-  .content_activity .list a .back:hover {
+  .content_activity .list a .text:hover {
     background: url("../img/SP-VIP_activity_btn_on.png") no-repeat;
     background-size: 100% auto;
   }
@@ -1656,4 +1851,184 @@ footer{
     width: 100%;
     overflow: visible;
   }
+
+}
+
+header{
+  display: none;
+  position: absolute;
+  top: 0px;
+  z-index: 40;
+  margin: auto;
+  width: 100%;
+}
+
+header .hamburger{
+  display: none;
+}
+
+header nav{
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2vw;
+  padding-right: 0.5vw;
+  height: 3.5vw;
+}
+
+header nav .logo {
+  margin-left: 1vw;
+}
+
+header nav .logo img {
+  width: 6.3vw;
+}
+
+header nav .icon-link{
+  display: flex;
+  align-items: center;
+}
+
+header nav .icon-link a{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-right: 2vw;
+}
+
+header nav .icon-link a div img {
+  width: 1.1vw;
+}
+
+header nav .icon-link a span {
+  font-size: 0.8vw;
+}
+
+@media (max-width: 768px) {
+  header {
+      display: block;
+  }
+  header nav{
+    display: flex;
+    position: fixed;
+    z-index: 10;
+    --tw-bg-opacity: 0.9;
+    padding-left: 5vw;
+    padding-right: 2vw;
+    height: 12vw;
+  }
+
+  header nav .logo img {
+    width: 16vw;
+  }
+
+  header nav .hamburger{
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column wrap;
+    height: 4.5vw;
+    width: 7vw;
+    margin-right: 2vw;
+    margin-left: auto;
+    transition: all 0.3s;
+  }
+
+  header nav .hamburger span{
+    --tw-bg-opacity: 1;
+    background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
+    height: 0.5vw;
+  }
+
+  header nav .hamburger.active span {
+    opacity: 0;
+  }
+
+  header nav .icon-link .active {
+      background: url("../img/record-btn-cancel.png") no-repeat;
+      background-size: 100% auto;
+      position: absolute;
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 500ms;
+      top: 5vw;
+      right: 2vw;
+      width: 18vw;
+      height: 18vw;
+    }
+
+  header nav .icon-link{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    flex-direction: column;
+    background: url("../img/hamburger_bg_login.jpg") no-repeat;
+    background-size: cover;
+    justify-content: space-evenly;
+    display: none;
+    opacity: 0;
+    padding: 3vw 0;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+    top: 0;
+    height: 100vh;
+  }
+
+  header nav .icon-link a{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    font-size: 8vw;
+    flex-direction: column;
+    margin: 2.5vw 0;
+  }
+
+  header nav .icon-link a div{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    width: 45vw;
+  }
+
+  header nav .icon-link a div img {
+    width: 16vw;
+  }
+
+  header nav .icon-link a span{
+    display: block;
+    font-size: 7.5vw;
+    margin-top: 1vw;
+    color: #f7d4b0;
+  }
+
+  header nav .icon-link .logout{
+      border-radius: 15% / 50%;
+      background-color: #f7d4b0;
+      padding: .5vw 0 ;
+      filter: drop-shadow(0 2vw 1vw rgba(0, 0, 0, 0.3)) drop-shadow(0 2vw 1vw rgba(0, 0, 0, 0.06));
+    }
+
+    header nav .icon-link .logout span{
+      color: #414050;
+      font-weight: bolder;
+    }
+
+    header nav .login .bear {
+        width: 40vw;
+        margin-bottom: 5vw;
+}
+
+header nav .login {
+    justify-content: center;
+    padding-bottom: 35vh;
+}
+
+header nav .login a .logout {
+    width: 50vw;
+}
+  
 }
