@@ -744,11 +744,13 @@ input[type=radio] {
 @media(max-width: 768px) {
 	.section1 .SelectRegion select {
 		padding: .2rem 0;
-		font-size: .3rem
+		font-size: .3rem;
+		text-align: center !important;
 	}
 }
 .section1 .SelectRegion select option {
-	background-color: #303030
+	background-color: #303030;
+	text-align: center !important;
 }
 .section1 .SelectRegion input {
 	color: #fbf2e9;
