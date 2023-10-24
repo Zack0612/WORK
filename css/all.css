@@ -1116,12 +1116,18 @@ input[type=radio] {
 		align-items: center;
 		width: 100%;
 		background: url(../image/sec2-bg_sp.png) no-repeat center top;
-		background-size: 7.5rem 17.6rem;
-		height: 17.6rem;
+		background-size: 7.5rem 17.2rem;
+		height: 17.2rem;
 		padding: 0.4rem 0;
 		gap: 0.6rem;
 	}
 }
+@media(max-width: 400px) {
+	.section2 .content {
+		background-size: 7.5rem 17.6rem;
+		height: 17.6rem;
+}
+
 .section2 .activities {
 	position: relative;
 	z-index: 3;
