@@ -2436,10 +2436,10 @@ input[type=radio] {
 	cursor: not-allowed;
 }
 
-.sign_now{
+.sign_ok,.sign_now{
 	cursor: pointer;
 }
-.sign_now:hover{
+.sign_ok:hover,.sign_now:hover{
 	filter: brightness(1.2);
 }
 .sign_noopen{
