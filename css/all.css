@@ -1130,8 +1130,8 @@ input[type=radio] {
 }
 @media(max-width: 360px) {
 	.section2 .content {
-		background-size: 7.5rem 17rem;
-		height: 17rem;
+		background-size: 7.5rem 17.4rem;
+		height: 17.4rem;
 }
 }
 .section2 .activities {
