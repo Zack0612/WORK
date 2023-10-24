@@ -731,7 +731,7 @@ input[type=radio] {
 @media(max-width: 768px) {
 	.section1 .SelectRegion {
 		margin-bottom: .18rem;
-		padding-left: .8rem
+		padding-left: .3rem
 	}
 }
 .section1 .SelectRegion select {
@@ -747,6 +747,7 @@ input[type=radio] {
 		padding: .2rem 0;
 		font-size: .3rem;
 		text-align: center !important;
+		width:40%
 	}
 }
 .section1 .SelectRegion select option {
@@ -761,7 +762,8 @@ input[type=radio] {
 @media(max-width: 768px) {
 	.section1 .SelectRegion input {
 		padding: .2rem 0;
-		font-size: .3rem
+		font-size: .3rem;
+		width:60%;
 	}
 
 }
@@ -1114,8 +1116,8 @@ input[type=radio] {
 		align-items: center;
 		width: 100%;
 		background: url(../image/sec2-bg_sp.png) no-repeat center top;
-		background-size: 7.5rem 18rem;
-		height: 18rem;
+		background-size: 7.5rem 17.6rem;
+		height: 17.6rem;
 		padding: 0.4rem 0;
 		gap: 0.6rem;
 	}
